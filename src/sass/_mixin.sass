@@ -1,0 +1,18 @@
+@mixin flex($direction, $justify, $align)
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify
+  align-items: $align
+
+@mixin position($position, $top, $right, $bottom, $left)
+  position: $position
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+@mixin articles()
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%)
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
+  border-radius: 5px
+  color: #fff
