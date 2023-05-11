@@ -1,8 +1,10 @@
 const ComityDescription = () => {
-  return (
-      <>
-      </>
-  )
+
+    return (
+        <>
+
+        </>
+    )
 }
 
 export default ComityDescription;

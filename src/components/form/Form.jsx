@@ -1,4 +1,4 @@
-const Clubs = () => {
+const Form = () => {
 
     return (
         <>
@@ -7,4 +7,4 @@ const Clubs = () => {
     )
 }
 
-export default Clubs;
+export default Form;

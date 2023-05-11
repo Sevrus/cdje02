@@ -1,8 +1,10 @@
 const NewsArticle = () => {
-  return (
-      <>
-      </>
-  )
+
+    return (
+        <>
+
+        </>
+    )
 }
 
 export default NewsArticle;
