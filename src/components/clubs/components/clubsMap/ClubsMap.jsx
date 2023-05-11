@@ -1,8 +1,10 @@
 const ClubsMap = () => {
-  return (
-      <>
-      </>
-  )
+
+    return (
+        <>
+
+        </>
+    )
 }
 
 export default ClubsMap;

@@ -1,8 +1,10 @@
 const Clubs = () => {
-  return (
-      <>
-      </>
-  )
+
+    return (
+        <>
+
+        </>
+    )
 }
 
 export default Clubs;

@@ -1,8 +1,10 @@
 const Comity = () => {
-  return (
-      <>
-      </>
-  )
+
+    return (
+        <>
+
+        </>
+    )
 }
 
 export default Comity;

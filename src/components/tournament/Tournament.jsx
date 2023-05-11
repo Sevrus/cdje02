@@ -1,8 +1,10 @@
 const Tournament = () => {
-  return (
-      <>
-      </>
-  )
+
+    return (
+        <>
+        
+        </>
+    )
 }
 
 export default Tournament;

@@ -1,8 +1,10 @@
 const FooterSocials = () => {
-  return (
-      <>
-      </>
-  )
+
+    return (
+        <>
+
+        </>
+    )
 }
 
 export default FooterSocials;
