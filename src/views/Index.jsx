@@ -1,9 +1,9 @@
+import News from "../components/news/News";
+
 const Index = () => {
 
     return (
-        <>
-            <h1>Accueil</h1>
-        </>
+            <News />
     )
 }
 
