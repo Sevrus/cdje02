@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+/* MENTION LEGALES */
+.legal_notice {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  margin: 40px;
+}
+.legal_notice .legal_notice_header {
+  text-align: center;
+}
+.legal_notice .legal_notice_header .legal_notice_header_title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #3d4450;
+}
+.legal_notice .legal_notice_header .legal_notice_header_subtitle {
+  font-size: 1rem;
+  color: #242627;
+}
+.legal_notice .legal_notice_content {
+  text-align: justify;
+  font-size: 1rem;
+  color: #242627;
+}
+.legal_notice .legal_notice_content .legal_notice_content_intro {
+  margin-top: 30px;
+}
+.legal_notice .legal_notice_content .legal_notice_content_intro p {
+  margin-top: 10px;
+}
+.legal_notice .legal_notice_content .legal_notice_content_article_title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #4e5862;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.legal_notice .legal_notice_footer {
+  margin: 20px 0 0 0;
+  text-align: end;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=style.css.map */

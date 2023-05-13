@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
+import Confidentiality from './components/policies/confidentiality/Confidentiality';
+import LegalNotice from './components/policies/legalNotice/LegalNotice';
 import ErrorPage from './ErrorPage';
 import Activity from './views/Activity';
 import Contact from './views/Contact';
 import Index from './views/Index';
 import Info from './views/Info';
+import Login from './views/Login';
 
 
 const router = createBrowserRouter([
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />,
+            },
+            {
+                path: "/login",
+                element: <Login />,
+            },
+            {
+                path: "/legal-notice",
+                element: <LegalNotice />,
+            },
+            {
+                path: "/confidentiality",
+                element: <Confidentiality />,
             },
         ]
     }
