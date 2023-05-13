@@ -1,0 +1,28 @@
+@import '../utilities/_variables'
+@import '../utilities/_mixin'
+
+/* FOOTER LINKS */
+/* VERSION MOBILE */
+.footer_links
+    @include flex(row, space-between, center)
+    margin: 15px 56px -30px 56px
+
+    img
+        height: 30px
+        width: 30px
+        cursor: pointer
+
+    .footer_links_ffe
+        width: 18px
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .footer_links
+
+        img
+            height: 35px
+            width: 35px
+            margin: 0 25px
+
+        footer_links_ffe
+            width: 21px

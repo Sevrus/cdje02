@@ -1,0 +1,47 @@
+@import '../utilities/_variables'
+@import '../utilities/_mixin'
+@import 'footerCopyright'
+@import 'footerLinks'
+@import 'footerNav'
+@import 'footerRules'
+@import 'footerSocials'
+
+/* FOOTER */
+/* VERSION MOBILE */
+.footer
+    position: absolute
+    background: $bg-gradient
+    color: $white
+    font-family: $font-primary
+    width: 100%
+    height: 170px
+    left: 0
+    margin-top: 10vh
+
+    .footer_center
+        @include flex(row, space-between, center)
+        margin-bottom: -8px 
+
+        .footer_line_left, .footer_line_right
+            margin-top: 18px
+            width: 80px
+            height: 117px
+            border-style: solid
+            border-color: $white
+
+        .footer_line_left
+            margin-left: 22px
+            border-width: 0px 0px 1px 1px
+            border-radius: 0px 0px 0px 3px
+
+        .footer_line_right
+            margin-right: 22px
+            border-width: 0px 1px 1px 0px
+            border-radius: 0px 0px 3px 0px
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+
+    .footer_line_left, .footer_line_right
+        margin: 20px
+        width: 286px
