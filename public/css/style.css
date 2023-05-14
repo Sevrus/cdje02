@@ -33,31 +33,48 @@ time, mark, audio, video {
 .navbar__burger {
   width: 35px;
   height: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   cursor: pointer;
 }
 .navbar__burger__line {
+  position: absolute;
   background-color: #fff;
   width: 30px;
   height: 3px;
   border-radius: 5px;
 }
+.navbar__burger__line:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .navbar__burger__line:nth-child(2) {
   width: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navbar__burger__line:last-child {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .navbar__burger__line.clicked:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
+  top: 11px;
+  left: 0;
+  transform: rotate(45deg);
   transition: ease-out 0.5s;
 }
 .navbar__burger__line.clicked:nth-child(2) {
-  transform: scale(0.1);
+  transform: scale(0);
   transition: ease-out 0.5s;
 }
 .navbar__burger__line.clicked:last-child {
-  transform: rotate(135deg) translate(-10px, 10px);
+  bottom: 11px;
+  left: 0;
+  transform: rotate(135deg);
+  transition: ease-out 0.5s;
+}
+.navbar__burger__line.unclicked {
   transition: ease-out 0.5s;
 }
 .navbar__links {
@@ -72,10 +89,14 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 .navbar__links__link a {
   color: #fff;
+}
+.navbar__links__link a:hover {
+  transition: color ease-out 0.5s;
+  color: #f73746;
 }
 
 @media screen and (min-width: 768px) {
