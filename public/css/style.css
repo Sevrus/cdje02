@@ -22,6 +22,82 @@ time, mark, audio, video {
   box-sizing: border-box;
 }
 
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding-top: 20px;
+}
+.navbar__burger {
+  width: 35px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar__burger__line {
+  background-color: #fff;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+}
+.navbar__burger__line:nth-child(2) {
+  width: 35px;
+}
+.navbar__burger__line.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+  transition: ease-out 0.5s;
+}
+.navbar__burger__line.clicked:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+.navbar__burger__line.clicked:last-child {
+  transform: rotate(135deg) translate(-10px, 10px);
+  transition: ease-out 0.5s;
+}
+.navbar__links {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
+  width: 100%;
+  height: 301px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.navbar__links__link a {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar__burger {
+    display: none;
+  }
+  .navbar__links {
+    height: 100%;
+    z-index: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
 .header {
   width: 100%;
   height: 248px;

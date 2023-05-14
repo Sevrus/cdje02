@@ -1,0 +1,70 @@
+@import '../utilities/variables'
+@import '../utilities/mixin'
+
+.navbar
+  width: 100%
+  @include flex(column, normal, center)
+  padding-top: 20px
+
+  &__burger
+    width: 35px
+    height: 25px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    cursor: pointer
+
+    &__line
+      background-color: $white
+      width: 30px
+      height: 3px
+      border-radius: 5px
+
+      &:nth-child(2)
+        width: 35px
+
+    &__line.clicked
+
+      &:nth-child(1)
+        transform: rotate(45deg) translate(8px, 8px)
+        transition: ease-out 0.5s
+
+      &:nth-child(2)
+        transform: scale(0.1)
+        transition: ease-out 0.5s
+
+      &:last-child
+        transform: rotate(135deg) translate(-10px, 10px)
+        transition: ease-out 0.5s
+
+  &__links
+    font-family: $font-primary
+    font-size: $fs-16
+    font-weight: 700
+    background: $bg-gradient
+    width: 100%
+    height: 301px
+    z-index: 1000
+    @include flex(column, center, center)
+    gap: 15px
+
+    &__link
+
+      a
+        color: $white
+
+@media screen and (min-width: 768px)
+  .navbar
+    @include flex(row, center, center)
+
+    &__burger
+      display: none
+
+    &__links
+      height: 100%
+      z-index: auto
+      @include flex(row, center, center)
+      gap: 30px
+
+
