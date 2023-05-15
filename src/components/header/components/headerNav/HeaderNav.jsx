@@ -1,5 +1,13 @@
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {
+    faChessKing,
+    faChessKnight,
+    faChessQueen,
+    faChessRook,
+    faRightToBracket
+} from "@fortawesome/free-solid-svg-icons";
 
 const HeaderNav = () => {
     const [burgerClass, setBurgerClass] = useState("navbar__burger__line unclicked");
@@ -18,11 +26,11 @@ const HeaderNav = () => {
     useEffect(() => {
 
         const changeWidth = () => {
-          setWidth(window.innerWidth);
+            setWidth(window.innerWidth);
 
-          if(window.innerWidth > 768) {
-              setOpen(false);
-          };
+            if (window.innerWidth > 767) {
+                setOpen(false);
+            }
         };
 
         window.addEventListener('resize', changeWidth);
@@ -30,7 +38,7 @@ const HeaderNav = () => {
         return () => {
             window.removeEventListener('resize', changeWidth);
         };
-    },[]);
+    }, []);
 
     return (
         <nav className="navbar">
@@ -39,22 +47,62 @@ const HeaderNav = () => {
                 <div className={burgerClass}></div>
                 <div className={burgerClass}></div>
             </div>
-            {(isOpen || width > 768) && (
+            {(isOpen || width > 767) && (
                 <ul className="navbar__links">
                     <li className="navbar__links__link">
-                        <Link to={`/`}>ACCUEIL</Link>
+                        <FontAwesomeIcon icon={faChessKing} className="navbar__links__link__icon"/>
+                        <NavLink
+                            to={`/`}
+                            className={({isActive, isPending}) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            ACCUEIL
+                        </NavLink>
                     </li>
                     <li className="navbar__links__link">
-                        <Link to={`/info`}>A PROPOS</Link>
+                        <FontAwesomeIcon icon={faChessQueen} className="navbar__links__link__icon"/>
+                        <NavLink
+                            to={`/info`}
+                            className={({isActive, isPending}) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            A PROPOS
+                        </NavLink>
                     </li>
                     <li className="navbar__links__link">
-                        <Link to={`/activity`}>ACTIVITÉS</Link>
+                        <FontAwesomeIcon icon={faChessRook} className="navbar__links__link__icon"/>
+                        <NavLink
+                            to={`/activity`}
+                            className={({isActive, isPending}) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            ACTIVITÉS
+                        </NavLink>
                     </li>
                     <li className="navbar__links__link">
-                        <Link to={`/contact`}>CONTACT</Link>
+                        <FontAwesomeIcon icon={faChessKnight} className="navbar__links__link__icon"/>
+                        <NavLink
+                            to={`/contact`}
+                            className={({isActive, isPending}) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            CONTACT
+                        </NavLink>
                     </li>
                     <li className="navbar__links__link">
-                        <Link to={`/login`}>LOGIN</Link>
+                        <FontAwesomeIcon icon={faRightToBracket} className="navbar__links__link__icon"/>
+                        <NavLink
+                            to={`/login`}
+                            className={({isActive, isPending}) =>
+                                isPending ? "pending" : isActive ? "active" : ""
+                            }
+                        >
+                            LOGIN
+                        </NavLink>
                     </li>
                 </ul>
             )}

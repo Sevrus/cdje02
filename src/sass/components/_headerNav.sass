@@ -67,13 +67,21 @@
     gap: 20px
 
     &__link
+      @include flex(row, center, center)
+      gap: 5px
+
+      &:hover > a, &:hover > &__icon
+        color: $red
+        transition: color ease-out .5s
+
+      &__icon
+        color: $white
 
       a
         color: $white
 
-        &:hover
-          transition: color ease-out .5s
-          color: $red
+      .active
+        color: $red
 
 @media screen and (min-width: 768px)
   .navbar
@@ -86,6 +94,32 @@
       height: 100%
       z-index: auto
       @include flex(row, center, center)
-      gap: 30px
+      gap: 25px
+
+      &::before, &::after
+        content: ''
+        width: 10%
+        height: 1px
+        background-color: rgba(211, 211, 211, .5)
+
+@media screen and (min-width: 1024px)
+  .navbar
+
+    &__links
+      font-size: $fs-18
+      gap: 32px
+
+      &::before, &::after
+        width: 12%
+
+@media screen and (min-width: 1920px)
+  .navbar
+
+    &__links
+      font-size: $fs-20
+      gap: 56px
+
+      &::before, &::after
+        width: 17%
 
 
