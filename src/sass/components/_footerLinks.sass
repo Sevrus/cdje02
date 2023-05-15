@@ -5,24 +5,35 @@
 /* VERSION MOBILE */
 .footer_links
     @include flex(row, space-between, center)
-    margin: 15px 56px -30px 56px
 
     img
         height: 30px
-        width: 30px
         cursor: pointer
 
-    .footer_links_ffe
+    &_ffe
         width: 18px
+
+    &_fide
+        width: 35px
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .footer_links
+        justify-content: normal
+        margin: 0
+        width: 200px
+        flex-wrap: wrap
 
         img
             height: 35px
-            width: 35px
-            margin: 0 25px
+            margin-left: 20px
 
-        footer_links_ffe
-            width: 21px
+        &_ffe
+            width: 20px
+            margin-left: 0
+
+        &_fide
+            width: 40px
+
+/* VERSION L */
+@media screen and (min-width: 1024px)

@@ -13,35 +13,62 @@
     background: $bg-gradient
     color: $white
     font-family: $font-primary
-    width: 100%
     height: 170px
     left: 0
+    width: 100%
+    min-width: 360px
     margin-top: 10vh
 
-    .footer_center
+    &_top
+        margin: 15px 56px -30px 56px
+
+    &_center
         @include flex(row, space-between, center)
-        margin-bottom: -8px 
 
-        .footer_line_left, .footer_line_right
-            margin-top: 18px
-            width: 80px
-            height: 117px
-            border-style: solid
-            border-color: $white
+    &_bottom
+        margin-top: -10px
 
-        .footer_line_left
-            margin-left: 22px
-            border-width: 0px 0px 1px 1px
-            border-radius: 0px 0px 0px 3px
+    &_line_left
+        margin-left: 20px
 
-        .footer_line_right
-            margin-right: 22px
-            border-width: 0px 1px 1px 0px
-            border-radius: 0px 0px 3px 0px
+    &_line_right
+        margin-right: 20px
+
+    .footer_line_left, .footer_line_right
+        margin-top: 18px
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
+    .footer
+        &_center
+            @include flex(row, space-between, center)
+            margin: 20px 50px 0 50px
 
-    .footer_line_left, .footer_line_right
-        margin: 20px
-        width: 286px
+            &_left
+                @include flex(row, space-between, center)
+                width: 210px
+
+        &_bottom
+            @include flex(row, space-between, center)
+            margin-top: -120px
+
+        .footer_line_left, .footer_line_right
+            width: 286px
+            height: 117px
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .footer
+        height: 200px
+
+        .footer_line_left, .footer_line_right
+            width: 390px
+            height: 160px
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .footer
+        height: 250px
+
+        .footer_line_left, .footer_line_right
+            width: 650px

@@ -8,9 +8,24 @@
     margin: auto
     @include flex(row, normal, center)
 
-    .footer_copyright_icon
+    &_icon
         height: 15px
 
-    .footer_copyright_text
+    &_text
         font-size: $fs-12
         margin-left: 2px
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .footer_copyright
+        width: 137px
+        margin-bottom: -5px
+
+        &_icon
+            height: 18px
+
+        &_text
+            font-size: $fs-14
+
+/* VERSION L */
+@media screen and (min-width: 1024px)

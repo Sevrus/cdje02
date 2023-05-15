@@ -1,7 +1,7 @@
-<svg width="651" height="151" viewBox="0 0 651 151" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="path-1-outside-1_123_29" maskUnits="userSpaceOnUse" x="0" y="0.000244141" width="651" height="151" fill="black">
-<rect fill="white" y="0.000244141" width="651" height="151"/>
-<path d="M1 0.000244141H651V150H3.99999C2.34313 150 1 148.657 1 147V0.000244141Z"/>
+<svg width="287" height="118" viewBox="0 0 287 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-outside-1_8_142" maskUnits="userSpaceOnUse" x="0" y="0" width="287" height="118" fill="black">
+<rect fill="white" width="287" height="118"/>
+<path d="M1 0H287V117H4C2.34315 117 1 115.657 1 114V0Z"/>
 </mask>
-<path d="M1 0.000244141H651H1ZM651 151H4C1.79086 151 0 149.209 0 147H2C2 148.105 2.89543 149 4 149H651V151ZM4 151C1.79086 151 0 149.209 0 147V0.000244141H2V147C2 148.105 2.89543 149 4 149V151ZM651 0.000244141V150V0.000244141Z" fill="#D9D9D9" mask="url(#path-1-outside-1_123_29)"/>
+<path d="M1 0H287H1ZM287 118H4C1.79086 118 0 116.209 0 114H2C2 115.105 2.89543 116 4 116H287V118ZM4 118C1.79086 118 0 116.209 0 114V0H2V114C2 115.105 2.89543 116 4 116V118ZM287 0V117V0Z" fill="#D9D9D9" mask="url(#path-1-outside-1_8_142)"/>
 </svg>
