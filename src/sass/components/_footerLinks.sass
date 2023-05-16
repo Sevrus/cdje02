@@ -3,8 +3,11 @@
 
 /* FOOTER LINKS */
 /* VERSION MOBILE */
-.footer_links
-    @include flex(row, space-between, center)
+.footer__links
+    position: absolute
+    width: 100%
+    @include flex(row, space-around, center)
+    margin-top: -110px
 
     img
         height: 30px
@@ -13,55 +16,55 @@
         &:hover
             opacity: 0.5
 
-    &_ffe
+    &__ffe
         width: 18px
 
-    &_fide
-        width: 35px
+    &__fide
+        width: 38px
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
-    .footer_links
-        @include flex(row, space-around, center)
+    .footer__links
+        position: relative
         margin: 0
         width: 210px
 
         img
             height: 35px
 
-        &_ffe
+        &__ffe
             width: 20px
             margin-left: 0
 
-        &_fide
-            width: 40px
+        &__fide
+            width: 42px
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
-    .footer_links
+    .footer__links
         width: 300px
 
         img
             height: 40px
 
-        &_ffe
+        &__ffe
             width: 25px
             margin-left: 0
 
-        &_fide
+        &__fide
             width: 45px
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
-    .footer_links
-        width: 700px
+    .footer__links
+        width: 500px
 
         img
             height: 52px
 
-        &_ffe
+        &__ffe
             width: 35px
             margin-left: 0
 
-        &_fide
+        &__fide
             width: 65px

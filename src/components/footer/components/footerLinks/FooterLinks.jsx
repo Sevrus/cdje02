@@ -1,19 +1,19 @@
-import logo_comity from '../../../../assets/images/logo_comity.png';
-import logo_ffe from '../../../../assets/images/logo_ffe.png';
-import logo_fide from '../../../../assets/images/logo_fide.png';
+import logo_comity from '../../../../assets/logos/logo_comity.png';
+import logo_ffe from '../../../../assets/logos/logo_ffe.png';
+import logo_fide from '../../../../assets/logos/logo_fide.png';
 
 const FooterLinks = () => {
 
     return (
-        <div className='footer_links'>
+        <div className='footer__links'>
             <a href="http://www.echecs.asso.fr/">
-                <img src={logo_ffe} alt="logo ffe" className='footer_links_ffe' />
+                <img src={logo_ffe} alt="logo ffe" className='footer__links__ffe' />
             </a>
             <a href="https://www.fide.com/">
-                <img src={logo_fide} alt="logo fide" className='footer_links_fide' />
+                <img src={logo_fide} alt="logo fide" className='footer__links__fide' />
             </a>
             <a href="https://ehdf.fr/">
-                <img src={logo_comity} alt="logo comity" className='footer_links_comity' />
+                <img src={logo_comity} alt="logo comity" className='footer__links__comity' />
             </a>
         </div>
     )

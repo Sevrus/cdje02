@@ -3,42 +3,29 @@
 
 /* FOOTER RULES */
 /* VERSION MOBILE */
-.footer_rules
-    margin: 10px 0 0 -20px
+.footer__rules
+    @include flex(column, center, center)
 
     hr
         border: 1px solid $white
-        width: 60px
+        width: 70px
 
-    &_text
-        width: 88px
-        font-size: $fs-11
-        padding: 3px 0
-        @include flex(column, normal, center)
+    &__text
+        width: 98px
+        font-size: $fs-12
+        @include flex(column, center, center)
 
-        & a
-            text-decoration: none
-            color: $white
-            cursor: pointer
+    & a
+        text-decoration: none
+        color: $white
+        cursor: pointer
 
-            &:hover
-                color: $red
-
-@media screen and (min-width: 460px)
-    .footer_rules
-        hr
-            border: 1px solid $white
-            width: 70px
-
-        &_text
-            width: 98px
-            font-size: $fs-12
-            padding: 5px 0
-            @include flex(column, normal, center)
+        &:hover
+            color: $red
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
-    .footer_rules
+    .footer__rules
         margin: 0
 
         & a
@@ -49,22 +36,22 @@
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
-    .footer_rules
+    .footer__rules
 
         hr
             width: 90px
 
-        &_text
+        &__text
             width: 140px
             font-size: $fs-16
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
-    .footer_rules
+    .footer__rules
 
         hr
             width: 110px
 
-        &_text
+        &__text
             width: 160px
             font-size: $fs-20

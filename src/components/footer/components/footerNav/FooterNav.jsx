@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const FooterNav = () => {
 
     return (
-        <div className="footer_nav">
-            <span className="footer_nav_title">PLAN DU SITE</span>
-            <div className="footer_nav_links">
+        <div className="footer__nav">
+            <span className="footer__nav__title">PLAN DU SITE</span>
+            <div className="footer__nav__links">
                 <Link to="/">Accueil</Link>
                 <Link to="/info">A Propos</Link>
                 <Link to="/activity">Activités</Link>

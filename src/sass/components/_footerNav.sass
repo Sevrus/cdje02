@@ -3,19 +3,19 @@
 
 /* FOOTER NAV */
 /* VERSION MOBILE */
-.footer_nav
+.footer__nav
     display: none
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
-    .footer_nav
+    .footer__nav
         display: block
         width: 230px
 
-        &_title
+        &__title
             display: none
 
-        &_links
+        &__links
             @include flex(column, center, center)
 
             & a
@@ -33,10 +33,10 @@
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
-    .footer_nav
+    .footer__nav
         width: 300px
 
-        &_links
+        &__links
             height: 80px
             @include flex(row, space-around, center)
             flex-wrap: wrap
@@ -46,11 +46,11 @@
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
-    .footer_nav
+    .footer__nav
         width: 500px
         height: 100px
 
-        &_title
+        &__title
             @include flex(row, center, center)
             margin: auto
             font-weight: bold
