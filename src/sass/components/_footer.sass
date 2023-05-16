@@ -18,6 +18,7 @@
     width: 100%
     min-width: 360px
     margin-top: 10vh
+    z-index: -2
 
     &_top
         margin: 15px 56px -30px 56px
@@ -36,21 +37,22 @@
 
     .footer_line_left, .footer_line_right
         margin-top: 18px
+        z-index: -1
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .footer
         &_center
             @include flex(row, space-between, center)
-            margin: 20px 50px 0 50px
+            margin: 30px 50px 0 50px
 
             &_left
                 @include flex(row, space-between, center)
-                width: 210px
+                width: 230px
 
         &_bottom
             @include flex(row, space-between, center)
-            margin-top: -120px
+            margin-top: -95px
 
         .footer_line_left, .footer_line_right
             width: 286px
@@ -61,6 +63,21 @@
     .footer
         height: 200px
 
+        &_center
+            margin: 60px 70px 0 70px
+
+            &_left
+                width: 320px
+
+        &_bottom
+            margin-top: -120px
+
+        &_line_left
+            margin-left: 30px
+
+        &_line_right
+            margin-right: 30px
+
         .footer_line_left, .footer_line_right
             width: 390px
             height: 160px
@@ -69,6 +86,21 @@
 @media screen and (min-width: 1920px)
     .footer
         height: 250px
+
+        &_center
+            margin: 70px 180px 0 180px
+
+            &_left
+                width: 500px
+
+        &_bottom
+            margin-top: -130px
+
+        &_line_left
+            margin-left: 40px
+
+        &_line_right
+            margin-right: 40px
 
         .footer_line_left, .footer_line_right
             width: 650px

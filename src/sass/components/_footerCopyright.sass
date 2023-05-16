@@ -9,7 +9,7 @@
     @include flex(row, normal, center)
 
     &_icon
-        height: 15px
+        height: 13px
 
     &_text
         font-size: $fs-12
@@ -19,13 +19,35 @@
 @media screen and (min-width: 768px)
     .footer_copyright
         width: 137px
-        margin-bottom: -5px
+        margin-bottom: 15px
 
         &_icon
-            height: 18px
+            height: 15px
 
         &_text
             font-size: $fs-14
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
+    .footer_copyright
+        width: 154px
+        margin-bottom: 20px
+
+        &_icon
+            height: 18px
+
+        &_text
+            font-size: $fs-16
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .footer_copyright
+        width: 200px
+        margin-bottom: -8px
+
+        &_icon
+            height: 20px
+
+        &_text
+            font-size: $fs-20
+            margin-left: 4px

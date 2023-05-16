@@ -10,18 +10,52 @@
 @media screen and (min-width: 768px)
     .footer_nav
         display: block
-        width: 200px
-        padding: 4px 0
-        @include flex(column, normal, center)
+        width: 230px
 
-        & a
-            font-family: $font-primary
-            text-decoration: none
-            text-transform: uppercase
-            color: $white
-            font-size: $fs-14
-            font-weight: bold
-            cursor: pointer
+        &_title
+            display: none
+
+        &_links
+            @include flex(column, center, center)
+
+            & a
+                font-family: $font-primary
+                text-decoration: none
+                text-transform: uppercase
+                color: $white
+                padding: 1px 0
+                font-size: $fs-14
+                font-weight: bold
+                cursor: pointer
+
+                &:hover
+                    color: $red
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
+    .footer_nav
+        width: 300px
+
+        &_links
+            height: 80px
+            @include flex(row, space-around, center)
+            flex-wrap: wrap
+
+            & a
+                font-size: $fs-16
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .footer_nav
+        width: 500px
+        height: 100px
+
+        &_title
+            @include flex(row, center, center)
+            margin: auto
+            font-weight: bold
+            font-size: $fs-22
+            text-decoration: underline
+            
+        & a
+            font-size: $fs-20

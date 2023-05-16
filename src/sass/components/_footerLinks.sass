@@ -10,6 +10,9 @@
         height: 30px
         cursor: pointer
 
+        &:hover
+            opacity: 0.5
+
     &_ffe
         width: 18px
 
@@ -19,14 +22,12 @@
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .footer_links
-        justify-content: normal
+        @include flex(row, space-around, center)
         margin: 0
-        width: 200px
-        flex-wrap: wrap
+        width: 210px
 
         img
             height: 35px
-            margin-left: 20px
 
         &_ffe
             width: 20px
@@ -37,3 +38,30 @@
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
+    .footer_links
+        width: 300px
+
+        img
+            height: 40px
+
+        &_ffe
+            width: 25px
+            margin-left: 0
+
+        &_fide
+            width: 45px
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .footer_links
+        width: 700px
+
+        img
+            height: 52px
+
+        &_ffe
+            width: 35px
+            margin-left: 0
+
+        &_fide
+            width: 65px
