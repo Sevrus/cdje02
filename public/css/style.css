@@ -105,6 +105,9 @@ time, mark, audio, video {
 .navbar__links__link__icon {
   color: #fff;
 }
+.navbar__links__link__icon:hover {
+  cursor: pointer;
+}
 .navbar__links__link a {
   color: #fff;
 }
@@ -156,43 +159,47 @@ time, mark, audio, video {
     width: 17%;
   }
 }
-.header {
-  position: relative;
-  width: 100%;
-  height: 248px;
-  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
+.header-title {
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.header__title {
-  position: relative;
-}
-.header__title h1 {
+.header-title h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: "Noto Serif", serif;
   color: #fff;
+  padding-top: 45px;
   font-size: 2rem;
-  padding-top: 32px;
   text-align: center;
 }
-.header__title h1 span {
+.header-title h1 span {
   font-size: 1.75rem;
   margin-left: 10px;
 }
-.header__title--right-bar, .header__title--left-bar {
+.header-title--right-bar, .header-title--left-bar, .header-title--disappear-bar {
   position: absolute;
   width: 60px;
   height: 40px;
-  top: 70%;
+  top: 75%;
 }
-.header__title--right-bar {
+.header-title--right-bar, .header-title--left-bar {
+  opacity: 1;
+}
+.header-title--right-bar {
   right: calc(50% - 123px);
 }
-.header__title--left-bar {
+.header-title--left-bar {
   left: calc(50% - 123px);
 }
-.header__chessboard {
+.header-title--disappear-bar {
+  opacity: 0;
+}
+
+.chessboard, .chessboard-disappear {
   position: absolute;
   left: 50%;
   bottom: -60px;
@@ -200,74 +207,113 @@ time, mark, audio, video {
   width: 292px;
 }
 
+.chessboard {
+  opacity: 1;
+  transition: opacity ease-in-out 0.5s 0.2s;
+}
+
+.chessboard-disappear {
+  opacity: 0;
+  transition: opacity ease-in-out 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .header-title {
+    position: relative;
+  }
+  .header-title h1 {
+    font-size: 2.25rem;
+    padding-top: 35px;
+  }
+  .header-title h1 span {
+    font-size: 1.875rem;
+  }
+  .header-title--right-bar, .header-title--left-bar {
+    width: 72px;
+    height: 60px;
+    top: 65%;
+  }
+  .header-title--right-bar {
+    right: calc(50% - 145px);
+  }
+  .header-title--left-bar {
+    left: calc(50% - 145px);
+  }
+  .chessboard {
+    bottom: -75px;
+    width: 363px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header-title h1 {
+    font-size: 3rem;
+    padding-top: 20px;
+  }
+  .header-title h1 span {
+    font-size: 2.375rem;
+  }
+  .header-title--right-bar, .header-title--left-bar {
+    width: 117px;
+    height: 80px;
+    top: 60%;
+  }
+  .header-title--right-bar {
+    right: calc(50% - 205px);
+  }
+  .header-title--left-bar {
+    left: calc(50% - 205px);
+  }
+  .chessboard {
+    bottom: -100px;
+    width: 501px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .header-title--right-bar, .header-title--left-bar {
+    width: 150px;
+    height: 100px;
+  }
+  .header-title--right-bar {
+    right: calc(50% - 240px);
+  }
+  .header-title--left-bar {
+    left: calc(50% - 240px);
+  }
+  .chessboard {
+    bottom: -130px;
+    width: 640px;
+  }
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
+}
+
+.normal-size {
+  height: 248px;
+  transition: height ease-out 0.5s;
+}
+
+.resize {
+  height: 140px;
+  transition: height ease-out 0.5s;
+}
+
 @media screen and (min-width: 768px) {
   .header {
     height: 316px;
-  }
-  .header__title h1 {
-    font-size: 2.25rem;
-    padding-top: 49px;
-  }
-  .header__title h1 span {
-    font-size: 1.875rem;
-  }
-  .header__title--right-bar, .header__title--left-bar {
-    width: 72px;
-    height: 60px;
-  }
-  .header__title--right-bar {
-    right: calc(50% - 145px);
-  }
-  .header__title--left-bar {
-    left: calc(50% - 145px);
-  }
-  .header__chessboard {
-    bottom: -75px;
-    width: 363px;
   }
 }
 @media screen and (min-width: 1024px) {
   .header {
     height: 388px;
   }
-  .header__title h1 {
-    font-size: 3rem;
-  }
-  .header__title h1 span {
-    font-size: 2.375rem;
-  }
-  .header__title--right-bar, .header__title--left-bar {
-    width: 117px;
-    height: 80px;
-  }
-  .header__title--right-bar {
-    right: calc(50% - 205px);
-  }
-  .header__title--left-bar {
-    left: calc(50% - 205px);
-  }
-  .header__chessboard {
-    bottom: -100px;
-    width: 501px;
-  }
 }
 @media screen and (min-width: 1920px) {
   .header {
     height: 457px;
-  }
-  .header__title--right-bar, .header__title--left-bar {
-    width: 150px;
-    height: 100px;
-  }
-  .header__title--right-bar {
-    right: calc(50% - 240px);
-  }
-  .header__title--left-bar {
-    left: calc(50% - 240px);
-  }
-  .header__chessboard {
-    bottom: -130px;
-    width: 640px;
   }
 }
 

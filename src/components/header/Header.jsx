@@ -1,19 +1,19 @@
 import HeaderNav from "./components/headerNav/HeaderNav.jsx";
-import headerImg from '../../assets/images/Image_header.png';
-import rightBar from '../../assets/svg/right_bar.svg';
-import leftBar from '../../assets/svg/left_bar.svg';
+import HeaderTitle from "./components/headerTitle/HeaderTitle.jsx";
+import {useState} from "react";
 
 const Header = () => {
+    const [resizeHeader, setResizeHeader] = useState(false);
+    const changeSize = () => {
+        window.scrollY >= 280 ? setResizeHeader(true) : setResizeHeader(false);
+    }
+
+    window.addEventListener('scroll', changeSize);
 
     return (
-        <header className="header">
+        <header className={resizeHeader ? 'header resize' : 'header normal-size'}>
             <HeaderNav/>
-            <div className="header__title">
-                <img src={rightBar} alt="" className="header__title--right-bar"/>
-                <img src={leftBar} alt="" className="header__title--left-bar"/>
-                <h1>CDJE<span>02</span></h1>
-            </div>
-            <img src={headerImg} alt="Un échiquier" className="header__chessboard"/>
+            <HeaderTitle chessboardDisappear={resizeHeader}/>
         </header>
     )
 }
