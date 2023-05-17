@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
-import Confidentiality from './components/policies/confidentiality/Confidentiality';
-import LegalNotice from './components/policies/legalNotice/LegalNotice';
 import ErrorPage from './ErrorPage';
 import Activity from './views/Activity';
 import Contact from './views/Contact';
@@ -37,14 +35,6 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login />,
-            },
-            {
-                path: "/legal-notice",
-                element: <LegalNotice />,
-            },
-            {
-                path: "/confidentiality",
-                element: <Confidentiality />,
             },
         ]
     }
