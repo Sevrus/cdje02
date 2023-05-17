@@ -465,44 +465,90 @@ time, mark, audio, video {
   }
 }
 /* MENTION LEGALES */
-.legal_notice {
+.legal-notice {
   font-family: "Noto Sans", sans-serif;
-  font-weight: 500;
   margin: 40px;
+  font-size: 0.875rem;
 }
-.legal_notice .legal_notice_header {
+.legal-notice a {
+  text-decoration: none;
+  color: #4e5862;
+}
+.legal-notice__header {
   text-align: center;
 }
-.legal_notice .legal_notice_header .legal_notice_header_title {
-  font-size: 1.75rem;
-  font-weight: 700;
+.legal-notice__header__title {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #3d4450;
 }
-.legal_notice .legal_notice_header .legal_notice_header_subtitle {
-  font-size: 1rem;
+.legal-notice__header__subtitle {
   color: #242627;
 }
-.legal_notice .legal_notice_content {
-  text-align: justify;
-  font-size: 1rem;
+.legal-notice__content {
   color: #242627;
 }
-.legal_notice .legal_notice_content .legal_notice_content_intro {
+.legal-notice__content__intro {
   margin-top: 30px;
 }
-.legal_notice .legal_notice_content .legal_notice_content_intro p {
+.legal-notice__content__intro p {
   margin-top: 10px;
 }
-.legal_notice .legal_notice_content .legal_notice_content_article_title {
-  font-size: 1.375rem;
-  font-weight: 700;
+.legal-notice__content__article__title {
+  font-size: 1.25rem;
+  font-weight: bold;
   color: #4e5862;
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.legal_notice .legal_notice_footer {
-  margin: 20px 0 0 0;
+.legal-notice__footer {
   text-align: end;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+/* POLITIQUE DE CONFIDENTIALITE */
+.confidentiality {
+  font-family: "Noto Sans", sans-serif;
+  margin: 40px;
+  font-size: 0.875rem;
+}
+.confidentiality a {
+  text-decoration: none;
+  color: #4e5862;
+}
+.confidentiality__header {
+  text-align: center;
+}
+.confidentiality__header__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3d4450;
+}
+.confidentiality__header__site {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.confidentiality__header__type {
+  font-style: italic;
+  margin-top: 10px;
+}
+.confidentiality__content {
+  color: #242627;
+}
+.confidentiality__content__article__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4e5862;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.confidentiality__content__article__content p {
+  margin: 25px;
+}
+.confidentiality__footer {
+  text-align: end;
+  margin-top: 40px;
   font-style: italic;
 }
 
