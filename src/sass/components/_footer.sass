@@ -9,15 +9,15 @@
 /* FOOTER */
 /* VERSION MOBILE */
 .footer
-    position: absolute
     background: $bg-gradient
     color: $white
     font-family: $font-primary
+    margin-top: 5vh
+    position: absolute
     height: 170px
     left: 0
     width: 100%
     min-width: 360px
-    margin-top: 10vh
     z-index: -2
 
     &__center__left
@@ -41,6 +41,7 @@
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .footer
+        
         &__center
             @include flex(row, space-between, center)
             margin: 40px 50px 0 50px

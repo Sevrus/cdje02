@@ -1,0 +1,122 @@
+@import '../utilities/variables'
+@import '../utilities/mixin'
+
+.header-title
+  position: fixed
+  top: 32px
+  left: 50%
+  transform: translateX(-50%)
+
+  h1
+    @include flex(row, center, center)
+    font-family: $font-secondary
+    color: $white
+    padding-top: 45px
+    font-size: $fs-32
+    text-align: center
+
+    span
+      font-size: $fs-28
+      margin-left: 10px
+
+  &--right-bar, &--left-bar, &--disappear-bar
+    position: absolute
+    width: 60px
+    height: 40px
+    top: 75%
+
+  &--right-bar, &--left-bar
+    opacity: 1
+
+  &--right-bar
+    right: calc(50% - 123px)
+
+  &--left-bar
+    left: calc(50% - 123px)
+
+  &--disappear-bar
+    opacity: 0
+
+.chessboard, .chessboard-disappear
+  position: absolute
+  left: 50%
+  bottom: -60px
+  transform: translateX(-50%)
+  width: 292px
+
+.chessboard
+  opacity: 1
+  transition: opacity ease-in-out .5s .2s
+
+.chessboard-disappear
+  opacity: 0
+  transition: opacity ease-in-out .5s
+
+
+@media screen and (min-width: 768px)
+  .header-title
+    position: relative
+
+    h1
+      font-size: $fs-36
+      padding-top: 35px
+
+      span
+        font-size: $fs-30
+
+    &--right-bar, &--left-bar
+      width: 72px
+      height: 60px
+      top: 65%
+
+    &--right-bar
+      right: calc(50% - 145px)
+
+    &--left-bar
+      left: calc(50% - 145px)
+
+  .chessboard
+    bottom: -75px
+    width: 363px
+
+@media screen and (min-width: 1024px)
+  .header-title
+
+    h1
+      font-size: $fs-40
+      padding-top: 20px
+
+      span
+        font-size: $fs-38
+
+    &--right-bar, &--left-bar
+      width: 117px
+      height: 80px
+      top: 60%
+
+    &--right-bar
+      right: calc(50% - 205px)
+
+    &--left-bar
+      left: calc(50% - 205px)
+
+  .chessboard
+    bottom: -100px
+    width: 501px
+
+@media screen and (min-width: 1920px)
+  .header-title
+
+    &--right-bar, &--left-bar
+      width: 150px
+      height: 100px
+
+    &--right-bar
+      right: calc(50% - 240px)
+
+    &--left-bar
+      left: calc(50% - 240px)
+
+  .chessboard
+    bottom: -130px
+    width: 640px

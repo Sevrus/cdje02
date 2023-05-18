@@ -47,9 +47,9 @@ const FooterNav = () => {
                     CONTACT
                 </NavLink>
 
-                <p onClick={() => setOpenModal(true)} className="footer__nav__links__login">
+                <a onClick={() => setOpenModal(true)}>
                     LOGIN
-                </p>
+                </a>
                 {openModal && createPortal(
                     <Modal closeModal={() => setOpenModal(false)} />, document.body
                 )}
