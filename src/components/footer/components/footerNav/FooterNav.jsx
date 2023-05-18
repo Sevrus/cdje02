@@ -1,7 +1,11 @@
+import { useState } from "react";
+import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
+import Modal from "../../../modal/Modal";
 
 
 const FooterNav = () => {
+    const [openModal, setOpenModal] = useState(false);
 
     return (
         <nav className="footer__nav">
@@ -33,7 +37,7 @@ const FooterNav = () => {
                 >
                     ACTIVITÉS
                 </NavLink>
-                
+
                 <NavLink
                     to="/contact"
                     className={({ isActive, isPending }) =>
@@ -43,14 +47,12 @@ const FooterNav = () => {
                     CONTACT
                 </NavLink>
 
-                <NavLink
-                    to="/login"
-                    className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
-                    }
-                >
+                <p onClick={() => setOpenModal(true)} className="footer__nav__links__login">
                     LOGIN
-                </NavLink>
+                </p>
+                {openModal && createPortal(
+                    <Modal closeModal={() => setOpenModal(false)} />, document.body
+                )}
             </ul>
         </nav>
     )

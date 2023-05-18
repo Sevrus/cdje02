@@ -6,12 +6,12 @@ const App = () => {
 
     return (
         <>
-          <Header />
-          <div className="main">
-              <Outlet />
-          </div>
-          <Footer />
-      </>
+            <Header />
+            <div className="main">
+                <Outlet />
+            </div>
+            <Footer />
+        </>
     )
 }
 
