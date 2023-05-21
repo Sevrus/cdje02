@@ -1,9 +1,13 @@
+import Comity from "../components/comity/Comity.jsx";
+import Referee from "../components/referee/Referee.jsx";
+
 const Info = () => {
 
     return (
-        <>
-            <h1>A Propos</h1>
-        </>
+        <main className="infos">
+            <Comity />
+            <Referee />
+        </main>
     )
 }
 
