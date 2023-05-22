@@ -1,0 +1,54 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+
+/* VERSION MOBILE */
+.regulation
+    @include flex(column, center , center)
+    font-family: $font-primary
+
+    &__title
+        @include flex(row, space-between , center)
+        width: 100%
+        margin: 30px 0 12px 0
+
+        h2
+            font-size: $fs-24
+            color: $black
+
+        &__left-line, &__right-line
+            width: 20%
+            border: 1px solid rgba(0, 0, 0, 0.35)
+
+/* VERSION TABLETTE */
+@media screen and (min-width:768px)
+    .regulation
+
+        &__title
+            margin-bottom: 25px
+
+            h2
+                font-size: $fs-26
+
+        &__list
+            width: 100%
+            @include flex(row, space-around, center)
+
+/* VERSION L */
+@media screen and (min-width:1024px)
+    .regulation
+        &__title
+            margin-bottom: 40px
+
+            h2
+                font-size: $fs-32
+
+        &__list
+            flex-direction: column
+
+/* VERSION XL */
+@media screen and (min-width:1920px)
+    .regulation
+
+        &__title
+            h2
+                font-size: $fs-40
