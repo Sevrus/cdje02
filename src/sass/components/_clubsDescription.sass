@@ -1,0 +1,186 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+
+// VERSION MOBILE
+.article-clubs
+    display: flex
+    flex-direction: column
+    background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
+    border-radius: 5px
+    width: 80%
+    margin-bottom: 20px
+
+    details[open] > summary .article-clubs__title__iconChevronDown
+        transform: rotate(180deg)
+
+    details
+        transition: height 1s ease
+
+    details:not([open])
+        height: 49px
+    details[open]
+        height: 144px
+
+    &__title
+        display: flex
+        position: relative
+        margin-bottom: 15px
+
+        &__lineLeft, &__lineRight
+            width: 70px
+            position: absolute
+            bottom: 0
+            margin-bottom: 0
+
+        &__lineLeft
+            left: 15px
+
+        &__lineRight
+            right: 15px
+
+        h4
+            margin: auto
+            font-family: $font-primary
+            font-size: $fs-14
+            line-height: 14px
+            color: $white
+            padding: 10px
+
+        &__iconChevronDown
+            position: absolute
+            top: 10px
+            right: 15px
+            color: $red
+
+    &__description
+        display: flex
+        flex-direction: column
+
+        &__top
+            p
+                text-align: center
+                font-family: $font-primary
+                font-size: $fs-12
+                line-height: 12px
+                color: $white
+                padding-bottom: 5px
+
+        &__tab
+
+            &__right
+                margin-bottom: 10px
+
+            &__right, &__left
+
+                p
+                    text-align: center
+                    font-family: $font-primary
+                    font-size: $fs-12
+                    line-height: 12px
+                    color: $white
+                    padding-bottom: 5px
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .article-clubs
+        width: 80%
+        margin-bottom: 20px
+
+        details
+            transition: height 1s ease
+
+        details:not([open])
+            height: 51px
+        details[open]
+            height: 155px
+
+        h4
+            font-size: $fs-16
+            line-height: 16px
+
+        p
+            font-size: $fs-14
+            line-height: 14px
+
+// VERSION L 
+@media screen and (min-width:1024px)
+    .article-clubs
+        width: 80%
+
+        details
+            transition: height 1s ease
+
+        details:not([open])
+            height: 53px
+        details[open]
+            height: 165px
+
+        h4
+            font-size: $fs-18
+            line-height: 18px
+
+        p
+            font-size: $fs-16
+            line-height: 16px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .article-clubs
+        width: 73% 
+
+        details
+            transition: height 1s ease
+
+        details:not([open])
+            height: 55px
+        details[open]
+            height: 175px
+
+        &__title
+            align-items: flex-end
+
+            &__lineLeft, &__lineRight
+                width: 150px
+                height: 0px
+
+            &__lineLeft
+                left: 10px
+
+            &__lineRight
+                right: 10px
+
+            h4
+                font-size: $fs-20
+                line-height: 20px
+                padding: 10px
+
+            &__iconChevronDown
+                top: 5px
+                right: 10px
+
+        &__description
+            margin-bottom: 15px
+            display: flex
+            align-items: center
+
+            p
+                padding: 0px
+                font-size: $fs-18
+                line-height: 18px
+
+            &__top
+                display: flex
+
+            &__tab
+                display: flex
+                justify-content: space-around
+                width: 100%
+
+                &__right, &__left
+                    display: flex
+                    flex-direction: column
+
+                    p
+                        text-align: left
+                        padding: 20px 0 0 0

@@ -1,0 +1,168 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+@import './_clubsDescription'
+
+// VERSION MOBILE 
+.clubs
+    display: flex
+    flex-direction: column
+    margin-top: 35px
+
+    &__title
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 25px
+
+        &__subhead
+            display: flex
+            justify-content: center
+
+            h3
+                color: $black
+                font-size: $fs-12
+                font-family: $font-primary
+                line-height: 12px
+
+        &__bigTitle
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+
+            h2
+                color: $black
+                font-size: $fs-24
+                font-family: $font-primary
+                line-height: 24px
+
+            &__lineLeft, &__lineRight
+                position: absolute
+                width: 23%
+                height: 0px
+
+            &__lineLeft
+                left: 10px
+
+            &__lineRight
+                right: 10px
+
+    &__list
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        &__left, &__right
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .clubs
+
+        &__title
+            margin-bottom: 35px
+
+            &__subhead
+
+                h3
+                    font-size: $fs-14
+                    line-height: 14px
+
+            &__bigTitle
+
+                h2
+                    font-size: $fs-26
+                    line-height: 26px
+                    margin: 0 40px 0 40px
+
+                &__lineLeft, &__lineRight
+                    width: 20%
+
+                &__lineLeft
+                    left: 80px
+
+                &__lineRight
+                    right: 80px
+
+        &__list
+            flex-direction: row
+            align-items: flex-start
+
+            &__left
+                align-items: flex-end
+                margin-right: 15px
+
+            &__right
+                align-items: flex-start
+                margin-left: 15px
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .clubs
+        margin-top: 50px
+
+        &__title
+            margin-bottom: 30px
+
+            &__subhead
+
+                h3
+                    font-size: $fs-20
+                    line-height: 20px
+
+            &__bigTitle
+
+                h2
+                    font-size: $fs-32
+                    line-height: 32px
+                    margin: 0 100px 0 100px
+
+                &__lineLeft, &__lineRight
+                    width: 21%
+
+                &__lineLeft
+                    left: 100px
+
+                &__lineRight
+                    right: 100px
+
+        &__list
+
+            &__left
+                align-items: flex-end
+
+            &__right
+                align-items: flex-start
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .clubs
+        margin-top: 60px
+
+        &__title
+            margin-bottom: 45px
+
+            &__subhead
+
+                h3
+                    font-size: $fs-28
+                    line-height: 28px
+
+            &__bigTitle
+
+                h2
+                    font-size: $fs-40
+                    line-height: 40px
+                    margin: 0 350px 0 350px
+
+                &__lineLeft, &__lineRight
+                    width: 22%
+
+                &__lineLeft
+                    left: 260px
+
+                &__lineRight
+                    right: 260px
