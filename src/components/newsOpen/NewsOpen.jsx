@@ -17,8 +17,6 @@ const NewsOpen = () => {
 
             <NewsOpenArticle />
 
-            <NewsOpenArticle />
-
         </section>
     )
 }

@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import NewsOpen from "../../newsOpen/NewsOpen";
+
 const NewsArticle = () => {
 
     return (
@@ -17,7 +20,11 @@ const NewsArticle = () => {
             </div>
 
             <div className="newsArticle__link">
-                <a href="<http://>" >Lire la suite</a>
+                <Link
+                    to={``}
+                >
+                    Lire la suite
+                </Link>
             </div>
 
 

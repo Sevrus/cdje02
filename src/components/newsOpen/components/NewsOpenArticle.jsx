@@ -1,3 +1,5 @@
+import profils from '../../../assets/images/Ellipse.png'
+
 const NewsOpenArticle = () => {
 
     return (
@@ -23,7 +25,11 @@ const NewsOpenArticle = () => {
                 </div>
 
                 <div className="newsOpenArticle__info__bottom">
-                    <p>Bracq Christian</p>
+                    <div className='newsOpenArticle__info__bottom__author'>
+                        <img src={profils} alt='miniature-photo'/>
+                        <p>Bracq Christian</p>
+                    </div>
+                
                     <p>11/05/2023</p>
                 </div>
 

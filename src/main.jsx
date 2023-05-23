@@ -7,6 +7,7 @@ import Activity from './views/Activity';
 import Contact from './views/Contact';
 import Index from './views/Index';
 import Info from './views/Info';
+import NewsOpen from './components/newsOpen/NewsOpen';
 
 
 const router = createBrowserRouter([

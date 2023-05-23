@@ -335,6 +335,7 @@ time, mark, audio, video {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 .newsOpenArticle__info__bottom p {
@@ -342,6 +343,16 @@ time, mark, audio, video {
   font-size: 0.875rem;
   color: #fff;
   padding: 10px;
+}
+.newsOpenArticle__info__bottom__author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.newsOpenArticle__info__bottom__author img {
+  width: 30px;
+  height: 30px;
+  margin: 10px 0 10px 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -384,6 +395,11 @@ time, mark, audio, video {
     font-size: 1.125rem;
     padding: 20px 20px 20px 20px;
   }
+  .newsOpenArticle__info__bottom img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 10px 20px;
+  }
 }
 @media screen and (min-width: 1920px) {
   .newsOpenArticle {
@@ -404,9 +420,16 @@ time, mark, audio, video {
   }
   .newsOpenArticle__description p {
     font-size: 1.25rem;
+    padding: 10px 35px 30px;
   }
   .newsOpenArticle__info p {
     font-size: 1.25rem;
+    padding-right: 35px;
+  }
+  .newsOpenArticle__info__bottom img {
+    width: 60px;
+    height: 60px;
+    margin: 15px 0 15px 35px;
   }
 }
 .newsOpen {
@@ -1137,6 +1160,13 @@ time, mark, audio, video {
   .header {
     height: 457px;
   }
+}
+.news {
+  margin-top: 300px;
+}
+
+.news {
+  margin-top: 500px;
 }
 
 /*# sourceMappingURL=style.css.map */
