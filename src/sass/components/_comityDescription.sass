@@ -1,7 +1,7 @@
 @import '../utilities/variables'
 @import '../utilities/mixin'
 
-.accordion
+.accordion-comity
   margin-top: 25px
   font-family: $font-primary
   color: $white
@@ -12,6 +12,8 @@
     width: 306px
     background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
     border-radius: 5px
+    padding: 5px
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
 
     &__title
       position: relative
@@ -53,6 +55,14 @@
       gap: 5px
       margin: 5px 0
 
+      p
+        text-align: center
+
+      p:last-child
+        span
+          cursor: pointer
+          text-decoration: underline
+
       img
         width: 178px
         filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5))
@@ -62,4 +72,71 @@
       max-height: 9999px
       transition: all .5s cubic-bezier(0,1,0,1)
 
+@media screen and (min-width: 600px)
+  .accordion-comity
+    margin-top: 30px
 
+    &__item
+      width: 520px
+
+      &__title
+        cursor: auto
+        @include flex(row, center, center)
+
+        h3
+          font-size: $fs-18
+
+        &--left, &--right
+          position: static
+          width: 150px
+
+        &__arrow
+          opacity: 0
+
+      &__content
+        @include flex(row, start, center)
+        gap: 15px
+        margin-left: 20px
+
+        p
+          text-align: start
+          font-size: $fs-16
+
+          &:nth-child(1), &:nth-child(2)
+            margin-bottom: 10px
+
+@media screen and (min-width: 1024px)
+  .accordion-comity
+    @include flex(row, center, center)
+    flex-wrap: wrap
+    padding: 0 20px
+    margin-top: 50px
+
+    &__item
+
+      &__title
+
+        h3
+          text-align: center
+
+@media screen and (min-width: 1920px)
+  .accordion-comity
+
+    &__item
+      width: 700px
+
+      &__title
+        justify-content: start
+
+        h3
+          font-size: $fs-22
+
+      &__content
+        gap: 30px
+        margin-left: 30px
+
+        img
+          width: 200px
+
+        p
+          font-size: 20px

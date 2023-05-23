@@ -1,4 +1,4 @@
-const data = [
+const dataComity = [
     {
         id: 1,
         title: 'PRÉSIDENT',
@@ -28,4 +28,4 @@ const data = [
     }
 ]
 
-export default data;
+export default dataComity;
