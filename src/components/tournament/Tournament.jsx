@@ -11,14 +11,7 @@ const Tournament = () => {
             </div>
 
             <div className="tournament__list">
-                <div className="tournament__list__left">
-                    <Description />
-                    <Description />
-                </div>
-                <div className="tournament__list__right">
-                    <Description />
-                    <Description />
-                </div>
+                <Description />
             </div>
 
             <div className="tournament__more-results">

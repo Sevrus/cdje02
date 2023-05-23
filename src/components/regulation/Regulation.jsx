@@ -10,16 +10,7 @@ const Regulation = () => {
             </div>
 
             <div className="regulation__list">
-                <div className="regulation__list__left">
-                    <Description />
-                    <Description />
-                    <Description />
-                </div>
-                <div className="regulation__list__right">
-                    <Description />
-                    <Description />
-                    <Description />
-                </div>
+                <Description />
             </div>
         </section>
     )
