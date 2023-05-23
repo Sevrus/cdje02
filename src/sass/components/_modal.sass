@@ -2,6 +2,7 @@
 @import '../utilities/_mixin'
 
 /* MODAL LOGIN */
+/* VERSION MOBILE */
 .modal
     position: fixed
     background-color: rgba(0,0,0,.7)
@@ -15,8 +16,8 @@
         left: 50%
         transform: translate(-50%, -50%)
         background-color: $white
-        width: 600px
-        height: 436px
+        width: 320px
+        height: 400px
         border-radius: 5px
         font-family: $font-primary
         font-weight: bold
@@ -53,11 +54,11 @@
 
             &__label
                 color: $black
-                font-size: $fs-22
+                font-size: $fs-18
 
             &__input
-                width: 450px
-                height: 55px
+                width: 275px
+                height: 35px
                 border: 1px solid $grey-blue
                 box-shadow: $shadow
                 border-radius: 5px
@@ -69,10 +70,10 @@
         &__button
             @include articles()
             margin-top: 50px
-            width: 450px
-            height: 57px
+            width: 275px
+            height: 40px
             border: none
-            font-size: $fs-22
+            font-size: $fs-18
             font-weight: bold
 
             &:hover
@@ -81,9 +82,78 @@
 
         &__lost-password
             color: $grey-blue
-            font-size: $fs-16
+            font-size: $fs-14
             margin-top: 30px
 
             &:hover
                 color: $red
                 cursor: pointer
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .modal
+        &__content
+            width: 550px
+            height: 450px
+
+            &__email, &__password
+                &__label
+                    font-size: $fs-22
+
+                &__input
+                    width: 430px
+                    height: 50px
+
+            &__button
+                width: 430px
+                height: 55px
+                font-size: $fs-22
+
+            &__lost-password
+                font-size: $fs-16
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .modal
+        &__content
+            width: 700px
+            height: 500px
+
+            &__email, &__password
+                &__label
+                    font-size: $fs-24
+
+                &__input
+                    width: 450px
+                    height: 55px
+
+            &__button
+                width: 450px
+                height: 60px
+                font-size: $fs-24
+
+            &__lost-password
+                font-size: $fs-18
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .modal
+        &__content
+            width: 850px
+            height: 600px
+
+            &__email, &__password
+                &__label
+                    font-size: $fs-26
+
+                &__input
+                    width: 500px
+                    height: 70px
+
+            &__button
+                width: 500px
+                height: 75px
+                font-size: $fs-26
+
+            &__lost-password
+                font-size: $fs-20
