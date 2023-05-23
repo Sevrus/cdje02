@@ -2,127 +2,131 @@
 @import '../utilities/mixin'
 
 .navbar
-  width: 100%
-  @include flex(column, normal, center)
-  padding-top: 20px
-
-  &__burger
-    width: 35px
-    height: 25px
-    position: relative
-    cursor: pointer
-
-    &__line
-      position: absolute
-      background-color: $white
-      width: 30px
-      height: 3px
-      border-radius: 5px
-
-      &:nth-child(1)
-        top: 0
-        left: 50%
-        transform: translateX(-50%)
-
-      &:nth-child(2)
-        width: 35px
-        top: 50%
-        transform: translateY(-50%)
-
-      &:last-child
-        bottom: 0
-        left: 50%
-        transform: translateX(-50%)
-
-    &__line.clicked
-
-      &:nth-child(1)
-        top: 11px
-        left: 0
-        transform: rotate(45deg)
-        transition: ease-out 0.5s
-
-      &:nth-child(2)
-        transform: scale(0)
-        transition: ease-out 0.5s
-
-      &:last-child
-        bottom: 11px
-        left: 0
-        transform: rotate(135deg)
-        transition: ease-out 0.5s
-
-    &__line.unclicked
-      transition: ease-out 0.5s
-
-  &__links
-    font-family: $font-primary
-    font-size: $fs-16
-    font-weight: 700
-    background: $bg-gradient
     width: 100%
-    height: 301px
-    z-index: 1000
-    @include flex(column, center, center)
-    gap: 20px
-
-    &__link
-      @include flex(row, center, center)
-      gap: 5px
-
-      &:hover > a, &:hover > &__icon
-        color: $red
-        transition: color ease-out .5s
-
-      &__icon
-        color: $white
-
-        &:hover
-          cursor: pointer
-
-      a
-        color: $white
-
-      .active
-        color: $red
-
-@media screen and (min-width: 768px)
-  .navbar
-    @include flex(row, center, center)
+    @include flex(column, normal, center)
+    padding-top: 20px
 
     &__burger
-      display: none
+        width: 35px
+        height: 25px
+        position: relative
+        cursor: pointer
+
+        &__line
+            position: absolute
+            background-color: $white
+            width: 30px
+            height: 3px
+            border-radius: 5px
+
+            &:nth-child(1)
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+
+            &:nth-child(2)
+                width: 35px
+                top: 50%
+                transform: translateY(-50%)
+
+            &:last-child
+                bottom: 0
+                left: 50%
+                transform: translateX(-50%)
+
+        &__line.clicked
+
+            &:nth-child(1)
+                top: 11px
+                left: 0
+                transform: rotate(45deg)
+                transition: ease-out 0.5s
+
+            &:nth-child(2)
+                transform: scale(0)
+                transition: ease-out 0.5s
+
+            &:last-child
+                bottom: 11px
+                left: 0
+                transform: rotate(135deg)
+                transition: ease-out 0.5s
+
+        &__line.unclicked
+            transition: ease-out 0.5s
 
     &__links
-      height: 100%
-      z-index: auto
-      @include flex(row, center, center)
-      gap: 25px
+        font-family: $font-primary
+        font-size: $fs-16
+        font-weight: 700
+        background: $bg-gradient
+        width: 100%
+        height: 301px
+        z-index: 1000
+        @include flex(column, center, center)
+        gap: 20px
 
-      &::before, &::after
-        content: ''
-        width: 10%
-        height: 1px
-        background-color: rgba(211, 211, 211, .5)
+        &__link
+            @include flex(row, center, center)
+            gap: 5px
+            cursor: pointer
+
+            &:hover > a, &:hover > &__icon
+                color: $red
+                transition: color ease-out .5s
+
+            &__icon
+                display: none
+
+            a
+                color: $white
+
+            .active
+                color: $red
+
+@media screen and (min-width: 768px)
+    .navbar
+        @include flex(row, center, center)
+
+        &__burger
+            display: none
+
+        &__links
+            height: 100%
+            z-index: auto
+            @include flex(row, center, center)
+            font-size: $fs-14
+            gap: 25px
+
+            &::before, &::after
+                content: ''
+                width: 10%
+                height: 1px
+                background-color: rgba(211, 211, 211, .5)
+            
+            &__link
+                &__icon
+                    display: block
+                    color: $white
+
+                    &:hover
+                        cursor: pointer
 
 @media screen and (min-width: 1024px)
-  .navbar
+    .navbar
+        &__links
+            font-size: $fs-18
+            gap: 32px
 
-    &__links
-      font-size: $fs-18
-      gap: 32px
-
-      &::before, &::after
-        width: 12%
+            &::before, &::after
+                width: 12%
 
 @media screen and (min-width: 1920px)
-  .navbar
+    .navbar
 
-    &__links
-      font-size: $fs-20
-      gap: 56px
+        &__links
+            font-size: $fs-20
+            gap: 56px
 
-      &::before, &::after
-        width: 17%
-
-
+            &::before, &::after
+                width: 17%

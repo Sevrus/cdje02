@@ -3,28 +3,33 @@
 @import 'headerNav'
 @import 'headerTitle'
 
+/* HEADER */
+/* VERSION MOBILE */
 .header
-  position: fixed
-  top: 0
-  width: 100%
-  background: $bg-gradient
+    position: fixed
+    top: 0
+    width: 100%
+    background: $bg-gradient
 
 .normal-size
-  height: 248px
-  transition: height ease-out .5s
+    height: 230px
+    transition: height ease-out .5s
 
 .resize
-  height: 140px
-  transition: height ease-out .5s
+    height: 130px
+    transition: height ease-out .5s
 
+/* VERSION TABLETTE */
 @media screen and (min-width: 768px)
-  .header
-    height: 316px
+    .header
+        height: 210px
 
+/* VERSION L */
 @media screen and (min-width: 1024px)
-  .header
-    height: 388px
+    .header
+        height: 270px
 
+/* VERSION XL */
 @media screen and (min-width: 1920px)
-  .header
-    height: 457px
+    .header
+        height: 330px

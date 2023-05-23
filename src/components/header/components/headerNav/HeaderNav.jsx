@@ -1,6 +1,3 @@
-import {Link, NavLink} from "react-router-dom";
-import {useEffect, useState} from "react";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
     faChessKing,
     faChessKnight,
@@ -8,11 +5,17 @@ import {
     faChessRook,
     faRightToBracket
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import { NavLink } from "react-router-dom";
+import Modal from "../../../modal/Modal";
 
 const HeaderNav = () => {
     const [burgerClass, setBurgerClass] = useState("navbar__burger__line unclicked");
     const [isOpen, setOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
+    const [openModal, setOpenModal] = useState(false);
 
     const handleClick = () => {
         if (!isOpen) {
@@ -50,10 +53,10 @@ const HeaderNav = () => {
             {(isOpen || width > 767) && (
                 <ul className="navbar__links">
                     <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faChessKing} className="navbar__links__link__icon"/>
+                        <FontAwesomeIcon icon={faChessKing} className="navbar__links__link__icon" />
                         <NavLink
                             to={`/`}
-                            className={({isActive, isPending}) =>
+                            className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
@@ -61,10 +64,10 @@ const HeaderNav = () => {
                         </NavLink>
                     </li>
                     <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faChessQueen} className="navbar__links__link__icon"/>
+                        <FontAwesomeIcon icon={faChessQueen} className="navbar__links__link__icon" />
                         <NavLink
                             to={`/info`}
-                            className={({isActive, isPending}) =>
+                            className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
@@ -72,10 +75,10 @@ const HeaderNav = () => {
                         </NavLink>
                     </li>
                     <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faChessRook} className="navbar__links__link__icon"/>
+                        <FontAwesomeIcon icon={faChessRook} className="navbar__links__link__icon" />
                         <NavLink
                             to={`/activity`}
-                            className={({isActive, isPending}) =>
+                            className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
@@ -83,10 +86,10 @@ const HeaderNav = () => {
                         </NavLink>
                     </li>
                     <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faChessKnight} className="navbar__links__link__icon"/>
+                        <FontAwesomeIcon icon={faChessKnight} className="navbar__links__link__icon" />
                         <NavLink
                             to={`/contact`}
-                            className={({isActive, isPending}) =>
+                            className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
@@ -94,15 +97,13 @@ const HeaderNav = () => {
                         </NavLink>
                     </li>
                     <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faRightToBracket} className="navbar__links__link__icon"/>
-                        <NavLink
-                            to={`/login`}
-                            className={({isActive, isPending}) =>
-                                isPending ? "pending" : isActive ? "active" : ""
-                            }
-                        >
+                        <FontAwesomeIcon icon={faRightToBracket} className="navbar__links__link__icon" />
+                        <a onClick={() => setOpenModal(true)}>
                             LOGIN
-                        </NavLink>
+                        </a>
+                        {openModal && createPortal(
+                            <Modal closeModal={() => setOpenModal(false)} />, document.body
+                        )}
                     </li>
                 </ul>
             )}
