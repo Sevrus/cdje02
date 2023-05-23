@@ -22,6 +22,7 @@ time, mark, audio, video {
   box-sizing: border-box;
 }
 
+/* VERSION MOBILE */
 .navbar {
   width: 100%;
   display: flex;
@@ -109,10 +110,8 @@ time, mark, audio, video {
 .navbar__links__link a {
   color: #fff;
 }
-.navbar__links__link .active {
-  color: #f73746;
-}
 
+/* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .navbar {
     display: flex;
@@ -137,7 +136,7 @@ time, mark, audio, video {
     content: "";
     width: 10%;
     height: 1px;
-    background-color: rgba(211, 211, 211, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
   }
   .navbar__links__link__icon {
     display: block;
@@ -146,7 +145,15 @@ time, mark, audio, video {
   .navbar__links__link__icon:hover {
     cursor: pointer;
   }
+  .navbar__links__link .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 65px;
+    border-top: solid 4px #f73746;
+  }
 }
+/* VERSION L */
 @media screen and (min-width: 1024px) {
   .navbar__links {
     font-size: 1.125rem;
@@ -155,7 +162,11 @@ time, mark, audio, video {
   .navbar__links::before, .navbar__links::after {
     width: 12%;
   }
+  .navbar__links__link .active::before {
+    width: 80px;
+  }
 }
+/* VERSION XL */
 @media screen and (min-width: 1920px) {
   .navbar__links {
     font-size: 1.25rem;
@@ -163,6 +174,9 @@ time, mark, audio, video {
   }
   .navbar__links::before, .navbar__links::after {
     width: 17%;
+  }
+  .navbar__links__link .active::before {
+    width: 90px;
   }
 }
 /* VERSION MOBILE */
