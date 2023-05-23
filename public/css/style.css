@@ -81,16 +81,19 @@ time, mark, audio, video {
 .navbar__links {
   font-family: "Noto Sans", sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: bold;
   background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   width: 100%;
-  height: 301px;
+  height: 300px;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+.navbar__links--site-name, .navbar__links--disappear-site-name {
+  display: none;
 }
 .navbar__links__link {
   display: flex;
@@ -124,12 +127,10 @@ time, mark, audio, video {
   }
   .navbar__links {
     height: 100%;
-    z-index: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 0.875rem;
     gap: 25px;
   }
   .navbar__links::before, .navbar__links::after {
@@ -137,6 +138,23 @@ time, mark, audio, video {
     width: 10%;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.5);
+  }
+  .navbar__links--site-name {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Noto Serif", serif;
+  }
+  .navbar__links--site-name span {
+    font-size: 0.875rem;
+    margin-left: 5px;
+  }
+  .navbar__links--site-name__icon {
+    margin-right: 5px;
+  }
+  .navbar__links__link {
+    font-size: 0.75rem;
   }
   .navbar__links__link__icon {
     display: block;
@@ -156,11 +174,19 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .navbar__links {
-    font-size: 1.125rem;
     gap: 32px;
   }
   .navbar__links::before, .navbar__links::after {
     width: 12%;
+  }
+  .navbar__links--site-name {
+    font-size: 1.25rem;
+  }
+  .navbar__links--site-name span {
+    font-size: 1.125rem;
+  }
+  .navbar__links__link {
+    font-size: 0.875rem;
   }
   .navbar__links__link .active::before {
     width: 80px;
@@ -169,11 +195,19 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .navbar__links {
-    font-size: 1.25rem;
     gap: 56px;
   }
   .navbar__links::before, .navbar__links::after {
     width: 17%;
+  }
+  .navbar__links--site-name {
+    font-size: 1.375rem;
+  }
+  .navbar__links--site-name span {
+    font-size: 1.25rem;
+  }
+  .navbar__links__link {
+    font-size: 1.125rem;
   }
   .navbar__links__link .active::before {
     width: 90px;
@@ -193,7 +227,7 @@ time, mark, audio, video {
   align-items: center;
   font-family: "Noto Serif", serif;
   color: #fff;
-  padding-top: 35px;
+  padding-top: 25px;
   font-size: 2rem;
   text-align: center;
 }
@@ -276,8 +310,8 @@ time, mark, audio, video {
     font-size: 2.375rem;
   }
   .chessboard {
-    bottom: -90px;
-    width: 550px;
+    bottom: -80px;
+    width: 500px;
   }
 }
 /* HEADER */
@@ -295,7 +329,7 @@ time, mark, audio, video {
 }
 
 .resize {
-  height: 130px;
+  height: 120px;
   transition: height ease-out 0.5s;
 }
 
@@ -311,16 +345,16 @@ time, mark, audio, video {
     height: 270px;
   }
   .resize {
-    height: 140px;
+    height: 130px;
   }
 }
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .normal-size {
-    height: 330px;
+    height: 300px;
   }
   .resize {
-    height: 160px;
+    height: 140px;
   }
 }
 /* MODAL LOGIN */

@@ -11,7 +11,7 @@ import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
 import Modal from "../../../modal/Modal";
 
-const HeaderNav = () => {
+const HeaderNav = ({ chessboardDisappear }) => {
     const [burgerClass, setBurgerClass] = useState("navbar__burger__line unclicked");
     const [isOpen, setOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
@@ -52,6 +52,10 @@ const HeaderNav = () => {
             </div>
             {(isOpen || width > 767) && (
                 <ul className="navbar__links">
+                    <li className={chessboardDisappear ? 'navbar__links--disappear-site-name' : 'navbar__links--site-name'}>
+                        <FontAwesomeIcon icon={faChessKing} className="navbar__links--site-name__icon" />
+                        CDJE<span>02</span>
+                    </li>
                     <li className="navbar__links__link">
                         <FontAwesomeIcon icon={faChessKing} className="navbar__links__link__icon" />
                         <NavLink

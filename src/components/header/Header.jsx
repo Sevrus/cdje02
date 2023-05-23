@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <header className={resizeHeader ? 'header resize' : 'header normal-size'}>
-            <HeaderNav/>
+            <HeaderNav chessboardDisappear={resizeHeader}/>
             <HeaderTitle chessboardDisappear={resizeHeader}/>
         </header>
     )
