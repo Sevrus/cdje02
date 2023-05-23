@@ -186,7 +186,7 @@ time, mark, audio, video {
   left: 50%;
   transform: translateX(-50%);
 }
-.header-title h1 {
+.header-title--cdje, .header-title--disappear-cdje {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -197,7 +197,7 @@ time, mark, audio, video {
   font-size: 2rem;
   text-align: center;
 }
-.header-title h1 span {
+.header-title--cdje span, .header-title--disappear-cdje span {
   font-size: 1.75rem;
   margin-left: 10px;
 }
@@ -240,8 +240,14 @@ time, mark, audio, video {
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
-  .header-title {
-    display: none;
+  .header-title--cdje {
+    font-size: 2.2rem;
+  }
+  .header-title--cdje span {
+    font-size: 1.875rem;
+  }
+  .header-title--disappear-cdje, .header-title--right-bar, .header-title--left-bar {
+    opacity: 0;
   }
   .chessboard {
     bottom: -60px;
@@ -250,6 +256,12 @@ time, mark, audio, video {
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
+  .header-title--cdje {
+    font-size: 2.375rem;
+  }
+  .header-title--cdje span {
+    font-size: 2rem;
+  }
   .chessboard {
     bottom: -75px;
     width: 450px;
@@ -257,6 +269,12 @@ time, mark, audio, video {
 }
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
+  .header-title--cdje {
+    font-size: 3rem;
+  }
+  .header-title--cdje span {
+    font-size: 2.375rem;
+  }
   .chessboard {
     bottom: -90px;
     width: 550px;
@@ -286,9 +304,6 @@ time, mark, audio, video {
   .normal-size {
     height: 210px;
   }
-  .resize {
-    height: 100px;
-  }
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
@@ -296,7 +311,7 @@ time, mark, audio, video {
     height: 270px;
   }
   .resize {
-    height: 100px;
+    height: 140px;
   }
 }
 /* VERSION XL */
@@ -305,7 +320,7 @@ time, mark, audio, video {
     height: 330px;
   }
   .resize {
-    height: 100px;
+    height: 160px;
   }
 }
 /* MODAL LOGIN */
@@ -471,6 +486,11 @@ time, mark, audio, video {
   .modal__content__lost-password {
     font-size: 1.25rem;
   }
+}
+.main {
+  min-width: 360px;
+  min-height: 100vh;
+  margin-top: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */

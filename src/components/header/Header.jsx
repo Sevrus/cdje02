@@ -1,11 +1,11 @@
+import { useState } from "react";
 import HeaderNav from "./components/headerNav/HeaderNav.jsx";
 import HeaderTitle from "./components/headerTitle/HeaderTitle.jsx";
-import {useState} from "react";
 
 const Header = () => {
     const [resizeHeader, setResizeHeader] = useState(false);
     const changeSize = () => {
-        window.scrollY >= 280 ? setResizeHeader(true) : setResizeHeader(false);
+        window.scrollY >= 180 ? setResizeHeader(true) : setResizeHeader(false);
     }
 
     window.addEventListener('scroll', changeSize);
