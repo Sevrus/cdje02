@@ -30,7 +30,7 @@
             font-weight: bold
 
 /* VERSION TABLETTE */
-@media screen and (min-width:768px)
+@media screen and (min-width: 768px)
     .tournament
 
         &__title
@@ -42,9 +42,10 @@
         &__list
             width: 100%
             @include flex(row, space-around, center)
+            flex-wrap: wrap
 
 /* VERSION L */
-@media screen and (min-width:1024px)
+@media screen and (min-width: 1024px)
     .tournament
 
         &__title
@@ -63,7 +64,7 @@
                 font-size: $fs-18
 
 /* VERSION XL */
-@media screen and (min-width:1920px)
+@media screen and (min-width: 1920px)
     .tournament
 
         &__title
