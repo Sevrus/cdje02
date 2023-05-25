@@ -9,7 +9,6 @@ import Activity from './views/Activity';
 import Contact from './views/Contact';
 import Index from './views/Index';
 import Info from './views/Info';
-import Login from './views/Login';
 
 
 const router = createBrowserRouter([
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />,
-            },
-            {
-                path: "/login",
-                element: <Login />,
             },
             {
                 path: "/legal-notice",
