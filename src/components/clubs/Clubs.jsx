@@ -8,9 +8,7 @@ const Clubs = () => {
 
             <div className="clubs__title">
 
-                <div className="clubs__title__subhead">
-                    <h3>TROUVER</h3>
-                </div>
+                <h3 className="clubs__title__subhead">TROUVER</h3>
 
                 <div className="clubs__title__bigTitle">
                     <hr className="clubs__title__bigTitle__lineLeft" />
@@ -22,32 +20,11 @@ const Clubs = () => {
 
             <div className="clubs__list">
 
-                <div className="clubs__list__left">
-
-                    <ClubsDescription />
-
-                    <ClubsDescription />
-
-                    <ClubsDescription />
-
-                    <ClubsDescription />
-
-                </div>
-
-                <div className="clubs__list__right">
-
-                    <ClubsDescription />
-
-                    <ClubsDescription />
-
-                    <ClubsDescription />
-
-                </div>
+                <ClubsDescription />
 
                 <ClubsMap />
 
             </div>
-
 
         </section>
     )

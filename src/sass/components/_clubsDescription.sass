@@ -3,22 +3,24 @@
 
 // VERSION MOBILE
 .article-clubs
-    display: flex
-    flex-direction: column
+    @include flex(row, center , center)
+    flex-wrap: wrap
     background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
     border-radius: 5px
     width: 80%
-    margin-bottom: 20px
+    gap: 20px
 
     details[open] > summary .article-clubs__title__iconChevronDown
         transform: rotate(180deg)
 
     details
         transition: height 1s ease
+        width: 300px
 
     details:not([open])
         height: 49px
+
     details[open]
         height: 144px
 
@@ -56,131 +58,112 @@
     &__description
         display: flex
         flex-direction: column
-
-        &__top
-            p
-                text-align: center
-                font-family: $font-primary
-                font-size: $fs-12
-                line-height: 12px
-                color: $white
-                padding-bottom: 5px
-
-        &__tab
-
-            &__right
-                margin-bottom: 10px
-
-            &__right, &__left
-
-                p
-                    text-align: center
-                    font-family: $font-primary
-                    font-size: $fs-12
-                    line-height: 12px
-                    color: $white
-                    padding-bottom: 5px
-
-// VERSION TABLETTE
-@media screen and (min-width:768px)
-    .article-clubs
-        width: 80%
-        margin-bottom: 20px
-
-        details
-            transition: height 1s ease
-
-        details:not([open])
-            height: 51px
-        details[open]
-            height: 155px
-
-        h4
-            font-size: $fs-16
-            line-height: 16px
+        text-align: center
+        font-family: $font-primary
+        font-size: $fs-12
+        color: $white
+        padding-bottom: 5px
+        margin-bottom: 10px
 
         p
-            font-size: $fs-14
-            line-height: 14px
+            padding-bottom: 5px
 
-// VERSION L 
-@media screen and (min-width:1024px)
-    .article-clubs
-        width: 80%
+// // VERSION TABLETTE
+// @media screen and (min-width:768px)
+//     .article-clubs
+//         width: 80%
+//         margin-bottom: 20px
 
-        details
-            transition: height 1s ease
+//         details
+//             transition: height 1s ease
 
-        details:not([open])
-            height: 53px
-        details[open]
-            height: 165px
+//         details:not([open])
+//             height: 51px
+//         details[open]
+//             height: 155px
 
-        h4
-            font-size: $fs-18
-            line-height: 18px
+//         h4
+//             font-size: $fs-16
+//             line-height: 16px
 
-        p
-            font-size: $fs-16
-            line-height: 16px
+//         p
+//             font-size: $fs-14
+//             line-height: 14px
 
-// VERSION XL
-@media screen and (min-width:1920px)
-    .article-clubs
-        width: 73% 
+// // VERSION L 
+// @media screen and (min-width:1024px)
+//     .article-clubs
+//         width: 80%
 
-        details
-            transition: height 1s ease
+//         details
+//             transition: height 1s ease
 
-        details:not([open])
-            height: 55px
-        details[open]
-            height: 175px
+//         details:not([open])
+//             height: 53px
+//         details[open]
+//             height: 165px
 
-        &__title
-            align-items: flex-end
+//         h4
+//             font-size: $fs-18
+//             line-height: 18px
 
-            &__lineLeft, &__lineRight
-                width: 150px
-                height: 0px
+//         p
+//             font-size: $fs-16
+//             line-height: 16px
 
-            &__lineLeft
-                left: 10px
+// // VERSION XL
+// @media screen and (min-width:1920px)
+//     .article-clubs
+//         width: 73%
 
-            &__lineRight
-                right: 10px
+//         details
+//             transition: height 1s ease
 
-            h4
-                font-size: $fs-20
-                line-height: 20px
-                padding: 10px
+//         details:not([open])
+//             height: 55px
+//         details[open]
+//             height: 175px
 
-            &__iconChevronDown
-                top: 5px
-                right: 10px
+//         &__title
+//             align-items: flex-end
 
-        &__description
-            margin-bottom: 15px
-            display: flex
-            align-items: center
+//             &__lineLeft, &__lineRight
+//                 width: 150px
+//                 height: 0px
 
-            p
-                padding: 0px
-                font-size: $fs-18
-                line-height: 18px
+//             &__lineLeft
+//                 left: 10px
 
-            &__top
-                display: flex
+//             &__lineRight
+//                 right: 10px
 
-            &__tab
-                display: flex
-                justify-content: space-around
-                width: 100%
+//             h4
+//                 font-size: $fs-20
+//                 line-height: 20px
+//                 padding: 10px
 
-                &__right, &__left
-                    display: flex
-                    flex-direction: column
+//             &__iconChevronDown
+//                 top: 5px
+//                 right: 10px
 
-                    p
-                        text-align: left
-                        padding: 20px 0 0 0
+//         &__description
+//             margin-bottom: 15px
+//             display: flex
+//             align-items: center
+
+//             p
+//                 padding: 0px
+//                 font-size: $fs-18
+//                 line-height: 18px
+
+//             &__top
+//                 display: flex
+
+//             &__tab
+//                 display: flex
+//                 justify-content: space-around
+//                 width: 100%
+
+//                 p
+//                     text-align: left
+//                     padding: 20px 0 0 0

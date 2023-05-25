@@ -1,45 +1,33 @@
+import dataClubs from "./dataClubs.js"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const ClubsDescription = () => {
 
     return (
-        <section className="article-clubs">
+        <div className="article-clubs">
 
-            <details>
+            {dataClubs.map((item) => (
+                <details key={item.id}>
 
-                <summary className="article-clubs__title">
-                    <hr className="article-clubs__title__lineLeft" />
-                    <h4>ECHIQUIER BERNOTOIS</h4>
-                    <hr className="article-clubs__title__lineRight" />
-                    <FontAwesomeIcon className='article-clubs__title__iconChevronDown' icon={faChevronDown} />
-                </summary>
+                    <summary className="article-clubs__title">
+                        <hr className="article-clubs__title__lineLeft" />
+                        <h4>{item.name}</h4>
+                        <hr className="article-clubs__title__lineRight" />
+                        <FontAwesomeIcon className='article-clubs__title__iconChevronDown' icon={faChevronDown} />
+                    </summary>
 
-                <div className="article-clubs__description">
+                    <section className="article-clubs__description">
+                        <p>{item.city}</p>
+                        <p>Président: {item.president}</p>
+                        <p>Tél : {item.tel}</p>
+                        <p>{item.site}</p>
+                        <p>Membres: {item.members}</p>
+                    </section>
 
-                    <div className='article-clubs__description__top'>
-                        <p>Commune: BERNOT</p>
-                    </div>
-
-                    <div className='article-clubs__description__tab'>
-
-                        <div className='article-clubs__description__tab__left'>
-                            <p>Président: Gerard LEROY</p>
-                            <p>Tél : 03.23.09.86.47</p>
-                        </div>
-
-                        <div className='article-clubs__description__tab__right'>
-                            <p>https://bernot.clubeo.com/</p>
-                            <p>Membres: 10</p>
-                        </div>
-                        
-                    </div>
-
-                </div>
-
-            </details>
-
-        </section>
+                </details>
+            ))}
+        </div>
     )
 }
 

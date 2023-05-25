@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import profils from '../../../assets/images/Ellipse.png'
 
 const NewsOpenArticle = () => {
@@ -25,10 +26,10 @@ const NewsOpenArticle = () => {
                 </div>
 
                 <div className="newsOpenArticle__info__bottom">
-                    <div className='newsOpenArticle__info__bottom__author'>
+                    <Link to={'/info'} className='newsOpenArticle__info__bottom__author'>
                         <img src={profils} alt='miniature-photo'/>
                         <p>Bracq Christian</p>
-                    </div>
+                    </Link>
                 
                     <p>11/05/2023</p>
                 </div>

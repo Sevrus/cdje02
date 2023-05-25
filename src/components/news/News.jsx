@@ -5,11 +5,8 @@ const News = () => {
 
     return (
         <section className="news">
-
-            <div className="news__title__subhead">
-                <h3>DERNIÈRES</h3>
-            </div>
-
+            <h3 className="news__title__subhead">DERNIÈRES</h3>
+            
             <div className="news__title__bigTitle">
                 <hr className="news__title__bigTitle__lineLeft" />
                 <h2>ACTUALITÉS</h2>
