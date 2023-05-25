@@ -12,12 +12,12 @@
 
     &__content
         position: fixed
-        top: 40%
+        top: 50%
         left: 50%
         transform: translate(-50%, -50%)
         background-color: $white
         width: 320px
-        height: 400px
+        height: 350px
         border-radius: 5px
         font-family: $font-primary
         font-weight: bold
@@ -54,7 +54,7 @@
 
             &__label
                 color: $black
-                font-size: $fs-18
+                font-size: $fs-16
 
             &__input
                 width: 275px
@@ -69,11 +69,11 @@
 
         &__button
             @include articles()
-            margin-top: 50px
+            margin-top: 40px
             width: 275px
             height: 40px
             border: none
-            font-size: $fs-18
+            font-size: $fs-16
             font-weight: bold
 
             &:hover
@@ -83,7 +83,7 @@
         &__lost-password
             color: $grey-blue
             font-size: $fs-14
-            margin-top: 30px
+            margin-top: 20px
 
             &:hover
                 color: $red
@@ -91,6 +91,29 @@
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
+    .modal
+        &__content
+            width: 500px
+            height: 400px
+
+            &__email, &__password
+                &__label
+                    font-size: $fs-20
+
+                &__input
+                    width: 400px
+                    height: 45px
+
+            &__button
+                width: 400px
+                height: 50px
+                font-size: $fs-20
+
+            &__lost-password
+                font-size: $fs-16
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
     .modal
         &__content
             width: 550px
@@ -101,36 +124,13 @@
                     font-size: $fs-22
 
                 &__input
-                    width: 430px
+                    width: 450px
                     height: 50px
 
             &__button
-                width: 430px
+                width: 450px
                 height: 55px
                 font-size: $fs-22
-
-            &__lost-password
-                font-size: $fs-16
-
-/* VERSION L */
-@media screen and (min-width: 1024px)
-    .modal
-        &__content
-            width: 700px
-            height: 500px
-
-            &__email, &__password
-                &__label
-                    font-size: $fs-24
-
-                &__input
-                    width: 450px
-                    height: 55px
-
-            &__button
-                width: 450px
-                height: 60px
-                font-size: $fs-24
 
             &__lost-password
                 font-size: $fs-18
@@ -139,21 +139,21 @@
 @media screen and (min-width: 1920px)
     .modal
         &__content
-            width: 850px
-            height: 600px
+            width: 800px
+            height: 500px
 
             &__email, &__password
                 &__label
-                    font-size: $fs-26
+                    font-size: $fs-24
 
                 &__input
                     width: 500px
-                    height: 70px
+                    height: 60px
 
             &__button
                 width: 500px
-                height: 75px
-                font-size: $fs-26
+                height: 65px
+                font-size: $fs-24
 
             &__lost-password
                 font-size: $fs-20
