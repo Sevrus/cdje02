@@ -1,4 +1,4 @@
-const dataDescription = [
+const dataRegulation = [
     {
         id: 1,
         name: "Championnats de l'Aisne Lent",
@@ -30,4 +30,4 @@ const dataDescription = [
     },
 ]
 
-export default dataDescription;
+export default dataRegulation;

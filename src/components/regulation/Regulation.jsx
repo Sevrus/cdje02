@@ -1,4 +1,5 @@
 import Description from "../description/Description";
+import dataRegulation from "./dataRegulation.js";
 
 const Regulation = () => {
     return (
@@ -10,7 +11,7 @@ const Regulation = () => {
             </div>
 
             <div className="regulation__list">
-                <Description />
+                <Description data={dataRegulation} />
             </div>
         </section>
     )

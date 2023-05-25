@@ -1,4 +1,5 @@
 import Description from "../description/Description";
+import dataTournament from "./dataTournament.js";
 
 const Tournament = () => {
 
@@ -11,7 +12,7 @@ const Tournament = () => {
             </div>
 
             <div className="tournament__list">
-                <Description />
+                <Description data={dataTournament}/>
             </div>
 
             <div className="tournament__more-results">

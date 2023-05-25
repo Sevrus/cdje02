@@ -1,11 +1,9 @@
-import dataDescription from "./dataDescription";
-
-const Description = () => {
+const Description = ({data}) => {
 
     return (
         <>
-            {dataDescription &&
-                dataDescription.map((item) => (
+            {data &&
+                data.map((item) => (
                     <div className="activity__article" key={item.id}>
                         <div className="activity__article__title" >
                             <hr className="activity__article__title__left-line" />
