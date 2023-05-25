@@ -1,8 +1,18 @@
+import Form from "../components/form/Form"
+
 const Contact = () => {
 
     return (
         <>
-            <h1>Contact</h1>
+            <section className="contact">
+                <div className="contact__title">
+                    <hr className="contact__title__lineLeft" />
+                    <h2>CONTACT</h2>
+                    <hr className="contact__title__lineRight" />
+                </div>
+            </section>
+
+            <Form />
         </>
     )
 }

@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+.form__lastname, .form__firstname, .form__email, .form__message {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 14px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.form__lastname label, .form__firstname label, .form__email label, .form__message label {
+  margin-bottom: 15px;
+}
+.form__lastname input, .form__lastname textarea, .form__firstname input, .form__firstname textarea, .form__email input, .form__email textarea, .form__message input, .form__message textarea {
+  width: 78%;
+  max-width: 450px;
+  border-radius: 5px;
+  border: 1px solid #242627;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+.form__lastname input, .form__firstname input, .form__email input, .form__message input {
+  height: 40px;
+}
+.form__lastname span, .form__firstname span, .form__email span, .form__message span {
+  color: #f73746;
+  padding-top: 10px;
+}
+.form__btn {
+  display: flex;
+  justify-content: center;
+}
+.form__btn button {
+  background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #fff;
+  width: 28%;
+  height: 30px;
+  font-size: 0.875rem;
+  line-height: 14px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    margin-top: 30px;
+  }
+  .form__lastname, .form__firstname, .form__email, .form__message, .form button {
+    font-size: 1.125rem;
+    line-height: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .form__lastname, .form__firstname, .form__email, .form__message {
+    margin-bottom: 30px;
+  }
+  .form__lastname, .form__firstname, .form__email, .form__message, .form button {
+    font-size: 1.25rem;
+    line-height: 20px;
+  }
+  .form label {
+    margin-bottom: 20px;
+  }
+  .form input, .form textarea {
+    width: 79%;
+  }
+  .form button {
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .form {
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+  .form__lastname, .form__firstname, .form__email, .form__message {
+    margin-bottom: 40px;
+  }
+  .form__lastname, .form__firstname, .form__email, .form__message, .form button {
+    font-size: 1.5rem;
+    line-height: 24px;
+  }
+  .form__lastname label, .form__firstname label, .form__email label, .form__message label, .form button label {
+    margin-bottom: 20px;
+  }
+  .form__lastname input, .form__lastname textarea, .form__firstname input, .form__firstname textarea, .form__email input, .form__email textarea, .form__message input, .form__message textarea, .form button input, .form button textarea {
+    width: 60%;
+  }
+  .form button {
+    height: 50px;
+  }
+}
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 35px;
+}
+.contact__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.contact__title h2 {
+  color: #242627;
+  font-size: 1.5rem;
+  font-family: "Noto Sans", sans-serif;
+  line-height: 24px;
+}
+.contact__title__lineLeft, .contact__title__lineRight {
+  width: 23%;
+  height: 0px;
+  position: absolute;
+}
+.contact__title__lineLeft {
+  left: 10px;
+}
+.contact__title__lineRight {
+  right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__title h2 {
+    font-size: 1.625rem;
+    line-height: 26px;
+    margin: 0;
+  }
+  .contact__title__lineLeft, .contact__title__lineRight {
+    width: 20%;
+  }
+  .contact__title__lineLeft {
+    left: 80px;
+  }
+  .contact__title__lineRight {
+    right: 80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact {
+    margin-top: 50px;
+  }
+  .contact__title h2 {
+    font-size: 2rem;
+    line-height: 32px;
+    margin: 0;
+  }
+  .contact__title__lineLeft, .contact__title__lineRight {
+    width: 21%;
+  }
+  .contact__title__lineLeft {
+    left: 100px;
+  }
+  .contact__title__lineRight {
+    right: 100px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .contact {
+    margin-top: 90px;
+  }
+  .contact__title h2 {
+    font-size: 3rem;
+    line-height: 40px;
+    margin: 0;
+  }
+  .contact__title__lineLeft, .contact__title__lineRight {
+    width: 22%;
+  }
+  .contact__title__lineLeft {
+    left: 260px;
+  }
+  .contact__title__lineRight {
+    right: 260px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
