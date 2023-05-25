@@ -2,16 +2,17 @@
 @import '../utilities/mixin'
 
 /* VERSION MOBILE */
-.navbar
+.navbar, .navbar--scroll
     width: 100%
     @include flex(column, normal, center)
-    padding-top: 20px
+    padding-top: 10px
 
     &__burger
         width: 35px
         height: 25px
         position: relative
         cursor: pointer
+        z-index: 1000
 
         &__line
             position: absolute
@@ -56,7 +57,7 @@
         &__line.unclicked
             transition: ease-out 0.5s
 
-    &__links
+    &__links, &__links--scroll
         font-family: $font-primary
         font-size: $fs-16
         font-weight: bold
@@ -65,12 +66,15 @@
         height: 300px
         z-index: 1000
         @include flex(column, center, center)
-        gap: 20px
+        gap: 15px
 
         &--site-name, &--disappear-site-name
             display: none
 
-        &__link
+        &__logo, &__logo--scroll
+            width: 60px
+
+        &__link, &__link--scroll
             @include flex(row, center, center)
             gap: 5px
             cursor: pointer
@@ -79,16 +83,23 @@
                 color: $red
                 transition: color ease-out .5s
 
-            &__icon
+            &__icon, &__icon--scroll
                 display: none
 
             a
                 color: $white
 
+            .active
+                color: $red
+
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .navbar
         @include flex(row, center, center)
+        padding-top: 0
+
+        &--scroll
+            flex: none
 
         &__burger
             display: none
@@ -104,19 +115,46 @@
                 height: 1px
                 background-color: rgba(255, 255, 255, .5)
 
+            &--scroll
+                @include flex(row, center, center)
+                width: auto
+                height: auto
+                background: none
+                border: 1px solid rgba(255, 255, 255, .5)
+                padding: 15px
+                font-size: $fs-14
+                margin-right: -40%
+                margin-top: 10px                
+
+            &__logo
+                display: none
+
+                &--scroll
+                    position: absolute
+                    width: 80px
+                    left: 30px
+                    top: 12px
+
+                    &::after 
+                        content: ''
+                        width: 200px
+                        height: 1px
+                        background-color: rgba(255, 255, 255, .5)
+
+
             &--site-name
                 display: block
-                font-size: $fs-16
+                font-size: $fs-18
                 color: $white
                 font-weight: bold
                 font-family: $font-secondary
+                margin-right: 20px
 
-                span
+                &__span
+                    color: $red
                     font-size: $fs-14
-                    margin-left: 5px
-
-                &__icon
-                    margin-right: 5px
+                    text-align: end
+                    margin-top: -8px
 
             &__link
                 font-size: $fs-12
@@ -129,12 +167,12 @@
                         cursor: pointer
 
                 .active
-                    &::before
-                        content: ''
-                        position: absolute
-                        top: 0
-                        width: 65px
-                        border-top: solid 4px $red
+                    border-top: 3.5px solid $red
+                    margin-bottom: 10px
+                    padding-top: 10px
+
+                &--scroll
+                    @include flex(row, space-between, center)
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
@@ -145,14 +183,26 @@
             &::before, &::after
                 width: 12%
 
+            &--scroll
+                margin-top: 20px
+                margin-right: -50%
+
             &--site-name
                 font-size: $fs-20
 
-                span
-                    font-size: $fs-18
+                &__span
+                    font-size: $fs-16
+                    margin-top: -9px
 
             &__link
                 font-size: $fs-14
+
+                &--scroll
+                    font-size: $fs-16
+
+            &__logo--scroll
+                width: 100px
+                left: 50px
 
                 .active
                     &::before
@@ -168,15 +218,23 @@
             &::before, &::after
                 width: 17%
 
-            &--site-name
-                font-size: $fs-22
+            &--scroll
+                margin-top: 30px
+                margin-right: -60%
 
-                span
+            &--site-name
+                font-size: $fs-24
+
+                &__span
                     font-size: $fs-20
+                    margin-top: -10px
 
             &__link
                 font-size: $fs-18
 
-                .active
-                    &::before
-                        width: 90px
+                &--scroll
+                    font-size: $fs-20
+
+            &__logo--scroll
+                width: 120px
+                left: 100px

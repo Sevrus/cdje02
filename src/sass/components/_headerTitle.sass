@@ -12,7 +12,7 @@
         @include flex(row, center, center)
         font-family: $font-secondary
         color: $white
-        padding-top: 25px
+        padding-top: 20px
         font-size: $fs-32
         text-align: center
 
@@ -56,41 +56,26 @@
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .header-title
-        &--cdje
-            font-size: $fs-36
 
-            span
-                font-size: $fs-30
-        
-        &--disappear-cdje, &--right-bar, &--left-bar
+        &--disappear-cdje, &--cdje, &--right-bar, &--left-bar
             opacity: 0
 
-    .chessboard
+    .chessboard, .chessboard-disappear
         bottom: -60px
         width: 350px
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
     .header-title
-        &--cdje
-            font-size: $fs-38
 
-            span
-                font-size: $fs-32
-
-    .chessboard
+    .chessboard, .chessboard-disappear
         bottom: -75px
         width: 450px
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
     .header-title
-        &--cdje
-            font-size: $fs-40
 
-            span
-                font-size: $fs-38
-
-    .chessboard
+    .chessboard, .chessboard-disappear
         bottom: -80px
         width: 500px
