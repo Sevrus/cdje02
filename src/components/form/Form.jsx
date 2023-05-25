@@ -1,43 +1,37 @@
-import { useForm } from "react-hook-form";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Form = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('contact_service', 'contact_form', form.current, 'uNJ6omJwqTvh-UN0K')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     return (
-        <form onSubmit={handleSubmit(data => console.log(data))} className="form" action="" method="post">
+        <form ref={form} onSubmit={sendEmail} className="form">
             <div className="form__lastname">
                 <label htmlFor="lastname">Nom</label>
-                <input
-                    {...register("lastName", { required: true, maxLength: 20, pattern: /^[A-Za-z]+$/ })}
-                    type="text"
-                />
-                {errors.lastName?.type === 'required' && <span role="alert">Nom Requis</span>}
+                <input type="text" name="lastname" maxLength={20} pattern='/^[A-Za-z]+$/i'/>
             </div>
             <div className="form__firstname">
                 <label htmlFor="firstname">Prénom</label>
-                <input
-                    {...register("firstName", { required: true, maxLength: 20, pattern: /^[A-Za-z]+$/i })}
-                    type="text"
-                />
-                {errors.firstName?.type === 'required' && <span role="alert">Prénom Requis</span>}
+                <input type="text" name='firstname' maxLength={20} pattern='/^[A-Za-z]+$/i'/>
             </div>
             <div className="form__email">
                 <label htmlFor="email">Email</label>
-                <input
-                    {...register("email", { required: true, maxLength: 40 })}
-                    type="email"
-                />
-                {errors.email?.type === 'required' && <span role="alert">Email Requis</span>}
+                <input type="email" name='email' maxLength={40} pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'/>
             </div>
             <div className="form__message">
                 <label htmlFor="message">Message</label>
-                <textarea
-                    {...register("message", { required: true, maxLength: 250 })}
-                    cols="30" rows="10"
-                >
-                </textarea>
-                {errors.message?.type === 'required' && <span role="alert">Message Requis</span>}
+                <textarea cols="30" rows="10" name='message' maxLength={200} />
             </div>
             <div className="form__btn">
                 <button>Envoyer</button>

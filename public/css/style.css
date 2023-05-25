@@ -52,6 +52,7 @@ time, mark, audio, video {
 }
 .form__lastname input, .form__firstname input, .form__email input, .form__message input {
   height: 40px;
+  text-indent: 10px;
 }
 .form__lastname span, .form__firstname span, .form__email span, .form__message span {
   color: #f73746;
