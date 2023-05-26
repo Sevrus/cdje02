@@ -19,16 +19,10 @@
         display: none
 
         &--scroll
-            position: absolute
+            position: relative
             width: 80px
             left: 30px
             top: 12px
-
-            // &::after
-            //     content: ''
-            //     width: 200px
-            //     height: 1px
-            //     background-color: rgba(255, 255, 255, .5)
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
@@ -38,6 +32,9 @@
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
+    .logo
+        display: block
+
     .logo--scroll
         width: 120px
         left: 100px

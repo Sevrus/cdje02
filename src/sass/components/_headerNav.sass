@@ -3,14 +3,12 @@
 
 /* VERSION MOBILE */
 .navbar, .navbar--scroll
-    @include flex(column, normal, center)
-
     &__burger
         position: absolute
         width: 35px
         height: 25px
         cursor: pointer
-        z-index: 1000
+        z-index: 1001
         right: 15px
         top: 15px
 
@@ -70,12 +68,12 @@
         top: 0
         left: 0
         margin-bottom: -10px
+        z-index: 1000
 
         &--site-name, &--disappear-site-name
             display: none
 
         &__link, &__link--scroll
-            z-index: 1000
             gap: 5px
             cursor: pointer
             width: 100px
@@ -103,11 +101,8 @@
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .navbar
-        @include flex(row, center, center)
-        height: 20px
-        width: 100%
-        left: 0
-        top: 0
+        width: 90%
+        margin: 0 auto
 
         &--scroll
             flex: none
@@ -117,10 +112,10 @@
 
         &__links
             position: relative
-            // height: 100%
-            // width: 100%
             @include flex(row, center, center)
             gap: 25px
+            height: auto
+            background: none
 
             &::before, &::after
                 content: ''
@@ -129,15 +124,14 @@
                 background-color: rgba(255, 255, 255, .5)
 
             &--scroll
+                position: relative
                 @include flex(row, center, center)
-                width: auto
-                height: auto
+                width: fit-content
+                height: fit-content
                 background: none
                 border: 1px solid rgba(255, 255, 255, .5)
                 padding: 15px
-                font-size: $fs-14
-                margin-right: -40%
-                margin-top: 10px
+                margin: -3px 30px 0 0
 
             &--site-name
                 display: block
@@ -170,7 +164,7 @@
                     padding-top: 10px
 
                 &--scroll
-                    @include flex(row, space-between, center)
+                    font-size: $fs-14
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
@@ -182,11 +176,11 @@
                 width: 12%
 
             &--scroll
-                margin-top: 20px
-                margin-right: -50%
+                margin-right: 50px
 
             &--site-name
                 font-size: $fs-20
+                margin-right: 40px
 
                 &__span
                     font-size: $fs-16
@@ -197,6 +191,9 @@
 
                 &--scroll
                     font-size: $fs-16
+                
+            &__icon
+                margin-left: 40px
 
                 .active
                     &::before
@@ -213,15 +210,10 @@
                 width: 17%
 
             &--scroll
-                margin-top: 30px
-                margin-right: -60%
+                margin-right: 100px
 
             &--site-name
-                font-size: $fs-24
-
-                &__span
-                    font-size: $fs-20
-                    margin-top: -10px
+                display: none
 
             &__link
                 font-size: $fs-18

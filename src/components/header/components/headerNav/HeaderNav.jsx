@@ -47,7 +47,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                 <div className={burgerClass}></div>
                 <div className={burgerClass}></div>
             </div>
-
+            
             {(isOpen || width > 767) && (
                 <ul className={chessboardDisappear ? 'navbar__links--scroll' : 'navbar__links'}>
                     <li className={chessboardDisappear ? 'navbar__links--disappear-site-name' : 'navbar__links--site-name'}>

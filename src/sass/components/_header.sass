@@ -30,11 +30,15 @@
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
+    .header
+        display: inline
+
     .normal-size
         height: 200px
     
     .resize
         height: 90px
+        @include flex(row, space-between, center)
 
 /* VERSION L */
 @media screen and (min-width: 1024px)

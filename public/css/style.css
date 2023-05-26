@@ -23,18 +23,12 @@ time, mark, audio, video {
 }
 
 /* VERSION MOBILE */
-.navbar, .navbar--scroll {
-  display: flex;
-  flex-direction: column;
-  justify-content: normal;
-  align-items: center;
-}
 .navbar__burger, .navbar--scroll__burger {
   position: absolute;
   width: 35px;
   height: 25px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1001;
   right: 15px;
   top: 15px;
 }
@@ -95,12 +89,12 @@ time, mark, audio, video {
   top: 0;
   left: 0;
   margin-bottom: -10px;
+  z-index: 1000;
 }
 .navbar__links--site-name, .navbar__links--disappear-site-name, .navbar__links--scroll--site-name, .navbar__links--scroll--disappear-site-name, .navbar--scroll__links--site-name, .navbar--scroll__links--disappear-site-name, .navbar--scroll__links--scroll--site-name, .navbar--scroll__links--scroll--disappear-site-name {
   display: none;
 }
 .navbar__links__link, .navbar__links__link--scroll, .navbar__links--scroll__link, .navbar__links--scroll__link--scroll, .navbar--scroll__links__link, .navbar--scroll__links__link--scroll, .navbar--scroll__links--scroll__link, .navbar--scroll__links--scroll__link--scroll {
-  z-index: 1000;
   gap: 5px;
   cursor: pointer;
   width: 100px;
@@ -132,14 +126,8 @@ time, mark, audio, video {
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
-    width: 100%;
-    left: 0;
-    top: 0;
+    width: 90%;
+    margin: 0 auto;
   }
   .navbar--scroll {
     flex: none;
@@ -154,6 +142,8 @@ time, mark, audio, video {
     justify-content: center;
     align-items: center;
     gap: 25px;
+    height: auto;
+    background: none;
   }
   .navbar__links::before, .navbar__links::after {
     content: "";
@@ -162,18 +152,17 @@ time, mark, audio, video {
     background-color: rgba(255, 255, 255, 0.5);
   }
   .navbar__links--scroll {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: auto;
+    width: fit-content;
+    height: fit-content;
     background: none;
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 15px;
-    font-size: 0.875rem;
-    margin-right: -40%;
-    margin-top: 10px;
+    margin: -3px 30px 0 0;
   }
   .navbar__links--site-name {
     display: block;
@@ -206,10 +195,7 @@ time, mark, audio, video {
     padding-top: 10px;
   }
   .navbar__links__link--scroll {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 0.875rem;
   }
 }
 /* VERSION L */
@@ -221,11 +207,11 @@ time, mark, audio, video {
     width: 12%;
   }
   .navbar__links--scroll {
-    margin-top: 20px;
-    margin-right: -50%;
+    margin-right: 50px;
   }
   .navbar__links--site-name {
     font-size: 1.25rem;
+    margin-right: 40px;
   }
   .navbar__links--site-name__span {
     font-size: 1rem;
@@ -237,7 +223,10 @@ time, mark, audio, video {
   .navbar__links__link--scroll {
     font-size: 1rem;
   }
-  .navbar__links__link .active::before {
+  .navbar__links__icon {
+    margin-left: 40px;
+  }
+  .navbar__links__icon .active::before {
     width: 80px;
   }
 }
@@ -250,15 +239,10 @@ time, mark, audio, video {
     width: 17%;
   }
   .navbar__links--scroll {
-    margin-top: 30px;
-    margin-right: -60%;
+    margin-right: 100px;
   }
   .navbar__links--site-name {
-    font-size: 1.5rem;
-  }
-  .navbar__links--site-name__span {
-    font-size: 1.25rem;
-    margin-top: -10px;
+    display: none;
   }
   .navbar__links__link {
     font-size: 1.125rem;
@@ -333,7 +317,7 @@ time, mark, audio, video {
     display: none;
   }
   .logo--scroll {
-    position: absolute;
+    position: relative;
     width: 80px;
     left: 30px;
     top: 12px;
@@ -348,6 +332,9 @@ time, mark, audio, video {
 }
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
+  .logo {
+    display: block;
+  }
   .logo--scroll {
     width: 120px;
     left: 100px;
@@ -386,11 +373,18 @@ time, mark, audio, video {
 }
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
+  .header {
+    display: inline;
+  }
   .normal-size {
     height: 200px;
   }
   .resize {
     height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 /* VERSION L */
