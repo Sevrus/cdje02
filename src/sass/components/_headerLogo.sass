@@ -1,0 +1,43 @@
+@import '../utilities/variables'
+@import '../utilities/mixin'
+
+/* VERSION MOBILE */
+.logo, .logo--scroll
+    position: absolute
+    width: 50px
+    left: 10px
+    top: 10px
+
+@media screen and (min-width: 500px)
+    .logo, .logo--scroll
+        width: 60px
+        left: 20px
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .logo
+        display: none
+
+        &--scroll
+            position: absolute
+            width: 80px
+            left: 30px
+            top: 12px
+
+            // &::after
+            //     content: ''
+            //     width: 200px
+            //     height: 1px
+            //     background-color: rgba(255, 255, 255, .5)
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .logo--scroll
+        width: 100px
+        left: 50px
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .logo--scroll
+        width: 120px
+        left: 100px

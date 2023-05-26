@@ -4,9 +4,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Link, NavLink } from "react-router-dom";
-import logoCDJE from "../../../../assets/svg/logo_cdje.svg";
+import { NavLink } from "react-router-dom";
 import Modal from "../../../modal/Modal";
+
 
 const HeaderNav = ({ chessboardDisappear }) => {
     const [burgerClass, setBurgerClass] = useState("navbar__burger__line unclicked");
@@ -47,17 +47,13 @@ const HeaderNav = ({ chessboardDisappear }) => {
                 <div className={burgerClass}></div>
                 <div className={burgerClass}></div>
             </div>
+
             {(isOpen || width > 767) && (
                 <ul className={chessboardDisappear ? 'navbar__links--scroll' : 'navbar__links'}>
                     <li className={chessboardDisappear ? 'navbar__links--disappear-site-name' : 'navbar__links--site-name'}>
                         <p>CDJE</p>
                         <p className="navbar__links--site-name__span">02</p>
                     </li>
-
-                    <Link to={`/`}>
-                        <img src={logoCDJE} alt="logo CDJE02"
-                            className={chessboardDisappear ? 'navbar__links__logo--scroll' : 'navbar__links__logo'} />
-                    </Link>
 
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
                         <NavLink
@@ -111,6 +107,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                     </li>
                 </ul>
             )}
+
 
         </nav>
     )

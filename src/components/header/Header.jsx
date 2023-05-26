@@ -1,6 +1,7 @@
 import { useState } from "react";
+import HeaderLogo from "./components/headerLogo/HeaderLogo.jsx";
 import HeaderNav from "./components/headerNav/HeaderNav.jsx";
-import HeaderTitle from "./components/headerTitle/HeaderTitle.jsx";
+import HeaderChessboard from "./components/headerTitle/HeaderChessboard.jsx";
 
 const Header = () => {
     const [resizeHeader, setResizeHeader] = useState(false);
@@ -12,8 +13,9 @@ const Header = () => {
 
     return (
         <header className={resizeHeader ? 'header resize' : 'header normal-size'}>
+            <HeaderChessboard chessboardDisappear={resizeHeader}/>
+            <HeaderLogo chessboardDisappear={resizeHeader}/>
             <HeaderNav chessboardDisappear={resizeHeader}/>
-            <HeaderTitle chessboardDisappear={resizeHeader}/>
         </header>
     )
 }
