@@ -590,12 +590,12 @@ time, mark, audio, video {
   width: 70px;
   margin-top: 7px;
 }
-.footer__socials__icons {
+.footer__socials__icons a {
   color: #fff;
   font-size: 1.125rem;
   margin-left: 7px;
 }
-.footer__socials__icons:hover {
+.footer__socials__icons a:hover {
   color: #f73746;
 }
 
@@ -608,7 +608,7 @@ time, mark, audio, video {
   .footer__socials__text {
     font-size: 0.875rem;
   }
-  .footer__socials__icons {
+  .footer__socials__icons a {
     font-size: 1.375rem;
   }
 }
@@ -623,7 +623,7 @@ time, mark, audio, video {
   .footer__socials hr {
     width: 90px;
   }
-  .footer__socials__icons {
+  .footer__socials__icons a {
     font-size: 1.75rem;
     margin-left: 12px;
   }
@@ -639,7 +639,7 @@ time, mark, audio, video {
   .footer__socials hr {
     width: 110px;
   }
-  .footer__socials__icons {
+  .footer__socials__icons a {
     font-size: 2rem;
   }
 }
@@ -852,7 +852,7 @@ time, mark, audio, video {
 }
 .modal__content {
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -939,6 +939,11 @@ time, mark, audio, video {
   cursor: pointer;
 }
 
+@media screen and (max-height: 600px) {
+  .modal__content {
+    top: 50%;
+  }
+}
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .modal__content {
