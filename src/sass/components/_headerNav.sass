@@ -104,9 +104,6 @@
         width: 90%
         margin: 0 auto
 
-        &--scroll
-            flex: none
-
         &__burger
             display: none
 
@@ -129,9 +126,9 @@
                 width: fit-content
                 height: fit-content
                 background: none
-                border: 1px solid rgba(255, 255, 255, .5)
                 padding: 15px
                 margin: -3px 30px 0 0
+                border: 1px solid rgba(255, 255, 255, .5)
 
             &--site-name
                 display: block
@@ -191,32 +188,71 @@
 
                 &--scroll
                     font-size: $fs-16
-                
+
             &__icon
                 margin-left: 40px
 
                 .active
                     &::before
                         width: 80px
+    
+@media screen and (min-width: 1250px)
+    .navbar--scroll
+        width: 100%
+        @include flex(row, space-between, center)
+        &::before
+            content: ''
+            width: 30%
+            height: 1px
+            background-color: rgba(255, 255, 255, .5)
+            margin-left: 10%
 
+@media screen and (min-width: 1600px)
+    .navbar--scroll
+        &::before
+            width: 40%
+    
 /* VERSION XL */
 @media screen and (min-width: 1920px)
     .navbar
+        width: 100%
 
         &__links
-            gap: 56px
+            position: relative
+            width: fit-content
+            height: fit-content
+            border: 1px solid rgba(255, 255, 255, .5)
+            padding: 15px
+            top: 30px
+            right: 0
 
             &::before, &::after
-                width: 17%
+                content: none
 
             &--scroll
                 margin-right: 100px
+                width: 800px
+                gap: 56px
+                padding: 25px 0
 
             &--site-name
                 display: none
 
-            &__link
+            &__link, &__link--scroll
                 font-size: $fs-18
 
-                &--scroll
-                    font-size: $fs-20
+                .active
+                    border-top: none
+
+                &__icon
+                    display: none
+                    margin-left: 0
+        
+    .navbar--scroll
+        &::before
+            width: 30%
+
+@media screen and (min-width: 2100px)
+    .navbar--scroll
+        &::before
+            width: 40%

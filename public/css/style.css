@@ -129,9 +129,6 @@ time, mark, audio, video {
     width: 90%;
     margin: 0 auto;
   }
-  .navbar--scroll {
-    flex: none;
-  }
   .navbar__burger {
     display: none;
   }
@@ -160,9 +157,9 @@ time, mark, audio, video {
     width: fit-content;
     height: fit-content;
     background: none;
-    border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 15px;
     margin: -3px 30px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
   }
   .navbar__links--site-name {
     display: block;
@@ -230,25 +227,70 @@ time, mark, audio, video {
     width: 80px;
   }
 }
+@media screen and (min-width: 1250px) {
+  .navbar--scroll {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar--scroll::before {
+    content: "";
+    width: 30%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: 10%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .navbar--scroll::before {
+    width: 40%;
+  }
+}
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
+  .navbar {
+    width: 100%;
+  }
   .navbar__links {
-    gap: 56px;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    top: 30px;
+    right: 0;
   }
   .navbar__links::before, .navbar__links::after {
-    width: 17%;
+    content: none;
   }
   .navbar__links--scroll {
     margin-right: 100px;
+    width: 800px;
+    gap: 56px;
+    padding: 25px 0;
   }
   .navbar__links--site-name {
     display: none;
   }
-  .navbar__links__link {
+  .navbar__links__link, .navbar__links__link--scroll {
     font-size: 1.125rem;
   }
-  .navbar__links__link--scroll {
-    font-size: 1.25rem;
+  .navbar__links__link .active, .navbar__links__link--scroll .active {
+    border-top: none;
+  }
+  .navbar__links__link__icon, .navbar__links__link--scroll__icon {
+    display: none;
+    margin-left: 0;
+  }
+  .navbar--scroll::before {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 2100px) {
+  .navbar--scroll::before {
+    width: 40%;
   }
 }
 /* VERSION MOBILE */
@@ -335,7 +377,7 @@ time, mark, audio, video {
   .logo {
     display: block;
   }
-  .logo--scroll {
+  .logo, .logo--scroll {
     width: 120px;
     left: 100px;
   }
@@ -399,7 +441,7 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .normal-size {
-    height: 250px;
+    height: 220px;
   }
   .resize {
     height: 130px;
