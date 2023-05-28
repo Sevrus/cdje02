@@ -458,7 +458,7 @@ time, mark, audio, video {
 }
 .modal__content {
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -545,6 +545,11 @@ time, mark, audio, video {
   cursor: pointer;
 }
 
+@media screen and (max-height: 600px) {
+  .modal__content {
+    top: 50%;
+  }
+}
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .modal__content {
