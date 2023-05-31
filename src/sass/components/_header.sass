@@ -9,9 +9,9 @@
 .header
     position: fixed
     top: 0
+    width: 100%
     background: $bg-gradient
     @include flex(row, space-between, center)
-    width: 100%
 
 .normal-size
     height: 110px
@@ -52,6 +52,7 @@
 @media screen and (min-width: 1920px)
     .normal-size
         height: 220px
+        @include flex(row,space-between, center)
 
     .resize
         height: 130px

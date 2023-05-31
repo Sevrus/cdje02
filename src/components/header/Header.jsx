@@ -1,7 +1,7 @@
 import { useState } from "react";
+import HeaderChessboard from "./components/headerChessboard/HeaderChessboard.jsx";
 import HeaderLogo from "./components/headerLogo/HeaderLogo.jsx";
 import HeaderNav from "./components/headerNav/HeaderNav.jsx";
-import HeaderChessboard from "./components/headerTitle/HeaderChessboard.jsx";
 
 const Header = ({ chessboardDisappear }) => {
     const [resizeHeader, setResizeHeader] = useState(false);

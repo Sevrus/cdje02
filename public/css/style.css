@@ -251,16 +251,18 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .navbar {
+    position: relative;
     width: 100%;
   }
   .navbar__links {
-    position: relative;
+    position: absolute;
     width: fit-content;
     height: fit-content;
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 15px;
-    top: 30px;
-    right: 0;
+    left: auto;
+    top: -40px;
+    right: 50px;
   }
   .navbar__links::before, .navbar__links::after {
     content: none;
@@ -376,6 +378,8 @@ time, mark, audio, video {
 @media screen and (min-width: 1920px) {
   .logo {
     display: block;
+    position: relative;
+    top: -5px;
   }
   .logo, .logo--scroll {
     width: 120px;
@@ -387,12 +391,12 @@ time, mark, audio, video {
 .header {
   position: fixed;
   top: 0;
+  width: 100%;
   background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 .normal-size {
@@ -442,6 +446,10 @@ time, mark, audio, video {
 @media screen and (min-width: 1920px) {
   .normal-size {
     height: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .resize {
     height: 130px;
