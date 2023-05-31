@@ -5,29 +5,29 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 const ClubsDescription = () => {
 
     return (
-        <div className="article-clubs">
-
+        <>
             {dataClubs.map((item) => (
-                <details key={item.id}>
 
-                    <summary className="article-clubs__title">
-                        <hr className="article-clubs__title__lineLeft" />
-                        <h4>{item.name}</h4>
-                        <hr className="article-clubs__title__lineRight" />
-                        <FontAwesomeIcon className='article-clubs__title__iconChevronDown' icon={faChevronDown} />
-                    </summary>
+                    <details className="article-clubs" key={item.id}>
 
-                    <section className="article-clubs__description">
-                        <p>{item.city}</p>
-                        <p>Président: {item.president}</p>
-                        <p>Tél : {item.tel}</p>
-                        <p>{item.site}</p>
-                        <p>Membres: {item.members}</p>
-                    </section>
+                        <summary className="article-clubs__title">
+                            <hr className="article-clubs__title__lineLeft" />
+                            <h4>{item.name}</h4>
+                            <hr className="article-clubs__title__lineRight" />
+                            <FontAwesomeIcon className='article-clubs__title__iconChevronDown' icon={faChevronDown} />
+                        </summary>
 
-                </details>
+                        <section className="article-clubs__description">
+                            <p>{item.city}</p>
+                            <p>Président: {item.president}</p>
+                            <p>Tél : {item.tel}</p>
+                            <p>{item.site}</p>
+                            <p>Membres: {item.members}</p>
+                        </section>
+
+                    </details>
             ))}
-        </div>
+        </>
     )
 }
 

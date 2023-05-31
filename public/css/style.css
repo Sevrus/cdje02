@@ -539,23 +539,23 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   width: 80%;
-  gap: 20px;
-}
-.article-clubs details[open] > summary .article-clubs__title__iconChevronDown {
-  transform: rotate(180deg);
-}
-.article-clubs details {
+  margin-bottom: 15px;
   transition: height 1s ease;
   width: 300px;
 }
-.article-clubs details:not([open]) {
+.article-clubs[open] > summary .article-clubs__title__iconChevronDown {
+  transform: rotate(180deg);
+}
+.article-clubs:not([open]) {
   height: 49px;
 }
-.article-clubs details[open] {
-  height: 144px;
+.article-clubs[open] {
+  height: 174px;
+  margin-bottom: 10px;
 }
 .article-clubs__title {
   display: flex;
+  flex-direction: row;
   position: relative;
   margin-bottom: 15px;
 }
@@ -599,6 +599,100 @@ time, mark, audio, video {
   padding-bottom: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .article-clubs {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .article-clubs:not([open]) {
+    height: 51px;
+  }
+  .article-clubs[open] {
+    height: 155px;
+  }
+  .article-clubs h4 {
+    font-size: 1rem;
+    line-height: 16px;
+  }
+  .article-clubs p {
+    font-size: 0.875rem;
+    line-height: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .article-clubs {
+    width: 80%;
+  }
+  .article-clubs:not([open]) {
+    height: 53px;
+  }
+  .article-clubs[open] {
+    height: 165px;
+  }
+  .article-clubs h4 {
+    font-size: 1.125rem;
+    line-height: 18px;
+  }
+  .article-clubs p {
+    font-size: 1rem;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .article-clubs {
+    width: 73%;
+  }
+  .article-clubs:not([open]) {
+    height: 55px;
+  }
+  .article-clubs[open] {
+    height: 175px;
+  }
+  .article-clubs__title {
+    align-items: flex-end;
+  }
+  .article-clubs__title__lineLeft, .article-clubs__title__lineRight {
+    width: 150px;
+    height: 0px;
+  }
+  .article-clubs__title__lineLeft {
+    left: 10px;
+  }
+  .article-clubs__title__lineRight {
+    right: 10px;
+  }
+  .article-clubs__title h4 {
+    font-size: 1.25rem;
+    line-height: 20px;
+    padding: 10px;
+  }
+  .article-clubs__title__iconChevronDown {
+    top: 5px;
+    right: 10px;
+  }
+  .article-clubs__description {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .article-clubs__description p {
+    padding: 0px;
+    font-size: 1.125rem;
+    line-height: 18px;
+  }
+  .article-clubs__description__top {
+    display: flex;
+  }
+  .article-clubs__description__tab {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .article-clubs__description__tab p {
+    text-align: left;
+    padding: 20px 0 0 0;
+  }
+}
 .clubs {
   display: flex;
   flex-direction: column;

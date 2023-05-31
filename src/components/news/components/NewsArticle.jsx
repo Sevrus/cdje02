@@ -21,8 +21,7 @@ const NewsArticle = () => {
                     </div>
 
                     <div className="newsArticle__link">
-                        <Link
-                            to={``}
+                        <Link to={""} 
                         >
                             Lire la suite
                         </Link>
