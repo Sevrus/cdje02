@@ -1,30 +1,58 @@
 @import '../utilities/variables'
 @import '../utilities/mixin'
 @import 'headerNav'
-@import 'headerTitle'
+@import 'headerChessboard'
+@import 'headerLogo'
 
+/* HEADER */
+/* VERSION MOBILE */
 .header
-  position: fixed
-  top: 0
-  width: 100%
-  background: $bg-gradient
+    position: fixed
+    top: 0
+    width: 100%
+    background: $bg-gradient
+    @include flex(row, space-between, center)
 
 .normal-size
-  height: 248px
-  transition: height ease-out .5s
+    height: 110px
+    transition: height ease-out .5s
 
 .resize
-  height: 140px
-  transition: height ease-out .5s
+    height: 60px
+    transition: height ease-out .5s
 
+@media screen and (min-width: 500px)
+    .normal-size
+        height: 130px
+
+    .resize
+        height: 70px
+
+/* VERSION TABLETTE */
 @media screen and (min-width: 768px)
-  .header
-    height: 230px
+    .header
+        display: inline
 
+    .normal-size
+        height: 200px
+
+    .resize
+        height: 90px
+        @include flex(row, space-between, center)
+
+/* VERSION L */
 @media screen and (min-width: 1024px)
-  .header
-    height: 388px
+    .normal-size
+        height: 230px
 
+    .resize
+        height: 110px
+
+/* VERSION XL */
 @media screen and (min-width: 1920px)
-  .header
-    height: 457px
+    .normal-size
+        height: 210px
+        @include flex(row,space-between, center)
+
+    .resize
+        height: 130px

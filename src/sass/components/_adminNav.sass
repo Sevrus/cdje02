@@ -1,0 +1,28 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+
+// VERSION MOBILE 
+.adminNav
+    @include articles()
+    border-radius: 0 0 10px 10px
+    width: 300px
+    margin: 0 auto    
+
+    &[open] > summary .adminNav__title__leftChevron, &[open] > summary .adminNav__title__rightChevron
+        transform: rotate(180deg)
+    
+    &__title
+        @include flex(row, space-around, center) 
+
+    &__links
+        @include flex(column, center, center)
+
+        a
+            color: $white
+            padding: 5px
+            font-family: $font-primary
+            font-size: $fs-14
+            font-weight: bold
+        
+        .active
+            color: $red

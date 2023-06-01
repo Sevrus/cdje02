@@ -1,8 +1,4 @@
 import {
-    faChessKing,
-    faChessKnight,
-    faChessQueen,
-    faChessRook,
     faRightToBracket
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,7 +7,8 @@ import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
 import Modal from "../../../modal/Modal";
 
-const HeaderNav = () => {
+
+const HeaderNav = ({ chessboardDisappear }) => {
     const [burgerClass, setBurgerClass] = useState("navbar__burger__line unclicked");
     const [isOpen, setOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
@@ -44,16 +41,21 @@ const HeaderNav = () => {
     }, []);
 
     return (
-        <nav className="navbar">
+        <nav className={chessboardDisappear ? 'navbar--scroll' : 'navbar'}>
             <div className="navbar__burger" onClick={handleClick}>
                 <div className={burgerClass}></div>
                 <div className={burgerClass}></div>
                 <div className={burgerClass}></div>
             </div>
+            
             {(isOpen || width > 767) && (
-                <ul className="navbar__links">
-                    <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faChessKing} className="navbar__links__link__icon" />
+                <ul className={chessboardDisappear ? 'navbar__links--scroll' : 'navbar__links'}>
+                    <li className={chessboardDisappear ? 'navbar__links--disappear-site-name' : 'navbar__links--site-name'}>
+                        <p>CDJE</p>
+                        <p className="navbar__links--site-name__span">02</p>
+                    </li>
+
+                    <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
                         <NavLink
                             to={`/`}
                             className={({ isActive, isPending }) =>
@@ -63,8 +65,7 @@ const HeaderNav = () => {
                             ACCUEIL
                         </NavLink>
                     </li>
-                    <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faChessQueen} className="navbar__links__link__icon" />
+                    <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
                         <NavLink
                             to={`/info`}
                             className={({ isActive, isPending }) =>
@@ -74,8 +75,7 @@ const HeaderNav = () => {
                             A PROPOS
                         </NavLink>
                     </li>
-                    <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faChessRook} className="navbar__links__link__icon" />
+                    <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
                         <NavLink
                             to={`/activity`}
                             className={({ isActive, isPending }) =>
@@ -85,8 +85,7 @@ const HeaderNav = () => {
                             ACTIVITÉS
                         </NavLink>
                     </li>
-                    <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faChessKnight} className="navbar__links__link__icon" />
+                    <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
                         <NavLink
                             to={`/contact`}
                             className={({ isActive, isPending }) =>
@@ -96,8 +95,9 @@ const HeaderNav = () => {
                             CONTACT
                         </NavLink>
                     </li>
-                    <li className="navbar__links__link">
-                        <FontAwesomeIcon icon={faRightToBracket} className="navbar__links__link__icon" />
+                    <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
+                        <FontAwesomeIcon icon={faRightToBracket}
+                            className={chessboardDisappear ? 'navbar__links__link__icon--scroll' : 'navbar__links__link__icon'} />
                         <a onClick={() => setOpenModal(true)}>
                             LOGIN
                         </a>
@@ -107,6 +107,7 @@ const HeaderNav = () => {
                     </li>
                 </ul>
             )}
+
 
         </nav>
     )
