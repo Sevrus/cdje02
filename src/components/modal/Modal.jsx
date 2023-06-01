@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Modal = ({ closeModal }) => {
 
     return (
@@ -17,8 +19,10 @@ const Modal = ({ closeModal }) => {
                     <input type="password" name="password" id="password" className="modal__content__password__input" />
                 </div>
 
-                <button className="modal__content__button">Se Connecter</button>
-
+                <Link to="/admin">
+                    <button className="modal__content__button">Se Connecter</button>
+                </Link>
+                
                 <div className="modal__content__lost-password">Mot de passe oublié ?</div>
             </div>
         </>

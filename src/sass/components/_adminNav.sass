@@ -1,18 +1,19 @@
 @import '../utilities/_mixin.sass'
 @import '../utilities/_variables.sass'
 
-// VERSION MOBILE 
+/* VERSION MOBILE */
 .adminNav
     @include articles()
     border-radius: 0 0 10px 10px
     width: 300px
-    margin: 0 auto    
+    margin: 0 auto
+    border-top: 1.5px solid $red
 
     &[open] > summary .adminNav__title__leftChevron, &[open] > summary .adminNav__title__rightChevron
         transform: rotate(180deg)
-    
+
     &__title
-        @include flex(row, space-around, center) 
+        @include flex(row, space-around, center)
 
     &__links
         @include flex(column, center, center)
@@ -23,6 +24,37 @@
             font-family: $font-primary
             font-size: $fs-14
             font-weight: bold
-        
+
         .active
             color: $red
+
+/* VERSION TABLET */
+@media screen and (min-width: 768px)
+    .adminNav
+        width: 700px
+        min-height: 20px
+
+        &__links
+            @include flex(row, space-around, center)
+
+            a
+                font-size: $fs-16
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .adminNav
+        width: 900px
+        min-height: 25px
+
+        &__links a
+            font-size: $fs-18
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .adminNav
+        width: 1300px
+        min-height: 30px
+        border-top-width: 2px
+
+        &__links a
+            font-size: $fs-22
