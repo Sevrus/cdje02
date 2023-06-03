@@ -40,6 +40,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
         };
     }, []);
 
+
     return (
         <nav className={chessboardDisappear ? 'navbar--scroll' : 'navbar'}>
             <div className="navbar__burger" onClick={handleClick}>

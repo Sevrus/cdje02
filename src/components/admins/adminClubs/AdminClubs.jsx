@@ -1,10 +1,15 @@
-const AdminClubs = () => {
+import { useLocation } from "react-router-dom";
 
-    return (
-        <>
-            <h1>AdminClubs</h1>
-        </>
-    )
+const AdminClubs = () => {
+    const { pathname } = useLocation();
+
+    if (pathname === "/admin/clubs") {
+        return (
+            <>
+                <h1>Clubs</h1>
+            </>
+        )
+    }
 }
 
 export default AdminClubs;

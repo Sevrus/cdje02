@@ -1,10 +1,15 @@
-const AdminReferees = () => {
+import { useLocation } from "react-router-dom";
 
-    return (
-        <>
-            <h1>AdminReferees</h1>
-        </>
-    )
+const AdminReferees = () => {
+    const { pathname } = useLocation();
+
+    if (pathname === "/admin/referees") {
+        return (
+            <>
+                <h1>Arbitres</h1>
+            </>
+        )
+    }
 }
 
 export default AdminReferees;

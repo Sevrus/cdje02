@@ -1,10 +1,16 @@
-const AdminChampions = () => {
+import { useLocation } from "react-router-dom";
 
-    return (
-        <>
-            <h1>AdminChampions</h1>
-        </>
-    )
+const AdminChampions = () => {
+    const { pathname } = useLocation();
+
+    if (pathname === "/admin/champions") {
+        return (
+            <>
+                <h1>Champions</h1>
+            </>
+        )
+    }
+
 }
 
 export default AdminChampions;

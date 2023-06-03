@@ -1,10 +1,15 @@
-const AdminArticles = () => {
+import { useLocation } from "react-router-dom";
 
-    return (
-        <>
-            <h1>AdminArticles</h1>
-        </>
-    )
+const AdminArticles = () => {
+    const { pathname } = useLocation();
+
+    if (pathname === "/admin/articles") {
+        return (
+            <>
+                <h1>Articles</h1>
+            </>
+        )
+    }
 }
 
 export default AdminArticles;

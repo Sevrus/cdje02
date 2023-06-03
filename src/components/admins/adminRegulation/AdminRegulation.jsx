@@ -1,10 +1,15 @@
-const AdminRegulation = () => {
+import { useLocation } from "react-router-dom";
 
-    return (
-        <>
-            <h1>AdminRegulation</h1>
-        </>
-    )
+const AdminRegulation = () => {
+    const { pathname } = useLocation();
+
+    if (pathname === "/admin/regulation") {
+        return (
+            <>
+                <h1>Règlements</h1>
+            </>
+        )
+    }
 }
 
 export default AdminRegulation;
