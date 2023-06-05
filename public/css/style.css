@@ -96,7 +96,7 @@ time, mark, audio, video {
   cursor: pointer;
 }
 .footer__links img:hover {
-  opacity: 0.5;
+  transform: scale(1.1);
 }
 .footer__links__ffe {
   width: 18px;
