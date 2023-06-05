@@ -1,10 +1,12 @@
+import { Form } from "react-router-dom";
+
 const RefereesAdd = () => {
 
     return (
 
         <>
 
-            <section className="addReferee">
+            <Form className="addReferee">
 
                 <div className="addReferee__name">
                     <label htmlFor="lastname">Nom et Prénom</label>
@@ -30,7 +32,7 @@ const RefereesAdd = () => {
                     <button>Envoyer</button>
                 </div>
 
-            </section>
+            </Form>
 
         </>
 

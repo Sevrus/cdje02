@@ -1408,6 +1408,7 @@ time, mark, audio, video {
   position: absolute;
   width: 23%;
   height: 0px;
+  z-index: -10;
 }
 .referee__title__lineLeft {
   left: 10px;
@@ -1457,6 +1458,7 @@ time, mark, audio, video {
   width: 23%;
   height: 0px;
   position: absolute;
+  z-index: -10;
 }
 .referee__addTitle__bigTitle__lineLeft {
   left: 10px;
@@ -1476,6 +1478,7 @@ time, mark, audio, video {
   }
   .referee__title__lineLeft, .referee__title__lineRight {
     width: 20%;
+    z-index: -10;
   }
   .referee__title__lineLeft {
     left: 80px;
@@ -1504,6 +1507,7 @@ time, mark, audio, video {
   }
   .referee__addTitle__bigTitle__lineLeft, .referee__addTitle__bigTitle__lineRight {
     width: 20%;
+    z-index: -10;
   }
   .referee__addTitle__bigTitle__lineLeft {
     left: 80px;
@@ -1526,6 +1530,7 @@ time, mark, audio, video {
   }
   .referee__title__lineLeft, .referee__title__lineRight {
     width: 21%;
+    z-index: -10;
   }
   .referee__title__lineLeft {
     left: 100px;
@@ -1551,6 +1556,7 @@ time, mark, audio, video {
   }
   .referee__addTitle__bigTitle__lineLeft, .referee__addTitle__bigTitle__lineRight {
     width: 21%;
+    z-index: -10;
   }
   .referee__addTitle__bigTitle__lineLeft {
     left: 100px;
@@ -1573,6 +1579,7 @@ time, mark, audio, video {
   }
   .referee__title__lineLeft, .referee__title__lineRight {
     width: 22%;
+    z-index: -10;
   }
   .referee__title__lineLeft {
     left: 260px;
@@ -1598,6 +1605,7 @@ time, mark, audio, video {
   }
   .referee__addTitle__bigTitle__lineLeft, .referee__addTitle__bigTitle__lineRight {
     width: 22%;
+    z-index: -10;
   }
   .referee__addTitle__bigTitle__lineLeft {
     left: 260px;
