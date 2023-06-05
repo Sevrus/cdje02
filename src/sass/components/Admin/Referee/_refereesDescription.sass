@@ -1,0 +1,56 @@
+@import '../../../utilities/_mixin.sass'
+@import '../../../utilities/_variables.sass'
+
+// VERSION MOBILE
+.articleReferee
+    @include flex(column, space-between , center)
+    background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
+    border-radius: 5px
+    width: 80%
+    margin-bottom: 15px
+    padding: 5px
+
+    &__text
+        @include flex(column, space-between, center)
+
+    p
+        font-family: $font-primary
+        font-size: $fs-12
+        color: $white
+        padding: 5px
+
+    &__icon
+        display: flex
+        justify-content: space-between
+
+        &__pencil, &__trash
+            color: $red
+            padding: 5px
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .articleReferee
+        width: 40%
+        margin: 0 10px 20px 10px
+
+        p
+            font-size: $fs-14
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .articleReferee
+        width: 25%
+        margin: 0 10px 30px 10px
+        
+        p
+            font-size: $fs-16
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .articleReferee
+        width: 25%
+        margin: 0 10px 30px 10px
+
+        p
+            font-size: $fs-18
