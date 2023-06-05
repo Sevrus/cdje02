@@ -601,8 +601,7 @@ time, mark, audio, video {
 
 @media screen and (min-width: 768px) {
   .article-clubs {
-    width: 80%;
-    margin-bottom: 20px;
+    width: 300px;
   }
   .article-clubs:not([open]) {
     height: 51px;
@@ -766,8 +765,9 @@ time, mark, audio, video {
     right: 80px;
   }
   .clubs__list {
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: flex-start;
+    gap: 10px;
   }
   .clubs__list__left {
     align-items: flex-end;
