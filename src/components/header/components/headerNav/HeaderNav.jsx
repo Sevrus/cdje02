@@ -4,7 +4,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Modal from "../../../modal/Modal";
 
 
@@ -13,6 +13,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
     const [isOpen, setOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
     const [openModal, setOpenModal] = useState(false);
+    const { pathname } = useLocation();
 
     const handleClick = () => {
         if (!isOpen) {
@@ -24,7 +25,6 @@ const HeaderNav = ({ chessboardDisappear }) => {
     };
 
     useEffect(() => {
-
         const changeWidth = () => {
             setWidth(window.innerWidth);
 
@@ -40,6 +40,44 @@ const HeaderNav = ({ chessboardDisappear }) => {
         };
     }, []);
 
+    const isLoggedIn = () => {
+        if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
+            || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
+            || pathname === "/admin/results" || pathname === "/admin/regulation") {
+            return (
+                <div className="navbar__links__link__admin">
+                    <NavLink
+                        to={`/admin`}
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                    >
+                        ADMIN
+                    </NavLink>
+                    <hr className="navbar__links__link__admin__hr" />
+                    <NavLink to="/">
+                        Déconnexion
+                    </NavLink>
+                </div>
+            )
+        } else {
+            return (
+                <>
+                    <FontAwesomeIcon icon={faRightToBracket}
+                        className={chessboardDisappear ? 'navbar__links__link__icon--scroll' : 'navbar__links__link__icon'} />
+                    <a onClick={() => setOpenModal(true)}>
+                        LOGIN
+                    </a>
+                    {
+                        openModal && createPortal(
+                            <Modal closeModal={() => setOpenModal(false)} />, document.body
+                        )
+                    }
+                </>
+            )
+        }
+    }
+
 
     return (
         <nav className={chessboardDisappear ? 'navbar--scroll' : 'navbar'}>
@@ -48,7 +86,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                 <div className={burgerClass}></div>
                 <div className={burgerClass}></div>
             </div>
-            
+
             {(isOpen || width > 767) && (
                 <ul className={chessboardDisappear ? 'navbar__links--scroll' : 'navbar__links'}>
                     <li className={chessboardDisappear ? 'navbar__links--disappear-site-name' : 'navbar__links--site-name'}>
@@ -97,16 +135,10 @@ const HeaderNav = ({ chessboardDisappear }) => {
                         </NavLink>
                     </li>
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
-                        <FontAwesomeIcon icon={faRightToBracket}
-                            className={chessboardDisappear ? 'navbar__links__link__icon--scroll' : 'navbar__links__link__icon'} />
-                        <a onClick={() => setOpenModal(true)}>
-                            LOGIN
-                        </a>
-                        {openModal && createPortal(
-                            <Modal closeModal={() => setOpenModal(false)} />, document.body
-                        )}
+                        {isLoggedIn()}
                     </li>
                 </ul>
+
             )}
 
 

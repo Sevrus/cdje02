@@ -6,8 +6,14 @@
     @include articles()
     border-radius: 0 0 10px 10px
     width: 300px
-    margin: 0 auto
     border-top: 1.5px solid $red
+    position: fixed
+    top: 60px
+    left: 50%
+    transform: translateX(-50%)
+
+    &:hover
+        cursor: pointer
 
     &[open] > summary .adminNav__title__leftChevron, &[open] > summary .adminNav__title__rightChevron
         transform: rotate(180deg)
@@ -25,12 +31,21 @@
             font-size: $fs-14
             font-weight: bold
 
+            &:hover
+                color: $red
+
         .active
             color: $red
+
+@media screen and (min-width: 500px)
+    .adminNav
+        top: 70px
+        width: 450px
 
 /* VERSION TABLET */
 @media screen and (min-width: 768px)
     .adminNav
+        top: 90px
         width: 700px
         min-height: 20px
 
@@ -38,23 +53,25 @@
             @include flex(row, space-around, center)
 
             a
-                font-size: $fs-16
+                font-size: $fs-14
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
     .adminNav
+        top: 110px
         width: 900px
         min-height: 25px
 
         &__links a
-            font-size: $fs-18
+            font-size: $fs-16
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
     .adminNav
+        top: 130px
         width: 1300px
         min-height: 30px
         border-top-width: 2px
 
         &__links a
-            font-size: $fs-22
+            font-size: $fs-20

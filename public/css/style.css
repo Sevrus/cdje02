@@ -80,7 +80,7 @@ time, mark, audio, video {
   font-weight: bold;
   background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   width: 100%;
-  height: 200px;
+  height: 230px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,7 +105,6 @@ time, mark, audio, video {
 }
 .navbar__links__link:hover > a, .navbar__links__link:hover > .navbar__links__link__icon, .navbar__links__link--scroll:hover > a, .navbar__links__link:hover > .navbar__links__link--scroll__icon, .navbar__links--scroll__link:hover > a, .navbar__links__link:hover > .navbar__links--scroll__link__icon, .navbar__links--scroll__link--scroll:hover > a, .navbar__links__link:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links__link:hover > a, .navbar__links__link:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links__link--scroll:hover > a, .navbar__links__link:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > a, .navbar__links__link:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > a, .navbar__links__link:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar__links__link--scroll:hover > .navbar__links__link__icon, .navbar__links__link--scroll:hover > .navbar__links__link--scroll__icon, .navbar__links__link--scroll:hover > .navbar__links--scroll__link__icon, .navbar__links__link--scroll:hover > .navbar__links--scroll__link--scroll__icon, .navbar__links__link--scroll:hover > .navbar--scroll__links__link__icon, .navbar__links__link--scroll:hover > .navbar--scroll__links__link--scroll__icon, .navbar__links__link--scroll:hover > .navbar--scroll__links--scroll__link__icon, .navbar__links__link--scroll:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar__links--scroll__link:hover > .navbar__links__link__icon, .navbar__links--scroll__link:hover > .navbar__links__link--scroll__icon, .navbar__links--scroll__link:hover > .navbar__links--scroll__link__icon, .navbar__links--scroll__link:hover > .navbar__links--scroll__link--scroll__icon, .navbar__links--scroll__link:hover > .navbar--scroll__links__link__icon, .navbar__links--scroll__link:hover > .navbar--scroll__links__link--scroll__icon, .navbar__links--scroll__link:hover > .navbar--scroll__links--scroll__link__icon, .navbar__links--scroll__link:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar__links--scroll__link--scroll:hover > .navbar__links__link__icon, .navbar__links--scroll__link--scroll:hover > .navbar__links__link--scroll__icon, .navbar__links--scroll__link--scroll:hover > .navbar__links--scroll__link__icon, .navbar__links--scroll__link--scroll:hover > .navbar__links--scroll__link--scroll__icon, .navbar__links--scroll__link--scroll:hover > .navbar--scroll__links__link__icon, .navbar__links--scroll__link--scroll:hover > .navbar--scroll__links__link--scroll__icon, .navbar__links--scroll__link--scroll:hover > .navbar--scroll__links--scroll__link__icon, .navbar__links--scroll__link--scroll:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links__link:hover > .navbar__links__link__icon, .navbar--scroll__links__link:hover > .navbar__links__link--scroll__icon, .navbar--scroll__links__link:hover > .navbar__links--scroll__link__icon, .navbar--scroll__links__link:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links__link:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links__link:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links__link:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links__link:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links__link--scroll:hover > .navbar__links__link__icon, .navbar--scroll__links__link--scroll:hover > .navbar__links__link--scroll__icon, .navbar--scroll__links__link--scroll:hover > .navbar__links--scroll__link__icon, .navbar--scroll__links__link--scroll:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links__link--scroll:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links__link--scroll:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links__link--scroll:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links__link--scroll:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > .navbar__links__link__icon, .navbar--scroll__links--scroll__link:hover > .navbar__links__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > .navbar__links--scroll__link__icon, .navbar--scroll__links--scroll__link:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links--scroll__link:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links--scroll__link:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar__links__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar__links__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar__links--scroll__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar--scroll__links--scroll__link--scroll__icon {
   color: #f73746;
-  transition: color ease-out 0.5s;
 }
 .navbar__links__link__icon, .navbar__links__link__icon--scroll, .navbar__links__link--scroll__icon, .navbar__links__link--scroll__icon--scroll, .navbar__links--scroll__link__icon, .navbar__links--scroll__link__icon--scroll, .navbar__links--scroll__link--scroll__icon, .navbar__links--scroll__link--scroll__icon--scroll, .navbar--scroll__links__link__icon, .navbar--scroll__links__link__icon--scroll, .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links__link--scroll__icon--scroll, .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links--scroll__link__icon--scroll, .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll__icon--scroll {
   display: none;
@@ -115,6 +114,23 @@ time, mark, audio, video {
 }
 .navbar__links__link .active, .navbar__links__link--scroll .active, .navbar__links--scroll__link .active, .navbar__links--scroll__link--scroll .active, .navbar--scroll__links__link .active, .navbar--scroll__links__link--scroll .active, .navbar--scroll__links--scroll__link .active, .navbar--scroll__links--scroll__link--scroll .active {
   color: #f73746;
+}
+.navbar__links__link__admin, .navbar__links__link__admin--scroll, .navbar__links__link--scroll__admin, .navbar__links__link--scroll__admin--scroll, .navbar__links--scroll__link__admin, .navbar__links--scroll__link__admin--scroll, .navbar__links--scroll__link--scroll__admin, .navbar__links--scroll__link--scroll__admin--scroll, .navbar--scroll__links__link__admin, .navbar--scroll__links__link__admin--scroll, .navbar--scroll__links__link--scroll__admin, .navbar--scroll__links__link--scroll__admin--scroll, .navbar--scroll__links--scroll__link__admin, .navbar--scroll__links--scroll__link__admin--scroll, .navbar--scroll__links--scroll__link--scroll__admin, .navbar--scroll__links--scroll__link--scroll__admin--scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px;
+}
+.navbar__links__link__admin a:hover, .navbar__links__link__admin--scroll a:hover, .navbar__links__link--scroll__admin a:hover, .navbar__links__link--scroll__admin--scroll a:hover, .navbar__links--scroll__link__admin a:hover, .navbar__links--scroll__link__admin--scroll a:hover, .navbar__links--scroll__link--scroll__admin a:hover, .navbar__links--scroll__link--scroll__admin--scroll a:hover, .navbar--scroll__links__link__admin a:hover, .navbar--scroll__links__link__admin--scroll a:hover, .navbar--scroll__links__link--scroll__admin a:hover, .navbar--scroll__links__link--scroll__admin--scroll a:hover, .navbar--scroll__links--scroll__link__admin a:hover, .navbar--scroll__links--scroll__link__admin--scroll a:hover, .navbar--scroll__links--scroll__link--scroll__admin a:hover, .navbar--scroll__links--scroll__link--scroll__admin--scroll a:hover {
+  color: #f73746;
+}
+.navbar__links__link__admin__hr, .navbar__links__link__admin--scroll__hr, .navbar__links__link--scroll__admin__hr, .navbar__links__link--scroll__admin--scroll__hr, .navbar__links--scroll__link__admin__hr, .navbar__links--scroll__link__admin--scroll__hr, .navbar__links--scroll__link--scroll__admin__hr, .navbar__links--scroll__link--scroll__admin--scroll__hr, .navbar--scroll__links__link__admin__hr, .navbar--scroll__links__link__admin--scroll__hr, .navbar--scroll__links__link--scroll__admin__hr, .navbar--scroll__links__link--scroll__admin--scroll__hr, .navbar--scroll__links--scroll__link__admin__hr, .navbar--scroll__links--scroll__link__admin--scroll__hr, .navbar--scroll__links--scroll__link--scroll__admin__hr, .navbar--scroll__links--scroll__link--scroll__admin--scroll__hr {
+  width: 80px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 5px 0;
 }
 
 @media screen and (min-width: 500px) {
@@ -157,7 +173,7 @@ time, mark, audio, video {
     width: fit-content;
     height: fit-content;
     background: none;
-    padding: 15px;
+    padding: 8px;
     margin: -3px 30px 0 0;
     border: 1px solid rgba(255, 255, 255, 0.5);
   }
@@ -177,13 +193,18 @@ time, mark, audio, video {
   }
   .navbar__links__link {
     font-size: 0.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
   }
   .navbar__links__link__icon {
     display: block;
     color: #fff;
     margin-left: 20px;
   }
-  .navbar__links__link__icon:hover {
+  .navbar__links__link:hover {
     cursor: pointer;
   }
   .navbar__links__link .active {
@@ -191,8 +212,14 @@ time, mark, audio, video {
     margin-bottom: 10px;
     padding-top: 10px;
   }
-  .navbar__links__link--scroll {
+  .navbar__links__link--scroll, .navbar__links__link__admin--scroll {
     font-size: 0.875rem;
+  }
+  .navbar__links__link__admin--scroll {
+    padding: 3px;
+  }
+  .navbar__links__link__admin--scroll__hr {
+    margin: 2px 0;
   }
 }
 /* VERSION L */
@@ -205,6 +232,7 @@ time, mark, audio, video {
   }
   .navbar__links--scroll {
     margin-right: 50px;
+    padding: 12px;
   }
   .navbar__links--site-name {
     font-size: 1.25rem;
@@ -214,20 +242,21 @@ time, mark, audio, video {
     font-size: 1rem;
     margin-top: -9px;
   }
-  .navbar__links__link {
+  .navbar__links__link, .navbar__links__link__admin {
     font-size: 0.875rem;
   }
-  .navbar__links__link--scroll {
+  .navbar__links__link--scroll, .navbar__links__link__admin--scroll, .navbar__links__link__admin--scroll, .navbar__links__link__admin__admin--scroll {
     font-size: 1rem;
   }
-  .navbar__links__icon {
+  .navbar__links__link__icon, .navbar__links__link__admin__icon {
     margin-left: 40px;
   }
-  .navbar__links__icon .active::before {
+  .navbar__links__link__admin--scroll, .navbar__links__link__admin__admin--scroll {
+    width: fit-content;
+  }
+  .navbar__links__link .active::before, .navbar__links__link__admin .active::before {
     width: 80px;
   }
-}
-@media screen and (min-width: 1250px) {
   .navbar--scroll {
     width: 100%;
     display: flex;
@@ -237,15 +266,22 @@ time, mark, audio, video {
   }
   .navbar--scroll::before {
     content: "";
-    width: 30%;
+    width: 20%;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.5);
     margin-left: 10%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .navbar--scroll::before {
+    width: 30%;
+    transition: width ease-out 0.5s;
+  }
+}
 @media screen and (min-width: 1600px) {
   .navbar--scroll::before {
     width: 40%;
+    transition: width ease-out 0.5s;
   }
 }
 /* VERSION XL */
@@ -271,20 +307,23 @@ time, mark, audio, video {
     margin-right: 100px;
     width: 800px;
     gap: 56px;
-    padding: 25px 0;
+    padding: 15px;
   }
   .navbar__links--site-name {
     display: none;
   }
-  .navbar__links__link, .navbar__links__link--scroll {
+  .navbar__links__link, .navbar__links__link--scroll, .navbar__links__link__admin, .navbar__links__link__admin--scroll {
     font-size: 1.125rem;
   }
-  .navbar__links__link .active, .navbar__links__link--scroll .active {
+  .navbar__links__link .active, .navbar__links__link--scroll .active, .navbar__links__link__admin .active, .navbar__links__link__admin--scroll .active {
     border-top: none;
   }
-  .navbar__links__link__icon, .navbar__links__link--scroll__icon {
+  .navbar__links__link__icon, .navbar__links__link--scroll__icon, .navbar__links__link__admin__icon, .navbar__links__link__admin--scroll__icon {
     display: none;
     margin-left: 0;
+  }
+  .navbar__links__link__admin--scroll, .navbar__links__link--scroll__admin--scroll, .navbar__links__link__admin__admin--scroll, .navbar__links__link__admin--scroll__admin--scroll {
+    padding: 10px;
   }
   .navbar--scroll::before {
     width: 30%;
@@ -305,12 +344,12 @@ time, mark, audio, video {
 }
 
 .chessboard {
-  opacity: 1;
+  display: block;
   transition: opacity ease-in-out 0.5s 0.2s;
 }
 
 .chessboard-disappear {
-  opacity: 0;
+  display: none;
   transition: opacity ease-in-out 0.5s;
 }
 
@@ -397,6 +436,7 @@ time, mark, audio, video {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 .normal-size {
@@ -529,7 +569,7 @@ time, mark, audio, video {
   cursor: pointer;
 }
 .footer__links img:hover {
-  opacity: 0.5;
+  transform: scale(1.1);
 }
 .footer__links__ffe {
   width: 18px;
@@ -998,6 +1038,7 @@ time, mark, audio, video {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
+  z-index: 1000;
   width: 320px;
   height: 350px;
   border-radius: 5px;
@@ -1160,8 +1201,14 @@ time, mark, audio, video {
   color: #fff;
   border-radius: 0 0 10px 10px;
   width: 300px;
-  margin: 0 auto;
   border-top: 1.5px solid #f73746;
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.adminNav:hover {
+  cursor: pointer;
 }
 .adminNav[open] > summary .adminNav__title__leftChevron, .adminNav[open] > summary .adminNav__title__rightChevron {
   transform: rotate(180deg);
@@ -1185,13 +1232,23 @@ time, mark, audio, video {
   font-size: 0.875rem;
   font-weight: bold;
 }
+.adminNav__links a:hover {
+  color: #f73746;
+}
 .adminNav__links .active {
   color: #f73746;
 }
 
+@media screen and (min-width: 500px) {
+  .adminNav {
+    top: 70px;
+    width: 450px;
+  }
+}
 /* VERSION TABLET */
 @media screen and (min-width: 768px) {
   .adminNav {
+    top: 90px;
     width: 700px;
     min-height: 20px;
   }
@@ -1202,34 +1259,37 @@ time, mark, audio, video {
     align-items: center;
   }
   .adminNav__links a {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .adminNav {
+    top: 110px;
     width: 900px;
     min-height: 25px;
   }
   .adminNav__links a {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .adminNav {
+    top: 130px;
     width: 1300px;
     min-height: 30px;
     border-top-width: 2px;
   }
   .adminNav__links a {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
 }
+/* MOBILE */
 .main {
   min-width: 360px;
   min-height: 100vh;
-  margin-top: 45%;
+  margin-top: 25%;
 }
 
 /*# sourceMappingURL=style.css.map */

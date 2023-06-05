@@ -62,7 +62,7 @@
         font-weight: bold
         background: $bg-gradient
         width: 100%
-        height: 200px
+        height: 230px
         @include flex(column, center, center)
         gap: 15px
         top: 0
@@ -81,7 +81,6 @@
 
             &:hover > a, &:hover > &__icon
                 color: $red
-                transition: color ease-out .5s
 
             &__icon, &__icon--scroll
                 display: none
@@ -91,6 +90,20 @@
 
             .active
                 color: $red
+
+            &__admin, &__admin--scroll
+                @include flex(column, center, center)
+                color: $white
+                border: 1px solid rgba(255, 255, 255, .5)
+                padding: 8px
+
+                & a:hover
+                    color: $red
+
+                &__hr
+                    width: 80px
+                    background-color: rgba(255, 255, 255, .5)
+                    margin: 5px 0
 
 @media screen and (min-width: 500px)
     .navbar, .navbar--scroll
@@ -126,7 +139,7 @@
                 width: fit-content
                 height: fit-content
                 background: none
-                padding: 15px
+                padding: 8px
                 margin: -3px 30px 0 0
                 border: 1px solid rgba(255, 255, 255, .5)
 
@@ -146,22 +159,30 @@
 
             &__link
                 font-size: $fs-12
+                @include flex(row, center, center)
+                gap: 5px
 
                 &__icon
                     display: block
                     color: $white
                     margin-left: 20px
 
-                    &:hover
-                        cursor: pointer
+                &:hover
+                    cursor: pointer
 
                 .active
                     border-top: 3.5px solid $red
                     margin-bottom: 10px
                     padding-top: 10px
 
-                &--scroll
+                &--scroll, &__admin--scroll
                     font-size: $fs-14
+
+                &__admin--scroll
+                    padding: 3px
+
+                    &__hr
+                        margin: 2px 0
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
@@ -174,6 +195,7 @@
 
             &--scroll
                 margin-right: 50px
+                padding: 12px
 
             &--site-name
                 font-size: $fs-20
@@ -183,34 +205,43 @@
                     font-size: $fs-16
                     margin-top: -9px
 
-            &__link
+            &__link, &__link__admin
                 font-size: $fs-14
 
-                &--scroll
+                &--scroll, &__admin--scroll
                     font-size: $fs-16
 
-            &__icon
-                margin-left: 40px
+                &__icon
+                    margin-left: 40px
+
+                &__admin--scroll
+                    width: fit-content
 
                 .active
                     &::before
                         width: 80px
 
-@media screen and (min-width: 1250px)
     .navbar--scroll
         width: 100%
         @include flex(row, space-between, center)
         &::before
             content: ''
-            width: 30%
+            width: 20%
             height: 1px
             background-color: rgba(255, 255, 255, .5)
             margin-left: 10%
+
+@media screen and (min-width: 1200px)
+    .navbar--scroll
+        &::before
+            width: 30%
+            transition: width ease-out .5s
 
 @media screen and (min-width: 1600px)
     .navbar--scroll
         &::before
             width: 40%
+            transition: width ease-out .5s
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
@@ -235,12 +266,12 @@
                 margin-right: 100px
                 width: 800px
                 gap: 56px
-                padding: 25px 0
+                padding: 15px
 
             &--site-name
                 display: none
 
-            &__link, &__link--scroll
+            &__link, &__link--scroll, &__link__admin, &__link__admin--scroll
                 font-size: $fs-18
 
                 .active
@@ -249,6 +280,9 @@
                 &__icon
                     display: none
                     margin-left: 0
+
+                &__admin--scroll
+                    padding: 10px
 
     .navbar--scroll
         &::before
