@@ -1226,6 +1226,394 @@ time, mark, audio, video {
     font-size: 1.375rem;
   }
 }
+.addClub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.addClub__name label, .addClub__town label, .addClub__site label, .addClub__president label, .addClub__tel label, .addClub__members label {
+  margin-bottom: 15px;
+}
+.addClub__name input, .addClub__town input, .addClub__site input, .addClub__president input, .addClub__tel input, .addClub__members input {
+  width: 78%;
+  max-width: 450px;
+  border-radius: 5px;
+  border: 1px solid #242627;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  height: 40px;
+  text-indent: 10px;
+}
+.addClub__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.addClub__btn button {
+  background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #fff;
+  width: 28%;
+  max-width: 300px;
+  height: 30px;
+  font-size: 0.875rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub button {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .addClub {
+    margin-bottom: 50px;
+  }
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members {
+    margin-bottom: 30px;
+  }
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub button {
+    font-size: 1.25rem;
+  }
+  .addClub label {
+    margin-bottom: 20px;
+  }
+  .addClub input {
+    width: 79%;
+    max-width: 600px;
+  }
+  .addClub button {
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .addClub {
+    margin-bottom: 90px;
+  }
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members {
+    margin-bottom: 40px;
+  }
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub button {
+    font-size: 1.5rem;
+  }
+  .addClub label {
+    margin-bottom: 20px;
+  }
+  .addClub input {
+    width: 70%;
+    max-width: 600px;
+  }
+  .addClub button {
+    height: 50px;
+  }
+}
+.articleClub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  width: 80%;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+.articleClub__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.articleClub p {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.75rem;
+  color: #fff;
+  padding: 5px;
+}
+.articleClub__icon {
+  display: flex;
+  justify-content: space-between;
+}
+.articleClub__icon__pencil, .articleClub__icon__trash {
+  color: #f73746;
+  padding: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .articleClub {
+    width: 40%;
+    margin: 0 10px 20px 10px;
+  }
+  .articleClub p {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .articleClub {
+    width: 25%;
+    margin: 0 10px 30px 10px;
+  }
+  .articleClub p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .articleClub {
+    width: 25%;
+    margin: 0 10px 30px 10px;
+  }
+  .articleClub p {
+    font-size: 1.125rem;
+  }
+}
+.clubs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  width: 100%;
+}
+.clubs__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.clubs__title h2 {
+  color: #242627;
+  font-size: 1.5rem;
+  font-family: "Noto Sans", sans-serif;
+  line-height: 24px;
+}
+.clubs__title__lineLeft, .clubs__title__lineRight {
+  position: absolute;
+  width: 23%;
+  height: 0px;
+  z-index: -10;
+}
+.clubs__title__lineLeft {
+  left: 10px;
+}
+.clubs__title__lineRight {
+  right: 10px;
+}
+.clubs__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.clubs__addTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.clubs__addTitle__subhead {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #242627;
+  font-size: 0.75rem;
+  line-height: 12px;
+  font-family: "Noto Sans", sans-serif;
+}
+.clubs__addTitle__bigTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.clubs__addTitle__bigTitle h2 {
+  color: #242627;
+  font-size: 1.5rem;
+  line-height: 24px;
+  font-family: "Noto Sans", sans-serif;
+}
+.clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+  width: 23%;
+  height: 0px;
+  position: absolute;
+  z-index: -10;
+}
+.clubs__addTitle__bigTitle__lineLeft {
+  left: 10px;
+}
+.clubs__addTitle__bigTitle__lineRight {
+  right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .clubs__title {
+    margin-bottom: 35px;
+  }
+  .clubs__title h2 {
+    font-size: 1.625rem;
+    line-height: 26px;
+    margin: 0 40px 0 40px;
+  }
+  .clubs__title__lineLeft, .clubs__title__lineRight {
+    width: 20%;
+    z-index: -10;
+  }
+  .clubs__title__lineLeft {
+    left: 80px;
+  }
+  .clubs__title__lineRight {
+    right: 80px;
+  }
+  .clubs__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .clubs__addTitle {
+    margin-top: 40px;
+  }
+  .clubs__addTitle__subhead {
+    font-size: 0.875rem;
+    line-height: 14px;
+  }
+  .clubs__addTitle__bigTitle h2 {
+    font-size: 1.625rem;
+    line-height: 26px;
+    margin: 0;
+  }
+  .clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+    width: 20%;
+    z-index: -10;
+  }
+  .clubs__addTitle__bigTitle__lineLeft {
+    left: 80px;
+  }
+  .clubs__addTitle__bigTitle__lineRight {
+    right: 80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .clubs {
+    margin-top: 50px;
+  }
+  .clubs__title {
+    margin-bottom: 30px;
+  }
+  .clubs__title h2 {
+    font-size: 2rem;
+    line-height: 32px;
+    margin: 0 100px 0 100px;
+  }
+  .clubs__title__lineLeft, .clubs__title__lineRight {
+    width: 21%;
+    z-index: -10;
+  }
+  .clubs__title__lineLeft {
+    left: 100px;
+  }
+  .clubs__title__lineRight {
+    right: 100px;
+  }
+  .clubs__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .clubs__addTitle__subhead {
+    font-size: 1.25rem;
+    line-height: 20px;
+  }
+  .clubs__addTitle__bigTitle h2 {
+    font-size: 2rem;
+    line-height: 32px;
+    margin: 0;
+  }
+  .clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+    width: 21%;
+    z-index: -10;
+  }
+  .clubs__addTitle__bigTitle__lineLeft {
+    left: 100px;
+  }
+  .clubs__addTitle__bigTitle__lineRight {
+    right: 100px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .clubs {
+    margin-top: 60px;
+  }
+  .clubs__title {
+    margin-bottom: 45px;
+  }
+  .clubs__title h2 {
+    font-size: 3rem;
+    line-height: 40px;
+    margin: 0 350px 0 350px;
+  }
+  .clubs__title__lineLeft, .clubs__title__lineRight {
+    width: 22%;
+    z-index: -10;
+  }
+  .clubs__title__lineLeft {
+    left: 260px;
+  }
+  .clubs__title__lineRight {
+    right: 260px;
+  }
+  .clubs__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .clubs__addTitle__subhead {
+    font-size: 1.75rem;
+    line-height: 28px;
+  }
+  .clubs__addTitle__bigTitle h2 {
+    font-size: 3rem;
+    line-height: 40px;
+    margin: 0;
+  }
+  .clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+    width: 22%;
+    z-index: -10;
+  }
+  .clubs__addTitle__bigTitle__lineLeft {
+    left: 260px;
+  }
+  .clubs__addTitle__bigTitle__lineRight {
+    right: 260px;
+  }
+}
 .main {
   min-width: 360px;
   min-height: 100vh;
