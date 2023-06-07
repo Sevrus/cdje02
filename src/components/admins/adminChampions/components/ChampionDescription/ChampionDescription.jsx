@@ -2,8 +2,24 @@ import dataChampion from "./dataChampion.js"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { useEffect, useState } from "react"
+import ModalChampion from "./ModalChampion.jsx"
+import { createPortal } from "react-dom"
 
 const ChampionDescription = () => {
+    const [openModal, setOpenModal] = useState(false);
+    const [dataChampions, setDataChampions] = useState([])
+
+    // useEffect(() => {
+    //     http({ url: "/champions" })
+    //         .then(json => setDataChampions(json))
+    // })
+
+    const handleDelete = (id) => {
+        const temp = dataChampions.filter(champions => champions.id !== id);
+        setDataChampions(temp);
+        // http({ url: "/champions/" + id, method: 'DELETE' });
+    }
 
     return (
 
@@ -19,8 +35,17 @@ const ChampionDescription = () => {
 
 
                     <div className="articleChampion__icon">
-                        <FontAwesomeIcon className="articleChampion__icon__pencil" icon={faPencil} />
-                        <FontAwesomeIcon className="articleChampion__icon__trash" icon={faTrash} />
+
+                        <a onClick={() => setOpenModal(true)}>
+                            <FontAwesomeIcon className="articleChampion__icon__pencil" icon={faPencil} />
+                        </a>
+                        {openModal && createPortal(
+                            <ModalChampion closeModal={() => setOpenModal(false)} />, document.body
+                        )}
+
+                        <span onClick={() => { handleDelete(item.id) }}>
+                            <FontAwesomeIcon className="articleChampion__icon__trash" icon={faTrash} />
+                        </span>
                     </div>
 
                 </section>
