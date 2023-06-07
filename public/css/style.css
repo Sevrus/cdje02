@@ -438,7 +438,7 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .normal-size {
-    height: 230px;
+    height: 220px;
   }
   .resize {
     height: 110px;
@@ -447,7 +447,7 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .normal-size {
-    height: 200px;
+    height: 210px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
