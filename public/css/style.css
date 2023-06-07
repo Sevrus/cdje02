@@ -70,7 +70,7 @@ time, mark, audio, video {
 @media screen and (min-width: 1920px) {
   .footer__copyright {
     width: 200px;
-    margin-bottom: -140px;
+    margin-bottom: -150px;
   }
   .footer__copyright__icon {
     height: 20px;
@@ -180,7 +180,7 @@ time, mark, audio, video {
     font-family: "Noto Sans", sans-serif;
     text-decoration: none;
     color: #fff;
-    padding: 1px 0;
+    padding: 3px 0;
     font-size: 0.875rem;
     font-weight: bold;
     cursor: pointer;
@@ -192,25 +192,8 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .footer__nav {
-    width: 300px;
-  }
-  .footer__nav__links {
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .footer__nav__links a {
-    font-size: 1rem;
-  }
-}
-/* VERSION XL */
-@media screen and (min-width: 1920px) {
-  .footer__nav {
-    width: 500px;
-    height: 100px;
+    width: 350px;
+    margin-bottom: -20px;
   }
   .footer__nav__title {
     display: flex;
@@ -219,10 +202,33 @@ time, mark, audio, video {
     align-items: center;
     margin: auto;
     font-weight: bold;
-    font-size: 1.375rem;
+    font-size: 1rem;
     text-decoration: underline;
   }
-  .footer__nav a {
+  .footer__nav__links {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer__nav__links a {
+    font-size: 0.875rem;
+    padding: 0 3px;
+  }
+}
+/* VERSION XL */
+@media screen and (min-width: 1920px) {
+  .footer__nav {
+    width: 500px;
+  }
+  .footer__nav__title {
+    font-size: 1.375rem;
+  }
+  .footer__nav__links {
+    height: 100px;
+  }
+  .footer__nav__links a {
     font-size: 1.25rem;
   }
 }
@@ -357,15 +363,15 @@ time, mark, audio, video {
 /* FOOTER */
 /* VERSION MOBILE */
 .footer {
-  position: absolute;
   background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   color: #fff;
   font-family: "Noto Sans", sans-serif;
+  margin-top: 5vh;
+  position: absolute;
   height: 170px;
   left: 0;
   width: 100%;
   min-width: 360px;
-  margin-top: 10vh;
   z-index: -2;
 }
 .footer__center__left {
@@ -400,7 +406,7 @@ time, mark, audio, video {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 40px 50px 0 50px;
+    margin: 45px 50px 0 50px;
   }
   .footer__center__left {
     display: flex;
@@ -423,7 +429,7 @@ time, mark, audio, video {
     height: 200px;
   }
   .footer__center {
-    margin: 60px 70px 0 70px;
+    margin: 65px 70px 0 70px;
   }
   .footer__center__left {
     width: 320px;
