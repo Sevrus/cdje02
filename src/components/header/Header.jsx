@@ -15,7 +15,7 @@ const Header = () => {
             setResizeHeader(true);
 
         } else {
-            window.scrollY >= 180 ? setResizeHeader(true) : setResizeHeader(false);
+            window.scrollY >= 100 ? setResizeHeader(true) : setResizeHeader(false);
         }
     }
     window.addEventListener('scroll', changeSize);
