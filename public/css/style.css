@@ -458,7 +458,7 @@ time, mark, audio, video {
     height: 130px;
   }
   .resize {
-    height: 70px;
+    height: 80px;
   }
 }
 /* VERSION TABLETTE */
@@ -480,7 +480,7 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .normal-size {
-    height: 230px;
+    height: 220px;
   }
   .resize {
     height: 110px;
@@ -1251,7 +1251,7 @@ time, mark, audio, video {
 
 @media screen and (min-width: 500px) {
   .adminNav {
-    top: 70px;
+    top: 80px;
     width: 450px;
   }
 }
