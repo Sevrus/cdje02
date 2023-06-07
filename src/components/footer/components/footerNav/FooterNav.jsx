@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
-import Modal from "../../../modal/Modal";
 
 
 const FooterNav = () => {
@@ -46,13 +44,6 @@ const FooterNav = () => {
                 >
                     CONTACT
                 </NavLink>
-
-                <a onClick={() => setOpenModal(true)}>
-                    LOGIN
-                </a>
-                {openModal && createPortal(
-                    <Modal closeModal={() => setOpenModal(false)} />, document.body
-                )}
             </ul>
         </nav>
     )

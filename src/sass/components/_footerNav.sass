@@ -22,7 +22,7 @@
                 font-family: $font-primary
                 text-decoration: none
                 color: $white
-                padding: 1px 0
+                padding: 3px 0
                 font-size: $fs-14
                 font-weight: bold
                 cursor: pointer
@@ -33,28 +33,34 @@
 /* VERSION L */
 @media screen and (min-width: 1024px)
     .footer__nav
-        width: 300px
-
-        &__links
-            height: 80px
-            @include flex(row, space-around, center)
-            flex-wrap: wrap
-
-            & a
-                font-size: $fs-16
-
-/* VERSION XL */
-@media screen and (min-width: 1920px)
-    .footer__nav
-        width: 500px
-        height: 100px
+        width: 350px
+        margin-bottom: -20px
 
         &__title
             @include flex(row, center, center)
             margin: auto
             font-weight: bold
-            font-size: $fs-22
+            font-size: $fs-16
             text-decoration: underline
 
-        & a
-            font-size: $fs-20
+        &__links
+            height: 70px
+            @include flex(row, space-around, center)
+
+            & a
+                font-size: $fs-14
+                padding: 0 3px
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .footer__nav
+        width: 500px
+
+        &__title
+            font-size: $fs-22
+
+        &__links
+            height: 100px
+ 
+            & a
+                font-size: $fs-20
