@@ -1393,7 +1393,7 @@ time, mark, audio, video {
   top: 0;
 }
 .modalArticle__content {
-  position: fixed;
+  position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1478,6 +1478,9 @@ time, mark, audio, video {
 }
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
+  .modalArticle__content {
+    top: 50%;
+  }
   .modalArticle__content__title__label, .modalArticle__content__author__label, .modalArticle__content__description__label, .modalArticle__content__date__label {
     font-size: 1.25rem;
   }

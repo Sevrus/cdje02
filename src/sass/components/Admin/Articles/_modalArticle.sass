@@ -11,7 +11,7 @@
     top: 0
 
     &__content
-        position: fixed
+        position: absolute
         top: 40%
         left: 50%
         transform: translate(-50%, -50%)
@@ -89,7 +89,8 @@
 @media screen and (min-width: 768px)
     .modalArticle
         &__content
-
+            top: 50%
+            
             &__title, &__author, &__description, &__date
                 &__label
                     font-size: $fs-20
