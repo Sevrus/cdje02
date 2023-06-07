@@ -262,7 +262,7 @@ time, mark, audio, video {
     padding: 15px;
     left: auto;
     top: -40px;
-    right: 50px;
+    right: 100px;
   }
   .navbar__links::before, .navbar__links::after {
     content: none;
@@ -339,6 +339,7 @@ time, mark, audio, video {
   .chessboard, .chessboard-disappear {
     bottom: -80px;
     width: 450px;
+    left: 37%;
   }
 }
 /* VERSION MOBILE */
@@ -346,7 +347,7 @@ time, mark, audio, video {
   position: absolute;
   width: 50px;
   left: 10px;
-  top: 10px;
+  top: 5px;
 }
 
 @media screen and (min-width: 500px) {
@@ -362,15 +363,14 @@ time, mark, audio, video {
   }
   .logo--scroll {
     position: relative;
-    width: 80px;
+    width: 75px;
     left: 30px;
-    top: 12px;
   }
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .logo--scroll {
-    width: 100px;
+    width: 85px;
     left: 50px;
   }
 }
@@ -379,11 +379,13 @@ time, mark, audio, video {
   .logo {
     display: block;
     position: relative;
-    top: -5px;
   }
   .logo, .logo--scroll {
-    width: 120px;
+    width: 110px;
     left: 100px;
+  }
+  .logo--scroll {
+    top: 16px;
   }
 }
 /* HEADER */
@@ -405,7 +407,7 @@ time, mark, audio, video {
 }
 
 .resize {
-  height: 60px;
+  height: 70px;
   transition: height ease-out 0.5s;
 }
 
@@ -414,7 +416,7 @@ time, mark, audio, video {
     height: 130px;
   }
   .resize {
-    height: 70px;
+    height: 80px;
   }
 }
 /* VERSION TABLETTE */
@@ -426,7 +428,7 @@ time, mark, audio, video {
     height: 200px;
   }
   .resize {
-    height: 90px;
+    height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -445,14 +447,14 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .normal-size {
-    height: 220px;
+    height: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
   .resize {
-    height: 130px;
+    height: 120px;
   }
 }
 /* MODAL LOGIN */
