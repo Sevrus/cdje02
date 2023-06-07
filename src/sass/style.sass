@@ -1,10 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@700&display=swap')
+
 @import './base/reset'
 @import './components/_header'
-@import './components/_modal'
 
+/* VERSION MOBILE */
 .main
     min-width: 360px
     min-height: 100vh
-    margin-top: 300px
-    
+    margin-top: 180px
+
+@media screen and ( min-width: 500px )
+    .main
+        margin-top: 200px   
+
+/* VERSION TABLETTE */
+@media screen and ( min-width: 768px )
+    .main
+        margin-top: 280px    
+
+/* VERSION L */        
+@media screen and ( min-width: 1024px )
+    .main
+        margin-top: 310px 
+
+/* VERSION XL */   
+@media screen and ( min-width: 1920px )
+    .main
+        margin-top: 310px
