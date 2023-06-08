@@ -212,6 +212,14 @@ time, mark, audio, video {
     margin-bottom: 10px;
     padding-top: 10px;
   }
+  .navbar__links__link__admin {
+    margin-top: 3px;
+  }
+  .navbar__links__link__admin .active {
+    border-top: none;
+    padding: 0;
+    margin: 0;
+  }
   .navbar__links__link--scroll, .navbar__links__link__admin--scroll {
     font-size: 0.875rem;
   }
@@ -321,6 +329,9 @@ time, mark, audio, video {
   .navbar__links__link__icon, .navbar__links__link--scroll__icon, .navbar__links__link__admin__icon, .navbar__links__link__admin--scroll__icon {
     display: none;
     margin-left: 0;
+  }
+  .navbar__links__link__admin, .navbar__links__link--scroll__admin, .navbar__links__link__admin__admin, .navbar__links__link__admin--scroll__admin {
+    margin-right: 15px;
   }
   .navbar__links__link__admin--scroll, .navbar__links__link--scroll__admin--scroll, .navbar__links__link__admin__admin--scroll, .navbar__links__link__admin--scroll__admin--scroll {
     padding: 10px;
