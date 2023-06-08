@@ -20,12 +20,12 @@ const ArticleAdd = () => {
 
                 <div className="addArticle__description">
                     <label htmlFor="description">Description</label>
-                    <textarea cols="30" rows="10" name="description" maxLength={250} required={true} />
+                    <textarea name="description" maxLength={500} required={true} />
                 </div>
 
                 <div className="addArticle__date">
                     <label htmlFor="date">Date</label>
-                    <input type="date" name="date" maxLength={250} required={true} />
+                    <input type="date" name="date" required={true} />
                 </div>
 
                 <div className="addArticle__btn">

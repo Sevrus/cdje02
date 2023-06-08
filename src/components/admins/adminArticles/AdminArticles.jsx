@@ -5,7 +5,7 @@ import ArticleDescription from "./components/ArticleDescription/ArticleDescripti
 const AdminArticles = () => {
     const { pathname } = useLocation();
 
-    if (pathname === "/admin/articles") {
+    if (pathname === "/admin/articles" || pathname === "/admin") {
         return (
             <section className="article">
 

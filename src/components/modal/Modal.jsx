@@ -30,13 +30,13 @@ const Modal = ({ closeModal }) => {
                 <div className="modal__content__email">
                     <label className="modal__content__email__label" htmlFor="email" >Email</label>
                     <input className="modal__content__email__input" type="email" name="email" id="email" 
-                        value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Entrez votre adresse mail" required />
+                        value={email} onChange={(e) => setEmail(e.target.value)} required />
                 </div>
 
                 <div className="modal__content__password">
                     <label className="modal__content__password__label" htmlFor="password">Mot de passe</label>
                     <input className="modal__content__password__input" type="password" name="password" id="password" 
-                        value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Entrez votre mot de passe" required />
+                        value={password} onChange={(e) => setPassword(e.target.value)} required />
                 </div>
 
                 <button type="submit" className="modal__content__button"

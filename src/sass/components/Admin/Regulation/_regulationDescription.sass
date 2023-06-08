@@ -4,9 +4,7 @@
 // VERSION MOBILE
 .articleRegulation
     @include flex(column, space-between , center)
-    background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
-    border-radius: 5px
+    @include articles()
     width: 80%
     margin-bottom: 15px
     padding: 5px
@@ -15,9 +13,7 @@
         @include flex(column, space-between, center)
 
     p
-        font-family: $font-primary
-        font-size: $fs-12
-        color: $white
+        font-size: $fs-14
         padding: 5px
 
     &__icon
@@ -27,6 +23,9 @@
         &__pencil, &__trash
             color: $red
             padding: 5px
+
+            &:hover
+                cursor: pointer
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)

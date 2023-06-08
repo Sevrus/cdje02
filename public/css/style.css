@@ -1061,7 +1061,7 @@ time, mark, audio, video {
   background-color: #fff;
   z-index: 1000;
   width: 320px;
-  height: 350px;
+  height: 400px;
   border-radius: 5px;
   font-family: "Noto Sans", sans-serif;
   font-weight: bold;
@@ -1101,14 +1101,15 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .modal__content__email__label, .modal__content__password__label {
   color: #242627;
   font-size: 1rem;
 }
 .modal__content__email__input, .modal__content__password__input {
-  width: 275px;
-  height: 35px;
+  width: 80%;
+  height: 40px;
   border: 1px solid #3d4450;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -1122,8 +1123,9 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: #fff;
+  font-family: "Noto Sans", sans-serif;
   margin-top: 40px;
-  width: 275px;
+  width: 60%;
   height: 40px;
   border: none;
   font-size: 1rem;
@@ -1152,19 +1154,14 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .modal__content {
     width: 500px;
-    height: 400px;
+    height: 350px;
   }
   .modal__content__email__label, .modal__content__password__label {
-    font-size: 1.25rem;
-  }
-  .modal__content__email__input, .modal__content__password__input {
-    width: 400px;
-    height: 45px;
+    font-size: 1.125rem;
   }
   .modal__content__button {
-    width: 400px;
-    height: 50px;
-    font-size: 1.25rem;
+    height: 45px;
+    font-size: 1.125rem;
   }
   .modal__content__lost-password {
     font-size: 1rem;
@@ -1173,20 +1170,19 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .modal__content {
-    width: 550px;
-    height: 450px;
+    width: 600px;
+    height: 400px;
   }
   .modal__content__email__label, .modal__content__password__label {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
   .modal__content__email__input, .modal__content__password__input {
     width: 450px;
     height: 50px;
   }
   .modal__content__button {
-    width: 450px;
-    height: 55px;
-    font-size: 1.375rem;
+    height: 50px;
+    font-size: 1.25rem;
   }
   .modal__content__lost-password {
     font-size: 1.125rem;
@@ -1195,20 +1191,15 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .modal__content {
-    width: 800px;
-    height: 500px;
+    width: 700px;
+    height: 450px;
   }
   .modal__content__email__label, .modal__content__password__label {
-    font-size: 1.5rem;
-  }
-  .modal__content__email__input, .modal__content__password__input {
-    width: 500px;
-    height: 60px;
+    font-size: 1.375rem;
   }
   .modal__content__button {
-    width: 500px;
-    height: 65px;
-    font-size: 1.5rem;
+    width: 50%;
+    font-size: 1.375rem;
   }
   .modal__content__lost-password {
     font-size: 1.25rem;
@@ -1220,6 +1211,7 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: #fff;
+  font-family: "Noto Sans", sans-serif;
   border-radius: 0 0 10px 10px;
   width: 300px;
   border-top: 1.5px solid #f73746;
@@ -1320,7 +1312,7 @@ time, mark, audio, video {
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans", sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 25px;
   width: 100%;
@@ -1345,15 +1337,22 @@ time, mark, audio, video {
   width: 100%;
 }
 .addReferee__btn button {
-  background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: #fff;
-  width: 28%;
-  max-width: 300px;
-  height: 30px;
-  font-size: 0.875rem;
   font-family: "Noto Sans", sans-serif;
+  margin-top: 40px;
+  width: 50%;
+  max-width: 300px;
+  height: 40px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.addReferee__btn button:hover {
+  cursor: pointer;
+  transform: scale(0.98);
 }
 
 @media screen and (min-width: 768px) {
@@ -1377,9 +1376,6 @@ time, mark, audio, video {
   .addReferee input {
     width: 79%;
     max-width: 600px;
-  }
-  .addReferee button {
-    height: 40px;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1408,9 +1404,11 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
   width: 80%;
   margin-bottom: 15px;
   padding: 5px;
@@ -1422,9 +1420,7 @@ time, mark, audio, video {
   align-items: center;
 }
 .articleReferee p {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 0.75rem;
-  color: #fff;
+  font-size: 0.875rem;
   padding: 5px;
 }
 .articleReferee__icon {
@@ -1434,6 +1430,9 @@ time, mark, audio, video {
 .articleReferee__icon__pencil, .articleReferee__icon__trash {
   color: #f73746;
   padding: 5px;
+}
+.articleReferee__icon__pencil:hover, .articleReferee__icon__trash:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -1539,6 +1538,7 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: #fff;
+  font-family: "Noto Sans", sans-serif;
   margin-top: 40px;
   width: 275px;
   height: 40px;
@@ -1852,7 +1852,7 @@ time, mark, audio, video {
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans", sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 25px;
   width: 100%;
@@ -1877,15 +1877,22 @@ time, mark, audio, video {
   width: 100%;
 }
 .addRegulation__btn button {
-  background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: #fff;
-  width: 28%;
-  max-width: 300px;
-  height: 30px;
-  font-size: 0.875rem;
   font-family: "Noto Sans", sans-serif;
+  margin-top: 40px;
+  width: 50%;
+  max-width: 300px;
+  height: 40px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.addRegulation__btn button:hover {
+  cursor: pointer;
+  transform: scale(0.98);
 }
 
 @media screen and (min-width: 768px) {
@@ -1909,9 +1916,6 @@ time, mark, audio, video {
   .addRegulation input {
     width: 79%;
     max-width: 600px;
-  }
-  .addRegulation button {
-    height: 40px;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1940,9 +1944,11 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
   width: 80%;
   margin-bottom: 15px;
   padding: 5px;
@@ -1954,9 +1960,7 @@ time, mark, audio, video {
   align-items: center;
 }
 .articleRegulation p {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 0.75rem;
-  color: #fff;
+  font-size: 0.875rem;
   padding: 5px;
 }
 .articleRegulation__icon {
@@ -1966,6 +1970,9 @@ time, mark, audio, video {
 .articleRegulation__icon__pencil, .articleRegulation__icon__trash {
   color: #f73746;
   padding: 5px;
+}
+.articleRegulation__icon__pencil:hover, .articleRegulation__icon__trash:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -2071,6 +2078,7 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: #fff;
+  font-family: "Noto Sans", sans-serif;
   margin-top: 40px;
   width: 275px;
   height: 40px;
@@ -2384,7 +2392,7 @@ time, mark, audio, video {
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans", sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 25px;
   width: 100%;
@@ -2401,6 +2409,10 @@ time, mark, audio, video {
   height: 40px;
   text-indent: 10px;
 }
+.addArticle__title textarea, .addArticle__author textarea, .addArticle__description textarea, .addArticle__date textarea {
+  height: 80px;
+  resize: vertical;
+}
 .addArticle__btn {
   display: flex;
   flex-direction: row;
@@ -2409,15 +2421,22 @@ time, mark, audio, video {
   width: 100%;
 }
 .addArticle__btn button {
-  background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: #fff;
-  width: 28%;
-  max-width: 300px;
-  height: 30px;
-  font-size: 0.875rem;
   font-family: "Noto Sans", sans-serif;
+  margin-top: 40px;
+  width: 50%;
+  max-width: 300px;
+  height: 40px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.addArticle__btn button:hover {
+  cursor: pointer;
+  transform: scale(0.98);
 }
 
 @media screen and (min-width: 768px) {
@@ -2441,9 +2460,6 @@ time, mark, audio, video {
   .addArticle input, .addArticle textarea {
     width: 79%;
     max-width: 600px;
-  }
-  .addArticle button {
-    height: 40px;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -2472,9 +2488,11 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
   width: 80%;
   margin-bottom: 15px;
   padding: 5px;
@@ -2486,9 +2504,7 @@ time, mark, audio, video {
   align-items: center;
 }
 .articleArticle p {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 0.75rem;
-  color: #fff;
+  font-size: 0.875rem;
   padding: 5px;
 }
 .articleArticle__icon {
@@ -2498,6 +2514,9 @@ time, mark, audio, video {
 .articleArticle__icon__pencil, .articleArticle__icon__trash {
   color: #f73746;
   padding: 5px;
+}
+.articleArticle__icon__pencil:hover, .articleArticle__icon__trash:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -2603,6 +2622,7 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: #fff;
+  font-family: "Noto Sans", sans-serif;
   margin-top: 40px;
   width: 275px;
   height: 40px;
