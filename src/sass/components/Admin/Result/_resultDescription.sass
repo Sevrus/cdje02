@@ -1,0 +1,55 @@
+@import '../../../utilities/_mixin.sass'
+@import '../../../utilities/_variables.sass'
+
+// VERSION MOBILE
+.articleResult
+    @include flex(column, space-between , center)
+    @include articles()
+    width: 80%
+    margin-bottom: 15px
+    padding: 5px
+
+    &__text
+        @include flex(column, space-between, center)
+
+    p
+        font-size: $fs-14
+        padding: 5px
+
+    &__icon
+        display: flex
+        justify-content: space-between
+
+        &__pencil, &__trash
+            color: $red
+            padding: 5px
+
+            &:hover
+                cursor: pointer
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .articleResult
+        width: 40%
+        margin: 0 10px 20px 10px
+
+        p
+            font-size: $fs-14
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .articleResult
+        width: 25%
+        margin: 0 10px 30px 10px
+        
+        p
+            font-size: $fs-16
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .articleResult
+        width: 20%
+        margin: 0 10px 30px 10px
+
+        p
+            font-size: $fs-18
