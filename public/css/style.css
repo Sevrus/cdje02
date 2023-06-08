@@ -344,12 +344,12 @@ time, mark, audio, video {
 }
 
 .chessboard {
-  opacity: 1;
+  display: block;
   transition: opacity ease-in-out 0.5s 0.2s;
 }
 
 .chessboard-disappear {
-  opacity: 0;
+  display: none;
   transition: opacity ease-in-out 0.5s;
 }
 

@@ -5,6 +5,7 @@ const Modal = ({ closeModal }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -12,6 +13,10 @@ const Modal = ({ closeModal }) => {
         console.log(email, password);
         closeModal();
         navigate('/admin');
+    }
+
+    const handleLogin = () => {
+        setIsLoggedIn(true);
     }
 
     return (
@@ -34,7 +39,8 @@ const Modal = ({ closeModal }) => {
                         value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Entrez votre mot de passe" required />
                 </div>
 
-                <button type="submit" className="modal__content__button">Se Connecter</button>
+                <button type="submit" className="modal__content__button"
+                    onClick={handleLogin}>Se Connecter</button>
 
                 <div className="modal__content__lost-password">Mot de passe oublié ?</div>
             </form>

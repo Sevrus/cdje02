@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AdminArticles from "../components/admins/adminArticles/AdminArticles";
 import AdminChampions from "../components/admins/adminChampions/AdminChampions";
 import AdminClubs from "../components/admins/adminClubs/AdminClubs";
@@ -9,17 +10,23 @@ import AdminResults from "../components/admins/adminResults/adminResults";
 
 const Admin = () => {
 
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
     return (
         <>
-            <AdminNav />
+            {/* {isLoggedIn ? */}
+                <>
+                    < AdminNav />
 
-            <AdminChampions />
-            <AdminReferees />
-            <AdminClubs />
-            <AdminComity />
-            <AdminArticles />
-            <AdminResults />
-            <AdminRegulation />
+                    <AdminChampions />
+                    <AdminReferees />
+                    <AdminClubs />
+                    <AdminComity />
+                    <AdminArticles />
+                    <AdminResults />
+                    <AdminRegulation />
+                </>
+                {/* : null} */}
         </>
     )
 }
