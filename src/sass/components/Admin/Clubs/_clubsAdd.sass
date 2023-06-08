@@ -2,12 +2,12 @@
 @import '../../../utilities/_variables.sass'
 
 // VERSION MOBILE 
-.addRegulation
+.addClub
     @include flex(column , center , center)
     margin-bottom: 30px
     width: 100%
 
-    &__title, &__link
+    &__name, &__town, &__site, &__president, &__tel, &__members
         @include flex(column ,center , center)
         font-family: $font-primary
         font-size: $fs-16
@@ -47,20 +47,20 @@
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
-    .addRegulation
+    .addClub
 
-        &__title, &__link, button
+        &__name, &__town, &__site, &__president, &__tel, &__members, button
             font-size: $fs-18
 
 // VERSION L
 @media screen and (min-width:1024px)
-    .addRegulation
+    .addClub
         margin-bottom: 50px
 
-        &__title, &__link
+        &__name, &__town, &__site, &__president, &__tel, &__members
             margin-bottom: 30px
 
-        &__title, &__link, button
+        &__name, &__town, &__site, &__president, &__tel, &__members, button
             font-size: $fs-20
 
         label
@@ -70,15 +70,18 @@
             width: 79%
             max-width: 600px
 
+        button
+            height: 40px
+
 // VERSION XL
 @media screen and (min-width:1920px)
-    .addRegulation
+    .addClub
         margin-bottom: 90px
 
-        &__title, &__link
+        &__name, &__town, &__site, &__president, &__tel, &__members
             margin-bottom: 40px
 
-        &__title, &__link, button
+        &__name, &__town, &__site, &__president, &__tel, &__members, button
             font-size: $fs-24
 
         label
