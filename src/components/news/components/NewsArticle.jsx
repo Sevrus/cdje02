@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import NewsOpen from "../../newsOpen/NewsOpen";
 import dataArticle from "./dataArticle.js"
 
 const NewsArticle = () => {

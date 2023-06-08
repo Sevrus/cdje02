@@ -1,31 +1,31 @@
 import dataClubs from "./dataClubs.js"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-const ClubsDescription = () => {
+const ClubsDescription = ({ toogle, selected }) => {
 
     return (
         <>
             {dataClubs.map((item) => (
 
-                    <details className="article-clubs" key={item.id}>
+                <li
+                    className={selected === item.id ? "article-clubs active" : "article-clubs"}
+                    key={item.id}
+                    onClick={() => toogle(item.id, item.coord)}
+                >
 
-                        <summary className="article-clubs__title">
-                            <hr className="article-clubs__title__lineLeft" />
-                            <h4>{item.name}</h4>
-                            <hr className="article-clubs__title__lineRight" />
-                            <FontAwesomeIcon className='article-clubs__title__iconChevronDown' icon={faChevronDown} />
-                        </summary>
+                    <div className="article-clubs__title">
+                        <h4>{item.name}</h4>
+                        <hr className="article-clubs__title__separation" />
+                    </div>
 
-                        <section className="article-clubs__description">
-                            <p>{item.city}</p>
-                            <p>Président: {item.president}</p>
-                            <p>Tél : {item.tel}</p>
-                            <p>{item.site}</p>
-                            <p>Membres: {item.members}</p>
-                        </section>
+                    <div className="article-clubs__description">
+                        <p>{item.city}</p>
+                        <p>Président: {item.president}</p>
+                        <p>Membres: {item.members}</p>
+                        <p>{item.site}</p>
+                        <p>{item.tel}</p>
+                    </div>
 
-                    </details>
+                </li>
             ))}
         </>
     )

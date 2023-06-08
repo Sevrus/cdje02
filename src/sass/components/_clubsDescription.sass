@@ -3,158 +3,116 @@
 
 // VERSION MOBILE
 .article-clubs
-    @include flex(row, center , center)
-    flex-wrap: wrap
+    @include flex(column, start , center)
     background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
     border-radius: 5px
-    width: 80%
-    margin-bottom: 15px
-    transition: height 1s ease
-    width: 300px
-
-    &[open] > summary .article-clubs__title__iconChevronDown
-        transform: rotate(180deg)
-
-    &:not([open])
-        height: 49px
-
-    &[open]
-        height: 174px
-        margin-bottom: 10px
+    margin-bottom: 20px
+    width: 83%
+    overflow: hidden
+    height: 45px
 
     &__title
-        display: flex
-        flex-direction: row
-        position: relative
-        margin-bottom: 15px
-
-        &__lineLeft, &__lineRight
-            width: 70px
-            position: absolute
-            bottom: 0
-            margin-bottom: 0
-
-        &__lineLeft
-            left: 15px
-
-        &__lineRight
-            right: 15px
+        @include flex(column, center, center)
+        height: 40px
+        width: 100%
+        margin-top: 10px
 
         h4
-            margin: auto
             font-family: $font-primary
             font-size: $fs-14
-            line-height: 14px
             color: $white
-            padding: 10px
+            padding: 0 10px
 
-        &__iconChevronDown
-            position: absolute
-            top: 10px
-            right: 15px
-            color: $red
+        &__separation
+            width: 90%           
+            background-color: #fff
 
     &__description
-        display: flex
-        flex-direction: column
-        text-align: center
+        @include flex( column , center , center )
+        gap: 5px
         font-family: $font-primary
         font-size: $fs-12
         color: $white
-        padding-bottom: 5px
-        margin-bottom: 10px
 
-        p
-            padding-bottom: 5px
+.article-clubs.active
+    @include flex(column , center , center)
+    position: absolute
+    top: -185px
+    left: 50%
+    z-index: 9999
+    transform: translate(-50%)
+    height: 165px 
+    width: 278px
+    background: linear-gradient(90deg, rgba(36, 38, 39, .9) -0.14%, rgba(61, 68, 80, .9) 47.26%, rgba(78, 88, 98, .9) 99.86%)
+    margin-bottom: 0
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
     .article-clubs
-        width: 300px
-
-        &:not([open])
-            height: 51px
-        &[open]
-            height: 155px
+        width: 39%
+        height: 50px
+        margin-bottom: 10px
 
         h4
             font-size: $fs-16
-            line-height: 16px
 
         p
             font-size: $fs-14
-            line-height: 14px
+
+    .article-clubs.active
+        top: -190px
+        height: 170px
+        max-height: 200px
+        width: 300px
 
 // VERSION L 
 @media screen and (min-width:1024px)
     .article-clubs
-        width: 80%
+        width: 40%
 
-        &:not([open])
-            height: 53px
-        &[open]
-            height: 165px
+        &__title
+            //width: 100%
 
-        h4
+            &__separation
+                height: 1px
+
+            h4
             font-size: $fs-18
-            line-height: 18px
 
         p
             font-size: $fs-16
-            line-height: 16px
+
+    .article-clubs.active
+        top: -210px
+        height: 185px
+        max-height: 300px
+        width: 320px
+
 
 // VERSION XL
 @media screen and (min-width:1920px)
     .article-clubs
-        width: 73%
-
-        &:not([open])
-            height: 55px
-            
-        &[open]
-            height: 175px
+        width: 30%
+        height: 55px
 
         &__title
-            align-items: flex-end
-
-            &__lineLeft, &__lineRight
-                width: 150px
-                height: 0px
-
-            &__lineLeft
-                left: 10px
-
-            &__lineRight
-                right: 10px
 
             h4
                 font-size: $fs-20
                 line-height: 20px
                 padding: 10px
 
-            &__iconChevronDown
-                top: 5px
-                right: 10px
-
         &__description
-            margin-bottom: 15px
-            display: flex
-            align-items: center
+            margin-top: 15px
 
             p
                 padding: 0px
                 font-size: $fs-18
-                line-height: 18px
 
-            &__top
-                display: flex
+    .article-clubs.active
+        @include flex(column , center , center)
+        top: -250px
+        width: 400px
+        height: 220px
 
-            &__tab
-                display: flex
-                justify-content: space-around
-                width: 100%
-
-                p
-                    text-align: left
-                    padding: 20px 0 0 0

@@ -1,7 +1,21 @@
+import { useState } from "react";
 import ClubsDescription from "./components/clubsDescription/ClubsDescription";
 import ClubsMap from "./components/clubsMap/ClubsMap";
 
 const Clubs = () => {
+
+    const [coordinate, setCoordinate] = useState([49.04729203170085, 3.399767194606112])
+    const [selected, setSelected] = useState(null)
+
+    const toogle = ((i, coord) => {
+        if (selected === i) {
+            return (
+                setSelected(null)
+            )
+        }
+        setSelected(i)
+        setCoordinate([coord[0], coord[1]]);
+    })
 
     return (
         <section className="clubs">
@@ -18,13 +32,13 @@ const Clubs = () => {
 
             </div>
 
-            <div className="clubs__list">
+            <ClubsMap coord={coordinate} />
 
-                <ClubsDescription />
+            <ul className="clubs__list">
 
-                <ClubsMap />
+                <ClubsDescription toogle={toogle} selected={selected} />
 
-            </div>
+            </ul>
 
         </section>
     )
