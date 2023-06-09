@@ -34,7 +34,7 @@ const RefereesAdd = () => {
                 </div>
 
                 <div className="addReferee__btn">
-                    <button>Envoyer</button>
+                    <button>Ajouter</button>
                 </div>
 
             </Form>

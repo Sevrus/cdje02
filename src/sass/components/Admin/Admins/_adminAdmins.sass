@@ -1,11 +1,11 @@
 @import '../../../utilities/_mixin.sass'
 @import '../../../utilities/_variables.sass'
-@import '../../Admin/Regulation/_regulationAdd.sass'
-@import '../../Admin/Regulation/_regulationDescription.sass'
-@import '../../Admin/Regulation/_modalRegulation'
+@import '../../Admin/Admins/_adminsDescription.sass'
+@import '../../Admin/Admins/_adminsAdd.sass'
+@import '../../Admin/Admins/_modalAdmins.sass'
 
 // VERSION MOBILE 
-.regulation
+.admins
     @include flex(column , center , center)
     margin-top: -70px
     width: 100%
@@ -72,7 +72,8 @@
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
-    .regulation
+    .admins
+
         &__title
             margin-bottom: 35px
 
@@ -121,7 +122,7 @@
 
 // VERSION L
 @media screen and (min-width:1024px)
-    .regulation
+    .admins
         margin-top: 50px
 
         &__title
@@ -169,7 +170,7 @@
 
 // VERSION XL
 @media screen and (min-width:1920px)
-    .regulation
+    .clubs
         margin-top: 60px
 
         &__title

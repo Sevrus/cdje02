@@ -16,39 +16,7 @@ const AdminNav = () => {
                 </summary>
 
                 <section className='adminNav__links'>
-                    <NavLink
-                        to={`/admin/champions`}
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
-                        }
-                    >
-                        Champions
-                    </NavLink>
-                    <NavLink
-                        to={`/admin/referees`}
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
-                        }
-                    >
-                        Arbitres
-                    </NavLink>
-                    <NavLink
-                        to={`/admin/clubs`}
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
-                        }
-                    >
-                        Clubs
-                    </NavLink>
-                    <NavLink
-                        to={`/admin/comity`}
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
-                        }
-                    >
-                        Comité
-                    </NavLink>
-                    <NavLink
+                <NavLink
                         to={`/admin/articles`}
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
@@ -56,6 +24,7 @@ const AdminNav = () => {
                     >
                         Articles
                     </NavLink>
+
                     <NavLink
                         to={`/admin/results`}
                         className={({ isActive, isPending }) =>
@@ -64,6 +33,43 @@ const AdminNav = () => {
                     >
                         Résultats
                     </NavLink>
+
+                    <NavLink
+                        to={`/admin/clubs`}
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                    >
+                        Clubs
+                    </NavLink>
+
+                    <NavLink
+                        to={`/admin/comity`}
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                    >
+                        Comité
+                    </NavLink>
+
+                    <NavLink
+                        to={`/admin/referees`}
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                    >
+                        Arbitres
+                    </NavLink>
+
+                    <NavLink
+                        to={`/admin/champions`}
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                    >
+                        Champions
+                    </NavLink>
+
                     <NavLink
                         to={`/admin/regulation`}
                         className={({ isActive, isPending }) =>
@@ -71,6 +77,15 @@ const AdminNav = () => {
                         }
                     >
                         Règlements
+                    </NavLink>
+
+                    <NavLink
+                        to={`/admin/admins`}
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "active" : ""
+                        }
+                    >
+                        Admins
                     </NavLink>
                 </section>
 

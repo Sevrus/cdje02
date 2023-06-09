@@ -22,7 +22,7 @@ const ModalChampion = ({ closeModal }) => {
                     <input type="year" name="year" id="year" className="modalChampion__content__year__input" />
                 </div>
 
-                <button className="modalChampion__content__button">Envoyer</button>
+                <button className="modalChampion__content__button">Confirmer</button>
 
             </div>
         </>

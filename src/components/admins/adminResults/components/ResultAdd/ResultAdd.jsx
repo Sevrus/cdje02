@@ -19,7 +19,7 @@ const ResultAdd = () => {
                 </div>
 
                 <div className="addResult__btn">
-                    <button>Envoyer</button>
+                    <button>Ajouter</button>
                 </div>
 
             </Form>

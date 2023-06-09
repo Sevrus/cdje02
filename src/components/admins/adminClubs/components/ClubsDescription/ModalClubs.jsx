@@ -37,7 +37,7 @@ const ModalClub = ({ closeModal }) => {
                     <input type="text" name="members" id="members" className="modalClub__content__members__input" />
                 </div>
                 
-                <button className="modalClub__content__button">Envoyer</button>
+                <button className="modalClub__content__button">Confirmer</button>
 
             </div>
         </>

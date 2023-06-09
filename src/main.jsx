@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
+import AdminAdmins from './components/admins/adminAdmins/AdminAdmins';
 import AdminArticles from './components/admins/adminArticles/AdminArticles';
 import AdminChampions from './components/admins/adminChampions/AdminChampions';
 import AdminClubs from './components/admins/adminClubs/AdminClubs';
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
                     {
                         path: "/admin/regulation",
                         element: <AdminRegulation />
+                    },
+                    {
+                        path: "/admin/admins",
+                        element: <AdminAdmins />
                     },
                 ]
             },

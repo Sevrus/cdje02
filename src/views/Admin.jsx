@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AdminAdmins from "../components/admins/adminAdmins/AdminAdmins";
 import AdminArticles from "../components/admins/adminArticles/AdminArticles";
 import AdminChampions from "../components/admins/adminChampions/AdminChampions";
 import AdminClubs from "../components/admins/adminClubs/AdminClubs";
@@ -18,13 +19,14 @@ const Admin = () => {
                 <>
                     < AdminNav />
 
-                    <AdminChampions />
-                    <AdminReferees />
-                    <AdminClubs />
-                    <AdminComity />
                     <AdminArticles />
                     <AdminResults />
+                    <AdminClubs />
+                    <AdminComity />
+                    <AdminReferees />
+                    <AdminChampions />
                     <AdminRegulation />
+                    <AdminAdmins />
                 </>
                 {/* : null} */}
         </>

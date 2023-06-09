@@ -27,7 +27,7 @@ const ModalArticle = ({ closeModal }) => {
                     <input type="date" name="date" id="date" className="modalArticle__content__date__input" />
                 </div>
 
-                <button className="modalArticle__content__button">Envoyer</button>
+                <button className="modalArticle__content__button">Confirmer</button>
 
             </div>
         </>

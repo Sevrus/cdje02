@@ -17,7 +17,7 @@ const ModalResult = ({ closeModal }) => {
                     <input type="txt" name="link" id="link" className="modalResult__content__link__input" />
                 </div>
 
-                <button className="modalResult__content__button">Envoyer</button>
+                <button className="modalResult__content__button">Confirmer</button>
 
             </div>
         </>

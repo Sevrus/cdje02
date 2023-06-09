@@ -39,7 +39,7 @@ const ClubsAdd = () => {
                 </div>
 
                 <div className="addClub__btn">
-                    <button>Envoyer</button>
+                    <button>Ajouter</button>
                 </div>
 
             </Form>

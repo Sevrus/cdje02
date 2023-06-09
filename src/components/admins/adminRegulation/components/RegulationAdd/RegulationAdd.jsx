@@ -17,7 +17,7 @@ const RegulationAdd = () => {
                 </div>
 
                 <div className="addRegulation__btn">
-                    <button>Envoyer</button>
+                    <button>Ajouter</button>
                 </div>
 
             </Form>

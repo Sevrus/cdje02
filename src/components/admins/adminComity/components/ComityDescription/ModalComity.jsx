@@ -27,7 +27,7 @@ const ModalComity = ({ closeModal }) => {
                     <input type="email" name="email" id="email" className="modalComity__content__email__input" />
                 </div>
 
-                <button className="modalComity__content__button">Envoyer</button>
+                <button className="modalComity__content__button">Confirmer</button>
 
             </div>
         </>

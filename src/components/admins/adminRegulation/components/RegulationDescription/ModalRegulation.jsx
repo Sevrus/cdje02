@@ -17,7 +17,7 @@ const ModalRegulation = ({ closeModal }) => {
                     <input type="txt" name="link" id="link" className="modalRegulation__content__link__input" />
                 </div>
 
-                <button className="modalRegulation__content__button">Envoyer</button>
+                <button className="modalRegulation__content__button">Confirmer</button>
 
             </div>
         </>

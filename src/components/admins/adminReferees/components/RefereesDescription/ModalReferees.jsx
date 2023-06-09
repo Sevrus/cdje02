@@ -32,7 +32,7 @@ const ModalReferees = ({ closeModal }) => {
                     <input type="txt" name="club" id="club" className="modalReferees__content__club__input" />
                 </div>
 
-                <button className="modalReferees__content__button">Envoyer</button>
+                <button className="modalReferees__content__button">Confirmer</button>
 
             </div>
         </>

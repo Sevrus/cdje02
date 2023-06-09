@@ -29,7 +29,7 @@ const ComityAdd = () => {
                 </div>
 
                 <div className="addComity__btn">
-                    <button>Envoyer</button>
+                    <button>Ajouter</button>
                 </div>
 
             </Form>

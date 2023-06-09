@@ -43,7 +43,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
     const isLoggedIn = () => {
         if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
             || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
-            || pathname === "/admin/results" || pathname === "/admin/regulation") {
+            || pathname === "/admin/results" || pathname === "/admin/regulation" || pathname === "/admin/admins") {
             return (
                 <div className="navbar__links__link__admin">
                     <NavLink

@@ -22,7 +22,7 @@ const ChampionAdd = () => {
                 </div>
 
                 <div className="addChampion__btn">
-                    <button>Envoyer</button>
+                    <button>Ajouter</button>
                 </div>
 
             </section>
