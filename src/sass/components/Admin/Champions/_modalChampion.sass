@@ -5,13 +5,15 @@
 /* VERSION MOBILE */
 .modalChampion
     position: fixed
-    background-color: rgba(0,0,0,.7)
+    background-color: rgba(0,0,0,.2)
     width: 100%
     height: 100vh
     top: 0
+    z-index: 1002
 
     &__content
-        position: fixed
+        position: absolute
+        z-index: 1003
         top: 40%
         left: 50%
         transform: translate(-50%, -50%)
@@ -19,7 +21,9 @@
         border-radius: 5px
         font-family: $font-primary
         font-weight: bold
-        padding: 20px
+        width: 320px
+        height: fit-content
+        padding: 30px 0
         @include flex(column, center, center)
 
         &__close
@@ -50,27 +54,31 @@
 
         &__name, &__firstname, &__year
             @include flex(column, center, center)
+            width: 100%
 
             &__label
                 color: $black
                 font-size: $fs-16
 
             &__input
-                width: 275px
-                height: 35px
+                width: 80%
+                height: 40px
                 border: 1px solid $grey-blue
                 box-shadow: $shadow
                 border-radius: 5px
                 margin-top: 12px
 
-        &__year, &__firstname
+        &__firstname, &__year
             margin-top: 30px
+
+        &__description__input
+            resize: vertical
 
         &__button
             @include articles()
             margin-top: 40px
-            width: 275px
-            height: 40px
+            width: 80%
+            height: 45px
             border: none
             font-size: $fs-16
             font-weight: bold
@@ -78,65 +86,57 @@
             &:hover
                 cursor: pointer
                 transform: scale(0.98)
-
+                    
 @media screen and (max-height: 600px)
     .modalChampion
         &__content
-            top: 50%
-    
+            top: 45%
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .modalChampion
         &__content
+            width: 500px
 
             &__name, &__firstname, &__year
                 &__label
                     font-size: $fs-20
 
-                &__input
-                    width: 400px
-                    height: 45px
-
             &__button
-                width: 400px
-                height: 50px
                 font-size: $fs-20
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
     .modalChampion
         &__content
-            
+            top: 45%
+            width: 600px
 
             &__name, &__firstname, &__year
                 &__label
                     font-size: $fs-22
 
                 &__input
-                    width: 450px
                     height: 50px
 
             &__button
-                width: 450px
-                height: 55px
+                height: 50px
                 font-size: $fs-22
+
+@media screen and (min-width: 1024px) and (max-height: 600px)
+    .modalChampion
+        &__content
+            top: 50%
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
     .modalChampion
         &__content
-            padding: 20px 30px
+            width: 700px
 
             &__name, &__firstname, &__year
                 &__label
                     font-size: $fs-24
 
-                &__input
-                    width: 500px
-                    height: 60px
-
             &__button
-                width: 500px
-                height: 65px
                 font-size: $fs-24

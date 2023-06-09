@@ -1,10 +1,9 @@
-import dataResult from "./dataResult.js"
+import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencil } from '@fortawesome/free-solid-svg-icons'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { useState } from "react"
 import { createPortal } from "react-dom"
 import ModalResult from "./ModalResult.jsx"
-import { useState } from "react"
+import dataResult from "./dataResult.js"
 
 const ResultDescription = () => {
     const [openModal, setOpenModal] = useState(false);
