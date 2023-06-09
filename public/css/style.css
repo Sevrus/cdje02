@@ -5229,7 +5229,7 @@ time, mark, audio, video {
 }
 
 @media screen and (min-width: 768px) {
-  .addAdmins__lastname, .addAdmins__firstname, .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword button {
+  .addAdmins__lastname, .addAdmins__firstname, .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword, .addAdmins button {
     font-size: 1.125rem;
   }
 }
@@ -5240,7 +5240,7 @@ time, mark, audio, video {
   .addAdmins__lastname, .addAdmins__firstname, .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword {
     margin-bottom: 30px;
   }
-  .addAdmins__lastname, .addAdmins__firstname, .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword button {
+  .addAdmins__lastname, .addAdmins__firstname, .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword, .addAdmins button {
     font-size: 1.25rem;
   }
   .addAdmins label {
@@ -5261,7 +5261,7 @@ time, mark, audio, video {
   .addAdmins__lastname, .addAdmins__firstname, .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword {
     margin-bottom: 40px;
   }
-  .addAdmins__lastname, .addAdmins__firstname, .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword button {
+  .addAdmins__lastname, .addAdmins__firstname, .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword, .addAdmins button {
     font-size: 1.5rem;
   }
   .addAdmins label {
@@ -5712,7 +5712,7 @@ time, mark, audio, video {
 }
 
 @media screen and (min-width: 768px) {
-  .resetPassword__password, .resetPassword__confirmPassword button {
+  .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
     font-size: 1.125rem;
   }
 }
@@ -5723,7 +5723,7 @@ time, mark, audio, video {
   .resetPassword__password, .resetPassword__confirmPassword {
     margin-bottom: 30px;
   }
-  .resetPassword__password, .resetPassword__confirmPassword button {
+  .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
     font-size: 1.25rem;
   }
   .resetPassword label {
@@ -5744,7 +5744,7 @@ time, mark, audio, video {
   .resetPassword__password, .resetPassword__confirmPassword {
     margin-bottom: 40px;
   }
-  .resetPassword__password, .resetPassword__confirmPassword button {
+  .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
     font-size: 1.5rem;
   }
   .resetPassword label {
