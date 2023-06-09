@@ -5654,6 +5654,110 @@ time, mark, audio, video {
     right: 260px;
   }
 }
+.resetPassword {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.resetPassword__password, .resetPassword__confirmPassword {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.resetPassword__password label, .resetPassword__confirmPassword label {
+  margin-bottom: 15px;
+}
+.resetPassword__password input, .resetPassword__confirmPassword input {
+  width: 78%;
+  max-width: 450px;
+  border-radius: 5px;
+  border: 1px solid #242627;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  height: 40px;
+  text-indent: 10px;
+}
+.resetPassword__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.resetPassword__btn button {
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  margin-top: 40px;
+  width: 50%;
+  max-width: 300px;
+  height: 40px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.resetPassword__btn button:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+}
+
+@media screen and (min-width: 768px) {
+  .resetPassword__password, .resetPassword__confirmPassword button {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .resetPassword {
+    margin-bottom: 50px;
+  }
+  .resetPassword__password, .resetPassword__confirmPassword {
+    margin-bottom: 30px;
+  }
+  .resetPassword__password, .resetPassword__confirmPassword button {
+    font-size: 1.25rem;
+  }
+  .resetPassword label {
+    margin-bottom: 20px;
+  }
+  .resetPassword input {
+    width: 79%;
+    max-width: 600px;
+  }
+  .resetPassword button {
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .resetPassword {
+    margin-bottom: 90px;
+  }
+  .resetPassword__password, .resetPassword__confirmPassword {
+    margin-bottom: 40px;
+  }
+  .resetPassword__password, .resetPassword__confirmPassword button {
+    font-size: 1.5rem;
+  }
+  .resetPassword label {
+    margin-bottom: 20px;
+  }
+  .resetPassword input {
+    width: 70%;
+    max-width: 600px;
+  }
+  .resetPassword button {
+    height: 50px;
+  }
+}
 /* VERSION MOBILE */
 .main {
   min-width: 360px;

@@ -22,12 +22,12 @@ const AdminsAdd = () => {
 
                 <div className="addAdmins__password">
                     <label htmlFor="password">Mot de passe</label>
-                    <input type="password" name="password" maxLength={50} required={true} />
+                    <input type="password" name="password" minLength={8} maxLength={50} required={true} />
                 </div>
 
                 <div className="addAdmins__confirmPassword">
                     <label htmlFor="confirmPassword">Confirmer le mot de passe</label>
-                    <input type="confirmPassword" name="confirmPassword" maxLength={50} required={true} />
+                    <input type="confirmPassword" name="confirmPassword" minLength={8} maxLength={50} required={true} />
                 </div>
 
                 <div className="addAdmins__btn">
