@@ -1,0 +1,96 @@
+@import '../utilities/_mixin'
+@import '../utilities/_variables'
+
+// VERSION MOBILE 
+.errorPage
+    @include flex(column , center , center)
+    background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%)
+    height: 100vh
+
+    &__container
+        @include flex(row , center , center)
+        background: $white
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
+        width: 90%
+        max-height: 80%
+        border: 2px solid $grey-blue
+        border-radius: 30px
+        position: relative
+
+        &__link
+            position: absolute
+            padding: 10px
+            top: -25px
+            font-size: $fs-14
+            font-family: $font-primary
+            color: $white
+            background: $grey-blue
+            border: 2px solid $white
+            border-radius: 30px
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
+            cursor: pointer
+
+        &__image
+            width: 90%
+            max-height: 95%
+            padding: 25px 0
+
+    &__message
+        @include flex(row , center , center)
+        background: $white
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
+        margin-top: 5px
+        padding: 5px
+        width: 80%
+        border: 2px solid $grey-blue
+        border-radius: 30px
+
+        p
+            text-align: center
+            font-size: $fs-14
+            font-family: $font-primary
+            color: $black
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .errorPage
+
+        &__container
+            width: 80%
+
+            &__link
+                font-size: $fs-16
+
+        &__message
+            width: 70%
+            
+            p
+                font-size: $fs-16
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .errorPage
+
+        &__container
+            
+            &__link
+                font-size: $fs-18
+
+        &__message
+
+            p
+                font-size: $fs-18
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .errorPage
+
+        &__container
+
+            &__link
+                font-size: $fs-20
+
+        &__message
+
+            p
+                font-size: $fs-20
