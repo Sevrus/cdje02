@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
+  height: 100vh;
+}
+.errorPage__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-height: 80%;
+  border: 2px solid #3d4450;
+  border-radius: 30px;
+  position: relative;
+}
+.errorPage__container__link {
+  position: absolute;
+  padding: 10px;
+  top: -25px;
+  font-size: 0.875rem;
+  font-family: "Noto Sans", sans-serif;
+  color: #fff;
+  background: #3d4450;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.errorPage__container__image {
+  width: 90%;
+  max-height: 95%;
+  padding: 25px 0;
+}
+.errorPage__message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  margin-top: 5px;
+  padding: 5px;
+  width: 80%;
+  border: 2px solid #3d4450;
+  border-radius: 30px;
+}
+.errorPage__message p {
+  text-align: center;
+  font-size: 0.875rem;
+  font-family: "Noto Sans", sans-serif;
+  color: #242627;
+}
+
+@media screen and (min-width: 768px) {
+  .errorPage__container {
+    width: 80%;
+  }
+  .errorPage__container__link {
+    font-size: 1rem;
+  }
+  .errorPage__message {
+    width: 70%;
+  }
+  .errorPage__message p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .errorPage__container__link {
+    font-size: 1.125rem;
+  }
+  .errorPage__message p {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .errorPage__container__link {
+    font-size: 1.25rem;
+  }
+  .errorPage__message p {
+    font-size: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
