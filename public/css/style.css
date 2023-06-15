@@ -1588,7 +1588,7 @@ time, mark, audio, video {
 .modalComity__content {
   position: absolute;
   z-index: 1003;
-  top: 40%;
+  top: 61%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -1674,12 +1674,13 @@ time, mark, audio, video {
 
 @media screen and (max-height: 600px) {
   .modalComity__content {
-    top: 55%;
+    top: 80%;
   }
 }
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .modalComity__content {
+    top: 50%;
     width: 500px;
   }
   .modalComity__content__job__label, .modalComity__content__lastname__label, .modalComity__content__firstname__label, .modalComity__content__email__label, .modalComity__content__image__label, .modalComity__content__alt__label {
@@ -1692,7 +1693,7 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .modalComity__content {
-    top: 45%;
+    top: 65%;
     width: 600px;
   }
   .modalComity__content__job__label, .modalComity__content__lastname__label, .modalComity__content__firstname__label, .modalComity__content__email__label, .modalComity__content__image__label, .modalComity__content__alt__label {
@@ -1708,12 +1709,13 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1024px) and (max-height: 600px) {
   .modalComity__content {
-    top: 60%;
+    top: 80%;
   }
 }
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .modalComity__content {
+    top: 50%;
     width: 700px;
   }
   .modalComity__content__job__label, .modalComity__content__lastname__label, .modalComity__content__firstname__label, .modalComity__content__email__label, .modalComity__content__image__label, .modalComity__content__alt__label {
