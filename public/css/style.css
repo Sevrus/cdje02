@@ -3224,7 +3224,7 @@ time, mark, audio, video {
 .modalReferees__content {
   position: absolute;
   z-index: 1003;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -3328,7 +3328,7 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .modalReferees__content {
-    top: 50%;
+    top: 55%;
     width: 600px;
   }
   .modalReferees__content__name__label, .modalReferees__content__validity__label, .modalReferees__content__type__label, .modalReferees__content__club__label {
