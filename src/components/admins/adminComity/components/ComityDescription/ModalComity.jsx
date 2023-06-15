@@ -27,6 +27,16 @@ const ModalComity = ({ closeModal }) => {
                     <input type="email" name="email" id="email" className="modalComity__content__email__input" />
                 </div>
 
+                <div className="modalComity__content__image">
+                    <label htmlFor="image" className="modalComity__content__image__label">Image</label>
+                    <input type="txt" name="image" id="image" className="modalComity__content__image__input" />
+                </div>
+
+                <div className="modalComity__content__alt">
+                    <label htmlFor="alt" className="modalComity__content__alt__label">Alt</label>
+                    <input type="txt" name="alt" id="alt" className="modalComity__content__alt__input" />
+                </div>
+
                 <button className="modalComity__content__button">Confirmer</button>
 
             </div>

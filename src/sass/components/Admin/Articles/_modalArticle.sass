@@ -14,7 +14,7 @@
     &__content
         position: absolute
         z-index: 1003
-        top: 40%
+        top: 55%
         left: 50%
         transform: translate(-50%, -50%)
         background-color: $white
@@ -52,7 +52,7 @@
             &:after
                 transform: rotate(-45deg)
 
-        &__title, &__author, &__description, &__date
+        &__title, &__author, &__description, &__date, &__image
             @include flex(column, center, center)
             width: 100%
 
@@ -68,7 +68,7 @@
                 border-radius: 5px
                 margin-top: 12px
 
-        &__author, &__description, &__date
+        &__author, &__description, &__date, &__image
             margin-top: 30px
 
         &__description__input
@@ -87,18 +87,19 @@
                 cursor: pointer
                 transform: scale(0.98)
                     
-@media screen and (max-height: 600px)
-    .modalArticle
-        &__content
-            top: 55%
+// @media screen and (max-height: 600px)
+//     .modalArticle
+//         &__content
+//             top: 55%
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .modalArticle
         &__content
             width: 500px
+            top: 50%
 
-            &__title, &__author, &__description, &__date
+            &__title, &__author, &__description, &__date, &__image
                 &__label
                     font-size: $fs-20
 
@@ -109,10 +110,10 @@
 @media screen and (min-width: 1024px)
     .modalArticle
         &__content
-            top: 45%
+            top: 75%
             width: 600px
 
-            &__title, &__author, &__description, &__date
+            &__title, &__author, &__description, &__date, &__image
                 &__label
                     font-size: $fs-22
 
@@ -123,18 +124,19 @@
                 height: 50px
                 font-size: $fs-22
 
-@media screen and (min-width: 1024px) and (max-height: 600px)
-    .modalArticle
-        &__content
-            top: 65%
+// @media screen and (min-width: 1024px) and (max-height: 600px)
+//     .modalArticle
+//         &__content
+//             top: 65%
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
     .modalArticle
         &__content
+            top: 50%
             width: 700px
 
-            &__title, &__author, &__description, &__date
+            &__title, &__author, &__description, &__date, &__image
                 &__label
                     font-size: $fs-24
 

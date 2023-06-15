@@ -28,7 +28,7 @@ const RegulationDescription = () => {
                 <section className="articleRegulation" key={item.id}>
 
                     <div className="articleRegulation__text">
-                        <p>{item.name}</p>
+                        <p>{item.title}</p>
                     </div>
 
                     <div className="articleRegulation__icon">

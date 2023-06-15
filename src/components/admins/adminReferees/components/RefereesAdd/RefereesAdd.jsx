@@ -8,14 +8,9 @@ const RefereesAdd = () => {
 
             <Form className="addReferee">
 
-                <div className="addReferee__lastname">
-                    <label htmlFor="lastname">Nom</label>
-                    <input type="text" name="lastname" maxLength={20} required={true} />
-                </div>
-
-                <div className="addReferee__firstname">
-                    <label htmlFor="firstname">Prénom</label>
-                    <input type="text" name="firstname" maxLength={20} required={true} />
+                <div className="addReferee__name">
+                    <label htmlFor="name">Nom</label>
+                    <input type="text" name="name" maxLength={20} required={true} />
                 </div>
 
                 <div className="addReferee__validity">

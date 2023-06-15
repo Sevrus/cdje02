@@ -30,7 +30,7 @@ const ChampionDescription = () => {
 
                     <div className="articleChampion__text">
                         <p>{item.name}</p>
-                        <p>{item.year}</p>
+                        <p>{item.years}</p>
                     </div>
 
 

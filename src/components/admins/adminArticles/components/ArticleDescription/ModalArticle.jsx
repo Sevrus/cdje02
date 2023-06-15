@@ -19,7 +19,12 @@ const ModalArticle = ({ closeModal }) => {
 
                 <div className="modalArticle__content__description">
                     <label htmlFor="description" className="modalArticle__content__description__label">Description</label>
-                    <textarea type="" name="description" id="description" className="modalArticle__content__description__input" />
+                    <textarea type="text" name="description" id="description" className="modalArticle__content__description__input" />
+                </div>
+
+                <div className="modalArticle__content__image">
+                    <label htmlFor="image" className="modalArticle__content__image__label">Image</label>
+                    <input type="text" name="image" id="image" className="modalArticle__content__image__input" />
                 </div>
 
                 <div className="modalArticle__content__date">

@@ -23,9 +23,9 @@ const ArticleAdd = () => {
                     <textarea name="description" maxLength={500} required={true} />
                 </div>
 
-                <div className="addArticle__date">
-                    <label htmlFor="date">Date</label>
-                    <input type="date" name="date" required={true} />
+                <div className="addArticle__image">
+                    <label htmlFor="image">Image</label>
+                    <input name="image" maxLength={500} required={true} />
                 </div>
 
                 <div className="addArticle__btn">

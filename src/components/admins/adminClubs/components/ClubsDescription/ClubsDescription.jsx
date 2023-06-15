@@ -31,7 +31,7 @@ const ClubsDescription = () => {
 
                     <div className="articleClub__text">
                         <p>{item.name}</p>
-                        <p>{item.town}</p>
+                        <p>{item.city}</p>
                     </div>
 
 

@@ -30,8 +30,8 @@ const ComityDescription = () => {
                 <section className="articleComity" key={item.id}>
 
                     <div className="articleComity__text">
-                        <p>{item.job}</p>
-                        <p>{item.lastname} {item.firstname}</p>
+                        <p>{item.title}</p>
+                        <p>{item.firstName} {item.lastName}</p>
                     </div>
 
 

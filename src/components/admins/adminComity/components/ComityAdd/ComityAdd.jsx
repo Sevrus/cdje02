@@ -28,6 +28,16 @@ const ComityAdd = () => {
                     <input type="text" name="email" maxLength={50} required={true} />
                 </div>
 
+                <div className="addComity__image">
+                    <label htmlFor="image">Image</label>
+                    <input type="text" name="image" maxLength={50} required={true} />
+                </div>
+
+                <div className="addComity__alt">
+                    <label htmlFor="alt">Alt</label>
+                    <input type="text" name="alt" maxLength={50} required={true} />
+                </div>
+
                 <div className="addComity__btn">
                     <button>Ajouter</button>
                 </div>

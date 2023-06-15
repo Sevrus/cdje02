@@ -5,16 +5,7 @@ const AdminsAdd = () => {
     return (
         <>
             <Form className="addAdmins">
-            <div className="addAdmins__lastname">
-                    <label htmlFor="lastname">Nom</label>
-                    <input type="text" name="lastname" id="lastname" maxLength={20} required={true} />
-                </div>
-
-                <div className="addAdmins__firstname">
-                    <label htmlFor="firstname">Prénom</label>
-                    <input type="text" name="firstname" id="firstname" maxLength={20} required={true} />
-                </div>
-
+            
                 <div className="addAdmins__email">
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" maxLength={50} required={true} />

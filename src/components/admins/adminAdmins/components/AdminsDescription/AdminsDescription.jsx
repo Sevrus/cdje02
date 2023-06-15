@@ -29,7 +29,7 @@ const AdminsDescription = () => {
                 <section className="articleAdmins" key={item.id}>
 
                     <div className="articleAdmins__text">
-                        <p>{item.lastname} {item.firstname}</p>
+                        <p>{item.mail}</p>
                     </div>
 
                     <div className="articleAdmins__icon">

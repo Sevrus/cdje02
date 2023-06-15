@@ -12,11 +12,6 @@ const ModalReferees = ({ closeModal }) => {
                     <input type="txt" name="name" id="name" className="modalReferees__content__name__input" />
                 </div>
 
-                <div className="modalReferees__content__firstname">
-                    <label htmlFor="firstname" className="modalReferees__content__firstname__label">Prénom</label>
-                    <input type="txt" name="firstname" id="firstname" className="modalReferees__content__firstname__input" />
-                </div>
-
                 <div className="modalReferees__content__validity">
                     <label htmlFor="validity" className="modalReferees__content__validity__label">Validité</label>
                     <input type="txt" name="validity" id="validity" className="modalReferees__content__validity__input" />

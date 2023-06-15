@@ -6,14 +6,9 @@ const ChampionAdd = () => {
 
             <section className="addChampion">
 
-                <div className="addChampion__lastname">
-                    <label htmlFor="lastname">Nom</label>
-                    <input type="text" name="lastname" maxLength={20} required={true} />
-                </div>
-
-                <div className="addChampion__firstname">
-                    <label htmlFor="lastname">Prénom</label>
-                    <input type="text" name="firstname" maxLength={20} required={true} />
+                <div className="addChampion__name">
+                    <label htmlFor="name">Nom</label>
+                    <input type="text" name="name" maxLength={20} required={true} />
                 </div>
 
                 <div className="addChampion__year">

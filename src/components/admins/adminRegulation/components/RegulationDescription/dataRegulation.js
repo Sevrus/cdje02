@@ -1,31 +1,31 @@
 const dataRegulation = [
     {
         id: 1,
-        name: "Championnats de l'Aisne Lent",
+        title: "Championnats de l'Aisne Lent",
     },
     {
         id: 2,
-        name: "Championnats de l'Aisne Rapide",
+        title: "Championnats de l'Aisne Rapide",
 
     },
     {
         id: 3,
-        name: "Championnats de l'Aisne Blitz",
+        title: "Championnats de l'Aisne Blitz",
 
     },
     {
         id: 4,
-        name: "Interclubs Lent",
+        title: "Interclubs Lent",
 
     },
     {
         id: 5,
-        name: "Interclubs Rapide Lichess",
+        title: "Interclubs Rapide Lichess",
 
     },
     {
         id: 6,
-        name: "Interclubs Rapide",
+        title: "Interclubs Rapide",
 
     },
 ]
