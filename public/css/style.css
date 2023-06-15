@@ -2680,7 +2680,7 @@ time, mark, audio, video {
 .modalClub__content {
   position: absolute;
   z-index: 1003;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -2766,13 +2766,13 @@ time, mark, audio, video {
 
 @media screen and (max-height: 600px) {
   .modalClub__content {
-    top: 75%;
+    top: 65%;
   }
 }
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .modalClub__content {
-    top: 55%;
+    top: 68%;
     width: 500px;
   }
   .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label {
@@ -2785,7 +2785,7 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .modalClub__content {
-    top: 60%;
+    top: 75%;
     width: 600px;
   }
   .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label {
@@ -2807,6 +2807,7 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .modalClub__content {
+    top: 55%;
     width: 700px;
   }
   .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label {
