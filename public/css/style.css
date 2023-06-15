@@ -4416,7 +4416,7 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .modalArticle__content {
-    top: 75%;
+    top: 70%;
     width: 600px;
   }
   .modalArticle__content__title__label, .modalArticle__content__author__label, .modalArticle__content__description__label, .modalArticle__content__date__label, .modalArticle__content__image__label {
