@@ -33,7 +33,7 @@ time, mark, audio, video {
   gap: 20px;
 }
 .accordion-comity__item {
-  width: 306px;
+  width: 300px;
   background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
   border-radius: 5px;
   padding: 5px;
@@ -90,7 +90,7 @@ time, mark, audio, video {
   text-decoration: underline;
 }
 .accordion-comity__item__content img {
-  width: 178px;
+  width: 150px;
   filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
 }
 .accordion-comity__item__content.show {
@@ -104,7 +104,7 @@ time, mark, audio, video {
     margin-top: 30px;
   }
   .accordion-comity__item {
-    width: 520px;
+    width: 500px;
   }
   .accordion-comity__item__title {
     cursor: auto;
@@ -112,9 +112,7 @@ time, mark, audio, video {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
-  .accordion-comity__item__title h3 {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   .accordion-comity__item__title--left, .accordion-comity__item__title--right {
     position: static;
@@ -149,29 +147,29 @@ time, mark, audio, video {
     padding: 0 20px;
     margin-top: 50px;
   }
+  .accordion-comity__item__title {
+    font-size: 1.125rem;
+  }
   .accordion-comity__item__title h3 {
     text-align: center;
   }
 }
 @media screen and (min-width: 1920px) {
   .accordion-comity__item {
-    width: 700px;
+    width: 600px;
   }
   .accordion-comity__item__title {
     justify-content: start;
   }
   .accordion-comity__item__title h3 {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
   .accordion-comity__item__content {
     gap: 30px;
     margin-left: 30px;
   }
-  .accordion-comity__item__content img {
-    width: 200px;
-  }
   .accordion-comity__item__content p {
-    font-size: 20px;
+    font-size: 1.125rem;
   }
 }
 .title-comity {
@@ -228,7 +226,7 @@ time, mark, audio, video {
   gap: 20px;
 }
 .accordion-referee__item {
-  width: 306px;
+  width: 300px;
   background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%);
   border-radius: 5px;
   padding: 5px;
@@ -286,14 +284,35 @@ time, mark, audio, video {
   transition: all 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .accordion-referee {
-    margin-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: normal;
     flex-wrap: wrap;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .accordion-referee__item {
+    width: 400px;
+  }
+  .accordion-referee__title, .accordion-referee__content {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .accordion-referee__title {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .accordion-referee__title {
+    font-size: 1.25rem;
+  }
+  .accordion-referee__content {
+    font-size: 1.125rem;
   }
 }
 .title-referee {

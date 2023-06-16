@@ -9,7 +9,7 @@
   gap: 20px
 
   &__item
-    width: 306px
+    width: 300px
     background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
     border-radius: 5px
     padding: 5px
@@ -64,7 +64,7 @@
           text-decoration: underline
 
       img
-        width: 178px
+        width: 150px
         filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5))
 
     &__content.show
@@ -77,14 +77,12 @@
     margin-top: 30px
 
     &__item
-      width: 520px
+      width: 500px
 
       &__title
         cursor: auto
         @include flex(row, center, center)
-
-        h3
-          font-size: $fs-18
+        font-size: $fs-16
 
         &--left, &--right
           position: static
@@ -115,6 +113,7 @@
     &__item
 
       &__title
+        font-size: $fs-18
 
         h3
           text-align: center
@@ -123,20 +122,17 @@
   .accordion-comity
 
     &__item
-      width: 700px
+      width: 600px
 
       &__title
         justify-content: start
 
         h3
-          font-size: $fs-22
+          font-size: $fs-20
 
       &__content
         gap: 30px
         margin-left: 30px
 
-        img
-          width: 200px
-
         p
-          font-size: 20px
+          font-size: $fs-18
