@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import ImageLeft from '../../assets/images/image-title-left.png';
 import ImageRight from '../../assets/images/image-title-right.png';
 
 const Form = () => {
