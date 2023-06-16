@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import ArticleAdd from "./components/ArticleAdd/ArticleAdd";
 import ArticleDescription from "./components/ArticleDescription/ArticleDescription";
+import imageTop from "../../../assets/images/image-title-top.png";
+import imageBottom from "../../../assets/images/image-title-bottom.png"
 
 const AdminArticles = () => {
     const { pathname } = useLocation();

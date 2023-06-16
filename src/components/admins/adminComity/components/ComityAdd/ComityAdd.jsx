@@ -34,7 +34,7 @@ const ComityAdd = () => {
                 </div>
 
                 <div className="addComity__alt">
-                    <label htmlFor="alt">Alt</label>
+                    <label htmlFor="alt">Alt (Texte Alternatif)</label>
                     <input type="text" name="alt" maxLength={50} required={true} />
                 </div>
 

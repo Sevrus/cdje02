@@ -25,7 +25,7 @@ const AdminResults = () => {
 
                         <div className="result__addTitle__bigTitle">
                             <hr className="result__addTitle__bigTitle__lineLeft" />
-                            <h2>RÉSULTAT</h2>
+                            <h2>RESULTAT</h2>
                             <hr className="result__addTitle__bigTitle__lineRight" />
                         </div>
 

@@ -1556,10 +1556,14 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .addComity {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 90px;
   }
   .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt {
     margin-bottom: 40px;
+    width: 30%;
   }
   .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt, .addComity button {
     font-size: 1.5rem;
@@ -1568,10 +1572,11 @@ time, mark, audio, video {
     margin-bottom: 20px;
   }
   .addComity input {
-    width: 70%;
+    width: 90%;
     max-width: 600px;
   }
   .addComity button {
+    margin-top: 20px;
     height: 50px;
   }
 }
@@ -1908,51 +1913,51 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .clubs {
+  .comity {
     margin-top: 60px;
   }
-  .clubs__title {
+  .comity__title {
     margin-bottom: 45px;
   }
-  .clubs__title h2 {
+  .comity__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .clubs__title__lineLeft, .clubs__title__lineRight {
+  .comity__title__lineLeft, .comity__title__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .clubs__title__lineLeft {
+  .comity__title__lineLeft {
     left: 260px;
   }
-  .clubs__title__lineRight {
+  .comity__title__lineRight {
     right: 260px;
   }
-  .clubs__list {
+  .comity__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .clubs__addTitle__subhead {
+  .comity__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .clubs__addTitle__bigTitle h2 {
+  .comity__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+  .comity__addTitle__bigTitle__lineLeft, .comity__addTitle__bigTitle__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .clubs__addTitle__bigTitle__lineLeft {
+  .comity__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .clubs__addTitle__bigTitle__lineRight {
+  .comity__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
@@ -2587,10 +2592,14 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .addClub {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 90px;
   }
   .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members {
     margin-bottom: 40px;
+    width: 30%;
   }
   .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub button {
     font-size: 1.5rem;
@@ -2599,10 +2608,11 @@ time, mark, audio, video {
     margin-bottom: 20px;
   }
   .addClub input {
-    width: 70%;
+    width: 90%;
     max-width: 600px;
   }
   .addClub button {
+    margin-top: 20px;
     height: 50px;
   }
 }
@@ -2809,7 +2819,7 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .modalClub__content {
-    top: 55%;
+    top: 50%;
     width: 700px;
   }
   .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label {
@@ -3705,6 +3715,7 @@ time, mark, audio, video {
   color: #fff;
   font-family: "Noto Sans", sans-serif;
   width: 80%;
+  height: 90px;
   margin-bottom: 15px;
   padding: 5px;
 }
@@ -3743,6 +3754,9 @@ time, mark, audio, video {
   .articleRegulation {
     width: 25%;
     margin: 0 10px 30px 10px;
+  }
+  .articleRegulation__text p {
+    text-align: center;
   }
   .articleRegulation p {
     font-size: 1rem;
@@ -5714,51 +5728,51 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .clubs {
+  .admins {
     margin-top: 60px;
   }
-  .clubs__title {
+  .admins__title {
     margin-bottom: 45px;
   }
-  .clubs__title h2 {
+  .admins__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .clubs__title__lineLeft, .clubs__title__lineRight {
+  .admins__title__lineLeft, .admins__title__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .clubs__title__lineLeft {
+  .admins__title__lineLeft {
     left: 260px;
   }
-  .clubs__title__lineRight {
+  .admins__title__lineRight {
     right: 260px;
   }
-  .clubs__list {
+  .admins__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .clubs__addTitle__subhead {
+  .admins__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .clubs__addTitle__bigTitle h2 {
+  .admins__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+  .admins__addTitle__bigTitle__lineLeft, .admins__addTitle__bigTitle__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .clubs__addTitle__bigTitle__lineLeft {
+  .admins__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .clubs__addTitle__bigTitle__lineRight {
+  .admins__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
