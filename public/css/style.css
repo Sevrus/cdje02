@@ -215,6 +215,22 @@ time, mark, audio, video {
     width: 300px;
   }
 }
+.modalReferee {
+  position: absolute;
+  width: 300px;
+  top: 25%;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  z-index: 1003;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+}
+
 .accordion-referee {
   margin-top: 25px;
   font-family: "Noto Sans", sans-serif;
@@ -285,6 +301,9 @@ time, mark, audio, video {
 }
 
 @media screen and (min-width: 600px) {
+  .modalReferee {
+    width: 400px;
+  }
   .accordion-referee {
     display: flex;
     flex-direction: row;
