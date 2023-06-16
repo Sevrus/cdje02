@@ -30,6 +30,9 @@ time, mark, audio, video {
   margin-top: 25px;
   margin-bottom: 30px;
 }
+.form__imageLeft, .form__imageRight {
+  display: none;
+}
 .form__lastname, .form__firstname, .form__email, .form__message {
   display: flex;
   align-items: center;
@@ -110,6 +113,22 @@ time, mark, audio, video {
   .form {
     margin-top: 90px;
     margin-bottom: 90px;
+  }
+  .form__imageLeft, .form__imageRight {
+    display: block;
+    filter: invert(1);
+    width: 20%;
+    position: absolute;
+    top: 40%;
+    opacity: 65%;
+  }
+  .form__imageLeft {
+    transform: rotate(90deg);
+    left: 15%;
+  }
+  .form__imageRight {
+    transform: rotate(-90deg);
+    right: 15%;
   }
   .form__lastname, .form__firstname, .form__email, .form__message {
     margin-bottom: 40px;

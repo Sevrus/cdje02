@@ -10,6 +10,9 @@
     margin-top: 25px
     margin-bottom: 30px
 
+    &__imageLeft, &__imageRight
+        display: none
+
     &__lastname, &__firstname, &__email, &__message
         display: flex
         align-items: center
@@ -32,7 +35,7 @@
 
         input
             height: 40px
-            text-indent:10px
+            text-indent: 10px
 
         span
             color: $red
@@ -79,17 +82,33 @@
         label
             margin-bottom: 20px
 
-        input, textarea  
-                width: 79%
+        input, textarea
+            width: 79%
 
         button
             height: 40px
-        
+
 // VERSION XL
 @media screen and (min-width:1920px)
     .form
         margin-top: 90px
         margin-bottom: 90px
+
+        &__imageLeft, &__imageRight
+            display: block
+            filter: invert(1)
+            width: 20%
+            position: absolute
+            top: 40%
+            opacity: 65%
+
+        &__imageLeft
+            transform: rotate(90deg)
+            left: 15%
+
+        &__imageRight
+            transform: rotate(-90deg)
+            right: 15%
 
         &__lastname, &__firstname, &__email, &__message
             margin-bottom: 40px
@@ -101,11 +120,8 @@
             label
                 margin-bottom: 20px
 
-            input, textarea  
+            input, textarea
                 width: 60%
 
         button
             height: 50px
-
-
-
