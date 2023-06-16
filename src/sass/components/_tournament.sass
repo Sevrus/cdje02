@@ -41,8 +41,9 @@
 
         &__list
             width: 100%
-            @include flex(row, space-around, center)
+            @include flex(row, center, center)
             flex-wrap: wrap
+            gap: 15px
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
@@ -76,3 +77,7 @@
 
             a
                 font-size: $fs-24
+
+        &__list
+            flex-direction: row
+            flex-wrap: wrap

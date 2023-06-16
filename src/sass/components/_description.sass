@@ -7,7 +7,6 @@
     @include articles
     width: 305px
     height: 65px
-    margin-bottom: 25px
 
     &__title
         position: relative
@@ -41,7 +40,7 @@
             font-weight: bold
 
 /* VERSION L */
-@media screen and (min-width:1024px)
+@media screen and (min-width: 1024px)
     .activity__article
         width: 700px
         height: 90px
@@ -66,15 +65,18 @@
                 font-size: $fs-18
 
 /* VERSION XL */
-@media screen and (min-width:1920px)
+@media screen and (min-width: 1920px)
     .activity__article
-        width: 1500px
+        width: 35%
         height: 110px
         margin-bottom: 30px
 
         &__title
             h4
                 font-size: $fs-24
+
+            &__left-line, &__right-line
+                width: 15%
 
         &__more
             a

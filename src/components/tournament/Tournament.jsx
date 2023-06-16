@@ -7,7 +7,7 @@ const Tournament = () => {
         <section className="tournament">
             <div className="tournament__title">
                 <hr className="tournament__title__left-line" />
-                <h2>RÉSULTATS</h2>
+                <h2>TOURNOIS</h2>
                 <hr className="tournament__title__right-line" />
             </div>
 
