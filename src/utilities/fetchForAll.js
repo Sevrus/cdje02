@@ -13,3 +13,5 @@ function fetchForAll(setIsLoaded, setError, setItems, url) {
             }
         )
 }
+
+export default fetchForAll;
