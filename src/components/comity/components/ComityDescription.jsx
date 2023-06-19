@@ -1,8 +1,8 @@
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import fetch from "../../../utilities/fetchForAll.js";
 import useWindowSize from "../../../utils/useWindowSize.jsx";
-import dataComity from './dataComity.js';
 
 const ComityDescription = () => {
     const [selected, setSelected] = useState(null);
@@ -21,10 +21,24 @@ const ComityDescription = () => {
         window.location.href = `mailto:${mail}`;
     }
 
-    return (
-        <ul className="accordion-comity">
-            {dataComity &&
-                dataComity.map((item) => (
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [datas, setDatas] = useState([]);
+
+
+    useEffect(() => {
+        fetch(setIsLoaded, setError, setDatas, "api/comities")
+    }, [])
+
+    if (error) {
+        return <div>Erreur : {error.message}</div>;
+    } else if (!isLoaded) {
+        return <div>Chargement...</div>;
+    } else {
+
+        return (
+            <ul className="accordion-comity">
+                {datas.data.map((item) => (
                     <li className="accordion-comity__item" key={item.id}>
                         <div className="accordion-comity__item__title" onClick={() => toggle(item.id)}>
                             <hr className="accordion-comity__item__title--left" />
@@ -49,8 +63,9 @@ const ComityDescription = () => {
                         </section>
                     </li>
                 ))}
-        </ul>
-    )
+            </ul>
+        )
+    }
 }
 
 export default ComityDescription;

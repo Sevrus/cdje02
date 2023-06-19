@@ -1,12 +1,26 @@
 import { motion } from 'framer-motion';
 
 const drop = {
-    hidden: { opacity: 0, y: "100vh" },
-    visible: {
-        opacity: 1, y: 0,
-        transition: { type: "spring", stiffness: 100 }
+    hidden: {
+        opacity: 0,
+        y: "100vh"
     },
-    exit: { opacity: 0, y: "100vh", transition: { duration: 0.8 } }
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            damping: 10,
+            type: "spring",
+            stiffness: 100
+        }
+    },
+    exit: {
+        opacity: 0,
+        y: "100vh",
+        transition: {
+            duration: 0.8
+        }
+    }
 }
 
 const RefereeModal = ({ closeModal }) => {
