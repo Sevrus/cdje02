@@ -7,16 +7,18 @@ const Clubs = () => {
     const [coordinate, setCoordinate] = useState([49.04729203170085, 3.399767194606112])
     const [selected, setSelected] = useState(null)
 
-    const toogle = ((i, coord) => {
+    const toogle = ((i, coordx, coordy) => {
+        const coord = new Array(coordx, coordy)
+        console.log(coord);
         if (selected === i) {
             return (
                 setSelected(null)
             )
         }
         setSelected(i)
-        setCoordinate([coord[0], coord[1]]);
+        setCoordinate(coord);
     })
-
+    
     return (
         <section className="clubs">
 

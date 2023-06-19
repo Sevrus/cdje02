@@ -1,34 +1,50 @@
-import dataClubs from "./dataClubs.js"
+import { useEffect, useState } from "react";
+import fetch from "../../../../utilities/fetchForAll.js"
 
 const ClubsDescription = ({ toogle, selected }) => {
 
-    return (
-        <>
-            {dataClubs.map((item) => (
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [datas, setDatas] = useState([]);
 
-                <li
-                    className={selected === item.id ? "article-clubs active" : "article-clubs"}
-                    key={item.id}
-                    onClick={() => toogle(item.id, item.coord)}
-                >
 
-                    <div className="article-clubs__title">
-                        <h4>{item.name}</h4>
-                        <hr className="article-clubs__title__separation" />
-                    </div>
+    useEffect(() => {
+        fetch(setIsLoaded, setError, setDatas, "api/clubs")
+    }, [])
 
-                    <div className="article-clubs__description">
-                        <p>{item.city}</p>
-                        <p>Président: {item.president}</p>
-                        <p>Membres: {item.members}</p>
-                        <p>{item.site}</p>
-                        <p>{item.tel}</p>
-                    </div>
+    if (error) {
+        return <div>Erreur : {error.message}</div>;
+    } else if (!isLoaded) {
+        return <div>Chargement...</div>;
+    } else {
+        return (
+            <>
+                {datas.data.map(item => (
 
-                </li>
-            ))}
-        </>
-    )
+                    <li
+                        className={selected === item.id ? "article-clubs active" : "article-clubs"}
+                        key={item.id}
+                        onClick={() => toogle(item.id, item.coordx, item.coordy)}
+                    >
+
+                        <div className="article-clubs__title">
+                            <h4>{item.name}</h4>
+                            <hr className="article-clubs__title__separation" />
+                        </div>
+
+                        <div className="article-clubs__description">
+                            <p>{item.city}</p>
+                            <p>Président: {item.president}</p>
+                            <p>Membres: {item.members}</p>
+                            <p>{item.site}</p>
+                            <p>{item.tel}</p>
+                        </div>
+
+                    </li>
+                ))}
+            </>
+        )
+    }
 }
 
 export default ClubsDescription;

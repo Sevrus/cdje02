@@ -1,35 +1,52 @@
 import { Link } from "react-router-dom";
-import dataArticle from "./dataArticle.js"
+import { useEffect, useState } from "react";
+import fetch from "../../../utilities/fetchForAll"
 
 const NewsArticle = () => {
 
-    return (
-        <>
-            {dataArticle.map((item) => (
-                <section className="newsArticle" key={item.id}>
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [datas, setDatas] = useState([]);
 
-                    <div className="newsArticle__title">
-                        <hr className="newsArticle__title__lineLeft" />
-                        <h4>{item.title}</h4>
-                        <hr className="newsArticle__title__lineRight" />
-                    </div>
 
-                    <div className="newsArticle__description">
-                        <p>{item.description}
-                        </p>
-                    </div>
+    useEffect(() => {
+        fetch(setIsLoaded, setError, setDatas, "api/news")
+    }, [])
 
-                    <div className="newsArticle__link">
-                        <Link to={""} 
-                        >
-                            Lire la suite
-                        </Link>
-                    </div>
+    if (error) {
+        return <div>Erreur : {error.message}</div>;
+    } else if (!isLoaded) {
+        return <div>Chargement...</div>;
+    } else {
 
-                </section>
-            ))}
-        </>
-    )
+        return (
+            <>
+                {datas.data.map((item) => (
+                    <section className="newsArticle" key={item.id}>
+
+                        <div className="newsArticle__title">
+                            <hr className="newsArticle__title__lineLeft" />
+                            <h4>{item.title}</h4>
+                            <hr className="newsArticle__title__lineRight" />
+                        </div>
+
+                        <div className="newsArticle__description">
+                            <p>{item.description}
+                            </p>
+                        </div>
+
+                        <div className="newsArticle__link">
+                            <Link to={""}
+                            >
+                                Lire la suite
+                            </Link>
+                        </div>
+
+                    </section>
+                ))}
+            </>
+        )
+    }
 }
 
-export default NewsArticle;
+    export default NewsArticle;
