@@ -18,6 +18,10 @@
         &__left-line, &__right-line
             width: 20%
             border: 1px solid rgba(0, 0, 0, 0.35)
+    
+    &__list
+        @include flex(column, center, center)
+        gap: 15px
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
@@ -31,8 +35,9 @@
 
         &__list
             width: 100%
-            @include flex(row, space-around, center)
+            @include flex(row, center, center)
             flex-wrap: wrap
+            gap: 15px
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
@@ -53,3 +58,7 @@
         &__title
             h2
                 font-size: $fs-40
+
+        &__list
+            flex-direction: row
+            flex-wrap: wrap

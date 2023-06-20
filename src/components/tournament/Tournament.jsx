@@ -10,7 +10,7 @@ const Tournament = () => {
     const [datas, setDatas] = useState([]);
 
     useEffect(() => {
-        fetchForAll(setIsLoaded, setError, setDatas, "api/tournaments")
+        fetchForAll(setIsLoaded, setError, setDatas, "api/tournaments?limit=6")
     }, [])
 
     if (error) {
@@ -23,7 +23,7 @@ const Tournament = () => {
             <section className="tournament">
                 <div className="tournament__title">
                     <hr className="tournament__title__left-line" />
-                    <h2>RÉSULTATS</h2>
+                    <h2>TOURNOIS</h2>
                     <hr className="tournament__title__right-line" />
                 </div>
 
