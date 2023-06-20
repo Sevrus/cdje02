@@ -6,7 +6,9 @@ import useWindowSize from "../../../utils/useWindowSize.jsx";
 
 const ComityDescription = () => {
     const [selected, setSelected] = useState(null);
-
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [datas, setDatas] = useState([]);
     const screenWidth = useWindowSize().width;
 
     const toggle = i => {
@@ -20,11 +22,6 @@ const ComityDescription = () => {
     const handleMail = (mail) => {
         window.location.href = `mailto:${mail}`;
     }
-
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [datas, setDatas] = useState([]);
-
 
     useEffect(() => {
         fetch(setIsLoaded, setError, setDatas, "api/comities")

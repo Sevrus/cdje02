@@ -215,20 +215,12 @@ time, mark, audio, video {
     width: 300px;
   }
 }
+.modalRefereeBack {
+  opacity: 0;
+}
+
 .modalReferee {
-  position: absolute;
-  width: 300px;
-  top: 25%;
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  z-index: 1003;
-  color: #fff;
-  font-family: "Noto Sans", sans-serif;
+  display: none;
 }
 
 .accordion-referee {
@@ -301,9 +293,6 @@ time, mark, audio, video {
 }
 
 @media screen and (min-width: 600px) {
-  .modalReferee {
-    width: 400px;
-  }
   .accordion-referee {
     display: flex;
     flex-direction: row;
@@ -319,6 +308,35 @@ time, mark, audio, video {
   }
   .accordion-referee__title, .accordion-referee__content {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 911px) {
+  .modalRefereeBack {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+  }
+  .modalReferee {
+    display: block;
+    position: absolute;
+    width: 400px;
+    top: 25%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    z-index: 1003;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
   }
 }
 @media screen and (min-width: 1024px) {
