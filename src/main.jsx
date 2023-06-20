@@ -7,6 +7,7 @@ import Activity from './views/Activity';
 import Contact from './views/Contact';
 import Index from './views/Index';
 import Info from './views/Info';
+import NewsOpen from './components/newsOpen/NewsOpen';
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Index />,
+            },
+            {
+                path: "/articles/:id",
+                element: <NewsOpen/>,
             },
             {
                 path: "/info",

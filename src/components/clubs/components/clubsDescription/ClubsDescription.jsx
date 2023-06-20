@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import fetch from "../../../../utilities/fetchForAll.js"
+import {fetchForAll} from "../../../../utilities/functionFetch"
 
 const ClubsDescription = ({ toogle, selected }) => {
 
@@ -7,9 +7,8 @@ const ClubsDescription = ({ toogle, selected }) => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
 
-
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/clubs")
+        fetchForAll(setIsLoaded, setError, setDatas, "api/clubs")
     }, [])
 
     if (error) {

@@ -611,11 +611,11 @@ time, mark, audio, video {
   .article-clubs {
     width: 40%;
   }
-  .article-clubs__title {
-    font-size: 1.125rem;
-  }
   .article-clubs__title__separation {
     height: 1px;
+  }
+  .article-clubs__title h4 {
+    font-size: 1.125rem;
   }
   .article-clubs p {
     font-size: 1rem;

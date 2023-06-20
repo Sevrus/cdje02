@@ -1,44 +1,67 @@
-import { Link } from 'react-router-dom';
-import profils from '../../../assets/images/Ellipse.png'
+import { Link, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { fetchForAll } from "../../../utilities/functionFetch"
 
 const NewsOpenArticle = () => {
 
-    return (
-        <section className="newsOpenArticle">
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [datas, setDatas] = useState({});
 
-            <div className="newsOpenArticle__title">
-                <hr className="newsOpenArticle__title__lineLeft" />
-                <h4>Championnats de l’Aisne 12/06/2022</h4>
-                <hr className="newsOpenArticle__title__lineRight" />
-            </div>
+    const { id } = useParams()
 
-            <div className="newsOpenArticle__description">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolor, doloremque reiciendis libero quo delectus modi saepe?
-                    Inventore ipsam vitae, ipsum architecto, accusantium ut tenetur corrupti error cumque minus quisquam distinctio!
-                </p>
-            </div>
+    useEffect(() => {
+        fetchForAll(setIsLoaded, setError, setDatas, `api/news/${id}`)
+    }, []);
 
-            <div className="newsOpenArticle__info">
+    console.log(datas);
 
-                <div className="newsOpenArticle__info__line">
-                    <hr className="newsOpenArticle__info__line__center" />
-                </div>
+    if (error) {
+        return <div>Erreur : {error.message}</div>;
+    } else if (!isLoaded) {
+        return <div>Chargement...</div>;
+    } else {
 
-                <div className="newsOpenArticle__info__bottom">
-                    <Link to={'/info'} className='newsOpenArticle__info__bottom__author'>
-                        <img src={profils} alt='miniature-photo'/>
-                        <p>Bracq Christian</p>
-                    </Link>
-                
-                    <p>11/05/2023</p>
-                </div>
+        return (
+            <>
+                {datas && (
 
-            </div>
+                    < section className="newsOpenArticle" key={datas.data.id}>
 
+                        <div className="newsOpenArticle__title">
+                            <hr className="newsOpenArticle__title__lineLeft" />
+                            <h4>{datas.data.title}</h4>
+                            <hr className="newsOpenArticle__title__lineRight" />
+                        </div>
 
-        </section>
-    )
+                        <div className="newsOpenArticle__description">
+                            <p>{datas.data.description}</p>
+                        </div>
+
+                        <div className="newsOpenArticle__info">
+
+                            <div className="newsOpenArticle__info__line">
+                                <hr className="newsOpenArticle__info__line__center" />
+                            </div>
+
+                            <div className="newsOpenArticle__info__bottom">
+                                <Link to={'/info'} className='newsOpenArticle__info__bottom__author'>
+                                    <img src={datas.data.image} alt='miniature-photo' />
+                                    <p>{datas.data.author}</p>
+                                </Link>
+
+                                <p>{datas.data.created}</p>
+                            </div>
+
+                        </div>
+
+                    </section >
+                )
+                }
+
+            </>
+        )
+    }
 }
 
 export default NewsOpenArticle;

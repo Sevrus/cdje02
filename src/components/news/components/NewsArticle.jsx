@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
-import fetch from "../../../utilities/fetchForAll"
+import {fetchForAll} from "../../../utilities/functionFetch"
+import NewsOpen from "../../newsOpen/NewsOpen";
 
 const NewsArticle = () => {
 
@@ -10,7 +11,7 @@ const NewsArticle = () => {
 
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/news")
+        fetchForAll(setIsLoaded, setError, setDatas, "api/news")
     }, [])
 
     if (error) {
@@ -36,17 +37,20 @@ const NewsArticle = () => {
                         </div>
 
                         <div className="newsArticle__link">
-                            <Link to={""}
-                            >
+                            <Link to={`/articles/${item.id}`} >
                                 Lire la suite
                             </Link>
                         </div>
 
                     </section>
                 ))}
+
+                <Routes>
+                    <Route path="/articles/:id" element={<NewsOpen/>}/>
+                </Routes>
             </>
         )
     }
 }
 
-    export default NewsArticle;
+export default NewsArticle;

@@ -1,4 +1,4 @@
-function fetchForAll(setIsLoaded, setError, setItems, uri) {
+const fetchForAll = (setIsLoaded, setError, setItems, uri) => {
 
     const url = "http://localhost:3000/"
 
@@ -16,4 +16,4 @@ function fetchForAll(setIsLoaded, setError, setItems, uri) {
         )
 }
 
-export default fetchForAll;
+export { fetchForAll };
