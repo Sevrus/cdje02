@@ -215,14 +215,6 @@ time, mark, audio, video {
     width: 300px;
   }
 }
-.modalRefereeBack {
-  opacity: 0;
-}
-
-.modalReferee {
-  display: none;
-}
-
 .accordion-referee {
   margin-top: 25px;
   font-family: "Noto Sans", sans-serif;
@@ -310,6 +302,27 @@ time, mark, audio, video {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .accordion-referee__title {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .accordion-referee__title {
+    font-size: 1.25rem;
+  }
+  .accordion-referee__content {
+    font-size: 1.125rem;
+  }
+}
+.modalRefereeBack {
+  opacity: 0;
+}
+
+.modalReferee {
+  display: none;
+}
+
 @media screen and (min-width: 911px) {
   .modalRefereeBack {
     opacity: 1;
@@ -337,19 +350,6 @@ time, mark, audio, video {
     z-index: 1003;
     color: #fff;
     font-family: "Noto Sans", sans-serif;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .accordion-referee__title {
-    font-size: 1.125rem;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .accordion-referee__title {
-    font-size: 1.25rem;
-  }
-  .accordion-referee__content {
-    font-size: 1.125rem;
   }
 }
 .title-referee {

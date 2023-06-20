@@ -53,6 +53,7 @@ const RefereeModal = ({ closeModal }) => {
                 >
                     {datas.data.map((item) => (
                         <li className="accordion-referee__item" key={item.id}>
+                            
                             <div className="accordion-referee__item__title">
                                 <hr className="accordion-referee__item__title--left" />
                                 <h3>{item.name}</h3>
@@ -63,6 +64,7 @@ const RefereeModal = ({ closeModal }) => {
                                     onClick={() => closeModal()}
                                 />
                             </div>
+
                             <section className='accordion-referee__item__content show'>
                                 <p>{item.title}</p>
                                 <p>Validité: {item.validity}</p>
@@ -71,7 +73,6 @@ const RefereeModal = ({ closeModal }) => {
                         </li>
                     ))}
                 </motion.div>
-
             </motion.div>
 
         )
