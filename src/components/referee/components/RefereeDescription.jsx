@@ -1,14 +1,36 @@
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import fetch from "../../../utilities/fetchForAll.js";
 import useWindowSize from "../../../utils/useWindowSize.jsx";
-import RefereeModal from "./RefereeModal.jsx";
+
+const drop = {
+    hidden: {
+        opacity: 0,
+        y: "100vh"
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            damping: 10,
+            type: "spring",
+            stiffness: 100
+        }
+    },
+    exit: {
+        opacity: 0,
+        y: "100vh",
+        transition: {
+            duration: 0.8
+        }
+    }
+}
 
 const RefereeDescription = () => {
-    const [openModal, setOpenModal] = useState(false);
     const [selected, setSelected] = useState(null);
+    const [selectedId, setSelectedId] = useState(null);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
@@ -33,11 +55,12 @@ const RefereeDescription = () => {
     } else {
 
         return (
-            <>
-                <ul className="accordion-referee">
+            <ul className="accordion-referee">
 
-                    {datas.data.map((item) => (
-                        <li className="accordion-referee__item" onClick={() => setOpenModal(true)} key={item.id}>
+                {datas.data.map((item) => (
+                    <>
+                        <motion.li className="accordion-referee__item" layoutId={item.id}
+                            onClick={() => setSelectedId(item.id)} key={item.id} >
 
                             <div className="accordion-referee__item__title" onClick={() => toggle(item.id)} >
                                 <hr className="accordion-referee__item__title--left" />
@@ -58,18 +81,43 @@ const RefereeDescription = () => {
                                 <p>Validité: {item.validity}</p>
                                 <p>Club: {item.club}</p>
                             </section>
-                        </li>
-                    ))}
-                </ul>
+                        </motion.li>
 
-                <AnimatePresence
-                    initial={false}
-                    mode="wait"
-                    onExitComplete={() => null}
-                >
-                    {openModal && <RefereeModal closeModal={() => setOpenModal(false)} />}
-                </AnimatePresence>
-            </>
+                        <AnimatePresence
+                            // initial={false}
+                            mode="wait"
+                            onExitComplete={() => null}
+
+                        >
+                            {selectedId && (
+                                <motion.div className="modalReferee"
+                                    variants={drop} initial="hidden" animate="visible" exit="exit"
+                                    layoutId={selectedId} key={selectedId}
+                                >
+                                    <li className="accordion-referee__item">
+                                        <div className="accordion-referee__item__title">
+                                            <hr className="accordion-referee__item__title--left" />
+                                            <h3>{item.name}</h3>
+                                            <hr className="accordion-referee__item__title--right" />
+                                            <FontAwesomeIcon
+                                                icon={faChevronUp}
+                                                className="accordion-referee__item__title__arrow"
+                                                onClick={() => setSelectedId(null)}
+                                            />
+                                        </div>
+
+                                        <section className='accordion-referee__item__content show'>
+                                            <p>{item.title}</p>
+                                            <p>Validité: {item.validity}</p>
+                                            <p>Club: {item.club}</p>
+                                        </section>
+                                    </li>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </>
+                ))}
+            </ul>
         )
     }
 }
