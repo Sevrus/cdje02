@@ -7,6 +7,7 @@ import Activity from './views/Activity';
 import Contact from './views/Contact';
 import Index from './views/Index';
 import Info from './views/Info';
+import AllTournament from './components/tournament/allTournament/AllTournament';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "/activity",
                 element: <Activity />,
+            },
+            {
+                path: "/tournaments",
+                element: <AllTournament />
             },
             {
                 path: "/contact",

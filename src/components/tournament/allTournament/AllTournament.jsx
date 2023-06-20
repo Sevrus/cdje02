@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import Description from "../description/Description";
-import { fetchForAll } from "../../utilities/functionFetch"
-import { Link } from "react-router-dom";
+import Description from "../../description/Description";
+import { fetchForAll } from "../../../utilities/functionFetch"
 
-const Tournament = () => {
+const AllTournament = () => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -20,6 +19,7 @@ const Tournament = () => {
     } else {
 
         return (
+
             <section className="tournament">
                 <div className="tournament__title">
                     <hr className="tournament__title__left-line" />
@@ -31,13 +31,10 @@ const Tournament = () => {
                     <Description data={datas} />
                 </div>
 
-                <div className="tournament__more-results">
-                    <Link to="/tournaments">Plus de résultats</Link>
-                </div>
-
             </section>
+
         )
     }
 }
 
-export default Tournament;
+export default AllTournament;
