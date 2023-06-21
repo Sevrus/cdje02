@@ -1,0 +1,77 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+
+/* VERSION MOBILE */
+.tournament
+    @include flex(column, center , center)
+    font-family: $font-primary
+
+    &__title
+        @include flex(row, space-between , center)
+        width: 100%
+        margin: 36px 10px 12px 10px
+
+        & h2
+            font-size: $fs-24
+            color: $black
+
+        &__left-line, &__right-line
+            width: 20%
+            border: 1px solid rgba(0, 0, 0, 0.35)
+
+    &__more-results
+        width: 80%
+        text-align: end
+
+        a
+            text-decoration: none
+            color: $red
+            font-size: $fs-14
+            font-weight: bold
+
+/* VERSION TABLETTE */
+@media screen and (min-width:768px)
+    .tournament
+
+        &__title
+            margin-bottom: 25px
+            
+            h2
+                font-size: $fs-26
+
+        &__list
+            width: 100%
+            @include flex(row, space-around, center)
+
+/* VERSION L */
+@media screen and (min-width:1024px)
+    .tournament
+
+        &__title
+            margin-bottom: 40px
+            
+            h2
+                font-size: $fs-32
+
+        &__list
+            flex-direction: column
+        
+        &__more-results
+            margin-top: 10px
+
+            a
+                font-size: $fs-18
+
+/* VERSION XL */
+@media screen and (min-width:1920px)
+    .tournament
+
+        &__title
+            h2
+                font-size: $fs-40
+        
+        &__more-results
+            margin-top: 20px
+
+            a
+                font-size: $fs-24

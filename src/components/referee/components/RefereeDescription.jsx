@@ -22,7 +22,7 @@ const drop = {
         opacity: 0,
         y: "100vh",
         transition: {
-            duration: 0.8
+            duration: 0.5
         }
     }
 }

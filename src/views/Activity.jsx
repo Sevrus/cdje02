@@ -1,8 +1,12 @@
+import Regulation from "../components/regulation/Regulation";
+import Tournament from "../components/tournament/Tournament";
+
 const Activity = () => {
 
     return (
         <>
-            <h1>Activitées</h1>
+            <Tournament />
+            <Regulation />
         </>
     )
 }
