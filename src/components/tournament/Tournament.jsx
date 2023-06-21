@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Description from "../description/Description";
-import { fetchForAll } from "../../utilities/functionFetch"
 import { Link } from "react-router-dom";
+import fetch from "../../utilities/fetchForAll";
+import Description from "../description/Description";
 
 const Tournament = () => {
 
@@ -10,7 +10,7 @@ const Tournament = () => {
     const [datas, setDatas] = useState([]);
 
     useEffect(() => {
-        fetchForAll(setIsLoaded, setError, setDatas, "api/tournaments?limit=6")
+        fetch(setIsLoaded, setError, setDatas, "api/tournaments?limit=6")
     }, [])
 
     if (error) {

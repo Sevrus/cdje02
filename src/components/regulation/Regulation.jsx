@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import fetch from "../../utilities/fetchForAll";
 import Description from "../description/Description";
-import { fetchForAll } from "../../utilities/functionFetch"
 
 const Regulation = () => {
 
@@ -9,7 +9,7 @@ const Regulation = () => {
     const [datas, setDatas] = useState([]);
 
     useEffect(() => {
-        fetchForAll(setIsLoaded, setError, setDatas, "api/regulations")
+        fetch(setIsLoaded, setError, setDatas, "api/regulations")
     }, [])
 
     if (error) {

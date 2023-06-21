@@ -2,7 +2,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import fetch from "../../../utilities/fetchForAll.js";
-import useWindowSize from "../../../utils/useWindowSize.jsx";
+import useWindowSize from "../../../utilities/useWindowSize.jsx";
 
 const ComityDescription = () => {
     const [selected, setSelected] = useState(null);

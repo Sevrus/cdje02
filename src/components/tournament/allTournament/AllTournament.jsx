@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import fetch from "../../../utilities/fetchForAll";
 import Description from "../../description/Description";
-import { fetchForAll } from "../../../utilities/functionFetch"
 
 const AllTournament = () => {
 
@@ -9,7 +9,7 @@ const AllTournament = () => {
     const [datas, setDatas] = useState([]);
 
     useEffect(() => {
-        fetchForAll(setIsLoaded, setError, setDatas, "api/tournaments")
+        fetch(setIsLoaded, setError, setDatas, "api/tournaments")
     }, [])
 
     if (error) {

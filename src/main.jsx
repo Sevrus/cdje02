@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
 import NewsOpen from './components/newsOpen/NewsOpen';
+import Confidentiality from './components/policies/confidentiality/Confidentiality';
+import LegalNotice from './components/policies/legalNotice/LegalNotice';
 import AllTournament from './components/tournament/allTournament/AllTournament';
 import ErrorPage from './ErrorPage';
 import Activity from './views/Activity';
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/articles/:id",
-                element: <NewsOpen/>,
+                element: <NewsOpen />,
             },
             {
                 path: "/info",
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />,
+            },
+            {
+                path: "/legal-notice",
+                element: <LegalNotice />,
+            },
+            {
+                path: "/confidentiality",
+                element: <Confidentiality />,
             },
         ]
     }

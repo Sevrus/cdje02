@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import fetch from "../../../utilities/fetchForAll.js";
-import useWindowSize from "../../../utils/useWindowSize.jsx";
+import useWindowSize from "../../../utilities/useWindowSize.jsx";
 
 const drop = {
     hidden: {

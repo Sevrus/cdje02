@@ -1,6 +1,6 @@
-import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { fetchForAll } from "../../../utilities/functionFetch"
+import { Link, useParams } from 'react-router-dom';
+import fetch from "../../../utilities/fetchForAll";
 
 const NewsOpenArticle = () => {
 
@@ -11,7 +11,7 @@ const NewsOpenArticle = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetchForAll(setIsLoaded, setError, setDatas, `api/news/${id}`)
+        fetch(setIsLoaded, setError, setDatas, `api/news/${id}`)
     }, []);
 
     console.log(datas);
