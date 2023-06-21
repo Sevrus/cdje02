@@ -6,8 +6,30 @@
 @import './pages/infos'
 @import './pages/activity'
 @import './pages/error'
+@import './components/_header'
 @import './components/_footer'
 @import './components/_modal'
-@import './components/_legalNotice'
-@import './components/_confidentiality'
 
+/* VERSION MOBILE */
+.main
+    min-width: 360px
+    margin-top: 180px
+
+@media screen and ( min-width: 500px )
+    .main
+        margin-top: 200px   
+
+/* VERSION TABLETTE */
+@media screen and ( min-width: 768px )
+    .main
+        margin-top: 280px    
+
+/* VERSION L */        
+@media screen and ( min-width: 1024px )
+    .main
+        margin-top: 310px 
+
+/* VERSION XL */   
+@media screen and ( min-width: 1920px )
+    .main
+        margin-top: 310px

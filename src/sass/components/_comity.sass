@@ -3,38 +3,49 @@
 @import './comityDescription'
 
 .title-comity
-  font-family: $font-primary
-  font-size: $fs-24
-  font-weight: 700
-  @include flex(row, center, center)
-  gap: 25px
-  margin-top: 35px
+    font-family: $font-primary
+    font-size: $fs-24
+    @include flex(row, center, center)
+    width: 100%
+    margin-top: 35px
 
-  &::before, &::after
-    content: ''
-    display: inline-block
-    width: 20%
-    height: 1px
-    background-color: rgba(0, 0, 0, .35)
+    &__left-line, &__right-line
+        position: absolute
+        width: 20%
+        border: 1px solid rgba(0, 0, 0, 0.35)
+
+    &__left-line
+        left: 10px
+
+    &__right-line
+        right: 10px
 
 @media screen and (min-width: 768px)
-  .title-comity
-    font-size: $fs-26
-    justify-content: space-evenly
+    .title-comity
+        font-size: $fs-26
 
-    &::before, &::after
-      width: 150px
+        &__left-line
+            left: 80px
+
+        &__right-line
+            right: 80px
 
 @media screen and (min-width: 1024px)
-  .title-comity
-    font-size: $fs-32
+    .title-comity
+        font-size: $fs-32
 
-    &::before, &::after
-      width: 200px
+        &__left-line
+            left: 100px
+
+        &__right-line
+            right: 100px
 
 @media screen and (min-width: 1920px)
-  .title-comity
-    font-size: $fs-40
+    .title-comity
+        font-size: $fs-40
 
-    &::before, &::after
-      width: 300px
+        &__left-line
+            left: 260px
+
+        &__right-line
+            right: 260px

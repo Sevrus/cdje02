@@ -5,11 +5,10 @@
 .newsOpenArticle
     display: flex
     flex-direction: column
-    background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
-    border-radius: 5px
-    width: 83%
+    @include articles
+    width: 80%
     margin-bottom: 15px
+    margin-top: 25px
 
     &__title
         display: flex
@@ -29,9 +28,7 @@
 
         h4
             margin: auto
-            font-family: $font-primary
             font-size: $fs-14
-            color: $white
             padding: 10px
 
     &__description
@@ -39,58 +36,32 @@
 
         p
             text-align: start
-            font-family: $font-primary
             font-size: $fs-14
-            color: $white
             padding: 10px
             width: 100%
 
-    &__info
+    &__link
         display: flex
-        flex-direction: column
-        align-items: center
-        position: relative
+        justify-content: end
 
-        &__line
-            display: flex
-            justify-content: center
-            width: 100%
-
-            &__center
-                width: 95%
-                margin: 0 10px 0 10px
-
-        &__bottom
-            display: flex
-            flex-direction: row
-            justify-content: space-between
-            align-items: center
-            width: 100%
-
-            p
-                font-family: $font-primary
-                font-size: $fs-14
-                color: $white
-                padding: 10px
-
-            &__author
-                display: flex
-                justify-content: flex-start
-                align-items: center
-
-                img
-                    width: 30px
-                    height: 30px
-                    margin: 10px 0 10px 10px
+        a
+            font-family: $font-primary
+            font-size: $fs-14
+            color: $red
+            padding: 0 10px 10px 10px
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
     .newsOpenArticle
-        width: 65%
+        width: 80%
+        margin-top: 10px
 
         &__title
             display: flex
             align-items: center
+
+            h4
+                font-size: $fs-16
 
             &__lineLeft, &__lineRight
                 position: static
@@ -108,6 +79,7 @@
     .newsOpenArticle
         display: flex
         width: 80%
+        margin-top: 0
 
         &__title
 
@@ -121,28 +93,22 @@
         &__description
 
             p
-
+                
                 font-size: $fs-16
                 padding: 0 20px 20px 20px
 
-        &__info
+        &__link
 
-            p
+            a
                 font-size: $fs-18
-                padding: 20px 20px 20px 20px
-
-            &__bottom
-
-                img
-                    width: 50px
-                    height: 50px
-                    margin: 10px 0 10px 20px
+                padding: 0 20px 20px 20px
 
 // VERSION XL
 @media screen and (min-width:1920px)
     .newsOpenArticle
         display: flex
-        width: 80%
+        width: 73%
+        margin-top: 0
 
         &__title
 
@@ -161,19 +127,11 @@
         &__description
 
             p
-
+                
                 font-size: $fs-20
-                padding: 10px 35px 30px
 
-        &__info
+        &__link
 
-            p
+            a
                 font-size: $fs-20
-                padding-right: 35px
-
-            &__bottom
-
-                img
-                    width: 60px
-                    height: 60px
-                    margin: 15px 0 15px 35px
+                

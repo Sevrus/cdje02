@@ -4,7 +4,11 @@ const Comity = () => {
 
     return (
         <>
-            <h2 className="title-comity">LE COMITÉ</h2>
+            <div className="title-comity">
+                <hr className="title-comity__left-line" />
+                <h2>LE COMITÉ</h2>
+                <hr className="title-comity__right-line" />
+            </div>
             <ComityDescription />
         </>
     )

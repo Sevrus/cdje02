@@ -1,5 +1,5 @@
-import News from "../components/news/News";
 import Clubs from "../components/clubs/Clubs";
+import News from "../components/news/News";
 
 const Index = () => {
 

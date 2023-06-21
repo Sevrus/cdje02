@@ -3,17 +3,13 @@
 
 .accordion-referee
   margin-top: 25px
-  font-family: $font-primary
-  color: $white
   @include flex(column, normal, center)
   gap: 20px
 
   &__item
     width: 300px
-    background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
-    border-radius: 5px
+    @include articles
     padding: 5px
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
 
     &__title
       position: relative

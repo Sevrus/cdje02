@@ -12,29 +12,31 @@
     &__title__subhead
         display: flex
         align-items: center
-
-        h3
-            color: $black
-            font-size: $fs-12
-            line-height: 12px
-            font-family: $font-primary
+        color: $black
+        font-size: $fs-12
+        font-family: $font-primary
 
     &__title__bigTitle
         display: flex
         align-items: center
-        justify-content: space-between
-        margin-bottom: 25px
+        justify-content: center
+        width: 100%
 
         h2
             color: $black
             font-size: $fs-24
             font-family: $font-primary
-            line-height: 24px
-            margin: 0 15px 0 15px
 
         &__lineLeft , &__lineRight
-            width: 82px
-            height: 0px
+            position: absolute
+            width: 20%
+            border: 1px solid rgba(0, 0, 0, 0.35)
+
+        &__lineLeft
+            left: 10px
+
+        &__lineRight
+            right: 10px
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
@@ -46,18 +48,20 @@
 
             h3
                 font-size: $fs-14
-                line-height: 14px
 
         &__title__bigTitle
             margin-bottom: 40px
+            width: 100%
 
             h2
                 font-size: $fs-26
-                line-height: 26px
-                margin: 0 20px 0 20px
+                margin: 0
 
-            &__lineLeft , &__lineRight
-                width: 150px
+            &__lineLeft
+                left: 80px
+
+            &__lineRight
+                right: 80pxx
 
 // VERSION L
 @media screen and (min-width:1024px)
@@ -67,21 +71,19 @@
         &__title__subhead
             display: flex
             align-items: center
-
-            h3
-                font-size: $fs-20
-                line-height: 20px
+            font-size: $fs-20
 
         &__title__bigTitle
             margin-bottom: 50px
 
             h2
                 font-size: $fs-32
-                line-height: 32px
-                margin: 0 70px 0 70px
 
-            &__lineLeft , &__lineRight
-                width: 220px
+            &__lineLeft
+                left: 100px
+
+            &__lineRight
+                right: 100px
 
 // VERSION XL
 @media screen and (min-width:1920px)
@@ -91,18 +93,16 @@
         &__title__subhead
             display: flex
             align-items: center
-
-            h3
-                font-size: $fs-28
-                line-height: 28px
+            font-size: $fs-28
 
         &__title__bigTitle
             margin-bottom: 50px
 
             h2
                 font-size: $fs-40
-                line-height: 40px
-                margin: 0 320px 0 320px
 
-            &__lineLeft , &__lineRight
-                width: 300px
+            &__lineLeft
+                left: 260px
+
+            &__lineRight
+                right: 260px

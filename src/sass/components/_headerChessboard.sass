@@ -1,0 +1,42 @@
+@import '../utilities/variables'
+@import '../utilities/mixin'
+
+/* VERSION MOBILE */
+.chessboard, .chessboard-disappear
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    width: 220px
+    bottom: -40px
+
+.chessboard
+    opacity: 1
+    transition: opacity ease-in-out .5s .2s
+
+.chessboard-disappear
+    opacity: 0
+    transition: opacity ease-in-out .5s
+
+@media screen and (min-width: 500px)
+    .chessboard, .chessboard-disappear
+        width: 280px
+        bottom: -50px
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .chessboard, .chessboard-disappear
+        bottom: -60px
+        width: 350px
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .chessboard, .chessboard-disappear
+        bottom: -68px
+        width: 400px
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .chessboard, .chessboard-disappear
+        bottom: -80px
+        width: 450px
+        left: 37%

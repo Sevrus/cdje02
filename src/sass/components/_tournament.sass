@@ -7,17 +7,24 @@
     font-family: $font-primary
 
     &__title
-        @include flex(row, space-between , center)
+        @include flex(row, center , center)
         width: 100%
-        margin: 36px 10px 12px 10px
+        margin-bottom: 35px
 
         & h2
             font-size: $fs-24
             color: $black
 
         &__left-line, &__right-line
+            position: absolute
             width: 20%
             border: 1px solid rgba(0, 0, 0, 0.35)
+
+        &__left-line
+            left: 10px
+
+        &__right-line
+            right: 10px
 
     &__list
         @include flex(column, center, center)
@@ -39,10 +46,15 @@
     .tournament
 
         &__title
-            margin-bottom: 25px
 
             h2
                 font-size: $fs-26
+
+            &__left-line
+                left: 80px
+
+            &__right-line
+                right: 80px
 
         &__list
             width: 100%
@@ -55,10 +67,16 @@
     .tournament
 
         &__title
-            margin-bottom: 40px
+            margin-bottom: 60px
 
             h2
                 font-size: $fs-32
+
+            &__left-line
+                left: 100px
+
+            &__right-line
+                right: 100px
 
         &__list
             flex-direction: column
@@ -74,6 +92,12 @@
         &__title
             h2
                 font-size: $fs-40
+
+            &__left-line
+                left: 260px
+
+            &__right-line
+                right: 260px
 
         &__more-results
             a

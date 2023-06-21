@@ -1,0 +1,59 @@
+@import '../utilities/variables'
+@import '../utilities/mixin'
+@import 'headerNav'
+@import 'headerChessboard'
+@import 'headerLogo'
+
+/* HEADER */
+/* VERSION MOBILE */
+.header
+    position: fixed
+    top: 0
+    width: 100%
+    background: $bg-gradient
+    @include flex(row, space-between, center)
+    z-index: 10
+
+.normal-size
+    height: 110px
+    transition: height ease-out .5s
+
+.resize
+    height: 70px
+    transition: height ease-out .5s
+
+@media screen and (min-width: 500px)
+    .normal-size
+        height: 130px
+
+    .resize
+        height: 80px
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .header
+        display: inline
+
+    .normal-size
+        height: 200px
+
+    .resize
+        height: 100px
+        @include flex(row, space-between, center)
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .normal-size
+        height: 220px
+
+    .resize
+        height: 110px
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .normal-size
+        height: 210px
+        @include flex(row,space-between, center)
+
+    .resize
+        height: 120px

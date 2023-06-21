@@ -10,9 +10,10 @@
 
     .leaflet-container
         margin: auto
-        width: 83%
+        width: 80%
         height: 480px
         margin-bottom: 15px
+        z-index: 0
 
     &__title
         display: flex
@@ -29,9 +30,7 @@
             line-height: 12px
 
         &__bigTitle
-            display: flex
-            justify-content: center
-            align-items: center
+            @include flex(row, center, center)
             width: 100%
 
             h2
@@ -42,8 +41,8 @@
 
             &__lineLeft, &__lineRight
                 position: absolute
-                width: 23%
-                height: 0px
+                width: 20%
+                border: 1px solid rgba(0, 0, 0, 0.35)
 
             &__lineLeft
                 left: 10px
@@ -77,9 +76,6 @@
                     line-height: 26px
                     margin: 0 40px 0 40px
 
-                &__lineLeft, &__lineRight
-                    width: 20%
-
                 &__lineLeft
                     left: 80px
 
@@ -110,9 +106,6 @@
                     line-height: 32px
                     margin: 0 100px 0 100px
 
-                &__lineLeft, &__lineRight
-                    width: 21%
-
                 &__lineLeft
                     left: 100px
 
@@ -139,9 +132,6 @@
                     font-size: $fs-40
                     line-height: 40px
                     margin: 0 350px 0 350px
-
-                &__lineLeft, &__lineRight
-                    width: 22%
 
                 &__lineLeft
                     left: 260px
