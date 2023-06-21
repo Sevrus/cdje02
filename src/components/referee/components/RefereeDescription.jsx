@@ -14,7 +14,6 @@ const drop = {
         opacity: 1,
         y: 0,
         transition: {
-            damping: 10,
             type: "spring",
             stiffness: 100
         }
@@ -55,11 +54,11 @@ const RefereeDescription = () => {
     } else {
 
         return (
-            <ul className="accordion-referee">
+            <>
+                <ul className="accordion-referee">
 
-                {datas.data.map((item) => (
-                    <>
-                        <motion.li className="accordion-referee__item" layoutId={item.id}
+                    {datas.data.map((item) => (
+                        <motion.li className="accordion-referee__item" 
                             onClick={() => setSelectedId(item.id)} key={item.id} >
 
                             <div className="accordion-referee__item__title" onClick={() => toggle(item.id)} >
@@ -82,22 +81,22 @@ const RefereeDescription = () => {
                                 <p>Club: {item.club}</p>
                             </section>
                         </motion.li>
+                    ))}
 
-                        <AnimatePresence
-                            // initial={false}
-                            mode="wait"
-                            onExitComplete={() => null}
+                    <AnimatePresence
+                        mode="wait"
+                        onExitComplete={() => null}
 
-                        >
-                            {selectedId && (
+                    >
+                        {selectedId && (
+                            <div className="modalRefereeBack" onClick={() => setSelectedId(null)}>
                                 <motion.div className="modalReferee"
                                     variants={drop} initial="hidden" animate="visible" exit="exit"
-                                    layoutId={selectedId} key={selectedId}
                                 >
                                     <li className="accordion-referee__item">
                                         <div className="accordion-referee__item__title">
                                             <hr className="accordion-referee__item__title--left" />
-                                            <h3>{item.name}</h3>
+                                            <h3>{datas.data.find((item) => item.id === selectedId).name}</h3>
                                             <hr className="accordion-referee__item__title--right" />
                                             <FontAwesomeIcon
                                                 icon={faChevronUp}
@@ -107,17 +106,17 @@ const RefereeDescription = () => {
                                         </div>
 
                                         <section className='accordion-referee__item__content show'>
-                                            <p>{item.title}</p>
-                                            <p>Validité: {item.validity}</p>
-                                            <p>Club: {item.club}</p>
+                                            <p>{datas.data.find((item) => item.id === selectedId).title}</p>
+                                            <p>Validité: {datas.data.find((item) => item.id === selectedId).validity}</p>
+                                            <p>Club: {datas.data.find((item) => item.id === selectedId).club}</p>
                                         </section>
                                     </li>
                                 </motion.div>
-                            )}
-                        </AnimatePresence>
-                    </>
-                ))}
-            </ul>
+                            </div>
+                        )}
+                    </AnimatePresence>
+                </ul>
+            </>
         )
     }
 }
