@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
+import NewsOpen from './components/newsOpen/NewsOpen';
+import AllTournament from './components/tournament/allTournament/AllTournament';
 import ErrorPage from './ErrorPage';
 import Activity from './views/Activity';
 import Contact from './views/Contact';
 import Index from './views/Index';
 import Info from './views/Info';
-import AllTournament from './components/tournament/allTournament/AllTournament';
-
 
 const router = createBrowserRouter([
     {
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Index />,
+            },
+            {
+                path: "/articles/:id",
+                element: <NewsOpen/>,
             },
             {
                 path: "/info",

@@ -2,15 +2,14 @@
 @import '../utilities/_variables.sass'
 
 // VERSION MOBILE
-.newsArticle
+.newsOpenArticle
     display: flex
     flex-direction: column
     background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
     border-radius: 5px
-    width: 80%
+    width: 83%
     margin-bottom: 15px
-    margin-top: 25px
 
     &__title
         display: flex
@@ -46,21 +45,48 @@
             padding: 10px
             width: 100%
 
-    &__link
+    &__info
         display: flex
-        justify-content: end
+        flex-direction: column
+        align-items: center
+        position: relative
 
-        a
-            font-family: $font-primary
-            font-size: $fs-14
-            color: $red
-            padding: 0 10px 10px 10px
+        &__line
+            display: flex
+            justify-content: center
+            width: 100%
+
+            &__center
+                width: 95%
+                margin: 0 10px 0 10px
+
+        &__bottom
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            width: 100%
+
+            p
+                font-family: $font-primary
+                font-size: $fs-14
+                color: $white
+                padding: 10px
+
+            &__author
+                display: flex
+                justify-content: flex-start
+                align-items: center
+
+                img
+                    width: 30px
+                    height: 30px
+                    margin: 10px 0 10px 10px
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
-    .newsArticle
-        width: 80%
-        margin-top: 10px
+    .newsOpenArticle
+        width: 65%
 
         &__title
             display: flex
@@ -79,10 +105,9 @@
 
 // VERSION L
 @media screen and (min-width:1024px)
-    .newsArticle
+    .newsOpenArticle
         display: flex
         width: 80%
-        margin-top: 0
 
         &__title
 
@@ -96,22 +121,28 @@
         &__description
 
             p
-                
+
                 font-size: $fs-16
                 padding: 0 20px 20px 20px
 
-        &__link
+        &__info
 
-            a
+            p
                 font-size: $fs-18
-                padding: 0 20px 20px 20px
+                padding: 20px 20px 20px 20px
+
+            &__bottom
+
+                img
+                    width: 50px
+                    height: 50px
+                    margin: 10px 0 10px 20px
 
 // VERSION XL
 @media screen and (min-width:1920px)
-    .newsArticle
+    .newsOpenArticle
         display: flex
-        width: 73%
-        margin-top: 0
+        width: 80%
 
         &__title
 
@@ -130,11 +161,19 @@
         &__description
 
             p
-                
-                font-size: $fs-20
 
-        &__link
-
-            a
                 font-size: $fs-20
-                
+                padding: 10px 35px 30px
+
+        &__info
+
+            p
+                font-size: $fs-20
+                padding-right: 35px
+
+            &__bottom
+
+                img
+                    width: 60px
+                    height: 60px
+                    margin: 15px 0 15px 35px

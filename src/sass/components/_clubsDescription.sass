@@ -1,0 +1,112 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+
+// VERSION MOBILE
+.article-clubs
+    @include flex(column, start , center)
+    @include articles()
+    margin-bottom: 20px
+    width: 83%
+    overflow: hidden
+    height: 49px
+
+    &__title
+        @include flex(column, center, center)
+        height: 40px
+        width: 100%
+        margin-top: 10px
+
+        h4
+            font-size: $fs-14
+            padding: 0 10px
+
+        &__separation
+            width: 90%           
+            background-color: $white
+
+    &__description
+        @include flex( column , center , center )
+        gap: 5px
+        font-size: $fs-12
+
+.article-clubs.active
+    @include flex(column , center , center)
+    position: absolute
+    top: -185px
+    left: 50%
+    z-index: 9999
+    transform: translate(-50%)
+    height: 165px 
+    width: 278px
+    background: $bg-gradient
+    opacity: .85
+    margin-bottom: 0
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .article-clubs
+        width: 40%
+        height: 53px
+        margin-bottom: 10px
+
+        h4
+            font-size: $fs-16
+
+        p
+            font-size: $fs-14
+
+    .article-clubs.active
+        top: -190px
+        height: 170px
+        max-height: 200px
+        width: 300px
+
+// VERSION L 
+@media screen and (min-width:1024px)
+    .article-clubs
+        width: 40%
+        height: 55px
+
+        &__title
+            &__separation
+                height: 1px
+
+            h4
+                font-size: $fs-18
+
+        p
+            font-size: $fs-16
+
+    .article-clubs.active
+        top: -210px
+        height: 185px
+        max-height: 300px
+        width: 320px
+
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .article-clubs
+        width: 30%
+        height: 60px
+
+        &__title
+
+            h4
+                font-size: $fs-20
+                line-height: 20px
+                padding: 10px 10px 0 10px
+
+        &__description
+            margin-top: 15px
+
+            p
+                padding: 0px
+                font-size: $fs-18
+
+    .article-clubs.active
+        @include flex(column , center , center)
+        top: -250px
+        width: 400px
+        height: 220px
+
