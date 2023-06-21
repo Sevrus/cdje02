@@ -1,0 +1,95 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+@import '../components/_form.sass'
+
+// VERSION MOBILE
+.contact
+    display: flex
+    align-items: center
+    flex-direction: column
+    margin-top: 35px
+
+    &__title
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+
+        h2
+            color: $black
+            font-size: $fs-24
+            font-family: $font-primary
+            line-height: 24px
+
+        &__lineLeft , &__lineRight
+            width: 23%
+            height: 0px
+            position: absolute
+
+        &__lineLeft
+            left: 10px
+
+        &__lineRight
+            right: 10px
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .contact
+
+        &__title
+
+            h2
+                font-size: $fs-26
+                line-height: 26px
+                margin: 0
+
+            &__lineLeft , &__lineRight
+                width: 20%
+
+            &__lineLeft
+                left: 80px
+
+            &__lineRight
+                right: 80px
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .contact
+        margin-top: 50px
+
+        &__title
+
+            h2
+                font-size: $fs-32
+                line-height: 32px
+                margin: 0
+
+            &__lineLeft , &__lineRight
+                width: 21%
+
+            &__lineLeft
+                left: 100px
+
+            &__lineRight
+                right: 100px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .contact
+        margin-top: 90px
+
+        &__title
+
+            h2
+                font-size: $fs-40
+                line-height: 40px
+                margin: 0
+
+            &__lineLeft , &__lineRight
+                width: 22%
+
+            &__lineLeft
+                left: 260px
+
+            &__lineRight
+                right: 260px

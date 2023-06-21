@@ -1,0 +1,126 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+
+// VERSION MOBILE 
+.form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    margin: 30px 0
+
+    &__imageLeft, &__imageRight
+        display: none
+
+    &__lastname, &__firstname, &__email, &__message
+        display: flex
+        align-items: center
+        flex-direction: column
+        font-family: $font-primary
+        font-size: $fs-14
+        line-height: 14px
+        font-weight: bold
+        margin-bottom: 25px
+
+        label
+            margin-bottom: 15px
+
+        input, textarea
+            width: 78%
+            max-width: 450px
+            border-radius: 5px
+            border: 1px solid $black
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
+
+        input
+            height: 40px
+            text-indent: 10px
+
+        textarea
+            resize: vertical
+
+        span
+            color: $red
+            padding-top: 10px
+
+    &__btn
+        display: flex
+        justify-content: center
+
+        button
+            @include articles()
+            margin-top: 40px
+            width: 50%
+            max-width: 300px
+            height: 40px
+            border: none
+            font-size: $fs-16
+            font-weight: bold
+
+            &:hover
+                cursor: pointer
+                transform: scale(0.98)
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .form
+        &__lastname, &__firstname, &__email, &__message, button
+            font-size: $fs-18
+            line-height: 18px
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .form
+
+        &__lastname, &__firstname, &__email, &__message
+            margin-bottom: 30px
+
+        &__lastname, &__firstname, &__email, &__message, button
+            font-size: $fs-20
+            line-height: 20px
+
+        label
+            margin-bottom: 20px
+
+        input, textarea
+            width: 79%
+
+        button
+            height: 40px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .form
+        margin: 50px 0
+
+        &__imageLeft, &__imageRight
+            display: block
+            filter: invert(1)
+            width: 20%
+            position: absolute
+            top: 40%
+            opacity: 65%
+
+        &__imageLeft
+            transform: rotate(90deg)
+            left: 15%
+
+        &__imageRight
+            transform: rotate(-90deg)
+            right: 15%
+
+        &__lastname, &__firstname, &__email, &__message
+            margin-bottom: 40px
+
+        &__lastname, &__firstname, &__email, &__message, button
+            font-size: $fs-24
+            line-height: 24px
+
+            label
+                margin-bottom: 20px
+
+            input, textarea
+                width: 60%
+
+        button
+            height: 50px
