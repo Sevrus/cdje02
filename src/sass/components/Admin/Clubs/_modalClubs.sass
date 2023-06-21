@@ -14,7 +14,7 @@
     &__content
         position: absolute
         z-index: 1003
-        top: 65%
+        top: 78%
         left: 50%
         transform: translate(-50%, -50%)
         background-color: $white
@@ -52,7 +52,7 @@
             &:after
                 transform: rotate(-45deg)
 
-        &__name, &__town, &__site, &__president, &__tel, &__members
+        &__name, &__town, &__site, &__president, &__tel, &__members, &__coordx, &__coordy, &__date
             @include flex(column, center, center)
             width: 100%
 
@@ -67,8 +67,10 @@
                 box-shadow: $shadow
                 border-radius: 5px
                 margin-top: 12px
+                font-family: $font-primary
+                padding: 10px
 
-        &__town, &__site, &__president, &__tel, &__members
+        &__town, &__site, &__president, &__tel, &__members, &__coordx, &__coordy, &__date
             margin-top: 30px
 
         &__description__input
@@ -99,9 +101,12 @@
             top: 68%
             width: 500px
 
-            &__name, &__town, &__site, &__president, &__tel, &__members
+            &__name, &__town, &__site, &__president, &__tel, &__members, &__coordx, &__coordy, &__date
                 &__label
                     font-size: $fs-20
+
+                &__input
+                    font-size: $fs-16
 
             &__button
                 font-size: $fs-20
@@ -110,15 +115,15 @@
 @media screen and (min-width: 1024px)
     .modalClub
         &__content
-            top: 75%
+            top: 92%
             width: 600px
 
-            &__name, &__town, &__site, &__president, &__tel, &__members
+            &__name, &__town, &__site, &__president, &__tel, &__members, &__coordx, &__coordy, &__date
                 &__label
                     font-size: $fs-22
 
                 &__input
-                    height: 50px
+                    font-size: $fs-18
 
             &__button
                 height: 50px
@@ -133,12 +138,15 @@
 @media screen and (min-width: 1920px)
     .modalClub
         &__content
-            top: 50%
+            top: 68%
             width: 700px
 
-            &__name, &__town, &__site, &__president, &__tel, &__members
+            &__name, &__town, &__site, &__president, &__tel, &__members, &__coordx, &__coordy, &__date
                 &__label
                     font-size: $fs-24
+
+                &__input
+                    font-size: $fs-20
 
             &__button
                 font-size: $fs-24

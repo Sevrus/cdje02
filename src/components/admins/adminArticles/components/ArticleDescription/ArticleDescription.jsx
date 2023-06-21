@@ -16,23 +16,23 @@ const ArticleDescription = () => {
         fetch("http://localhost:3000/api/news/" + id, {
             method: 'DELETE'
         })
-        .then(resp => {
-            if (resp.ok) {
-                console.log(`La suppression de l'article ${id} a réussi.`);
-                return resp.json();
-            } else {
-                console.log(`La suppression de l'article a échoué.`);
-                throw new Error("Erreur lors de la suppression de l'article."); 
-            }
-        })
-        .then(datas => {
-            console.log(`La suppression de l'article ${id} a réussi.`, 
-            datas);
-        })
-        .catch (error => {
-            console.error('Erreur lors de la requête de suppression', 
-            error);
-        })
+            .then(resp => {
+                if (resp.ok) {
+                    console.log(`La suppression de l'article ${id} a réussi.`);
+                    return resp.json();
+                } else {
+                    console.log(`La suppression de l'article a échoué.`);
+                    throw new Error("Erreur lors de la suppression de l'article.");
+                }
+            })
+            .then(datas => {
+                console.log(`La suppression de l'article ${id} a réussi.`,
+                    datas);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la requête de suppression',
+                    error);
+            })
     }
 
     useEffect(() => {
@@ -77,9 +77,7 @@ const ArticleDescription = () => {
                 ))}
 
             </>
-
         )
-
     }
 }
 

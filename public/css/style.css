@@ -2515,7 +2515,7 @@ time, mark, audio, video {
   margin-bottom: 30px;
   width: 100%;
 }
-.addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members {
+.addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2526,10 +2526,10 @@ time, mark, audio, video {
   margin-bottom: 25px;
   width: 100%;
 }
-.addClub__name label, .addClub__town label, .addClub__site label, .addClub__president label, .addClub__tel label, .addClub__members label {
+.addClub__name label, .addClub__town label, .addClub__site label, .addClub__president label, .addClub__tel label, .addClub__members label, .addClub__coordx label, .addClub__coordy label {
   margin-bottom: 15px;
 }
-.addClub__name input, .addClub__town input, .addClub__site input, .addClub__president input, .addClub__tel input, .addClub__members input {
+.addClub__name input, .addClub__town input, .addClub__site input, .addClub__president input, .addClub__tel input, .addClub__members input, .addClub__coordx input, .addClub__coordy input {
   width: 78%;
   max-width: 450px;
   border-radius: 5px;
@@ -2565,7 +2565,7 @@ time, mark, audio, video {
 }
 
 @media screen and (min-width: 768px) {
-  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub button {
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy, .addClub button {
     font-size: 1.125rem;
   }
 }
@@ -2573,10 +2573,10 @@ time, mark, audio, video {
   .addClub {
     margin-bottom: 50px;
   }
-  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members {
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy {
     margin-bottom: 30px;
   }
-  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub button {
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy, .addClub button {
     font-size: 1.25rem;
   }
   .addClub label {
@@ -2597,11 +2597,11 @@ time, mark, audio, video {
     width: 100%;
     margin-bottom: 90px;
   }
-  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members {
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy {
     margin-bottom: 40px;
     width: 30%;
   }
-  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub button {
+  .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy, .addClub button {
     font-size: 1.5rem;
   }
   .addClub label {
@@ -2692,7 +2692,7 @@ time, mark, audio, video {
 .modalClub__content {
   position: absolute;
   z-index: 1003;
-  top: 65%;
+  top: 78%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
@@ -2733,26 +2733,28 @@ time, mark, audio, video {
 .modalClub__content__close:after {
   transform: rotate(-45deg);
 }
-.modalClub__content__name, .modalClub__content__town, .modalClub__content__site, .modalClub__content__president, .modalClub__content__tel, .modalClub__content__members {
+.modalClub__content__name, .modalClub__content__town, .modalClub__content__site, .modalClub__content__president, .modalClub__content__tel, .modalClub__content__members, .modalClub__content__coordx, .modalClub__content__coordy, .modalClub__content__date {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label {
+.modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label, .modalClub__content__coordx__label, .modalClub__content__coordy__label, .modalClub__content__date__label {
   color: #242627;
   font-size: 1rem;
 }
-.modalClub__content__name__input, .modalClub__content__town__input, .modalClub__content__site__input, .modalClub__content__president__input, .modalClub__content__tel__input, .modalClub__content__members__input {
+.modalClub__content__name__input, .modalClub__content__town__input, .modalClub__content__site__input, .modalClub__content__president__input, .modalClub__content__tel__input, .modalClub__content__members__input, .modalClub__content__coordx__input, .modalClub__content__coordy__input, .modalClub__content__date__input {
   width: 80%;
   height: 40px;
   border: 1px solid #3d4450;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-top: 12px;
+  font-family: "Noto Sans", sans-serif;
+  padding: 10px;
 }
-.modalClub__content__town, .modalClub__content__site, .modalClub__content__president, .modalClub__content__tel, .modalClub__content__members {
+.modalClub__content__town, .modalClub__content__site, .modalClub__content__president, .modalClub__content__tel, .modalClub__content__members, .modalClub__content__coordx, .modalClub__content__coordy, .modalClub__content__date {
   margin-top: 30px;
 }
 .modalClub__content__description__input {
@@ -2787,8 +2789,11 @@ time, mark, audio, video {
     top: 68%;
     width: 500px;
   }
-  .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label {
+  .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label, .modalClub__content__coordx__label, .modalClub__content__coordy__label, .modalClub__content__date__label {
     font-size: 1.25rem;
+  }
+  .modalClub__content__name__input, .modalClub__content__town__input, .modalClub__content__site__input, .modalClub__content__president__input, .modalClub__content__tel__input, .modalClub__content__members__input, .modalClub__content__coordx__input, .modalClub__content__coordy__input, .modalClub__content__date__input {
+    font-size: 1rem;
   }
   .modalClub__content__button {
     font-size: 1.25rem;
@@ -2797,14 +2802,14 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .modalClub__content {
-    top: 75%;
+    top: 92%;
     width: 600px;
   }
-  .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label {
+  .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label, .modalClub__content__coordx__label, .modalClub__content__coordy__label, .modalClub__content__date__label {
     font-size: 1.375rem;
   }
-  .modalClub__content__name__input, .modalClub__content__town__input, .modalClub__content__site__input, .modalClub__content__president__input, .modalClub__content__tel__input, .modalClub__content__members__input {
-    height: 50px;
+  .modalClub__content__name__input, .modalClub__content__town__input, .modalClub__content__site__input, .modalClub__content__president__input, .modalClub__content__tel__input, .modalClub__content__members__input, .modalClub__content__coordx__input, .modalClub__content__coordy__input, .modalClub__content__date__input {
+    font-size: 1.125rem;
   }
   .modalClub__content__button {
     height: 50px;
@@ -2819,11 +2824,14 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .modalClub__content {
-    top: 50%;
+    top: 68%;
     width: 700px;
   }
-  .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label {
+  .modalClub__content__name__label, .modalClub__content__town__label, .modalClub__content__site__label, .modalClub__content__president__label, .modalClub__content__tel__label, .modalClub__content__members__label, .modalClub__content__coordx__label, .modalClub__content__coordy__label, .modalClub__content__date__label {
     font-size: 1.5rem;
+  }
+  .modalClub__content__name__input, .modalClub__content__town__input, .modalClub__content__site__input, .modalClub__content__president__input, .modalClub__content__tel__input, .modalClub__content__members__input, .modalClub__content__coordx__input, .modalClub__content__coordy__input, .modalClub__content__date__input {
+    font-size: 1.25rem;
   }
   .modalClub__content__button {
     font-size: 1.5rem;
@@ -4937,6 +4945,8 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-top: 12px;
+  font-family: "Noto Sans", sans-serif;
+  padding: 10px;
 }
 .modalChampion__content__year {
   margin-top: 30px;
@@ -4975,6 +4985,9 @@ time, mark, audio, video {
   .modalChampion__content__name__label, .modalChampion__content__year__label {
     font-size: 1.25rem;
   }
+  .modalChampion__content__name__input, .modalChampion__content__year__input {
+    font-size: 1rem;
+  }
   .modalChampion__content__button {
     font-size: 1.25rem;
   }
@@ -4989,7 +5002,7 @@ time, mark, audio, video {
     font-size: 1.375rem;
   }
   .modalChampion__content__name__input, .modalChampion__content__year__input {
-    height: 50px;
+    font-size: 1.125rem;
   }
   .modalChampion__content__button {
     height: 50px;
@@ -5008,6 +5021,9 @@ time, mark, audio, video {
   }
   .modalChampion__content__name__label, .modalChampion__content__year__label {
     font-size: 1.5rem;
+  }
+  .modalChampion__content__name__input, .modalChampion__content__year__input {
+    font-size: 1.25rem;
   }
   .modalChampion__content__button {
     font-size: 1.5rem;
