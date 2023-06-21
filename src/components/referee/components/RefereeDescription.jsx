@@ -15,7 +15,7 @@ const drop = {
         y: 0,
         transition: {
             type: "spring",
-            stiffness: 100
+            stiffness: 130
         }
     },
     exit: {

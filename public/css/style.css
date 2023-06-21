@@ -442,7 +442,15 @@ time, mark, audio, video {
   width: 20%;
   border: 1px solid rgba(0, 0, 0, 0.35);
 }
+.tournament__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 .tournament__more-results {
+  margin-top: 15px;
   width: 80%;
   text-align: end;
 }
@@ -465,8 +473,10 @@ time, mark, audio, video {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
 /* VERSION L */
@@ -480,9 +490,6 @@ time, mark, audio, video {
   .tournament__list {
     flex-direction: column;
   }
-  .tournament__more-results {
-    margin-top: 10px;
-  }
   .tournament__more-results a {
     font-size: 1.125rem;
   }
@@ -492,11 +499,12 @@ time, mark, audio, video {
   .tournament__title h2 {
     font-size: 3rem;
   }
-  .tournament__more-results {
-    margin-top: 20px;
-  }
   .tournament__more-results a {
     font-size: 1.5rem;
+  }
+  .tournament__list {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 /* VERSION MOBILE */
@@ -523,6 +531,13 @@ time, mark, audio, video {
   width: 20%;
   border: 1px solid rgba(0, 0, 0, 0.35);
 }
+.regulation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
@@ -536,8 +551,10 @@ time, mark, audio, video {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
 /* VERSION L */
@@ -557,6 +574,10 @@ time, mark, audio, video {
   .regulation__title h2 {
     font-size: 3rem;
   }
+  .regulation__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 /* VERSION MOBILE */
 .activity__article {
@@ -571,7 +592,6 @@ time, mark, audio, video {
   color: #fff;
   width: 305px;
   height: 65px;
-  margin-bottom: 25px;
 }
 .activity__article__title {
   position: relative;
@@ -613,18 +633,23 @@ time, mark, audio, video {
     margin-bottom: 20px;
   }
   .activity__article__title {
-    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
   }
   .activity__article__title h4 {
     font-size: 1.125rem;
   }
   .activity__article__title__left-line, .activity__article__title__right-line {
-    margin-top: -5px;
-    position: relative;
+    height: 0;
+    margin-top: 0;
+    position: static;
+    width: 100px;
+  }
+  .activity__article__title__left-line {
+    margin-left: 20px;
+  }
+  .activity__article__title__right-line {
+    margin-right: 20px;
   }
   .activity__article__more {
     text-align: end;
@@ -637,12 +662,15 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .activity__article {
-    width: 1500px;
+    width: 38%;
     height: 110px;
     margin-bottom: 30px;
   }
   .activity__article__title h4 {
     font-size: 1.5rem;
+  }
+  .activity__article__title__left-line, .activity__article__title__right-line {
+    width: 75px;
   }
   .activity__article__more a {
     font-size: 1.375rem;
