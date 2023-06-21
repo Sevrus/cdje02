@@ -1,0 +1,39 @@
+@import '../utilities/variables'
+@import '../utilities/mixin'
+@import './comityDescription'
+
+.title-comity
+  font-family: $font-primary
+  font-size: $fs-24
+  font-weight: 700
+  @include flex(row, center, center)
+  gap: 25px
+
+  &::before, &::after
+    content: ''
+    display: inline-block
+    width: 20%
+    height: 1px
+    background-color: rgba(0, 0, 0, .35)
+
+@media screen and (min-width: 768px)
+  .title-comity
+    font-size: $fs-26
+    justify-content: space-evenly
+
+    &::before, &::after
+      width: 150px
+
+@media screen and (min-width: 1024px)
+  .title-comity
+    font-size: $fs-32
+
+    &::before, &::after
+      width: 200px
+
+@media screen and (min-width: 1920px)
+  .title-comity
+    font-size: $fs-40
+
+    &::before, &::after
+      width: 300px

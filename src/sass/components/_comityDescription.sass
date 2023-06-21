@@ -1,0 +1,138 @@
+@import '../utilities/variables'
+@import '../utilities/mixin'
+
+.accordion-comity
+  margin-top: 25px
+  font-family: $font-primary
+  color: $white
+  @include flex(column, normal, center)
+  gap: 20px
+
+  &__item
+    width: 300px
+    background: linear-gradient(90deg, #242627 -0.14%, #3D4450 47.26%, #4E5862 99.86%)
+    border-radius: 5px
+    padding: 5px
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
+
+    &__title
+      position: relative
+      font-size: $fs-14
+      height: 48px
+      cursor: pointer
+
+      h3
+        text-align: center
+        padding: 10px 0
+        font-weight: 700
+
+      &--left, &--right
+        position: absolute
+        top: 28px
+        background-color: $white
+        border: none
+        width: 70px
+        height: 1px
+
+      &--left
+        left: 10px
+
+      &--right
+        right: 10px
+
+      &__arrow
+        position: absolute
+        color: $red
+        top: 13px
+        right: 13px
+
+    &__content
+      @include flex(column, normal, center)
+      max-height: 0
+      overflow: hidden
+      transition: all .5s cubic-bezier(0,1,0,1)
+      font-size: $fs-14
+      gap: 5px
+      margin: 5px 0
+
+      p
+        text-align: center
+
+      p:last-child
+        span
+          cursor: pointer
+          text-decoration: underline
+
+      img
+        width: 150px
+        filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5))
+
+    &__content.show
+      height: auto
+      max-height: 9999px
+      transition: all .5s cubic-bezier(0,1,0,1)
+
+@media screen and (min-width: 600px)
+  .accordion-comity
+    margin-top: 30px
+
+    &__item
+      width: 500px
+
+      &__title
+        cursor: auto
+        @include flex(row, center, center)
+        font-size: $fs-16
+
+        &--left, &--right
+          position: static
+          width: 150px
+
+        &__arrow
+          opacity: 0
+
+      &__content
+        @include flex(row, start, center)
+        gap: 15px
+        margin-left: 20px
+
+        p
+          text-align: start
+          font-size: $fs-16
+
+          &:nth-child(1), &:nth-child(2)
+            margin-bottom: 10px
+
+@media screen and (min-width: 1024px)
+  .accordion-comity
+    @include flex(row, center, center)
+    flex-wrap: wrap
+    padding: 0 20px
+    margin-top: 50px
+
+    &__item
+
+      &__title
+        font-size: $fs-18
+
+        h3
+          text-align: center
+
+@media screen and (min-width: 1920px)
+  .accordion-comity
+
+    &__item
+      width: 600px
+
+      &__title
+        justify-content: start
+
+        h3
+          font-size: $fs-20
+
+      &__content
+        gap: 30px
+        margin-left: 30px
+
+        p
+          font-size: $fs-18

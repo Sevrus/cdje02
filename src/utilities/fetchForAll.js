@@ -1,6 +1,8 @@
-function fetchForAll(setIsLoaded, setError, setItems, url) {
+function fetchForAll(setIsLoaded, setError, setItems, uri) {
 
-    fetch(url)
+    const url = "http://localhost:3000/"
+
+    fetch(url + uri)
         .then(res => res.json())
         .then(
             (result) => {
@@ -13,3 +15,5 @@ function fetchForAll(setIsLoaded, setError, setItems, url) {
             }
         )
 }
+
+export default fetchForAll;
