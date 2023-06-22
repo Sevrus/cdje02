@@ -3504,9 +3504,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .referee {
-    margin-top: 50px;
-  }
   .referee__title {
     margin-bottom: 30px;
   }
@@ -3553,9 +3550,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .referee {
-    margin-top: 60px;
-  }
   .referee__title {
     margin-bottom: 45px;
   }
@@ -4052,9 +4046,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .regulation {
-    margin-top: 50px;
-  }
   .regulation__title {
     margin-bottom: 30px;
   }
@@ -4101,9 +4092,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .regulation {
-    margin-top: 60px;
-  }
   .regulation__title {
     margin-bottom: 45px;
   }
@@ -5132,9 +5120,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .champion {
-    margin-top: 50px;
-  }
   .champion__title {
     margin-bottom: 30px;
   }
@@ -5179,9 +5164,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .champion {
-    margin-top: 60px;
-  }
   .champion__title {
     margin-bottom: 45px;
   }
@@ -5674,9 +5656,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .admins {
-    margin-top: 50px;
-  }
   .admins__title {
     margin-bottom: 30px;
   }
@@ -5723,9 +5702,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .admins {
-    margin-top: 60px;
-  }
   .admins__title {
     margin-bottom: 45px;
   }
