@@ -1,6 +1,4 @@
-import {
-    faRightToBracket
-} from "@fortawesome/free-solid-svg-icons";
+import {faRightToBracket} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
