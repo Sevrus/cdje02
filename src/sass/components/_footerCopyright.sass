@@ -1,0 +1,53 @@
+@import '../utilities/_variables'
+@import '../utilities/_mixin'
+
+/* FOOTER COPYRIGHT */
+/* VERSION MOBILE */
+.footer__copyright
+    width: 120px
+    @include flex(row, center, center)
+    margin-bottom: -20px
+
+    &__icon
+        height: 12px
+
+    &__text
+        font-size: $fs-11
+        margin-left: 2px
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .footer__copyright
+        width: 137px
+        margin-bottom: -70px
+
+        &__icon
+            height: 15px
+
+        &__text
+            font-size: $fs-14
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .footer__copyright
+        width: 154px
+        margin-bottom: -90px
+
+        &__icon
+            height: 18px
+
+        &__text
+            font-size: $fs-16
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .footer__copyright
+        width: 200px
+        margin-bottom: -150px
+
+        &__icon
+            height: 20px
+
+        &__text
+            font-size: $fs-20
+            margin-left: 4px

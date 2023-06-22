@@ -1,0 +1,108 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+@import './_newsOpenArticle'
+
+// VERSION MOBILE 
+.newsOpen
+    display: flex
+    align-items: center
+    flex-direction: column
+    margin-top: 35px
+
+    &__title__subhead
+        display: flex
+        align-items: center
+        color: $black
+        font-size: $fs-12
+        font-family: $font-primary
+
+    &__title__bigTitle
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+
+        h2
+            color: $black
+            font-size: $fs-24
+            font-family: $font-primary
+
+        &__lineLeft , &__lineRight
+            position: absolute
+            width: 20%
+            border: 1px solid rgba(0, 0, 0, 0.35)
+
+        &__lineLeft
+            left: 10px
+
+        &__lineRight
+            right: 10px
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .newsOpen
+
+        &__title__subhead
+            display: flex
+            align-items: center
+
+            h3
+                font-size: $fs-14
+
+        &__title__bigTitle
+            margin-bottom: 40px
+            width: 100%
+
+            h2
+                font-size: $fs-26
+                margin: 0
+
+            &__lineLeft
+                left: 80px
+
+            &__lineRight
+                right: 80pxx
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .newsOpen
+        margin-top: 50px
+
+        &__title__subhead
+            display: flex
+            align-items: center
+            font-size: $fs-20
+
+        &__title__bigTitle
+            margin-bottom: 50px
+
+            h2
+                font-size: $fs-32
+
+            &__lineLeft
+                left: 100px
+
+            &__lineRight
+                right: 100px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .newsOpen
+        margin-top: 90px
+
+        &__title__subhead
+            display: flex
+            align-items: center
+            font-size: $fs-28
+
+        &__title__bigTitle
+            margin-bottom: 50px
+
+            h2
+                font-size: $fs-40
+
+            &__lineLeft
+                left: 260px
+
+            &__lineRight
+                right: 260px

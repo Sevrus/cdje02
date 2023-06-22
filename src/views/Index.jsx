@@ -1,9 +1,18 @@
+import Clubs from "../components/clubs/Clubs";
+import News from "../components/news/News";
+
 const Index = () => {
 
     return (
+        
         <>
-            <h1>Accueil</h1>
+
+            <News />
+
+            <Clubs />
+
         </>
+
     )
 }
 

@@ -1,0 +1,90 @@
+@import '../utilities/variables'
+@import '../utilities/mixin'
+
+.accordion-referee
+  margin-top: 25px
+  @include flex(column, normal, center)
+  gap: 20px
+
+  &__item
+    width: 300px
+    @include articles
+    padding: 5px
+
+    &__title
+      position: relative
+      font-size: $fs-14
+      height: 48px
+      cursor: pointer
+
+      h3
+        text-align: center
+        padding: 10px 0
+        font-weight: 700
+
+      &--left, &--right
+        position: absolute
+        top: 28px
+        background-color: $white
+        border: none
+        width: 70px
+        height: 1px
+
+      &--left
+        left: 10px
+
+      &--right
+        right: 10px
+
+      &__arrow
+        position: absolute
+        color: $red
+        top: 13px
+        right: 13px
+
+    &__content
+      @include flex(column, normal, center)
+      max-height: 0
+      overflow: hidden
+      transition: all .5s cubic-bezier(0,1,0,1)
+      font-size: $fs-14
+      gap: 5px
+      margin: 5px 0
+
+      p
+        text-align: center
+
+    &__content.show
+      height: auto
+      max-height: 9999px
+      transition: all .5s cubic-bezier(0,1,0,1)
+
+@media screen and (min-width: 600px)
+    .accordion-referee
+        @include flex(row, center, normal)
+        flex-wrap: wrap
+        max-width: 90%
+        margin: auto
+        margin-top: 30px
+
+        &__item
+            width: 400px
+        
+        &__title, &__content
+            font-size: $fs-16
+
+@media screen and (min-width: 1024px)
+  .accordion-referee
+
+    &__title
+      font-size: $fs-18
+
+@media screen and (min-width: 1920px)
+  .accordion-referee
+
+    &__title
+      font-size: $fs-20
+
+    &__content
+      font-size: $fs-18
+      

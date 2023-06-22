@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@700&display=swap')
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@700&display=swap')
+@import './base/_reset'
+@import './pages/contact'
+@import './pages/index'
+@import './pages/infos'
+@import './pages/activity'
+@import './pages/error'
+@import './components/_header'
+@import './components/_footer'
+@import './components/_modal'
 
-@import './base/reset'
+/* VERSION MOBILE */
+.main
+    min-width: 360px
+    margin-top: 180px
+
+@media screen and ( min-width: 500px )
+    .main
+        margin-top: 200px   
+
+/* VERSION TABLETTE */
+@media screen and ( min-width: 768px )
+    .main
+        margin-top: 280px    
+
+/* VERSION L */        
+@media screen and ( min-width: 1024px )
+    .main
+        margin-top: 310px 
+
+/* VERSION XL */   
+@media screen and ( min-width: 1920px )
+    .main
+        margin-top: 310px

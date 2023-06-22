@@ -1,0 +1,144 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+@import './_clubsDescription'
+
+// VERSION MOBILE 
+.clubs
+    display: flex
+    flex-direction: column
+    margin-top: 50px
+
+    .leaflet-container
+        margin: auto
+        width: 80%
+        height: 480px
+        margin-bottom: 15px
+        z-index: 0
+
+    &__title
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 25px
+
+        &__subhead
+            display: flex
+            justify-content: center
+            color: $black
+            font-size: $fs-12
+            font-family: $font-primary
+            line-height: 12px
+
+        &__bigTitle
+            @include flex(row, center, center)
+            width: 100%
+
+            h2
+                color: $black
+                font-size: $fs-24
+                font-family: $font-primary
+                line-height: 24px
+
+            &__lineLeft, &__lineRight
+                position: absolute
+                width: 20%
+                border: 1px solid rgba(0, 0, 0, 0.35)
+
+            &__lineLeft
+                left: 10px
+
+            &__lineRight
+                right: 10px
+
+    &__list
+        @include flex(column , center , center )
+        width: 100%
+        position: relative
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .clubs
+
+        .leaflet-container
+            width: 80%
+
+        &__title
+            margin-bottom: 35px
+
+            &__subhead
+                font-size: $fs-14
+                line-height: 14px
+
+            &__bigTitle
+
+                h2
+                    font-size: $fs-26
+                    line-height: 26px
+                    margin: 0 40px 0 40px
+
+                &__lineLeft
+                    left: 80px
+
+                &__lineRight
+                    right: 80px
+
+        &__list
+            flex-flow: row wrap
+            align-items: flex-start
+            gap: 10px
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .clubs
+        margin-top: 100px
+
+        &__title
+            margin-bottom: 30px
+
+            &__subhead
+                font-size: $fs-20
+                line-height: 20px
+
+            &__bigTitle
+
+                h2
+                    font-size: $fs-32
+                    line-height: 32px
+                    margin: 0 100px 0 100px
+
+                &__lineLeft
+                    left: 100px
+
+                &__lineRight
+                    right: 100px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .clubs
+        .leaflet-container
+            width: 73%
+            height: 800px
+
+        &__title
+            margin-bottom: 45px
+
+            &__subhead
+                font-size: $fs-28
+                line-height: 28px
+
+            &__bigTitle
+
+                h2
+                    font-size: $fs-40
+                    line-height: 40px
+                    margin: 0 350px 0 350px
+
+                &__lineLeft
+                    left: 260px
+
+                &__lineRight
+                    right: 260px
+
+        &__list
+            margin: auto
+            width: 80%

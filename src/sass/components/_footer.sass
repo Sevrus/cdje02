@@ -1,0 +1,105 @@
+@import '../utilities/_variables'
+@import '../utilities/_mixin'
+@import 'footerCopyright'
+@import 'footerLinks'
+@import 'footerNav'
+@import 'footerRules'
+@import 'footerSocials'
+@import 'legalNotice'
+@import 'confidentiality'
+
+/* FOOTER */
+/* VERSION MOBILE */
+.footer
+    background: $bg-gradient
+    color: $white
+    font-family: $font-primary
+    margin-top: 10vh
+    position: absolute
+    height: 170px
+    left: 0
+    width: 100%
+    min-width: 360px
+    z-index: -2
+
+    &__center__left
+        @include flex(row, space-around, center)
+        width: 100%
+        margin-top: 60px
+
+    &__bottom
+        @include flex(row, space-between, center)
+
+    &__line__left
+        margin-left: 20px
+
+    &__line__right
+        margin-right: 20px
+
+    .footer__line__left, .footer__line__right
+        z-index: -1
+        width: 100px
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .footer
+
+        &__center
+            @include flex(row, space-between, center)
+            margin: 45px 50px 0 50px
+
+            &__left
+                @include flex(row, space-between, center)
+                width: 230px
+                margin: 0
+
+        &__bottom
+            margin-top: -60px
+
+        .footer__line__left, .footer__line__right
+            width: 286px
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .footer
+        height: 200px
+        margin-top: 20vh
+
+        &__center
+            margin: 65px 70px 0 70px
+
+            &__left
+                width: 320px
+
+        &__line__left
+            margin-left: 30px
+
+        &__line__right
+            margin-right: 30px
+
+        .footer__line__left, .footer__line__right
+            width: 390px
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .footer
+        height: 250px
+        margin-top: 30vh
+
+        &__center
+            margin: 70px 180px 0 180px
+
+            &__left
+                width: 500px
+
+        &__bottom
+            margin-top: -110px
+
+        &__line__left
+            margin-left: 40px
+
+        &__line__right
+            margin-right: 40px
+
+        .footer__line__left, .footer__line__right
+            width: 650px

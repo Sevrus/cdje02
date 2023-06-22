@@ -1,0 +1,108 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+
+/* VERSION MOBILE */
+.tournament
+    @include flex(column, center , center)
+    font-family: $font-primary
+
+    &__title
+        @include flex(row, center , center)
+        width: 100%
+        margin-bottom: 35px
+
+        & h2
+            font-size: $fs-24
+            color: $black
+
+        &__left-line, &__right-line
+            position: absolute
+            width: 20%
+            border: 1px solid rgba(0, 0, 0, 0.35)
+
+        &__left-line
+            left: 10px
+
+        &__right-line
+            right: 10px
+
+    &__list
+        @include flex(column, center, center)
+        gap: 15px
+
+    &__more-results
+        margin-top: 15px
+        width: 80%
+        text-align: end
+
+        a
+            text-decoration: none
+            color: $red
+            font-size: $fs-14
+            font-weight: bold
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .tournament
+
+        &__title
+
+            h2
+                font-size: $fs-26
+
+            &__left-line
+                left: 80px
+
+            &__right-line
+                right: 80px
+
+        &__list
+            width: 100%
+            @include flex(row, center, center)
+            flex-wrap: wrap
+            gap: 15px
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .tournament
+
+        &__title
+            margin-bottom: 60px
+
+            h2
+                font-size: $fs-32
+
+            &__left-line
+                left: 100px
+
+            &__right-line
+                right: 100px
+
+        &__list
+            flex-direction: column
+
+        &__more-results
+            a
+                font-size: $fs-18
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .tournament
+
+        &__title
+            h2
+                font-size: $fs-40
+
+            &__left-line
+                left: 260px
+
+            &__right-line
+                right: 260px
+
+        &__more-results
+            a
+                font-size: $fs-24
+
+        &__list
+            flex-direction: row
+            flex-wrap: wrap
