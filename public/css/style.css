@@ -1455,8 +1455,8 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1024px) {
   .articleComity {
-    width: 25%;
-    margin: 0 10px 30px 10px;
+    width: 40%;
+    margin: 0 10px 20px 10px;
   }
   .articleComity p {
     font-size: 1rem;
@@ -1464,8 +1464,8 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .articleComity {
-    width: 20%;
-    margin: 0 10px 30px 10px;
+    width: 23%;
+    margin: 0 15px 30px 15px;
   }
   .articleComity p {
     font-size: 1.125rem;
@@ -1476,7 +1476,6 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt {
@@ -1534,9 +1533,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .addComity {
-    margin-bottom: 50px;
-  }
   .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt {
     margin-bottom: 30px;
   }
@@ -1559,11 +1555,10 @@ time, mark, audio, video {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 90px;
   }
   .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt {
     margin-bottom: 40px;
-    width: 30%;
+    width: 26%;
   }
   .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt, .addComity button {
     font-size: 1.5rem;
@@ -1572,7 +1567,7 @@ time, mark, audio, video {
     margin-bottom: 20px;
   }
   .addComity input {
-    width: 90%;
+    width: 85%;
     max-width: 600px;
   }
   .addComity button {
@@ -1652,6 +1647,8 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-top: 12px;
+  font-family: "Noto Sans", sans-serif;
+  padding: 10px;
 }
 .modalComity__content__lastname, .modalComity__content__firstname, .modalComity__content__email, .modalComity__content__image, .modalComity__content__alt {
   margin-top: 30px;
@@ -1691,6 +1688,9 @@ time, mark, audio, video {
   .modalComity__content__job__label, .modalComity__content__lastname__label, .modalComity__content__firstname__label, .modalComity__content__email__label, .modalComity__content__image__label, .modalComity__content__alt__label {
     font-size: 1.25rem;
   }
+  .modalComity__content__job__input, .modalComity__content__lastname__input, .modalComity__content__firstname__input, .modalComity__content__email__input, .modalComity__content__image__input, .modalComity__content__alt__input {
+    font-size: 1rem;
+  }
   .modalComity__content__button {
     font-size: 1.25rem;
   }
@@ -1705,7 +1705,7 @@ time, mark, audio, video {
     font-size: 1.375rem;
   }
   .modalComity__content__job__input, .modalComity__content__lastname__input, .modalComity__content__firstname__input, .modalComity__content__email__input, .modalComity__content__image__input, .modalComity__content__alt__input {
-    height: 50px;
+    font-size: 1.125rem;
   }
   .modalComity__content__button {
     height: 50px;
@@ -1725,6 +1725,9 @@ time, mark, audio, video {
   }
   .modalComity__content__job__label, .modalComity__content__lastname__label, .modalComity__content__firstname__label, .modalComity__content__email__label, .modalComity__content__image__label, .modalComity__content__alt__label {
     font-size: 1.5rem;
+  }
+  .modalComity__content__job__input, .modalComity__content__lastname__input, .modalComity__content__firstname__input, .modalComity__content__email__input, .modalComity__content__image__input, .modalComity__content__alt__input {
+    font-size: 1.25rem;
   }
   .modalComity__content__button {
     font-size: 1.5rem;
@@ -1864,9 +1867,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .comity {
-    margin-top: 50px;
-  }
   .comity__title {
     margin-bottom: 30px;
   }
@@ -1913,9 +1913,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .comity {
-    margin-top: 60px;
-  }
   .comity__title {
     margin-bottom: 45px;
   }
@@ -1966,7 +1963,6 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 .addResult__title, .addResult__link {
@@ -2005,7 +2001,7 @@ time, mark, audio, video {
   border-radius: 5px;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
-  margin-top: 40px;
+  margin-top: 10px;
   width: 50%;
   max-width: 300px;
   height: 40px;
@@ -2024,9 +2020,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .addResult {
-    margin-bottom: 50px;
-  }
   .addResult__title, .addResult__link {
     margin-bottom: 30px;
   }
@@ -2045,9 +2038,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .addResult {
-    margin-bottom: 90px;
-  }
   .addResult__title, .addResult__link {
     margin-bottom: 40px;
   }
@@ -2112,20 +2102,22 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1024px) {
   .articleResult {
-    width: 25%;
+    width: 40%;
     margin: 0 10px 30px 10px;
   }
   .articleResult p {
     font-size: 1rem;
+    text-align: center;
   }
 }
 @media screen and (min-width: 1920px) {
   .articleResult {
-    width: 20%;
+    width: 24%;
     margin: 0 10px 30px 10px;
   }
   .articleResult p {
     font-size: 1.125rem;
+    text-align: center;
   }
 }
 /* MODAL LOGIN */
@@ -2200,6 +2192,8 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-top: 12px;
+  font-family: "Noto Sans", sans-serif;
+  padding: 10px;
 }
 .modalResult__content__link {
   margin-top: 30px;
@@ -2238,6 +2232,9 @@ time, mark, audio, video {
   .modalResult__content__title__label, .modalResult__content__link__label {
     font-size: 1.25rem;
   }
+  .modalResult__content__title__input, .modalResult__content__link__input {
+    font-size: 1rem;
+  }
   .modalResult__content__button {
     font-size: 1.25rem;
   }
@@ -2252,7 +2249,7 @@ time, mark, audio, video {
     font-size: 1.375rem;
   }
   .modalResult__content__title__input, .modalResult__content__link__input {
-    height: 50px;
+    font-size: 1.125rem;
   }
   .modalResult__content__button {
     height: 50px;
@@ -2271,6 +2268,9 @@ time, mark, audio, video {
   }
   .modalResult__content__title__label, .modalResult__content__link__label {
     font-size: 1.5rem;
+  }
+  .modalResult__content__title__input, .modalResult__content__link__input {
+    font-size: 1.25rem;
   }
   .modalResult__content__button {
     font-size: 1.5rem;
@@ -2410,9 +2410,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .result {
-    margin-top: 50px;
-  }
   .result__title {
     margin-bottom: 30px;
   }
@@ -2459,9 +2456,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .result {
-    margin-top: 60px;
-  }
   .result__title {
     margin-bottom: 45px;
   }
@@ -2512,7 +2506,6 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy {
@@ -2551,7 +2544,7 @@ time, mark, audio, video {
   border-radius: 5px;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
-  margin-top: 40px;
+  margin-top: 10px;
   width: 50%;
   max-width: 300px;
   height: 40px;
@@ -2570,9 +2563,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .addClub {
-    margin-bottom: 50px;
-  }
   .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy {
     margin-bottom: 30px;
   }
@@ -2595,11 +2585,10 @@ time, mark, audio, video {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 90px;
   }
   .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy {
     margin-bottom: 40px;
-    width: 30%;
+    width: 26%;
   }
   .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy, .addClub button {
     font-size: 1.5rem;
@@ -2608,7 +2597,7 @@ time, mark, audio, video {
     margin-bottom: 20px;
   }
   .addClub input {
-    width: 90%;
+    width: 88%;
     max-width: 600px;
   }
   .addClub button {
@@ -2663,7 +2652,7 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1024px) {
   .articleClub {
-    width: 25%;
+    width: 40%;
     margin: 0 10px 30px 10px;
   }
   .articleClub p {
@@ -2672,7 +2661,7 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .articleClub {
-    width: 20%;
+    width: 24%;
     margin: 0 10px 30px 10px;
   }
   .articleClub p {
@@ -2971,9 +2960,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .clubs {
-    margin-top: 50px;
-  }
   .clubs__title {
     margin-bottom: 30px;
   }
@@ -3020,9 +3006,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .clubs {
-    margin-top: 60px;
-  }
   .clubs__title {
     margin-bottom: 45px;
   }
@@ -3073,7 +3056,6 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 .addReferee__name, .addReferee__validity, .addReferee__type, .addReferee__club {
@@ -3112,7 +3094,7 @@ time, mark, audio, video {
   border-radius: 5px;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
-  margin-top: 40px;
+  margin-top: 10px;
   width: 50%;
   max-width: 300px;
   height: 40px;
@@ -3131,9 +3113,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .addReferee {
-    margin-bottom: 50px;
-  }
   .addReferee__name, .addReferee__validity, .addReferee__type, .addReferee__club {
     margin-bottom: 30px;
   }
@@ -3150,10 +3129,13 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .addReferee {
-    margin-bottom: 90px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
   }
   .addReferee__name, .addReferee__validity, .addReferee__type, .addReferee__club {
     margin-bottom: 40px;
+    width: 26%;
   }
   .addReferee__name, .addReferee__validity, .addReferee__type, .addReferee__club, .addReferee button {
     font-size: 1.5rem;
@@ -3162,7 +3144,7 @@ time, mark, audio, video {
     margin-bottom: 20px;
   }
   .addReferee input {
-    width: 70%;
+    width: 85%;
     max-width: 600px;
   }
   .addReferee button {
@@ -3216,8 +3198,8 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1024px) {
   .articleReferee {
-    width: 25%;
-    margin: 0 10px 30px 10px;
+    width: 40%;
+    margin: 0 10px 20px 10px;
   }
   .articleReferee p {
     font-size: 1rem;
@@ -3225,8 +3207,8 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .articleReferee {
-    width: 20%;
-    margin: 0 10px 30px 10px;
+    width: 24%;
+    margin: 0 15px 30px 15px;
   }
   .articleReferee p {
     font-size: 1.125rem;
@@ -3304,6 +3286,8 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-top: 12px;
+  font-family: "Noto Sans", sans-serif;
+  padding: 10px;
 }
 .modalReferees__content__validity, .modalReferees__content__type, .modalReferees__content__club {
   margin-top: 30px;
@@ -3342,6 +3326,9 @@ time, mark, audio, video {
   .modalReferees__content__name__label, .modalReferees__content__validity__label, .modalReferees__content__type__label, .modalReferees__content__club__label {
     font-size: 1.25rem;
   }
+  .modalReferees__content__name__input, .modalReferees__content__validity__input, .modalReferees__content__type__input, .modalReferees__content__club__input {
+    font-size: 1rem;
+  }
   .modalReferees__content__button {
     font-size: 1.25rem;
   }
@@ -3356,7 +3343,7 @@ time, mark, audio, video {
     font-size: 1.375rem;
   }
   .modalReferees__content__name__input, .modalReferees__content__validity__input, .modalReferees__content__type__input, .modalReferees__content__club__input {
-    height: 50px;
+    font-size: 1.125rem;
   }
   .modalReferees__content__button {
     height: 50px;
@@ -3375,6 +3362,9 @@ time, mark, audio, video {
   }
   .modalReferees__content__name__label, .modalReferees__content__validity__label, .modalReferees__content__type__label, .modalReferees__content__club__label {
     font-size: 1.5rem;
+  }
+  .modalReferees__content__name__input, .modalReferees__content__validity__input, .modalReferees__content__type__input, .modalReferees__content__club__input {
+    font-size: 1.25rem;
   }
   .modalReferees__content__button {
     font-size: 1.5rem;
@@ -3616,7 +3606,6 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 .addRegulation__title, .addRegulation__link {
@@ -3655,7 +3644,7 @@ time, mark, audio, video {
   border-radius: 5px;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
-  margin-top: 40px;
+  margin-top: 10px;
   width: 50%;
   max-width: 300px;
   height: 40px;
@@ -3674,9 +3663,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .addRegulation {
-    margin-bottom: 50px;
-  }
   .addRegulation__title, .addRegulation__link {
     margin-bottom: 30px;
   }
@@ -3692,9 +3678,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .addRegulation {
-    margin-bottom: 90px;
-  }
   .addRegulation__title, .addRegulation__link {
     margin-bottom: 40px;
   }
@@ -3760,8 +3743,8 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1024px) {
   .articleRegulation {
-    width: 25%;
-    margin: 0 10px 30px 10px;
+    width: 40%;
+    margin: 0 10px 20px 10px;
   }
   .articleRegulation__text p {
     text-align: center;
@@ -3772,8 +3755,8 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .articleRegulation {
-    width: 20%;
-    margin: 0 10px 30px 10px;
+    width: 24%;
+    margin: 0 15px 30px 15px;
   }
   .articleRegulation p {
     font-size: 1.125rem;
@@ -3851,6 +3834,8 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-top: 12px;
+  font-family: "Noto Sans", sans-serif;
+  padding: 10px;
 }
 .modalRegulation__content__link {
   margin-top: 30px;
@@ -3889,6 +3874,9 @@ time, mark, audio, video {
   .modalRegulation__content__title__label, .modalRegulation__content__link__label {
     font-size: 1.25rem;
   }
+  .modalRegulation__content__title__input, .modalRegulation__content__link__input {
+    font-size: 1rem;
+  }
   .modalRegulation__content__button {
     font-size: 1.25rem;
   }
@@ -3903,7 +3891,7 @@ time, mark, audio, video {
     font-size: 1.375rem;
   }
   .modalRegulation__content__title__input, .modalRegulation__content__link__input {
-    height: 50px;
+    font-size: 1.125rem;
   }
   .modalRegulation__content__button {
     height: 50px;
@@ -3922,6 +3910,9 @@ time, mark, audio, video {
   }
   .modalRegulation__content__title__label, .modalRegulation__content__link__label {
     font-size: 1.5rem;
+  }
+  .modalRegulation__content__title__input, .modalRegulation__content__link__input {
+    font-size: 1.25rem;
   }
   .modalRegulation__content__button {
     font-size: 1.5rem;
@@ -4163,7 +4154,6 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 .addArticle__title, .addArticle__author, .addArticle__description, .addArticle__image {
@@ -4206,7 +4196,7 @@ time, mark, audio, video {
   border-radius: 5px;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
-  margin-top: 40px;
+  margin-top: 10px;
   width: 50%;
   max-width: 300px;
   height: 40px;
@@ -4225,9 +4215,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .addArticle {
-    margin-bottom: 50px;
-  }
   .addArticle__title, .addArticle__author, .addArticle__description, .addArticle__image {
     margin-bottom: 30px;
   }
@@ -4243,9 +4230,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .addArticle {
-    margin-bottom: 90px;
-  }
   .addArticle__title, .addArticle__author, .addArticle__description, .addArticle__image {
     margin-bottom: 40px;
   }
@@ -4609,9 +4593,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .article {
-    margin-top: 50px;
-  }
   .article__title {
     margin-bottom: 30px;
   }
@@ -4658,9 +4639,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .article {
-    margin-top: 60px;
-  }
   .article__title {
     margin-bottom: 45px;
   }
@@ -4711,7 +4689,6 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 .addChampion__name, .addChampion__year {
@@ -4750,7 +4727,7 @@ time, mark, audio, video {
   border-radius: 5px;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
-  margin-top: 40px;
+  margin-top: 10px;
   width: 50%;
   max-width: 300px;
   height: 40px;
@@ -4769,9 +4746,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .addChampion {
-    margin-bottom: 50px;
-  }
   .addChampion__name, .addChampion__year {
     margin-bottom: 30px;
   }
@@ -4790,9 +4764,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .addChampion {
-    margin-bottom: 90px;
-  }
   .addChampion__name, .addChampion__year {
     margin-bottom: 40px;
   }
@@ -4857,8 +4828,8 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1024px) {
   .articleChampion {
-    width: 25%;
-    margin: 0 10px 30px 10px;
+    width: 40%;
+    margin: 0 10px 20px 10px;
   }
   .articleChampion p {
     font-size: 1rem;
@@ -4866,8 +4837,8 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .articleChampion {
-    width: 20%;
-    margin: 0 10px 30px 10px;
+    width: 24%;
+    margin: 0 15px 30px 15px;
   }
   .articleChampion p {
     font-size: 1.125rem;

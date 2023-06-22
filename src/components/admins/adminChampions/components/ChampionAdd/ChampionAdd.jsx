@@ -48,7 +48,7 @@ const ChampionAdd = () => {
                     </div>
 
                     <div className="addChampion__btn">
-                        <button>Ajouter</button>
+                        <button type="submit">Ajouter</button>
                     </div>
 
                 </Form>

@@ -2,29 +2,31 @@ import { useEffect, useState } from "react";
 import { Form, useParams } from "react-router-dom";
 import { fetchForAll } from "../../../../../utilities/functionFetch"
 
-const ModalChampion = ({ closeModal }) => {
+const ModalChampion = ({ closeModal, championData }) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [datas, setDatas] = useState([]);
-    const [initialDatas, setInitialDatas] = useState([]);
-    const { id } = useParams();
 
-    const handleNameChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, name: value }))
-    }
-
-    const handleYearsChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, years: value }))
-    }
+    const [name, setName] = useState(championData.name);
+    const [years, setYears] = useState(championData.years);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("http://localhost:3000/api/aisnechampions/" + id, {
-            method: 'PUT', body: JSON.stringify(datas)
+        setIsLoaded(true);
+
+        const updatedData = {
+            name: name,
+            years: years
+        };
+
+        fetch("http://localhost:3000/api/aisnechampions/" + championData.id, {
+            method: 'PUT',
+            body: JSON.stringify(updatedData),
+            headers: {
+                "Content-type": "application/json"
+            },
         })
             .then(resp => {
+                setIsLoaded(false);
                 if (resp.ok) {
                     console.log(`La mise à jour du champion est effectué`)
                     setDatas(datas);
@@ -33,45 +35,36 @@ const ModalChampion = ({ closeModal }) => {
                     throw new Error("Erreur lors de la mise à jour du champion.");
                 }
             })
+            .catch(error => {
+                setIsLoaded(false);
+                setError(error.message);
+            })
     }
 
-    useEffect(() => {
-        fetchForAll(setIsLoaded, setError, setInitialDatas, "api/aisnechampions")
-    }, [])
+    return (
+        <>
+            <div className="modalChampion" onClick={closeModal}>
+            </div>
 
-    if (error) {
-        return <div>Erreur : {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div>Chargement...</div>;
-    } else {
+                <Form className="modalChampion__content" onSubmit={handleSubmit}>
+                    <div className="modalChampion__content__close" onClick={closeModal}></div>
 
-        return (
-            <>
-                <div className="modalChampion" onClick={closeModal}>
-                </div>
+                    <div className="modalChampion__content__name">
+                        <label htmlFor="name" className="modalChampion__content__name__label">Nom</label>
+                        <input type="text" name="name" id="name" className="modalChampion__content__name__input" value={name} onChange={(e) => setName(e.target.value)} />
+                    </div>
 
-                {initialDatas.data.map((item) => (
+                    <div className="modalChampion__content__year">
+                        <label htmlFor="year" className="modalChampion__content__year__label">Année</label>
+                        <input type="text" name="year" id="year" className="modalChampion__content__year__input" value={years} onChange={(e) => setYears(e.target.value)} />
+                    </div>
 
-                    <Form className="modalChampion__content" key={item.id} onSubmit={handleSubmit}>
-                        <div className="modalChampion__content__close" onClick={closeModal}></div>
+                    <button disabled={isLoaded} type="submit" className="modalChampion__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
-                        <div className="modalChampion__content__name">
-                            <label htmlFor="name" className="modalChampion__content__name__label">Nom</label>
-                            <input type="txt" name="name" id="name" className="modalChampion__content__name__input" value={datas.name || item.name} onChange={handleNameChange}/>
-                        </div>
+                </Form>
 
-                        <div className="modalChampion__content__year">
-                            <label htmlFor="year" className="modalChampion__content__year__label">Année</label>
-                            <input type="txt" name="year" id="year" className="modalChampion__content__year__input" value={datas.years || item.years} onChange={handleYearsChange}/>
-                        </div>
-
-                        <button className="modalChampion__content__button">Confirmer</button>
-
-                    </Form>
-                ))}
-            </>
-        )
-    }
+        </>
+    )
 }
 
 export default ModalChampion;

@@ -35,6 +35,14 @@ const ArticleDescription = () => {
             })
     }
 
+    const handleOpenModal = (article) => {
+        setOpenModal(article)
+    }
+
+    const handleCloseModal = () => {
+        setOpenModal(null)
+    }
+
     useEffect(() => {
         fetchForAll(setIsLoaded, setError, setDatas, "api/news")
     }, [])
@@ -60,11 +68,11 @@ const ArticleDescription = () => {
 
 
                         <div className="articleArticle__icon">
-                            <a onClick={() => setOpenModal(true)}>
+                            <a onClick={() => handleOpenModal(item)}>
                                 <FontAwesomeIcon className="articleArticle__icon__pencil" icon={faPencil} />
                             </a>
-                            {openModal && createPortal(
-                                <ModalArticle closeModal={() => setOpenModal(false)} />, document.body
+                            {openModal === item && createPortal(
+                                <ModalArticle articleData={item} closeModal={handleCloseModal} />, document.body
                             )}
 
                             <span onClick={() => { handleDelete(item.id) }}>

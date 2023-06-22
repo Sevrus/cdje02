@@ -1,58 +1,49 @@
-import { useEffect, useState } from "react";
-import { fetchForAll } from "../../../../../utilities/functionFetch"
+import { useState } from "react";
 import { Form } from "react-router-dom";
 
-const ModalComity = ({ closeModal, data }) => {
+const ModalComity = ({ closeModal, comityData }) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [datas, setDatas] = useState([]);
 
-    const handleTitleChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, title: value }))
-    }
-
-    const handleImageChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, image: value }))
-    }
-
-    const handleAltChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, alt: value }))
-    }
-
-    const handleFirstnameChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, firstName: value }))
-    }
-
-    const handleLastnameChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, lastName: value }))
-    }
-
-    const handleMailChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, mail: value }))
-    }
+    const [title, setTitle] = useState(comityData.title);
+    const [image, setImage] = useState(comityData.image);
+    const [alt, setAlt] = useState(comityData.alt);
+    const [firstName, setFirstname] = useState(comityData.firstName);
+    const [lastName, setLastname] = useState(comityData.lastName);
+    const [mail, setMail] = useState(comityData.mail);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("http://localhost:3000/api/comities/" + data.id, {
-            method: 'PUT', body: JSON.stringify(datas),
+        setIsLoaded(true);
+
+        const updatedData = {
+            title: title,
+            image: image,
+            alt: alt,
+            firstName: firstName,
+            lastName: lastName,
+            mail: mail
+        };
+
+        fetch("http://localhost:3000/api/comities/" + comityData.id, {
+            method: 'PUT',
+            body: JSON.stringify(updatedData),
             headers: {
                 "Content-type": "application/json"
             },
         })
             .then(resp => {
+                setIsLoaded(false);
                 if (resp.ok) {
                     console.log(`La mise à jour du membre est effectué`)
-                    setDatas(datas);
                 } else {
                     console.log(`La mise à jour du membre a échoué.`);
                     throw new Error("Erreur lors de la mise à jour du membre.");
                 }
+            })
+            .catch(error => {
+                setIsLoaded(false);
+                setError(error.message);
             })
     }
 
@@ -61,40 +52,40 @@ const ModalComity = ({ closeModal, data }) => {
             <div className="modalComity" onClick={closeModal}>
             </div>
 
-            <Form className="modalComity__content" key={data.id} onSubmit={handleSubmit}>
+            <Form className="modalComity__content" onSubmit={handleSubmit}>
                 <div className="modalComity__content__close" onClick={closeModal}></div>
 
                 <div className="modalComity__content__job">
                     <label htmlFor="job" className="modalComity__content__job__label">Poste</label>
-                    <input type="txt" name="job" id="job" className="modalComity__content__job__input" value={datas.title || data.title} onChange={handleTitleChange} />
+                    <input type="text" name="job" id="job" className="modalComity__content__job__input" value={title} onChange={(e) => setTitle(e.target.value)} />
                 </div>
 
                 <div className="modalComity__content__lastname">
                     <label htmlFor="lastname" className="modalComity__content__lastname__label">Nom</label>
-                    <input type="txt" name="lastname" id="lastname" className="modalComity__content__lastname__input" value={datas.firstName || data.firstName} onChange={handleFirstnameChange} />
+                    <input type="text" name="lastname" id="lastname" className="modalComity__content__lastname__input" value={firstName} onChange={(e) => setFirstname(e.target.value)} />
                 </div>
 
                 <div className="modalComity__content__firstname">
                     <label htmlFor="firstname" className="modalComity__content__firstname__label">Prénom</label>
-                    <input type="txt" name="firstname" id="firstname" className="modalComity__content__firstname__input" value={datas.lastName || data.lastName} onChange={handleLastnameChange} />
+                    <input type="text" name="firstname" id="firstname" className="modalComity__content__firstname__input" value={lastName} onChange={(e) => setLastname(e.target.value)} />
                 </div>
 
                 <div className="modalComity__content__email">
                     <label htmlFor="email" className="modalComity__content__email__label">Email</label>
-                    <input type="email" name="email" id="email" className="modalComity__content__email__input" value={datas.mail || data.mail} onChange={handleMailChange} />
+                    <input type="email" name="email" id="email" className="modalComity__content__email__input" value={mail} onChange={(e) => setMail(e.target.value)} />
                 </div>
 
                 <div className="modalComity__content__image">
                     <label htmlFor="image" className="modalComity__content__image__label">Image</label>
-                    <input type="txt" name="image" id="image" className="modalComity__content__image__input" value={datas.image || data.image} onChange={handleImageChange} />
+                    <input type="text" name="image" id="image" className="modalComity__content__image__input" value={image} onChange={(e) => setImage(e.target.value)} />
                 </div>
 
                 <div className="modalComity__content__alt">
                     <label htmlFor="alt" className="modalComity__content__alt__label">Alt</label>
-                    <input type="txt" name="alt" id="alt" className="modalComity__content__alt__input" value={datas.alt || data.alt} onChange={handleAltChange} />
+                    <input type="text" name="alt" id="alt" className="modalComity__content__alt__input" value={alt} onChange={(e) => setAlt(e.target.value)} />
                 </div>
 
-                <button className="modalComity__content__button">Confirmer</button>
+                <button disabled={isLoaded} type="submit" className="modalComity__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
             </Form>
         </>

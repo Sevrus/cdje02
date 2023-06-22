@@ -4,7 +4,6 @@
 // VERSION MOBILE 
 .addComity
     @include flex(column , center , center)
-    margin-bottom: 30px
     width: 100%
 
     &__job, &__lastname, &__firstname, &__email, &__image, &__alt
@@ -55,7 +54,6 @@
 // VERSION L
 @media screen and (min-width:1024px)
     .addComity
-        margin-bottom: 50px
 
         &__job, &__lastname, &__firstname, &__email, &__image, &__alt
             margin-bottom: 30px
@@ -79,11 +77,10 @@
         flex-direction: row
         flex-wrap: wrap
         width: 100%
-        margin-bottom: 90px
 
         &__job, &__lastname, &__firstname, &__email, &__image, &__alt
             margin-bottom: 40px
-            width: 30%
+            width: 26%
 
         &__job, &__lastname, &__firstname, &__email, &__image, &__alt, button
             font-size: $fs-24
@@ -92,7 +89,7 @@
             margin-bottom: 20px
 
         input
-            width: 90%
+            width: 85%
             max-width: 600px
 
         button

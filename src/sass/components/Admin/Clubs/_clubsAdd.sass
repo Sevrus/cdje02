@@ -4,7 +4,6 @@
 // VERSION MOBILE 
 .addClub
     @include flex(column , center , center)
-    margin-bottom: 30px
     width: 100%
 
     &__name, &__town, &__site, &__president, &__tel, &__members, &__coordx, &__coordy
@@ -33,7 +32,7 @@
 
         button
             @include articles()
-            margin-top: 40px
+            margin-top: 10px
             width: 50%
             max-width: 300px
             height: 40px
@@ -55,7 +54,6 @@
 // VERSION L
 @media screen and (min-width:1024px)
     .addClub
-        margin-bottom: 50px
 
         &__name, &__town, &__site, &__president, &__tel, &__members, &__coordx, &__coordy
             margin-bottom: 30px
@@ -79,11 +77,10 @@
         flex-direction: row
         flex-wrap: wrap
         width: 100%
-        margin-bottom: 90px
 
         &__name, &__town, &__site, &__president, &__tel, &__members, &__coordx, &__coordy
             margin-bottom: 40px
-            width: 30%
+            width: 26%
 
         &__name, &__town, &__site, &__president, &__tel, &__members, &__coordx, &__coordy, button
             font-size: $fs-24
@@ -92,7 +89,7 @@
             margin-bottom: 20px
 
         input
-            width: 90%
+            width: 88%
             max-width: 600px
 
         button

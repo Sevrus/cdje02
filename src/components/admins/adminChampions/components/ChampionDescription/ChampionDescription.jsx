@@ -7,7 +7,7 @@ import { createPortal } from "react-dom"
 import { fetchForAll } from "../../../../../utilities/functionFetch.js"
 
 const ChampionDescription = () => {
-    const [openModal, setOpenModal] = useState(false);
+    const [openModal, setOpenModal] = useState(null);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
@@ -35,6 +35,14 @@ const ChampionDescription = () => {
             })
     }
 
+    const handleOpenModal = (champion) => {
+        setOpenModal(champion)
+    }
+
+    const handleCloseModal = () => {
+        setOpenModal(null)
+    }
+
     useEffect(() => {
         fetchForAll(setIsLoaded, setError, setDatas, "api/aisnechampions")
     }, [])
@@ -60,11 +68,11 @@ const ChampionDescription = () => {
 
                         <div className="articleChampion__icon">
 
-                            <a onClick={() => setOpenModal(true)}>
+                            <a onClick={() => handleOpenModal(item)}>
                                 <FontAwesomeIcon className="articleChampion__icon__pencil" icon={faPencil} />
                             </a>
-                            {openModal && createPortal(
-                                <ModalChampion closeModal={() => setOpenModal(false)} />, document.body
+                            {openModal === item && createPortal(
+                                <ModalChampion championData={item} closeModal={handleCloseModal} />, document.body
                             )}
 
                             <span onClick={() => { handleDelete(item.id) }}>

@@ -4,7 +4,6 @@
 // VERSION MOBILE 
 .addReferee
     @include flex(column , center , center)
-    margin-bottom: 30px
     width: 100%
 
     &__name, &__validity, &__type, &__club
@@ -33,7 +32,7 @@
 
         button
             @include articles()
-            margin-top: 40px
+            margin-top: 10px
             width: 50%
             max-width: 300px
             height: 40px
@@ -55,7 +54,6 @@
 // VERSION L
 @media screen and (min-width:1024px)
     .addReferee
-        margin-bottom: 50px
 
         &__name, &__validity, &__type, &__club
             margin-bottom: 30px
@@ -73,10 +71,13 @@
 // VERSION XL
 @media screen and (min-width:1920px)
     .addReferee
-        margin-bottom: 90px
+        flex-direction: row
+        flex-wrap: wrap
+        width: 100%
 
         &__name, &__validity, &__type, &__club
             margin-bottom: 40px
+            width: 26%
 
         &__name, &__validity, &__type, &__club, button
             font-size: $fs-24
@@ -85,7 +86,7 @@
             margin-bottom: 20px
 
         input
-            width: 70%
+            width: 85%
             max-width: 600px
 
         button

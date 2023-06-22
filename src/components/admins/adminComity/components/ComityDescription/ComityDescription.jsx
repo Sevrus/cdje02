@@ -1,4 +1,3 @@
-import dataComity from "./dataComity.js"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
@@ -8,7 +7,7 @@ import { useEffect, useState } from "react"
 import { fetchForAll } from "../../../../../utilities/functionFetch.js"
 
 const ComityDescription = () => {
-    const [openModal, setOpenModal] = useState(false);
+    const [openModal, setOpenModal] = useState(null);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
@@ -36,6 +35,14 @@ const ComityDescription = () => {
             })
     }
 
+    const handleOpenModal = (member) => {
+        setOpenModal(member)
+    }
+
+    const handleCloseModal = () => {
+        setOpenModal(null)
+    }
+
     useEffect(() => {
         fetchForAll(setIsLoaded, setError, setDatas, "api/comities")
     }, [])
@@ -61,11 +68,11 @@ const ComityDescription = () => {
 
 
                         <div className="articleComity__icon">
-                            <a onClick={() => setOpenModal(true)}>
+                            <a onClick={() => handleOpenModal(item)}>
                                     <FontAwesomeIcon className="articleComity__icon__pencil" icon={faPencil} />
                             </a>
-                            {openModal && createPortal(
-                                <ModalComity data={item} closeModal={() => setOpenModal(false)} />, document.body
+                            {openModal === item && createPortal(
+                                <ModalComity comityData={item} closeModal={handleCloseModal} />, document.body
                             )}
 
                             <span onClick={() => { handleDelete(item.id) }}>

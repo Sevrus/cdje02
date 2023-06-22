@@ -1,65 +1,44 @@
-import { useEffect, useState } from "react";
-import { fetchForAll } from "../../../../../utilities/functionFetch"
-import { Form, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Form } from "react-router-dom";
 
-const ModalClubs = ({ closeModal }) => {
+const ModalClubs = ({ closeModal, clubData }) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [datas, setDatas] = useState([]);
-    const [initialDatas, setInitialDatas] = useState([]);
-    const { id } = useParams();
-
-    const handleNameChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, name: value }))
-    }
-
-    const handleCityChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, city: value }))
-    }
-
-    const handlePresidentChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, president: value }))
-    }
-
-    const handleTelChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, tel: value }))
-    }
-
-    const handleSiteChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, site: value }))
-    }
-
-    const handleMembersChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, members: value }))
-    }
-
-    const handleCoordxChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, coordx: value }))
-    }
-
-    const handleCoordyChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, coordy: value }))
-    }
-
-    const handleDateChange = (e) => {
-        const { value } = e.target;
-        setDatas(prevState => ({ ...prevState, created: value }))
-    }
+    
+    const [name, setName] = useState(clubData.name);
+    const [city, setCity] = useState(clubData.city);
+    const [president, setPresident] = useState(clubData.president);
+    const [tel, setTel] = useState(clubData.tel);
+    const [site, setSite] = useState(clubData.site);
+    const [members, setMembers] = useState(clubData.members);
+    const [coordx, setCoordx] = useState(clubData.coordx);
+    const [coordy, setCoordy] = useState(clubData.coordy);
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("http://localhost:3000/api/clubs/" + id, {
-            method: 'PUT', body: JSON.stringify(datas)
+        setIsLoaded(true);
+
+        const updatedData = {
+            name: name,
+            city: city,
+            president: president,
+            tel: tel,
+            site: site,
+            members: members,
+            coordx: coordx,
+            coordy: coordy
+        };
+
+        fetch("http://localhost:3000/api/clubs/" + clubData.id, {
+            method: 'PUT',
+            body: JSON.stringify(updatedData),
+            headers: {
+                "Content-type": "application/json"
+            },
         })
             .then(resp => {
+                setIsLoaded(false);
                 if (resp.ok) {
                     console.log(`La mise à jour du club est effectué`)
                     setDatas(datas);
@@ -68,79 +47,65 @@ const ModalClubs = ({ closeModal }) => {
                     throw new Error("Erreur lors de la mise à jour du club.");
                 }
             })
+            .catch(error => {
+                setIsLoaded(false);
+                setError(error.message);
+            })
     }
-
-    useEffect(() => {
-        fetchForAll(setIsLoaded, setError, setInitialDatas, "api/clubs")
-    }, [])
-
-    if (error) {
-        return <div>Erreur : {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div>Chargement...</div>;
-    } else {
 
         return (
             <>
                 <div className="modalClub" onClick={closeModal}>
                 </div>
 
-                {initialDatas.data.map(item => (
-                    <Form className="modalClub__content" key={item.id} onSubmit={handleSubmit}>
+                    <Form className="modalClub__content" onSubmit={handleSubmit}>
                         <div className="modalClub__content__close" onClick={closeModal}></div>
 
                         <div className="modalClub__content__name">
                             <label htmlFor="name" className="modalClub__content__name__label">Nom</label>
-                            <input type="text" name="name" id="name" className="modalClub__content__name__input" value={datas.name || item.name} onChange={handleNameChange} />
+                            <input type="text" name="name" id="name" className="modalClub__content__name__input" value={name} onChange={(e) => setName(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__town">
                             <label htmlFor="town" className="modalClub__content__town__label">Ville</label>
-                            <input type="text" name="town" id="town" className="modalClub__content__town__input" value={datas.city || item.city} onChange={handleCityChange} />
+                            <input type="text" name="town" id="town" className="modalClub__content__town__input" value={city} onChange={(e) => setCity(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__site">
                             <label htmlFor="site" className="modalClub__content__site__label">Site Internet</label>
-                            <input type="text" name="site" id="site" className="modalClub__content__site__input" value={datas.site || item.site} onChange={handleSiteChange} />
+                            <input type="text" name="site" id="site" className="modalClub__content__site__input" value={site} onChange={(e) => setSite(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__president">
                             <label htmlFor="president" className="modalClub__content__president__label">Président</label>
-                            <input type="text" name="president" id="president" className="modalClub__content__president__input" value={datas.president || item.president} onChange={handlePresidentChange} />
+                            <input type="text" name="president" id="president" className="modalClub__content__president__input" value={president} onChange={(e) => setPresident(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__tel">
                             <label htmlFor="tel" className="modalClub__content__tel__label">Téléphone</label>
-                            <input type="tel" name="tel" id="tel" className="modalClub__content__tel__input" value={datas.tel || item.tel} onChange={handleTelChange} />
+                            <input type="tel" name="tel" id="tel" className="modalClub__content__tel__input" value={tel} onChange={(e) => setTel(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__members">
                             <label htmlFor="members" className="modalClub__content__members__label">Membres</label>
-                            <input type="text" name="members" id="members" className="modalClub__content__members__input" value={datas.members || item.members} onChange={handleMembersChange} />
+                            <input type="text" name="members" id="members" className="modalClub__content__members__input" value={members} onChange={(e) => setMembers(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__coordx">
                             <label htmlFor="coordx" className="modalClub__content__coordx__label">Coordonnée X</label>
-                            <input type="text" name="coordx" id="coordx" className="modalClub__content__coordx__input" value={datas.coordx || item.coordx} onChange={handleCoordxChange} />
+                            <input type="text" name="coordx" id="coordx" className="modalClub__content__coordx__input" value={coordx} onChange={(e) => setCoordx(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__coordy">
                             <label htmlFor="coordy" className="modalClub__content__coordy__label">Coordonnée Y</label>
-                            <input type="text" name="coordy" id="coordy" className="modalClub__content__coordy__input" value={datas.coordy || item.coordy} onChange={handleCoordyChange} />
+                            <input type="text" name="coordy" id="coordy" className="modalClub__content__coordy__input" value={coordy} onChange={(e) => setCoordy(e.target.value)} />
                         </div>
 
-                        <div className="modalClub__content__date">
-                            <label htmlFor="date" className="modalClub__content__date__label">Date</label>
-                            <input type="date" name="date" id="date" className="modalClub__content__date__input" value={datas.created || item.created} onChange={handleDateChange} />
-                        </div>
-
-                        <button className="modalClub__content__button">Confirmer</button>
+                        <button disabled={isLoaded} type="submit" className="modalClub__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
                     </Form>
-                ))}
             </>
         )
     }
-}
 
 export default ModalClubs;

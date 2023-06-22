@@ -1,37 +1,46 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Form } from "react-router-dom";
-import { fetchForAll } from "../../../../../utilities/functionFetch"
 
 const ClubsAdd = () => {
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [datas, setDatas] = useState([]);
+    const [name, setName] = useState("");
+    const [city, setCity] = useState("");
+    const [president, setPresident] = useState("");
+    const [tel, setTel] = useState("");
+    const [site, setSite] = useState("");
+    const [members, setMembers] = useState("");
+    const [coordx, setCoordx] = useState("");
+    const [coordy, setCoordy] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch("http://localhost:3000/api/clubs/", {
-            method: 'POST', body: JSON.stringify(datas)
+            method: 'POST', 
+            body: JSON.stringify({
+                name,
+                city,
+                president,
+                tel,
+                site,
+                members,
+                coordx,
+                coordy
+            }),
+            headers: {
+                "Content-type": "application/json"
+              },
         })
             .then(resp => {
                 if (resp.ok) {
                     console.log(`La création du club est effectué`)
-                    setDatas(resp);
                 } else {
                     console.log(`La création du club a échoué.`);
                     throw new Error("Erreur lors de la création du club.");
                 }
             })
+            .catch((error) => {
+                console.log('Erreur lors de la requête.', error);
+            })
     }
-
-    useEffect(() => {
-        fetchForAll(setIsLoaded, setError, setDatas, "api/clubs")
-    }, [])
-
-    if (error) {
-        return <div>Erreur : {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div>Chargement...</div>;
-    } else {
 
         return (
 
@@ -41,46 +50,46 @@ const ClubsAdd = () => {
 
                     <div className="addClub__name">
                         <label htmlFor="lastname">Nom</label>
-                        <input type="text" name="name" maxLength={20} required={true} />
+                        <input type="text" name="name" maxLength={20} required={true} value={name} onChange={(e) => setName(e.target.value)} />
                     </div>
 
                     <div className="addClub__town">
                         <label htmlFor="town">Ville</label>
-                        <input type="text" name="town" maxLength={50} required={true} />
+                        <input type="text" name="town" maxLength={50} required={true} value={city} onChange={(e) => setCity(e.target.value)} />
                     </div>
 
                     <div className="addClub__site">
                         <label htmlFor="site">Site Internet</label>
-                        <input type="text" name="site" maxLength={50} required={true} />
+                        <input type="text" name="site" maxLength={50} required={true} value={site} onChange={(e) => setSite(e.target.value)} />
                     </div>
 
                     <div className="addClub__president">
                         <label htmlFor="president">Président</label>
-                        <input type="text" name="president" maxLength={50} required={true} />
+                        <input type="text" name="president" maxLength={50} required={true} value={president} onChange={(e) => setPresident(e.target.value)}/>
                     </div>
 
                     <div className="addClub__tel">
                         <label htmlFor="tel">Téléphone</label>
-                        <input type="text" name="tel" maxLength={50} required={true} />
+                        <input type="text" name="tel" maxLength={50} required={true} value={tel} onChange={(e) => setTel(e.target.value)}/>
                     </div>
 
                     <div className="addClub__members">
                         <label htmlFor="members">Membres</label>
-                        <input type="text" name="members" maxLength={3} required={true} />
+                        <input type="text" name="members" maxLength={3} required={true} value={members} onChange={(e) => setMembers(e.target.value)}/>
                     </div>
 
                     <div className="addClub__coordx">
                         <label htmlFor="coordx">Coordonnée X</label>
-                        <input type="text" name="coordx" maxLength={25} required={true} />
+                        <input type="text" name="coordx" maxLength={25} required={true} value={coordx} onChange={(e) => setCoordx(e.target.value)} />
                     </div>
 
                     <div className="addClub__coordy">
                         <label htmlFor="coordy">Coordonnée Y</label>
-                        <input type="text" name="coordy" maxLength={25} required={true} />
+                        <input type="text" name="coordy" maxLength={25} required={true} value={coordy} onChange={(e) => setCoordy(e.target.value)} />
                     </div>
 
                     <div className="addClub__btn">
-                        <button>Ajouter</button>
+                        <button type="submit">Ajouter</button>
                     </div>
 
                 </Form>
@@ -89,6 +98,5 @@ const ClubsAdd = () => {
 
         )
     }
-}
 
 export default ClubsAdd;

@@ -7,7 +7,7 @@ import ModalClub from "./ModalClubs.jsx"
 import { fetchForAll } from "../../../../../utilities/functionFetch.js"
 
 const ClubsDescription = () => {
-    const [openModal, setOpenModal] = useState(false);
+    const [openModal, setOpenModal] = useState(null);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
@@ -35,6 +35,14 @@ const ClubsDescription = () => {
             })
     }
 
+    const handleOpenModal = (club) => {
+        setOpenModal(club)
+    }
+
+    const handleCloseModal = () => {
+        setOpenModal(null)
+    }
+
     useEffect(() => {
         fetchForAll(setIsLoaded, setError, setDatas, "api/clubs")
     }, [])
@@ -60,11 +68,11 @@ const ClubsDescription = () => {
 
 
                         <div className="articleClub__icon">
-                            <a onClick={() => setOpenModal(true)}>
+                            <a onClick={() => handleOpenModal(item)}>
                                 <FontAwesomeIcon className="articleClub__icon__pencil" icon={faPencil} />
                             </a>
-                            {openModal && createPortal(
-                                <ModalClub closeModal={() => setOpenModal(false)} />, document.body
+                            {openModal === item && createPortal(
+                                <ModalClub clubData={item} closeModal={handleCloseModal} />, document.body
                             )}
 
                             <span onClick={() => { handleDelete(item.id) }}>

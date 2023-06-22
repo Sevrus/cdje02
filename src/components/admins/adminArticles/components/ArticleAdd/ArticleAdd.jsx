@@ -56,11 +56,11 @@ const ArticleAdd = () => {
 
                     <div className="addArticle__image">
                         <label htmlFor="image">Image</label>
-                        <input name="image" maxLength={500} required={true} value={image} onChange={(e) => setImage(e.target.value)} />
+                        <input type="text" name="image" maxLength={500} required={true} value={image} onChange={(e) => setImage(e.target.value)} />
                     </div>
 
                     <div className="addArticle__btn">
-                        <button>Ajouter</button>
+                        <button type="submit">Ajouter</button>
                     </div>
 
                 </Form>

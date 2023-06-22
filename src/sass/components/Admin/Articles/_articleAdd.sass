@@ -4,7 +4,6 @@
 // VERSION MOBILE 
 .addArticle
     @include flex(column , center , center)
-    margin-bottom: 30px
     width: 100%
 
     &__title, &__author, &__description, &__image
@@ -37,7 +36,7 @@
 
         button
             @include articles()
-            margin-top: 40px
+            margin-top: 10px
             width: 50%
             max-width: 300px
             height: 40px
@@ -59,7 +58,6 @@
 // VERSION L
 @media screen and (min-width:1024px)
     .addArticle
-        margin-bottom: 50px
 
         &__title, &__author, &__description, &__image
             margin-bottom: 30px
@@ -77,7 +75,6 @@
 // VERSION XL
 @media screen and (min-width:1920px)
     .addArticle
-        margin-bottom: 90px
 
         &__title, &__author, &__description, &__image
             margin-bottom: 40px

@@ -75,7 +75,7 @@ const ComityAdd = () => {
                 </div>
 
                 <div className="addComity__btn">
-                    <button>Ajouter</button>
+                    <button type="submit">Ajouter</button>
                 </div>
 
             </Form>

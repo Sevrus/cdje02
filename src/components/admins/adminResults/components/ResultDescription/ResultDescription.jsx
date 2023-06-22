@@ -1,59 +1,92 @@
 import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import ModalResult from "./ModalResult.jsx"
-import dataResult from "./dataResult.js"
+import { fetchForAll } from "../../../../../utilities/functionFetch.js"
+
 
 const ResultDescription = () => {
-    const [openModal, setOpenModal] = useState(false);
-    const [dataResults, setDataResults] = useState([])
-
-    // useEffect(() => {
-    //     http({ url: "/Results" })
-    //         .then(json => setDataResults(json))
-    // })
+    const [openModal, setOpenModal] = useState(null);
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [datas, setDatas] = useState([]);
 
     const handleDelete = (id) => {
-        const temp = dataResults.filter(results => results.id !== id);
-        setDataResults(temp);
-        // http({ url: "/Results/" + id, method: 'DELETE' });
+        fetch("http://localhost:3000/api/tournaments/" + id, {
+            method: 'DELETE'
+        })
+            .then(resp => {
+                if (resp.ok) {
+                    console.log(`La suppression du tournoi ${id} a réussi.`);
+                    return resp.json();
+                } else {
+                    console.log(`La suppression du tournoi a échoué.`);
+                    throw new Error("Erreur lors de la suppression du tournoi.");
+                }
+            })
+            .then(datas => {
+                console.log(`La suppression du tournoi ${id} a réussi.`,
+                    datas);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la requête de suppression',
+                    error);
+            })
     }
 
-    return (
+    const handleOpenModal = (result) => {
+        setOpenModal(result)
+    }
 
-        <>
+    const handleCloseModal = () => {
+        setOpenModal(null)
+    }
 
-            {dataResult.map((item) => (
+    useEffect(() => {
+        fetchForAll(setIsLoaded, setError, setDatas, "api/tournaments")
+    }, [])
 
-                <section className="articleResult" key={item.id}>
+    if (error) {
+        return <div>Erreur : {error.message}</div>;
+    } else if (!isLoaded) {
+        return <div>Chargement...</div>;
+    } else {
 
-                    <div className="articleResult__text">
-                        <p>{item.title}</p>
-                    </div>
+        return (
+
+            <>
+
+                {datas.data.map((item) => (
+
+                    <section className="articleResult" key={item.id}>
+
+                        <div className="articleResult__text">
+                            <p>{item.title}</p>
+                        </div>
 
 
-                    <div className="articleResult__icon">
-                        <a onClick={() => setOpenModal(true)}>
-                            <FontAwesomeIcon className="articleResult__icon__pencil" icon={faPencil} />
-                        </a>
-                        {openModal && createPortal(
-                            <ModalResult closeModal={() => setOpenModal(false)} />, document.body
-                        )}
+                        <div className="articleResult__icon">
+                            <a onClick={() => handleOpenModal(item)}>
+                                <FontAwesomeIcon className="articleResult__icon__pencil" icon={faPencil} />
+                            </a>
+                            {openModal == item && createPortal(
+                                <ModalResult resultData={item} closeModal={handleCloseModal} />, document.body
+                            )}
 
-                        <span onClick={() => { handleDelete(item.id) }}>
-                            <FontAwesomeIcon className="articleResult__icon__trash" icon={faTrash} />
-                        </span>
-                    </div>
+                            <span onClick={() => { handleDelete(item.id) }}>
+                                <FontAwesomeIcon className="articleResult__icon__trash" icon={faTrash} />
+                            </span>
+                        </div>
 
-                </section>
+                    </section>
 
-            ))}
+                ))}
 
-        </>
+            </>
 
-    )
-
+        )
+    }
 }
 
 export default ResultDescription;
