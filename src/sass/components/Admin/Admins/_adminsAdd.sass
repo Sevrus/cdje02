@@ -4,7 +4,6 @@
 // VERSION MOBILE 
 .addAdmins
     @include flex(column , center , center)
-    margin-bottom: 30px
     width: 100%
 
     &__email, &__password, &__confirmPassword
@@ -33,7 +32,7 @@
 
         button
             @include articles()
-            margin-top: 40px
+            margin-top: 10px
             width: 50%
             max-width: 300px
             height: 40px
@@ -55,7 +54,6 @@
 // VERSION L
 @media screen and (min-width:1024px)
     .addAdmins
-        margin-bottom: 50px
 
         &__email, &__password, &__confirmPassword
             margin-bottom: 30px
@@ -76,7 +74,6 @@
 // VERSION XL
 @media screen and (min-width:1920px)
     .addAdmins
-        margin-bottom: 90px
 
         &__email, &__password, &__confirmPassword
             margin-bottom: 40px

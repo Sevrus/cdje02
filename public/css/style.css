@@ -5293,7 +5293,6 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword {
@@ -5332,7 +5331,7 @@ time, mark, audio, video {
   border-radius: 5px;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
-  margin-top: 40px;
+  margin-top: 10px;
   width: 50%;
   max-width: 300px;
   height: 40px;
@@ -5351,9 +5350,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .addAdmins {
-    margin-bottom: 50px;
-  }
   .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword {
     margin-bottom: 30px;
   }
@@ -5372,9 +5368,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .addAdmins {
-    margin-bottom: 90px;
-  }
   .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword {
     margin-bottom: 40px;
   }
@@ -5464,6 +5457,8 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-top: 12px;
+  font-family: "Noto Sans", sans-serif;
+  padding: 10px;
 }
 .modalAdmins__content__password, .modalAdmins__content__verifPassword {
   margin-top: 30px;
@@ -5502,6 +5497,9 @@ time, mark, audio, video {
   .modalAdmins__content__email__label, .modalAdmins__content__password__label, .modalAdmins__content__verifPassword__label {
     font-size: 1.25rem;
   }
+  .modalAdmins__content__email__input, .modalAdmins__content__password__input, .modalAdmins__content__verifPassword__input {
+    font-size: 1rem;
+  }
   .modalAdmins__content__button {
     font-size: 1.25rem;
   }
@@ -5516,7 +5514,7 @@ time, mark, audio, video {
     font-size: 1.375rem;
   }
   .modalAdmins__content__email__input, .modalAdmins__content__password__input, .modalAdmins__content__verifPassword__input {
-    height: 50px;
+    font-size: 1.125rem;
   }
   .modalAdmins__content__button {
     height: 50px;
@@ -5535,6 +5533,9 @@ time, mark, audio, video {
   }
   .modalAdmins__content__email__label, .modalAdmins__content__password__label, .modalAdmins__content__verifPassword__label {
     font-size: 1.5rem;
+  }
+  .modalAdmins__content__email__input, .modalAdmins__content__password__input, .modalAdmins__content__verifPassword__input {
+    font-size: 1.25rem;
   }
   .modalAdmins__content__button {
     font-size: 1.5rem;
@@ -5674,9 +5675,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .admins {
-    margin-top: 50px;
-  }
   .admins__title {
     margin-bottom: 30px;
   }
@@ -5723,9 +5721,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .admins {
-    margin-top: 60px;
-  }
   .admins__title {
     margin-bottom: 45px;
   }

@@ -7,7 +7,7 @@ import ModalArticle from "./ModalArticle.jsx"
 import { fetchForAll } from "../../../../../utilities/functionFetch.js"
 
 const ArticleDescription = () => {
-    const [openModal, setOpenModal] = useState(false);
+    const [openModal, setOpenModal] = useState(null);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
