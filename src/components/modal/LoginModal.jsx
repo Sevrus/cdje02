@@ -1,21 +1,16 @@
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {clearErrorAfterDelay} from "../../utilities/clearErrorAfterDelay.js";
 
-const Modal = ({ closeModal }) => {
+const LoginModal = ({ closeModal }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-
-    const clearErrorAfterDelay = () => {
-        setTimeout(() => {
-            setError(null);
-        }, 3000);
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -38,13 +33,13 @@ const Modal = ({ closeModal }) => {
                     navigate("/admin");
                 } else {
                     setError('Mot de passe incorrect.');
-                    clearErrorAfterDelay();
+                    clearErrorAfterDelay(setError, 3000);
                 }
             })
             .catch((error) => {
                 setIsLoading(false);
                 setError("Échec de la connexion. Veuillez réessayer plus tard.");
-                clearErrorAfterDelay();
+                clearErrorAfterDelay(setError, 3000);
             });
     };
 
@@ -98,4 +93,4 @@ const Modal = ({ closeModal }) => {
     )
 }
 
-export default Modal;
+export default LoginModal;

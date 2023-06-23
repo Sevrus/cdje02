@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { NavLink, useLocation } from "react-router-dom";
-import Modal from "../../../modal/Modal";
+import LoginModal from "../../../modal/LoginModal.jsx";
 
 
 const HeaderNav = ({ chessboardDisappear }) => {
@@ -68,7 +68,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                     </a>
                     {
                         openModal && createPortal(
-                            <Modal closeModal={() => setOpenModal(false)} />, document.body
+                            <LoginModal closeModal={() => setOpenModal(false)} />, document.body
                         )
                     }
                 </>
