@@ -1214,7 +1214,7 @@ time, mark, audio, video {
   font-size: 1rem;
   margin-left: -30px;
 }
-.modal__content__message, .modal__content__error {
+.modal__content__error {
   font-family: "Noto Sans", sans-serif;
   color: #f73746;
   font-weight: bold;
@@ -1301,7 +1301,7 @@ time, mark, audio, video {
   .modal__content__lost-password {
     font-size: 1.125rem;
   }
-  .modal__content__message, .modal__content__error {
+  .modal__content__error {
     font-size: 1rem;
   }
 }

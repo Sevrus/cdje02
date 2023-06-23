@@ -2,6 +2,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import { clearErrorAfterDelay } from "../../utilities/clearErrorAfterDelay";
 
 const ResetPassword = () => {
 
@@ -27,6 +28,7 @@ const ResetPassword = () => {
 
         if (password === "" || confirmPassword === "") {
             setMessage("Veuillez remplir tous les champs");
+            clearErrorAfterDelay(setMessage, 3000);
 
         } else if (!pattern.test(password) || !pattern.test(confirmPassword)) {
             setMessage("Votre mot de passe doit contenir au moins 8 caractères, une majuscule, un chiffre et un caractère spécial");
@@ -36,6 +38,7 @@ const ResetPassword = () => {
 
         } else {
             setMessage("Les mots de passe ne correspondent pas");
+            clearErrorAfterDelay(setMessage, 3000);
         }
     }
 
