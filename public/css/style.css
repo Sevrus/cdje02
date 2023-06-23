@@ -482,24 +482,41 @@ time, mark, audio, video {
   font-size: 0.875rem;
   padding: 10px;
 }
-.newsOpenArticle__description {
-  display: flex;
-}
 .newsOpenArticle__description p {
   text-align: start;
   font-size: 0.875rem;
   padding: 10px;
   width: 100%;
 }
-.newsOpenArticle__link {
+.newsOpenArticle__info {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.newsOpenArticle__link a {
+.newsOpenArticle__info hr {
+  width: 100%;
+}
+.newsOpenArticle__info__bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 10px 10px;
+}
+.newsOpenArticle__info__bottom a {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 60%;
   font-family: "Noto Sans", sans-serif;
   font-size: 0.875rem;
   color: #f73746;
-  padding: 0 10px 10px 10px;
+}
+.newsOpenArticle__info__bottom a img {
+  width: 20%;
+  margin-right: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -525,6 +542,12 @@ time, mark, audio, video {
   .newsOpenArticle__title__lineLeft {
     margin-left: 20px;
   }
+  .newsOpenArticle__info__bottom {
+    width: 100%;
+  }
+  .newsOpenArticle__info__bottom a img {
+    width: 10%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .newsOpenArticle {
@@ -543,9 +566,11 @@ time, mark, audio, video {
     font-size: 1rem;
     padding: 0 20px 20px 20px;
   }
-  .newsOpenArticle__link a {
-    font-size: 1.125rem;
-    padding: 0 20px 20px 20px;
+  .newsOpenArticle__info__bottom a img {
+    width: 10%;
+  }
+  .newsOpenArticle__info__bottom a p {
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -569,7 +594,17 @@ time, mark, audio, video {
   .newsOpenArticle__description p {
     font-size: 1.25rem;
   }
-  .newsOpenArticle__link a {
+  .newsOpenArticle__info__bottom {
+    padding: 5px 15px 15px 15px;
+  }
+  .newsOpenArticle__info__bottom p {
+    font-size: 1.25rem;
+  }
+  .newsOpenArticle__info__bottom a img {
+    width: 8%;
+    margin-right: 15px;
+  }
+  .newsOpenArticle__info__bottom a p {
     font-size: 1.25rem;
   }
 }

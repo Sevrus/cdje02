@@ -39,11 +39,9 @@ const NewsOpenArticle = () => {
                         </div>
 
                         <div className="newsOpenArticle__info">
-
-                            <div className="newsOpenArticle__info__line">
-                                <hr className="newsOpenArticle__info__line__center" />
-                            </div>
-
+ 
+                            <hr className="newsOpenArticle__info__line" />
+                            
                             <div className="newsOpenArticle__info__bottom">
                                 <Link to={'/info'} className='newsOpenArticle__info__bottom__author'>
                                     <img src={datas.data.image} alt='miniature-photo' />

@@ -32,7 +32,6 @@
             padding: 10px
 
     &__description
-        display: flex
 
         p
             text-align: start
@@ -40,15 +39,26 @@
             padding: 10px
             width: 100%
 
-    &__link
-        display: flex
-        justify-content: end
+    &__info
+        @include flex(column , center , center )
 
-        a
-            font-family: $font-primary
-            font-size: $fs-14
-            color: $red
+        hr
+            width: 100%
+
+        &__bottom
+            @include flex(row , space-between , center )
             padding: 0 10px 10px 10px
+
+            a
+                @include flex(row , start , center )
+                width: 60%
+                font-family: $font-primary
+                font-size: $fs-14
+                color: $red
+
+                img
+                    width: 20%
+                    margin-right: 5px
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
@@ -74,6 +84,15 @@
             &__lineLeft
                 margin-left: 20px
 
+        &__info
+
+            &__bottom
+                width: 100%
+
+                a
+                    img
+                        width: 10%
+
 // VERSION L
 @media screen and (min-width:1024px)
     .newsOpenArticle
@@ -93,15 +112,21 @@
         &__description
 
             p
-                
+
                 font-size: $fs-16
                 padding: 0 20px 20px 20px
 
-        &__link
+        &__info
 
-            a
-                font-size: $fs-18
-                padding: 0 20px 20px 20px
+            &__bottom
+
+                a
+
+                    img
+                        width: 10%
+
+                    p
+                        font-size: $fs-16
 
 // VERSION XL
 @media screen and (min-width:1920px)
@@ -127,11 +152,21 @@
         &__description
 
             p
-                
+
                 font-size: $fs-20
 
-        &__link
+        &__info
 
-            a
-                font-size: $fs-20
-                
+            &__bottom
+                padding: 5px 15px 15px 15px
+
+                p
+                    font-size: $fs-20
+
+                a
+                    img
+                        width: 8%
+                        margin-right: 15px
+
+                    p
+                        font-size: $fs-20
