@@ -45,8 +45,8 @@ const LoginModal = ({ closeModal }) => {
                         localStorage.setItem("token", data.token);
                         navigate("/admin");
                     } else {
-                        setMessage('Mot de passe incorrect.');
-                        clearErrorAfterDelay(setMessage, 3000);
+                        setError('Mot de passe incorrect.');
+                        clearErrorAfterDelay(setError, 3000);
                     }
                 })
                 .catch((error) => {
@@ -78,15 +78,20 @@ const LoginModal = ({ closeModal }) => {
 
                 <div className="modal__content__password">
                     <label className="modal__content__password__label" htmlFor="password">Mot de passe</label>
-                    <input className="modal__content__password__input" name="password" id="password"
-                        type={showPassword ? "text" : "password"}
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                        value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} className="modal__content__password__icon"
-                        onClick={toggleShowPassword} />
+                    <div>
+                        <input className="modal__content__password__input" name="password" id="password"
+                            type={showPassword ? "text" : "password"}
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                            value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} className="modal__content__password__icon"
+                            onClick={toggleShowPassword} />
+                    </div>
                 </div>
 
                 <p className="modal__content__message">{message}</p>
+                {error &&
+                    <p className="modal__content__message">{error}</p>
+                }
 
                 <button
                     type="submit"
@@ -95,8 +100,6 @@ const LoginModal = ({ closeModal }) => {
                 >
                     {isLoading ? "Connexion..." : "Se connecter"}
                 </button>
-                
-                {error && <p className="modal__content__error">{error}</p>}
 
                 <Link to={"/request-reset-password"} onClick={closeModal} className="modal__content__lost-password">Mot de passe oublié ?</Link>
             </form>

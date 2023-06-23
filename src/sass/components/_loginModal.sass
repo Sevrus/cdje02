@@ -53,14 +53,13 @@
 
         &__email, &__password
             @include flex(column, center, center)
-            width: 100%
 
             &__label
                 color: $black
                 font-size: $fs-16
 
             &__input
-                width: 80%
+                width: 240px
                 height: 40px
                 border: 1px solid $grey-blue
                 box-shadow: $shadow
@@ -73,11 +72,10 @@
             margin-top: 30px
 
             &__icon
-                position: absolute
                 color: $grey-blue
-                right: 20px
-                top: 200px
-        
+                font-size: $fs-16
+                margin-left: -30px
+
         &__message, &__error
             font-family: $font-primary
             color: $red
@@ -89,7 +87,7 @@
         &__button
             @include articles()
             margin-top: 40px
-            width: 80%
+            width: 250px
             height: 45px
             border: none
             font-size: $fs-16
@@ -119,18 +117,15 @@
     .modal
         &__content
             width: 500px
-            height: 350px
+            height: 360px
 
             &__email, &__password
                 &__label
                     font-size: $fs-18
-                
+
                 &__input
+                    width: 350px
                     font-size: $fs-16
-                
-                &__icon
-                    right: 35px
-                    top: 177px
 
             &__button
                 font-size: $fs-18
@@ -151,15 +146,16 @@
 
                 &__input
                     height: 50px
+                    width: 500px
                     font-size: $fs-18
-                
+
                 &__icon
-                    top: 204px
-                    right: 47px
+                    margin-left: -35px
                     font-size: $fs-18
 
             &__button
                 height: 50px
+                width: 350px
                 font-size: $fs-20
 
             &__lost-password
@@ -178,11 +174,6 @@
             &__email, &__password
                 &__label
                     font-size: $fs-22
-                
-                &__icon
-                    font-size: $fs-20
-                    top: 228px
-                    right: 60px
 
             &__button
                 font-size: $fs-22

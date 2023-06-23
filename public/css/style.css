@@ -1191,14 +1191,13 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 .modal__content__email__label, .modal__content__password__label {
   color: #242627;
   font-size: 1rem;
 }
 .modal__content__email__input, .modal__content__password__input {
-  width: 80%;
+  width: 240px;
   height: 40px;
   border: 1px solid #3d4450;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
@@ -1211,10 +1210,9 @@ time, mark, audio, video {
   margin-top: 30px;
 }
 .modal__content__password__icon {
-  position: absolute;
   color: #3d4450;
-  right: 20px;
-  top: 200px;
+  font-size: 1rem;
+  margin-left: -30px;
 }
 .modal__content__message, .modal__content__error {
   font-family: "Noto Sans", sans-serif;
@@ -1231,7 +1229,7 @@ time, mark, audio, video {
   color: #fff;
   font-family: "Noto Sans", sans-serif;
   margin-top: 40px;
-  width: 80%;
+  width: 250px;
   height: 45px;
   border: none;
   font-size: 1rem;
@@ -1261,17 +1259,14 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .modal__content {
     width: 500px;
-    height: 350px;
+    height: 360px;
   }
   .modal__content__email__label, .modal__content__password__label {
     font-size: 1.125rem;
   }
   .modal__content__email__input, .modal__content__password__input {
+    width: 350px;
     font-size: 1rem;
-  }
-  .modal__content__email__icon, .modal__content__password__icon {
-    right: 35px;
-    top: 177px;
   }
   .modal__content__button {
     font-size: 1.125rem;
@@ -1291,15 +1286,16 @@ time, mark, audio, video {
   }
   .modal__content__email__input, .modal__content__password__input {
     height: 50px;
+    width: 500px;
     font-size: 1.125rem;
   }
   .modal__content__email__icon, .modal__content__password__icon {
-    top: 204px;
-    right: 47px;
+    margin-left: -35px;
     font-size: 1.125rem;
   }
   .modal__content__button {
     height: 50px;
+    width: 350px;
     font-size: 1.25rem;
   }
   .modal__content__lost-password {
@@ -1317,11 +1313,6 @@ time, mark, audio, video {
   }
   .modal__content__email__label, .modal__content__password__label {
     font-size: 1.375rem;
-  }
-  .modal__content__email__icon, .modal__content__password__icon {
-    font-size: 1.25rem;
-    top: 228px;
-    right: 60px;
   }
   .modal__content__button {
     font-size: 1.375rem;
@@ -5896,8 +5887,7 @@ time, mark, audio, video {
 }
 /* VERSION MOBILE */
 .requestResetPassword {
-  margin-bottom: 30px;
-  width: 100%;
+  margin-top: 30px;
 }
 .requestResetPassword__email {
   display: flex;
@@ -5911,7 +5901,7 @@ time, mark, audio, video {
   width: 100%;
 }
 .requestResetPassword__email__label {
-  margin-bottom: 15px;
+  margin: 30px 0;
 }
 .requestResetPassword__email__input {
   width: 350px;
