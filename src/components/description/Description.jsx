@@ -11,7 +11,7 @@ const Description = ({data}) => {
                             <hr className="activity__article__title__right-line" />
                         </div>
                         <div className="activity__article__more">
-                            <a href={item.link}>Lire la suite</a>
+                            <a href={item.link} target="_blank" >Lire la suite</a>
                         </div>
                     </div>
                 ))}
