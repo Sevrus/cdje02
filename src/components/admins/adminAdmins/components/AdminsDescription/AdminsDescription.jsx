@@ -69,7 +69,7 @@ const AdminsDescription = () => {
                             <a onClick={() => handleOpenModal(item)}>
                                 <FontAwesomeIcon className="articleAdmins__icon__pencil" icon={faPencil} />
                             </a>
-                            {openModal == item && createPortal(
+                            {openModal === item && createPortal(
                                 <ModalAdmins adminData={item} closeModal={handleCloseModal} />, document.body
                             )}
 

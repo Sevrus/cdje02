@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalAdmins = ({ closeModal, adminData }) => {
     const [error, setError] = useState(null);
@@ -13,7 +14,8 @@ const ModalAdmins = ({ closeModal, adminData }) => {
         e.preventDefault();
 
         if (password !== verifyPassword) {
-            setError("Le mot de passe n'est pas identiques");
+            setError("Les mots de passe ne sont pas identiques");
+            clearErrorAfterDelay(setError, 3000);
             return;
         };
 
@@ -46,8 +48,7 @@ const ModalAdmins = ({ closeModal, adminData }) => {
     }
     return (
         <>
-            <div className="modalAdmins" onClick={closeModal}>
-            </div>
+            <div className="modalAdmins" onClick={closeModal}></div>
 
             <Form className="modalAdmins__content" onSubmit={handleSubmit}>
                 <div className="modalAdmins__content__close" onClick={closeModal}></div>
@@ -68,6 +69,7 @@ const ModalAdmins = ({ closeModal, adminData }) => {
                 </div>
 
                 <button disabled={isLoaded} type="submit" className="modalAdmins__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
+                {error && <div className="modalAdmins__content__error">{error}</div>}
             </Form>
         </>
     )
