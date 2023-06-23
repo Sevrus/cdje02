@@ -111,29 +111,6 @@ time, mark, audio, video {
     font-size: 1.25rem;
   }
 }
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  text-decoration: none;
-  list-style-type: none;
-  box-sizing: border-box;
-}
-
 /* VERSION MOBILE */
 .navbar__burger, .navbar--scroll__burger {
   position: absolute;
@@ -960,6 +937,94 @@ time, mark, audio, video {
     font-size: 2rem;
   }
 }
+/* MENTION LEGALES */
+.legal-notice {
+  font-family: "Noto Sans", sans-serif;
+  margin: 40px;
+  font-size: 0.875rem;
+}
+.legal-notice a {
+  text-decoration: none;
+  color: #4e5862;
+}
+.legal-notice__header {
+  text-align: center;
+}
+.legal-notice__header__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3d4450;
+}
+.legal-notice__header__subtitle {
+  color: #242627;
+}
+.legal-notice__content {
+  color: #242627;
+}
+.legal-notice__content__intro {
+  margin-top: 30px;
+}
+.legal-notice__content__intro p {
+  margin-top: 10px;
+}
+.legal-notice__content__article__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4e5862;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.legal-notice__footer {
+  text-align: end;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+/* POLITIQUE DE CONFIDENTIALITE */
+.confidentiality {
+  font-family: "Noto Sans", sans-serif;
+  margin: 40px;
+  font-size: 0.875rem;
+}
+.confidentiality a {
+  text-decoration: none;
+  color: #4e5862;
+}
+.confidentiality__header {
+  text-align: center;
+}
+.confidentiality__header__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3d4450;
+}
+.confidentiality__header__site {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.confidentiality__header__type {
+  font-style: italic;
+  margin-top: 10px;
+}
+.confidentiality__content {
+  color: #242627;
+}
+.confidentiality__content__article__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4e5862;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.confidentiality__content__article__content p {
+  margin: 25px;
+}
+.confidentiality__footer {
+  text-align: end;
+  margin-top: 40px;
+  font-style: italic;
+}
+
 /* FOOTER */
 /* VERSION MOBILE */
 .footer {
@@ -1068,94 +1133,6 @@ time, mark, audio, video {
     width: 650px;
   }
 }
-/* MENTION LEGALES */
-.legal-notice {
-  font-family: "Noto Sans", sans-serif;
-  margin: 40px;
-  font-size: 0.875rem;
-}
-.legal-notice a {
-  text-decoration: none;
-  color: #4e5862;
-}
-.legal-notice__header {
-  text-align: center;
-}
-.legal-notice__header__title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #3d4450;
-}
-.legal-notice__header__subtitle {
-  color: #242627;
-}
-.legal-notice__content {
-  color: #242627;
-}
-.legal-notice__content__intro {
-  margin-top: 30px;
-}
-.legal-notice__content__intro p {
-  margin-top: 10px;
-}
-.legal-notice__content__article__title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #4e5862;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-.legal-notice__footer {
-  text-align: end;
-  margin-top: 30px;
-  font-style: italic;
-}
-
-/* POLITIQUE DE CONFIDENTIALITE */
-.confidentiality {
-  font-family: "Noto Sans", sans-serif;
-  margin: 40px;
-  font-size: 0.875rem;
-}
-.confidentiality a {
-  text-decoration: none;
-  color: #4e5862;
-}
-.confidentiality__header {
-  text-align: center;
-}
-.confidentiality__header__title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #3d4450;
-}
-.confidentiality__header__site {
-  font-weight: bold;
-  margin-top: 20px;
-}
-.confidentiality__header__type {
-  font-style: italic;
-  margin-top: 10px;
-}
-.confidentiality__content {
-  color: #242627;
-}
-.confidentiality__content__article__title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #4e5862;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-.confidentiality__content__article__content p {
-  margin: 25px;
-}
-.confidentiality__footer {
-  text-align: end;
-  margin-top: 40px;
-  font-style: italic;
-}
-
 /* MODAL LOGIN */
 /* VERSION MOBILE */
 .modal {
@@ -1227,6 +1204,8 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-top: 12px;
+  padding: 0 20px;
+  font-size: 0.875rem;
 }
 .modal__content__password {
   margin-top: 30px;
@@ -1272,6 +1251,9 @@ time, mark, audio, video {
   .modal__content__email__label, .modal__content__password__label {
     font-size: 1.125rem;
   }
+  .modal__content__email__input, .modal__content__password__input {
+    font-size: 1rem;
+  }
   .modal__content__button {
     font-size: 1.125rem;
   }
@@ -1290,6 +1272,7 @@ time, mark, audio, video {
   }
   .modal__content__email__input, .modal__content__password__input {
     height: 50px;
+    font-size: 1.125rem;
   }
   .modal__content__button {
     height: 50px;
@@ -5777,6 +5760,15 @@ time, mark, audio, video {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   height: 40px;
   text-indent: 10px;
+  font-size: 0.875rem;
+  padding: 0 10px;
+}
+.resetPassword__message {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
 }
 .resetPassword__btn {
   display: flex;
@@ -5808,6 +5800,9 @@ time, mark, audio, video {
   .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
     font-size: 1.125rem;
   }
+  .resetPassword__message {
+    font-size: 0.875rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .resetPassword {
@@ -5819,12 +5814,16 @@ time, mark, audio, video {
   .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
     font-size: 1.25rem;
   }
-  .resetPassword label {
+  .resetPassword__password label, .resetPassword__confirmPassword label, .resetPassword button label {
     margin-bottom: 20px;
   }
-  .resetPassword input {
-    width: 79%;
+  .resetPassword__password input, .resetPassword__confirmPassword input, .resetPassword button input {
+    width: 80%;
     max-width: 600px;
+    font-size: 1.125rem;
+  }
+  .resetPassword__message {
+    font-size: 1rem;
   }
   .resetPassword button {
     height: 40px;
@@ -5854,7 +5853,6 @@ time, mark, audio, video {
 /* VERSION MOBILE */
 .main {
   min-width: 360px;
-  min-height: 100vh;
   margin-top: 180px;
 }
 

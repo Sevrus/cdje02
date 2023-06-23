@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -47,6 +48,20 @@ const Modal = ({ closeModal }) => {
             });
     };
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('password_service', 'reset_password', form.current, 'LoB492yO3zEvCzY_C')
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+    };
+
     return (
         <>
             <div className="modal" onClick={closeModal}>
@@ -58,13 +73,15 @@ const Modal = ({ closeModal }) => {
                 <div className="modal__content__email">
                     <label className="modal__content__email__label" htmlFor="email" >Email</label>
                     <input className="modal__content__email__input" type="email" name="email" id="email" 
-                        value={email} onChange={(e) => setEmail(e.target.value)} required />
+                        minLength={8} value={email} pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                         onChange={(e) => setEmail(e.target.value)} required />
                 </div>
 
                 <div className="modal__content__password">
                     <label className="modal__content__password__label" htmlFor="password">Mot de passe</label>
-                    <input className="modal__content__password__input" type="password" name="password" id="password" 
-                        value={password} onChange={(e) => setPassword(e.target.value)} required />
+                    <input className="modal__content__password__input" type="password" name="password" id="password"
+                        minLength={8} value={password} pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                        onChange={(e) => setPassword(e.target.value)} required />
                 </div>
 
                 <button
@@ -75,7 +92,7 @@ const Modal = ({ closeModal }) => {
                     {isLoading ? "Connexion..." : "Se connecter"}
                 </button>
                 {error && <div className="modal__content__error">{error}</div>}
-                <div className="modal__content__lost-password">Mot de passe oublié ?</div>
+                <div className="modal__content__lost-password" onClick={sendEmail}>Mot de passe oublié ?</div>
             </form>
         </>
     )
