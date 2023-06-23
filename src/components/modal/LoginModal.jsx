@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Modal = ({ closeModal }) => {
+const LoginModal = ({ closeModal }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
@@ -81,4 +81,4 @@ const Modal = ({ closeModal }) => {
     )
 }
 
-export default Modal;
+export default LoginModal;
