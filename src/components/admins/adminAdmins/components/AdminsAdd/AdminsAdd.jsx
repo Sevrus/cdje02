@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay";
 
 const AdminsAdd = () => {
     const [error, setError] = useState(null);
@@ -11,7 +12,8 @@ const AdminsAdd = () => {
         e.preventDefault();
 
         if (password !== verifyPassword) {
-            setError("Le mot de passe n'est pas identiques");
+            setError("Les mots de passe ne sont pas identiques");
+            clearErrorAfterDelay(setError, 3000);
             return;
         };
 
@@ -60,6 +62,7 @@ const AdminsAdd = () => {
                 <div className="addAdmins__btn">
                     <button type="submit">Ajouter</button>
                 </div>
+                {error && <div className="addAdmins__error">{error}</div>}
             </Form>
         </>
     )
