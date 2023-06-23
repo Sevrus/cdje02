@@ -1,61 +1,66 @@
-import emailjs from "@emailjs/browser";
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../utilities/clearErrorAfterDelay.js";
+import { Link, useNavigate } from "react-router-dom";
+import { clearErrorAfterDelay } from "../../utilities/clearErrorAfterDelay.js";
+
 
 const LoginModal = ({ closeModal }) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    // const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setIsLoading(true);
+        let password = document.getElementById("password").value;
+        let email = document.getElementById("email").value;
 
-        // Make a POST request to authenticate user
-        fetch("http://localhost:3000/api/login", {
-            method: "POST",
-            body: JSON.stringify({ email, password }),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                setIsLoading(false);
-                if (data.token) {
-                    // Save the token to localStorage for authentication
-                    localStorage.setItem("token", data.token);
-                    navigate("/admin");
-                } else {
-                    setError('Mot de passe incorrect.');
-                    clearErrorAfterDelay(setError, 3000);
-                }
-            })
-            .catch((error) => {
-                setIsLoading(false);
-                setError("Échec de la connexion. Veuillez réessayer plus tard.");
-                clearErrorAfterDelay(setError, 3000);
-            });
-    };
+        if (password === "" || email === "") {
+            setMessage("Veuillez remplir tous les champs");
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+        } else if (password !== b || email !== b) {
+            setMessage("Le mot de passe ou l'adresse mail n'est pas valide");
 
-        emailjs.sendForm('password_service', 'reset_password', form.current, 'LoB492yO3zEvCzY_C')
-            .then(
-                (result) => {
-                    console.log(result.text);
+        } else {
+            setMessage("");
+            setIsLoading(true);
+
+            // Make a POST request to authenticate user
+            fetch("http://localhost:3000/api/login", {
+                method: "POST",
+                body: JSON.stringify({ email, password }),
+                headers: {
+                    "Content-Type": "application/json",
                 },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    setIsLoading(false);
+                    if (data.token) {
+                        // Save the token to localStorage for authentication
+                        localStorage.setItem("token", data.token);
+                        navigate("/admin");
+                    } else {
+                        setMessage('Mot de passe incorrect.');
+                        clearErrorAfterDelay(setMessage, 3000);
+                    }
+                })
+                .catch((error) => {
+                    setIsLoading(false);
+                    setError("Échec de la connexion. Veuillez réessayer plus tard.");
+                    clearErrorAfterDelay(setError, 3000);
+                });
+        };
     };
+
+    const [showPassword, setShowPassword] = useState(false);
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    }
 
     return (
         <>
@@ -67,17 +72,21 @@ const LoginModal = ({ closeModal }) => {
 
                 <div className="modal__content__email">
                     <label className="modal__content__email__label" htmlFor="email" >Email</label>
-                    <input className="modal__content__email__input" type="email" name="email" id="email" 
-                        minLength={8} value={email} pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                         onChange={(e) => setEmail(e.target.value)} required />
+                    <input className="modal__content__email__input" type="email" name="email" id="email"
+                        value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
 
                 <div className="modal__content__password">
                     <label className="modal__content__password__label" htmlFor="password">Mot de passe</label>
-                    <input className="modal__content__password__input" type="password" name="password" id="password"
-                        minLength={8} value={password} pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                        onChange={(e) => setPassword(e.target.value)} required />
+                    <input className="modal__content__password__input" name="password" id="password"
+                        type={showPassword ? "text" : "password"}
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                        value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} className="modal__content__password__icon"
+                        onClick={toggleShowPassword} />
                 </div>
+
+                <p className="modal__content__message">{message}</p>
 
                 <button
                     type="submit"
@@ -86,8 +95,10 @@ const LoginModal = ({ closeModal }) => {
                 >
                     {isLoading ? "Connexion..." : "Se connecter"}
                 </button>
-                {error && <div className="modal__content__error">{error}</div>}
-                <div className="modal__content__lost-password" onClick={sendEmail}>Mot de passe oublié ?</div>
+                
+                {error && <p className="modal__content__error">{error}</p>}
+
+                <Link to={"/request-reset-password"} onClick={closeModal} className="modal__content__lost-password">Mot de passe oublié ?</Link>
             </form>
         </>
     )

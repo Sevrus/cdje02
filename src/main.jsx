@@ -12,6 +12,7 @@ import AdminRegulation from './components/admins/adminRegulation/AdminRegulation
 import AdminResults from './components/admins/adminResults/adminResults';
 import Confidentiality from './components/policies/confidentiality/Confidentiality';
 import LegalNotice from './components/policies/legalNotice/LegalNotice';
+import RequestResetPassword from './components/resetPassword/RequestResetPassword';
 import ResetPassword from './components/resetPassword/ResetPassword';
 import ErrorPage from './ErrorPage';
 import Activity from './views/Activity';
@@ -52,8 +53,12 @@ const router = createBrowserRouter([
                 element: <Confidentiality />,
             },
             {
-                path: "/resetPassword",
+                path: "/reset-password",
                 element: <ResetPassword />,
+            },
+            {
+                path: "/request-reset-password",
+                element: <RequestResetPassword />,
             },
             {
                 path: "/admin",

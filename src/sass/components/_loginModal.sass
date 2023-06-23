@@ -72,6 +72,20 @@
         &__password
             margin-top: 30px
 
+            &__icon
+                position: absolute
+                color: $grey-blue
+                right: 20px
+                top: 200px
+        
+        &__message, &__error
+            font-family: $font-primary
+            color: $red
+            font-weight: bold
+            font-size: $fs-14
+            text-align: center
+            margin: 15px 0 -15px
+
         &__button
             @include articles()
             margin-top: 40px
@@ -87,6 +101,7 @@
 
         &__lost-password
             color: $grey-blue
+            font-family: $font-primary
             font-size: $fs-14
             margin-top: 20px
 
@@ -112,6 +127,10 @@
                 
                 &__input
                     font-size: $fs-16
+                
+                &__icon
+                    right: 35px
+                    top: 177px
 
             &__button
                 font-size: $fs-18
@@ -133,6 +152,11 @@
                 &__input
                     height: 50px
                     font-size: $fs-18
+                
+                &__icon
+                    top: 204px
+                    right: 47px
+                    font-size: $fs-18
 
             &__button
                 height: 50px
@@ -140,6 +164,9 @@
 
             &__lost-password
                 font-size: $fs-18
+
+            &__message, &__error
+                font-size: $fs-16
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
@@ -151,6 +178,11 @@
             &__email, &__password
                 &__label
                     font-size: $fs-22
+                
+                &__icon
+                    font-size: $fs-20
+                    top: 228px
+                    right: 60px
 
             &__button
                 font-size: $fs-22

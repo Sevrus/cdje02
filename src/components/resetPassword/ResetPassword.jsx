@@ -1,3 +1,5 @@
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Form } from "react-router-dom";
 
@@ -6,6 +8,16 @@ const ResetPassword = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [message, setMessage] = useState("");
+
+    const [showPassword, setShowPassword] = useState(false);
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    }
+
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const toggleShowConfirmPassword = () => {
+        setShowConfirmPassword(!showConfirmPassword);
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,8 +32,8 @@ const ResetPassword = () => {
             setMessage("Votre mot de passe doit contenir au moins 8 caractères, une majuscule, un chiffre et un caractère spécial");
 
         } else if (password === confirmPassword) {
-            setMessage("Les mots de passe sont corrects");
-            
+            setMessage("");
+
         } else {
             setMessage("Les mots de passe ne correspondent pas");
         }
@@ -32,14 +44,22 @@ const ResetPassword = () => {
 
             <div className="resetPassword__password">
                 <label htmlFor="password">Nouveau mot de passe</label>
-                <input type="password" name="password" id="password" value={password}
-                    onChange={(e) => setPassword(e.target.value)} />
+                <div>
+                    <input type={showPassword ? "text" : "password"} name="password" id="password" value={password}
+                        onChange={(e) => setPassword(e.target.value)} placeholder="********" />
+                    <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} className="resetPassword__password__icon"
+                        onClick={toggleShowPassword} />
+                </div>
             </div>
 
             <div className="resetPassword__confirmPassword">
                 <label htmlFor="confirmPassword">Confirmer le mot de passe</label>
-                <input type="password" name="confirmPassword" id="confirmPassword" value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)} />
+                <div>
+                    <input type={showConfirmPassword ? "text" : "password"} name="confirmPassword" id="confirmPassword" value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)} placeholder="********" />
+                    <FontAwesomeIcon icon={showConfirmPassword ? faEye : faEyeSlash} className="resetPassword__confirmPassword__icon"
+                        onClick={toggleShowConfirmPassword} />
+                </div>
             </div>
             <p className="resetPassword__message">{message}</p>
 
