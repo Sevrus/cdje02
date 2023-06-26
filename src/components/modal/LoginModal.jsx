@@ -1,13 +1,13 @@
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {useContext, useState} from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../utilities/AuthContext.jsx";
 import { clearErrorAfterDelay } from "../../utilities/clearErrorAfterDelay.js";
-import {AuthContext} from "../../utilities/AuthContext.jsx";
 
 
 const LoginModal = ({ closeModal }) => {
-    const {login} = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');

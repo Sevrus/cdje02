@@ -14,9 +14,6 @@ const RequestResetPassword = () => {
         if (email === "") {
             setMessage("Veuillez entrer votre adresse mail");
 
-            // } else if (email !== b) {
-            //     setMessage("Cette adresse mail n'est pas valide");
-
         } else {
             setMessage("");
 
@@ -29,7 +26,6 @@ const RequestResetPassword = () => {
                         console.log(error.text);
                     }
                 );
-            return <p>Message envoyé</p>;
         };
     };
 
