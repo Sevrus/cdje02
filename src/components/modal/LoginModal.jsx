@@ -54,7 +54,7 @@ const LoginModal = ({ closeModal }) => {
                     setError("Échec de la connexion. Veuillez réessayer plus tard.");
                     clearErrorAfterDelay(setError, 3000);
                 });
-        };
+        }
     };
 
     const [showPassword, setShowPassword] = useState(false);
