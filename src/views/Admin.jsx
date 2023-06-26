@@ -13,6 +13,7 @@ import { AuthContext } from "../utilities/AuthContext";
 const Admin = () => {
 
     const { isLoggedIn } = useContext(AuthContext);
+    
     return (
         <>
             {isLoggedIn &&
