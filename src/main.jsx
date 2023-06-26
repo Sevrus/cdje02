@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {AuthProvider} from "./utilities/AuthContext.jsx";
 import App from './App';
 import AdminAdmins from './components/admins/adminAdmins/AdminAdmins';
 import AdminArticles from './components/admins/adminArticles/AdminArticles';
@@ -25,77 +26,81 @@ import Info from './views/Info';
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
-        errorElement: <ErrorPage />,
+        element: (
+            <AuthProvider>
+                <App/>
+            </AuthProvider>
+        ),
+        errorElement: <ErrorPage/>,
         children: [
             {
                 path: "/",
-                element: <Index />,
+                element: <Index/>,
             },
             {
                 path: "/info",
-                element: <Info />,
+                element: <Info/>,
             },
             {
                 path: "/activity",
-                element: <Activity />,
+                element: <Activity/>,
             },
             {
                 path: "/contact",
-                element: <Contact />,
+                element: <Contact/>,
             },
             {
                 path: "/legal-notice",
-                element: <LegalNotice />,
+                element: <LegalNotice/>,
             },
             {
                 path: "/confidentiality",
-                element: <Confidentiality />,
+                element: <Confidentiality/>,
             },
             {
                 path: "/reset-password",
-                element: <ResetPassword />,
+                element: <ResetPassword/>,
             },
             {
                 path: "/request-reset-password",
-                element: <RequestResetPassword />,
+                element: <RequestResetPassword/>,
             },
             {
                 path: "/admin",
-                element: <Admin />,
+                element: <Admin/>,
                 children: [
                     {
                         index: true,
                         path: "/admin/champions",
-                        element: <AdminChampions />
+                        element: <AdminChampions/>
                     },
                     {
                         path: "/admin/referees",
-                        element: <AdminReferees />
+                        element: <AdminReferees/>
                     },
                     {
                         path: "/admin/clubs",
-                        element: <AdminClubs />
+                        element: <AdminClubs/>
                     },
                     {
                         path: "/admin/comity",
-                        element: <AdminComity />
+                        element: <AdminComity/>
                     },
                     {
                         path: "/admin/articles",
-                        element: <AdminArticles />
+                        element: <AdminArticles/>
                     },
                     {
                         path: "/admin/results",
-                        element: <AdminResults />
+                        element: <AdminResults/>
                     },
                     {
                         path: "/admin/regulation",
-                        element: <AdminRegulation />
+                        element: <AdminRegulation/>
                     },
                     {
                         path: "/admin/admins",
-                        element: <AdminAdmins />
+                        element: <AdminAdmins/>
                     },
                 ]
             },
@@ -105,6 +110,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <RouterProvider router={router}/>
     </React.StrictMode>,
 )

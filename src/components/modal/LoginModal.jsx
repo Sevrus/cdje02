@@ -1,12 +1,13 @@
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import {useContext, useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../utilities/clearErrorAfterDelay.js";
+import {AuthContext} from "../../utilities/AuthContext.jsx";
 
 
 const LoginModal = ({ closeModal }) => {
-
+    const {login} = useContext(AuthContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
@@ -21,9 +22,6 @@ const LoginModal = ({ closeModal }) => {
 
         if (password === "" || email === "") {
             setMessage("Veuillez remplir tous les champs");
-
-        } else if (password !== b || email !== b) {
-            setMessage("Le mot de passe ou l'adresse mail n'est pas valide");
 
         } else {
             setMessage("");
@@ -43,6 +41,7 @@ const LoginModal = ({ closeModal }) => {
                     if (data.token) {
                         // Save the token to localStorage for authentication
                         localStorage.setItem("token", data.token);
+                        login();
                         navigate("/admin");
                     } else {
                         setError('Mot de passe incorrect.');
