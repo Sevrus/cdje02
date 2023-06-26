@@ -2,7 +2,7 @@ import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../../utilities/AuthContext.jsx";
 import LoginModal from "../../../modal/LoginModal.jsx";
 
@@ -13,7 +13,6 @@ const HeaderNav = ({ chessboardDisappear }) => {
     const [width, setWidth] = useState(window.innerWidth);
     const [openModal, setOpenModal] = useState(false);
     const { login, logout } = useContext(AuthContext);
-    const navigate = useNavigate();
 
     const handleClick = () => {
         ``
@@ -41,11 +40,12 @@ const HeaderNav = ({ chessboardDisappear }) => {
         };
     }, []);
 
+
     const setLogout = () => {
         localStorage.removeItem("token");
         logout();
-        navigate("/");
     }
+
 
     const adminLogin = () => {
         if (login) {
@@ -60,9 +60,9 @@ const HeaderNav = ({ chessboardDisappear }) => {
                         ADMIN
                     </NavLink>
                     <hr className="navbar__links__link__admin__hr" />
-                    <p onClick={setLogout()}>
+                    <NavLink to={"/"} onClick={setLogout()}>
                         Déconnexion
-                    </p>
+                    </NavLink>
                 </div>
             )
         } else if (logout) {
