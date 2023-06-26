@@ -6,11 +6,11 @@ import HeaderNav from "./components/headerNav/HeaderNav.jsx";
 
 const Header = () => {
     const [resizeHeader, setResizeHeader] = useState(false);
-    const { login, logout } = useContext(AuthContext);
+    const { login, logout, isLoggedIn } = useContext(AuthContext);
 
 
     const changeSize = () => {
-        if (login) {
+        if (isLoggedIn) {
             setResizeHeader(true);
 
         } else if (logout) {
