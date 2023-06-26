@@ -1,17 +1,16 @@
 import {faRightToBracket} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
-import { NavLink, useLocation } from "react-router-dom";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {useEffect, useState} from "react";
+import {createPortal} from "react-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import LoginModal from "../../../modal/LoginModal.jsx";
 
-
-const HeaderNav = ({ chessboardDisappear }) => {
+const HeaderNav = ({chessboardDisappear}) => {
     const [burgerClass, setBurgerClass] = useState("navbar__burger__line unclicked");
     const [isOpen, setOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
     const [openModal, setOpenModal] = useState(false);
-    const { pathname } = useLocation();
+    const {pathname} = useLocation();
 
     const handleClick = () => {
         if (!isOpen) {
@@ -46,13 +45,13 @@ const HeaderNav = ({ chessboardDisappear }) => {
                 <div className="navbar__links__link__admin">
                     <NavLink
                         to={`/admin`}
-                        className={({ isActive, isPending }) =>
+                        className={({isActive, isPending}) =>
                             isPending ? "pending" : isActive ? "active" : ""
                         }
                     >
                         ADMIN
                     </NavLink>
-                    <hr className="navbar__links__link__admin__hr" />
+                    <hr className="navbar__links__link__admin__hr"/>
                     <NavLink to="/">
                         Déconnexion
                     </NavLink>
@@ -62,13 +61,13 @@ const HeaderNav = ({ chessboardDisappear }) => {
             return (
                 <>
                     <FontAwesomeIcon icon={faRightToBracket}
-                        className={chessboardDisappear ? 'navbar__links__link__icon--scroll' : 'navbar__links__link__icon'} />
+                                     className={chessboardDisappear ? 'navbar__links__link__icon--scroll' : 'navbar__links__link__icon'}/>
                     <a onClick={() => setOpenModal(true)}>
                         LOGIN
                     </a>
                     {
                         openModal && createPortal(
-                            <LoginModal closeModal={() => setOpenModal(false)} />, document.body
+                            <LoginModal closeModal={() => setOpenModal(false)}/>, document.body
                         )
                     }
                 </>
@@ -95,7 +94,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
                         <NavLink
                             to={`/`}
-                            className={({ isActive, isPending }) =>
+                            className={({isActive, isPending}) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
@@ -105,7 +104,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
                         <NavLink
                             to={`/info`}
-                            className={({ isActive, isPending }) =>
+                            className={({isActive, isPending}) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
@@ -115,7 +114,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
                         <NavLink
                             to={`/activity`}
-                            className={({ isActive, isPending }) =>
+                            className={({isActive, isPending}) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
@@ -125,7 +124,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
                         <NavLink
                             to={`/contact`}
-                            className={({ isActive, isPending }) =>
+                            className={({isActive, isPending}) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
@@ -138,8 +137,6 @@ const HeaderNav = ({ chessboardDisappear }) => {
                 </ul>
 
             )}
-
-
         </nav>
     )
 }
