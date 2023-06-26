@@ -1,10 +1,9 @@
+import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencil } from '@fortawesome/free-solid-svg-icons'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
-import { createPortal } from "react-dom"
 import { useEffect, useState } from "react"
-import ModalArticle from "./ModalArticle.jsx"
+import { createPortal } from "react-dom"
 import { fetchForAll } from "../../../../../utilities/functionFetch.js"
+import ModalArticle from "./ModalArticle.jsx"
 
 const ArticleDescription = () => {
     const [openModal, setOpenModal] = useState(null);

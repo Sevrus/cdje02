@@ -15,7 +15,6 @@ const HeaderNav = ({ chessboardDisappear }) => {
     const { login, logout } = useContext(AuthContext);
 
     const handleClick = () => {
-        ``
         if (!isOpen) {
             setBurgerClass("navbar__burger__line clicked");
         } else {
@@ -65,6 +64,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                     </NavLink>
                 </div>
             )
+            
         } else if (logout) {
             return (
                 <>
