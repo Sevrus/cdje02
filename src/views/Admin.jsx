@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import AdminAdmins from "../components/admins/adminAdmins/AdminAdmins";
 import AdminArticles from "../components/admins/adminArticles/AdminArticles";
 import AdminChampions from "../components/admins/adminChampions/AdminChampions";
@@ -8,14 +8,14 @@ import AdminNav from "../components/admins/adminNav/AdminNav";
 import AdminReferees from "../components/admins/adminReferees/AdminReferees";
 import AdminRegulation from "../components/admins/adminRegulation/AdminRegulation";
 import AdminResults from "../components/admins/adminResults/adminResults";
+import { AuthContext } from "../utilities/AuthContext";
 
 const Admin = () => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+    const { isLoggedIn } = useContext(AuthContext);
     return (
         <>
-            {/* {isLoggedIn ? */}
+            {isLoggedIn &&
                 <>
                     < AdminNav />
 
@@ -28,7 +28,7 @@ const Admin = () => {
                     <AdminRegulation />
                     <AdminAdmins />
                 </>
-                {/* : null} */}
+            }
         </>
     )
 }

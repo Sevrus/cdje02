@@ -6,14 +6,14 @@ import HeaderNav from "./components/headerNav/HeaderNav.jsx";
 
 const Header = () => {
     const [resizeHeader, setResizeHeader] = useState(false);
-    const { login, logout } = useContext(AuthContext);
+    const { isLoggedIn, logout } = useContext(AuthContext);
 
 
     const changeSize = () => {
-        if (login) {
+        if (isLoggedIn) {
             setResizeHeader(true);
 
-        } else if (logout) {
+        } else {
             window.scrollY >= 100 ? setResizeHeader(true) : setResizeHeader(false);
         }
     }

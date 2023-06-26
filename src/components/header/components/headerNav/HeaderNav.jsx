@@ -12,7 +12,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
     const [isOpen, setOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
     const [openModal, setOpenModal] = useState(false);
-    const { login, logout, isLoggedIn } = useContext(AuthContext);
+    const { logout, isLoggedIn } = useContext(AuthContext);
 
     const handleClick = () => {
         if (!isOpen) {
