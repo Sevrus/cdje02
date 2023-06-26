@@ -1,20 +1,19 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../utilities/AuthContext.jsx";
 import HeaderChessboard from "./components/headerChessboard/HeaderChessboard.jsx";
 import HeaderLogo from "./components/headerLogo/HeaderLogo.jsx";
 import HeaderNav from "./components/headerNav/HeaderNav.jsx";
 
 const Header = () => {
     const [resizeHeader, setResizeHeader] = useState(false);
-    const { pathname } = useLocation();
+    const { login, logout } = useContext(AuthContext);
+
 
     const changeSize = () => {
-        if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
-            || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
-            || pathname === "/admin/results" || pathname === "/admin/regulation" || pathname === "/admin/admins") {
+        if (login) {
             setResizeHeader(true);
 
-        } else {
+        } else if (logout) {
             window.scrollY >= 100 ? setResizeHeader(true) : setResizeHeader(false);
         }
     }

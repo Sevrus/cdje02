@@ -1,8 +1,9 @@
-import {faRightToBracket} from "@fortawesome/free-solid-svg-icons";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../../utilities/AuthContext.jsx";
 import LoginModal from "../../../modal/LoginModal.jsx";
 
 
@@ -11,9 +12,11 @@ const HeaderNav = ({ chessboardDisappear }) => {
     const [isOpen, setOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
     const [openModal, setOpenModal] = useState(false);
-    const { pathname } = useLocation();
+    const { login, logout } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleClick = () => {
+        ``
         if (!isOpen) {
             setBurgerClass("navbar__burger__line clicked");
         } else {
@@ -38,10 +41,14 @@ const HeaderNav = ({ chessboardDisappear }) => {
         };
     }, []);
 
-    const isLoggedIn = () => {
-        if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
-            || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
-            || pathname === "/admin/results" || pathname === "/admin/regulation" || pathname === "/admin/admins") {
+    const setLogout = () => {
+        localStorage.removeItem("token");
+        logout();
+        navigate("/");
+    }
+
+    const adminLogin = () => {
+        if (login) {
             return (
                 <div className="navbar__links__link__admin">
                     <NavLink
@@ -53,12 +60,12 @@ const HeaderNav = ({ chessboardDisappear }) => {
                         ADMIN
                     </NavLink>
                     <hr className="navbar__links__link__admin__hr" />
-                    <NavLink to="/">
+                    <p onClick={setLogout()}>
                         Déconnexion
-                    </NavLink>
+                    </p>
                 </div>
             )
-        } else {
+        } else if (logout) {
             return (
                 <>
                     <FontAwesomeIcon icon={faRightToBracket}
@@ -133,7 +140,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                         </NavLink>
                     </li>
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
-                        {isLoggedIn()}
+                        {adminLogin()}
                     </li>
                 </ul>
 
