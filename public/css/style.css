@@ -2793,6 +2793,9 @@ time, mark, audio, video {
   font-size: 1rem;
   margin-left: -30px;
 }
+.modal__content__password__icon:hover {
+  cursor: pointer;
+}
 .modal__content__message {
   font-family: "Noto Sans", sans-serif;
   color: #f73746;
@@ -7370,6 +7373,9 @@ time, mark, audio, video {
   color: #3d4450;
   font-size: 0.875rem;
   margin-left: -30px;
+}
+.resetPassword__password__icon:hover, .resetPassword__confirmPassword__icon:hover {
+  cursor: pointer;
 }
 .resetPassword__confirmPassword {
   margin-top: 20px;
