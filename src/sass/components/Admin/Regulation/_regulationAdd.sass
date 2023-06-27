@@ -1,0 +1,89 @@
+@import '../../../utilities/_mixin.sass'
+@import '../../../utilities/_variables.sass'
+
+// VERSION MOBILE 
+.addRegulation
+    @include flex(column , center , center)
+    width: 100%
+
+    &__title, &__link
+        @include flex(column ,center , center)
+        font-family: $font-primary
+        font-size: $fs-16
+        font-weight: bold
+        margin-bottom: 25px
+        width: 100%
+
+        label
+            margin-bottom: 15px
+
+        input
+            width: 78%
+            max-width: 450px
+            border-radius: 5px
+            border: 1px solid $black
+            box-shadow: $shadow
+            height: 40px
+            text-indent: 10px
+
+    &__btn
+        @include flex(row , center , center)
+        width: 100%
+
+        button
+            @include articles()
+            margin-top: 10px
+            width: 50%
+            max-width: 300px
+            height: 40px
+            border: none
+            font-size: $fs-16
+            font-weight: bold
+
+            &:hover
+                cursor: pointer
+                transform: scale(0.98)
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .addRegulation
+
+        &__title, &__link, button
+            font-size: $fs-18
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .addRegulation
+
+        &__title, &__link
+            margin-bottom: 30px
+
+        &__title, &__link, button
+            font-size: $fs-20
+
+        label
+            margin-bottom: 20px
+
+        input
+            width: 79%
+            max-width: 600px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .addRegulation
+
+        &__title, &__link
+            margin-bottom: 40px
+
+        &__title, &__link, button
+            font-size: $fs-24
+
+        label
+            margin-bottom: 20px
+
+        input
+            width: 70%
+            max-width: 600px
+
+        button
+            height: 50px

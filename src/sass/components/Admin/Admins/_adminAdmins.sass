@@ -1,0 +1,215 @@
+@import '../../../utilities/_mixin.sass'
+@import '../../../utilities/_variables.sass'
+@import '../../Admin/Admins/_adminsDescription.sass'
+@import '../../Admin/Admins/_adminsAdd.sass'
+@import '../../Admin/Admins/_modalAdmins.sass'
+
+// VERSION MOBILE 
+.admins
+    @include flex(column , center , center)
+    margin-top: -70px
+    width: 100%
+
+    &__title
+        @include flex(column , center , center)
+        margin-bottom: 25px
+
+        h2
+            color: $black
+            font-size: $fs-24
+            font-family: $font-primary
+            line-height: 24px
+
+        &__lineLeft, &__lineRight
+            position: absolute
+            width: 23%
+            height: 0px
+            z-index: -10
+
+        &__lineLeft
+            left: 10px
+
+        &__lineRight
+            right: 10px
+
+    &__list
+        @include flex(column , center , center)
+        width: 100%
+
+    &__addTitle
+        @include flex(column , center , center)
+        margin-top: 25px
+        margin-bottom: 25px
+
+        &__subhead
+            @include flex(row , center , center)
+            color: $black
+            font-size: $fs-12
+            line-height: 12px
+            font-family: $font-primary
+
+        &__bigTitle
+            @include flex(row , center , center)
+            width: 100%
+
+            h2
+                color: $black
+                font-size: $fs-24
+                line-height: 24px
+                font-family: $font-primary
+
+            &__lineLeft , &__lineRight
+                width: 23%
+                height: 0px
+                position: absolute
+                z-index: -10
+
+            &__lineLeft
+                left: 10px
+
+            &__lineRight
+                right: 10px
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .admins
+
+        &__title
+            margin-bottom: 35px
+
+            h2
+                font-size: $fs-26
+                line-height: 26px
+                margin: 0 40px 0 40px
+
+            &__lineLeft, &__lineRight
+                width: 20%
+                z-index: -10
+
+            &__lineLeft
+                left: 80px
+
+            &__lineRight
+                right: 80px
+
+        &__list
+            @include flex(row , center , center)
+            flex-wrap: wrap
+
+        &__addTitle
+            margin-top: 40px
+
+            &__subhead
+                font-size: $fs-14
+                line-height: 14px
+
+            &__bigTitle
+
+                h2
+                    font-size: $fs-26
+                    line-height: 26px
+                    margin: 0
+
+                &__lineLeft , &__lineRight
+                    width: 20%
+                    z-index: -10
+
+                &__lineLeft
+                    left: 80px
+
+                &__lineRight
+                    right: 80px
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .admins
+
+        &__title
+            margin-bottom: 30px
+
+            h2
+                font-size: $fs-32
+                line-height: 32px
+                margin: 0 100px 0 100px
+
+            &__lineLeft, &__lineRight
+                width: 21%
+                z-index: -10
+
+            &__lineLeft
+                left: 100px
+
+            &__lineRight
+                right: 100px
+
+        &__list
+            @include flex(row , center , center)
+            flex-wrap: wrap
+
+        &__addTitle__subhead
+            font-size: $fs-20
+            line-height: 20px
+
+        &__addTitle__bigTitle
+
+            h2
+                font-size: $fs-32
+                line-height: 32px
+                margin: 0
+
+            &__lineLeft , &__lineRight
+                width: 21%
+                z-index: -10
+
+            &__lineLeft
+                left: 100px
+
+            &__lineRight
+                right: 100px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .admins
+
+        &__title
+            margin-bottom: 45px
+
+            h2
+                font-size: $fs-40
+                line-height: 40px
+                margin: 0 350px 0 350px
+
+            &__lineLeft, &__lineRight
+                width: 22%
+                z-index: -10
+
+            &__lineLeft
+                left: 260px
+
+            &__lineRight
+                right: 260px
+
+        &__list
+            @include flex(row , center , center)
+            flex-wrap: wrap
+
+        &__addTitle__subhead
+            font-size: $fs-28
+            line-height: 28px
+
+        &__addTitle__bigTitle
+
+            h2
+                font-size: $fs-40
+                line-height: 40px
+                margin: 0
+
+            &__lineLeft , &__lineRight
+                width: 22%
+                z-index: -10
+
+            &__lineLeft
+                left: 260px
+
+            &__lineRight
+                right: 260px

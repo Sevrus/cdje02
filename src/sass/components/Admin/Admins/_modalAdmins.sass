@@ -1,28 +1,29 @@
-@import '../utilities/_variables'
-@import '../utilities/_mixin'
+@import '../../../utilities/_mixin'
+@import '../../../utilities/_variables'
 
 /* MODAL LOGIN */
 /* VERSION MOBILE */
-.modal
+.modalAdmins
     position: fixed
-    background-color: rgba(0,0,0,.7)
+    background-color: rgba(0,0,0,.5)
     width: 100%
     height: 100vh
     top: 0
     z-index: 1002
 
     &__content
-        position: fixed
+        position: absolute
         z-index: 1003
         top: 40%
         left: 50%
         transform: translate(-50%, -50%)
         background-color: $white
-        width: 320px
-        height: 400px
         border-radius: 5px
         font-family: $font-primary
         font-weight: bold
+        width: 320px
+        height: fit-content
+        padding: 30px 0
         @include flex(column, center, center)
 
         &__close
@@ -51,7 +52,7 @@
             &:after
                 transform: rotate(-45deg)
 
-        &__email, &__password
+        &__email, &__password, &__verifPassword
             @include flex(column, center, center)
             width: 100%
 
@@ -66,9 +67,14 @@
                 box-shadow: $shadow
                 border-radius: 5px
                 margin-top: 12px
+                font-family: $font-primary
+                padding: 10px
 
-        &__password
+        &__password, &__verifPassword
             margin-top: 30px
+
+        &__description__input
+            resize: vertical
 
         &__button
             @include articles()
@@ -82,72 +88,63 @@
             &:hover
                 cursor: pointer
                 transform: scale(0.98)
-
-        &__lost-password
-            color: $grey-blue
-            font-size: $fs-14
-            margin-top: 20px
-
-            &:hover
-                color: $red
-                cursor: pointer
-
+                    
 @media screen and (max-height: 600px)
-    .modal
+    .modalAdmins
         &__content
             top: 50%
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
-    .modal
+    .modalAdmins
         &__content
             width: 500px
-            height: 350px
 
-            &__email, &__password
-                &__label
-                    font-size: $fs-18
-
-            &__button
-                font-size: $fs-18
-
-            &__lost-password
-                font-size: $fs-16
-
-/* VERSION L */
-@media screen and (min-width: 1024px)
-    .modal
-        &__content
-            width: 600px
-            height: 400px
-
-            &__email, &__password
+            &__email, &__password, &__verifPassword
                 &__label
                     font-size: $fs-20
 
                 &__input
-                    height: 50px
+                    font-size: $fs-16
 
             &__button
-                height: 50px
                 font-size: $fs-20
 
-            &__lost-password
-                font-size: $fs-18
-
-/* VERSION XL */
-@media screen and (min-width: 1920px)
-    .modal
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .modalAdmins
         &__content
-            width: 700px
-            height: 450px
+            top: 45%
+            width: 600px
 
-            &__email, &__password
+            &__email, &__password, &__verifPassword
                 &__label
                     font-size: $fs-22
 
+                &__input
+                    font-size: $fs-18
+
             &__button
+                height: 50px
                 font-size: $fs-22
 
-            &__lost-password
-                font-size: $fs-20
+@media screen and (min-width: 1024px) and (max-height: 600px)
+    .modalAdmins
+        &__content
+            top: 55%
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .modalAdmins
+        &__content
+            width: 700px
+
+            &__email, &__password, &__verifPassword
+                &__label
+                    font-size: $fs-24
+
+                &__input
+                    font-size: $fs-20
+
+            &__button
+                font-size: $fs-24

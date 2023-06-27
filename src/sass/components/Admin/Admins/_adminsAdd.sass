@@ -1,0 +1,92 @@
+@import '../../../utilities/_mixin.sass'
+@import '../../../utilities/_variables.sass'
+
+// VERSION MOBILE 
+.addAdmins
+    @include flex(column , center , center)
+    width: 100%
+
+    &__email, &__password, &__confirmPassword
+        @include flex(column ,center , center)
+        font-family: $font-primary
+        font-size: $fs-16
+        font-weight: bold
+        margin-bottom: 25px
+        width: 100%
+
+        label
+            margin-bottom: 15px
+
+        input
+            width: 78%
+            max-width: 450px
+            border-radius: 5px
+            border: 1px solid $black
+            box-shadow: $shadow
+            height: 40px
+            text-indent: 10px
+
+    &__btn
+        @include flex(row , center , center)
+        width: 100%
+
+        button
+            @include articles()
+            margin-top: 10px
+            width: 50%
+            max-width: 300px
+            height: 40px
+            border: none
+            font-size: $fs-16
+            font-weight: bold
+
+            &:hover
+                cursor: pointer
+                transform: scale(0.98)
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .addAdmins
+
+        &__email, &__password, &__confirmPassword, button
+            font-size: $fs-18
+
+// VERSION L
+@media screen and (min-width:1024px)
+    .addAdmins
+
+        &__email, &__password, &__confirmPassword
+            margin-bottom: 30px
+
+        &__email, &__password, &__confirmPassword, button
+            font-size: $fs-20
+
+        label
+            margin-bottom: 20px
+
+        input
+            width: 79%
+            max-width: 600px
+
+        button
+            height: 40px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+    .addAdmins
+
+        &__email, &__password, &__confirmPassword
+            margin-bottom: 40px
+
+        &__email, &__password, &__confirmPassword, button
+            font-size: $fs-24
+
+        label
+            margin-bottom: 20px
+
+        input
+            width: 70%
+            max-width: 600px
+
+        button
+            height: 50px

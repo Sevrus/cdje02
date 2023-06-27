@@ -1,11 +1,10 @@
-import {
-    faRightToBracket
-} from "@fortawesome/free-solid-svg-icons";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { NavLink, useLocation } from "react-router-dom";
-import Modal from "../../../modal/Modal";
+import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../../../utilities/AuthContext.jsx";
+import LoginModal from "../../../modal/LoginModal.jsx";
 
 
 const HeaderNav = ({ chessboardDisappear }) => {
@@ -13,7 +12,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
     const [isOpen, setOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
     const [openModal, setOpenModal] = useState(false);
-    const { pathname } = useLocation();
+    const { logout, isLoggedIn } = useContext(AuthContext);
 
     const handleClick = () => {
         if (!isOpen) {
@@ -40,10 +39,15 @@ const HeaderNav = ({ chessboardDisappear }) => {
         };
     }, []);
 
-    const isLoggedIn = () => {
-        if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
-            || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
-            || pathname === "/admin/results" || pathname === "/admin/regulation" || pathname === "/admin/admins") {
+
+    const setLogout = () => {
+        localStorage.removeItem("token");
+        logout();
+    }
+
+
+    const adminLogin = () => {
+        if (isLoggedIn) {
             return (
                 <div className="navbar__links__link__admin">
                     <NavLink
@@ -55,11 +59,12 @@ const HeaderNav = ({ chessboardDisappear }) => {
                         ADMIN
                     </NavLink>
                     <hr className="navbar__links__link__admin__hr" />
-                    <NavLink to="/">
+                    <NavLink to={"/"} onClick={setLogout}>
                         Déconnexion
                     </NavLink>
                 </div>
             )
+
         } else {
             return (
                 <>
@@ -70,7 +75,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                     </a>
                     {
                         openModal && createPortal(
-                            <Modal closeModal={() => setOpenModal(false)} />, document.body
+                            <LoginModal closeModal={() => setOpenModal(false)} />, document.body
                         )
                     }
                 </>
@@ -135,7 +140,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                         </NavLink>
                     </li>
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
-                        {isLoggedIn()}
+                        {adminLogin()}
                     </li>
                 </ul>
 
