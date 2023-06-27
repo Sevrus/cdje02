@@ -807,7 +807,7 @@ time, mark, audio, video {
     top: -210px;
     height: 185px;
     max-height: 300px;
-    width: 320px;
+    width: 350px;
   }
 }
 @media screen and (min-width: 1920px) {
