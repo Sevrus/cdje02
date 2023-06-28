@@ -96,10 +96,19 @@
             &__admin
                 display: flex
                 flex-direction: column
+                border: 1px solid rgba(255, 255, 255, .5)
+                padding: 4px
+
+                a:hover
+                    color: $red
+                    transition: color ease-out .2s
 
                 &__hr
-                    width: 90px
-
+                    width: 60px
+                    margin: 3px 0
+                
+                &__logout
+                    font-size: $fs-13
 
 @media screen and (min-width: 500px)
     .navbar, .navbar--scroll
@@ -166,6 +175,8 @@
 
                 .active
                     border-top: 3.5px solid $red
+                    margin-bottom: 10px
+                    padding-top: 10px
 
                 &--scroll
                     font-size: $fs-14
@@ -195,6 +206,12 @@
 
                 &--scroll
                     font-size: $fs-16
+                
+                &__admin__logout
+                    font-size: $fs-14
+                
+                &__admin__hr
+                    width: 70px
 
             &__icon
                 margin-left: 40px
@@ -250,6 +267,12 @@
 
             &__link, &__link--scroll
                 font-size: $fs-18
+
+                &__admin__logout
+                    font-size: $fs-16
+                
+                &__admin__hr
+                    width: 80px
 
                 .active
                     border-top: none

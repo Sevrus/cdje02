@@ -59,7 +59,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                         ADMIN
                     </NavLink>
                     <hr className="navbar__links__link__admin__hr" />
-                    <NavLink to={"/"} onClick={setLogout}>
+                    <NavLink to={"/"} onClick={setLogout} className="navbar__links__link__admin__logout">
                         LOGOUT
                     </NavLink>
                 </div>

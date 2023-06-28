@@ -1855,9 +1855,19 @@ time, mark, audio, video {
 .navbar__links__link__admin, .navbar__links__link--scroll__admin, .navbar__links--scroll__link__admin, .navbar__links--scroll__link--scroll__admin, .navbar--scroll__links__link__admin, .navbar--scroll__links__link--scroll__admin, .navbar--scroll__links--scroll__link__admin, .navbar--scroll__links--scroll__link--scroll__admin {
   display: flex;
   flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 4px;
+}
+.navbar__links__link__admin a:hover, .navbar__links__link--scroll__admin a:hover, .navbar__links--scroll__link__admin a:hover, .navbar__links--scroll__link--scroll__admin a:hover, .navbar--scroll__links__link__admin a:hover, .navbar--scroll__links__link--scroll__admin a:hover, .navbar--scroll__links--scroll__link__admin a:hover, .navbar--scroll__links--scroll__link--scroll__admin a:hover {
+  color: #f73746;
+  transition: color ease-out 0.2s;
 }
 .navbar__links__link__admin__hr, .navbar__links__link--scroll__admin__hr, .navbar__links--scroll__link__admin__hr, .navbar__links--scroll__link--scroll__admin__hr, .navbar--scroll__links__link__admin__hr, .navbar--scroll__links__link--scroll__admin__hr, .navbar--scroll__links--scroll__link__admin__hr, .navbar--scroll__links--scroll__link--scroll__admin__hr {
-  width: 90px;
+  width: 60px;
+  margin: 3px 0;
+}
+.navbar__links__link__admin__logout, .navbar__links__link--scroll__admin__logout, .navbar__links--scroll__link__admin__logout, .navbar__links--scroll__link--scroll__admin__logout, .navbar--scroll__links__link__admin__logout, .navbar--scroll__links__link--scroll__admin__logout, .navbar--scroll__links--scroll__link__admin__logout, .navbar--scroll__links--scroll__link--scroll__admin__logout {
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 500px) {
@@ -1931,6 +1941,8 @@ time, mark, audio, video {
   }
   .navbar__links__link .active {
     border-top: 3.5px solid #f73746;
+    margin-bottom: 10px;
+    padding-top: 10px;
   }
   .navbar__links__link--scroll {
     font-size: 0.875rem;
@@ -1960,6 +1972,12 @@ time, mark, audio, video {
   }
   .navbar__links__link--scroll {
     font-size: 1rem;
+  }
+  .navbar__links__link__admin__logout {
+    font-size: 0.875rem;
+  }
+  .navbar__links__link__admin__hr {
+    width: 70px;
   }
   .navbar__links__icon {
     margin-left: 40px;
@@ -2020,6 +2038,12 @@ time, mark, audio, video {
   }
   .navbar__links__link, .navbar__links__link--scroll {
     font-size: 1.125rem;
+  }
+  .navbar__links__link__admin__logout, .navbar__links__link--scroll__admin__logout {
+    font-size: 1rem;
+  }
+  .navbar__links__link__admin__hr, .navbar__links__link--scroll__admin__hr {
+    width: 80px;
   }
   .navbar__links__link .active, .navbar__links__link--scroll .active {
     border-top: none;
