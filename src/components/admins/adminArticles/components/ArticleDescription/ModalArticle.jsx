@@ -69,7 +69,7 @@ const ModalArticle = ({ closeModal, articleData }) => {
                 </div>
 
                 <div className="modalArticle__content__image">
-                    <label htmlFor="image" className="modalArticle__content__image__label">Image</label>
+                    <label htmlFor="image" className="modalArticle__content__image__label">Photo de l'auteur</label>
                     <input type="text" name="image" id="image" className="modalArticle__content__image__input" value={image} onChange={(e) => setImage(e.target.value)} />
                 </div>
 

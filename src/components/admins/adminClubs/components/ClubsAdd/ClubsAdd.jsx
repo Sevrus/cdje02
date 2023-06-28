@@ -75,17 +75,17 @@ const ClubsAdd = () => {
 
                     <div className="addClub__members">
                         <label htmlFor="members">Membres</label>
-                        <input type="text" name="members" maxLength={3} required={true} value={members} onChange={(e) => setMembers(e.target.value)}/>
+                        <input type="text" name="members" maxLength={3} required={true} value={members} placeholder="Nombre de membres dans le club" onChange={(e) => setMembers(e.target.value)}/>
                     </div>
 
                     <div className="addClub__coordx">
-                        <label htmlFor="coordx">Coordonnée X</label>
-                        <input type="text" name="coordx" maxLength={25} required={true} value={coordx} onChange={(e) => setCoordx(e.target.value)} />
+                        <label htmlFor="coordx">Latitude</label>
+                        <input type="text" name="coordx" maxLength={25} required={true} value={coordx} placeholder="Coordonnée GPS X du club" onChange={(e) => setCoordx(e.target.value)} />
                     </div>
 
                     <div className="addClub__coordy">
-                        <label htmlFor="coordy">Coordonnée Y</label>
-                        <input type="text" name="coordy" maxLength={25} required={true} value={coordy} onChange={(e) => setCoordy(e.target.value)} />
+                        <label htmlFor="coordy">Longitude</label>
+                        <input type="text" name="coordy" maxLength={25} required={true} value={coordy} placeholder="Coordonnée GPS Y du club" onChange={(e) => setCoordy(e.target.value)} />
                     </div>
 
                     <div className="addClub__btn">

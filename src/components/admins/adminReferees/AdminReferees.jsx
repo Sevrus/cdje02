@@ -8,26 +8,26 @@ const AdminReferees = () => {
     if (pathname === "/admin/referees") {
         return (
             <>
-                <section className="referee">
+                <section className="adminReferee">
 
-                    <div className="referee__title">
-                        <hr className="referee__title__lineLeft" />
+                    <div className="adminReferee__title">
+                        <hr className="adminReferee__title__lineLeft" />
                         <h2>ARBITRES</h2>
-                        <hr className="referee__title__lineRight" />
+                        <hr className="adminReferee__title__lineRight" />
                     </div>
 
-                    <div className="referee__list">
+                    <div className="adminReferee__list">
                         <RefereesDescription />
                     </div>
 
-                    <div className="referee__addTitle">
+                    <div className="adminReferee__addTitle">
 
-                        <h3 className="referee__addTitle__subhead">AJOUTER UN</h3>
+                        <h3 className="adminReferee__addTitle__subhead">AJOUTER UN</h3>
 
-                        <div className="referee__addTitle__bigTitle">
-                            <hr className="referee__addTitle__bigTitle__lineLeft" />
+                        <div className="adminReferee__addTitle__bigTitle">
+                            <hr className="adminReferee__addTitle__bigTitle__lineLeft" />
                             <h2>ARBITRE</h2>
-                            <hr className="referee__addTitle__bigTitle__lineRight" />
+                            <hr className="adminReferee__addTitle__bigTitle__lineRight" />
                         </div>
 
                     </div>

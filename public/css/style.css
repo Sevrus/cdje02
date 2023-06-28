@@ -27,7 +27,6 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-top: 30px;
 }
 .form__imageLeft, .form__imageRight {
   display: none;
@@ -93,9 +92,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .form {
-    margin-top: 60px;
-  }
   .form__lastname, .form__firstname, .form__email, .form__message {
     margin-bottom: 30px;
   }
@@ -119,7 +115,7 @@ time, mark, audio, video {
     filter: invert(1);
     width: 20%;
     position: absolute;
-    top: 60vh;
+    top: 65vh;
     opacity: 65%;
   }
   .form__imageLeft {
@@ -151,13 +147,13 @@ time, mark, audio, video {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 35px;
 }
 .contact__title {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 35px;
 }
 .contact__title h2 {
   color: #242627;
@@ -191,8 +187,8 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .contact {
-    margin-top: 50px;
+  .contact__title {
+    margin-bottom: 60px;
   }
   .contact__title h2 {
     font-size: 2rem;
@@ -207,9 +203,6 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1920px) {
-  .contact {
-    margin-top: 90px;
-  }
   .contact__title h2 {
     font-size: 3rem;
     line-height: 40px;
@@ -252,7 +245,7 @@ time, mark, audio, video {
 }
 .newsArticle__title h4 {
   margin: auto;
-  font-size: 0.875rem;
+  font-size: 1rem;
   padding: 10px;
 }
 .newsArticle__description {
@@ -261,7 +254,7 @@ time, mark, audio, video {
 .newsArticle__description p {
   text-align: start;
   font-size: 0.875rem;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
 }
 .newsArticle__link {
@@ -272,6 +265,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   font-size: 0.875rem;
   color: #f73746;
+  font-weight: bold;
   padding: 0 10px 10px 10px;
 }
 
@@ -314,7 +308,7 @@ time, mark, audio, video {
   }
   .newsArticle__description p {
     font-size: 1rem;
-    padding: 0 20px 20px 20px;
+    padding: 30px;
   }
   .newsArticle__link a {
     font-size: 1.125rem;
@@ -324,7 +318,7 @@ time, mark, audio, video {
 @media screen and (min-width: 1920px) {
   .newsArticle {
     display: flex;
-    width: 73%;
+    width: 70%;
     margin-top: 0;
   }
   .newsArticle__title__lineLeft, .newsArticle__title__lineRight {
@@ -479,13 +473,13 @@ time, mark, audio, video {
 }
 .newsOpenArticle__title h4 {
   margin: auto;
-  font-size: 0.875rem;
+  font-size: 1rem;
   padding: 10px;
 }
 .newsOpenArticle__description p {
   text-align: start;
   font-size: 0.875rem;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
 }
 .newsOpenArticle__info {
@@ -495,14 +489,19 @@ time, mark, audio, video {
   align-items: center;
 }
 .newsOpenArticle__info hr {
-  width: 100%;
+  width: 97%;
+  margin-top: 10px;
 }
 .newsOpenArticle__info__bottom {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px 10px 10px;
+  padding: 0 15px 10px 15px;
+  font-weight: bold;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.875rem;
 }
 .newsOpenArticle__info__bottom a {
   display: flex;
@@ -510,12 +509,10 @@ time, mark, audio, video {
   justify-content: start;
   align-items: center;
   width: 60%;
-  font-family: "Noto Sans", sans-serif;
-  font-size: 0.875rem;
   color: #f73746;
 }
 .newsOpenArticle__info__bottom a img {
-  width: 20%;
+  width: 40px;
   margin-right: 5px;
 }
 
@@ -542,11 +539,8 @@ time, mark, audio, video {
   .newsOpenArticle__title__lineLeft {
     margin-left: 20px;
   }
-  .newsOpenArticle__info__bottom {
-    width: 100%;
-  }
   .newsOpenArticle__info__bottom a img {
-    width: 10%;
+    width: 50px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -563,11 +557,11 @@ time, mark, audio, video {
     padding: 20px;
   }
   .newsOpenArticle__description p {
+    padding: 30px;
     font-size: 1rem;
-    padding: 0 20px 20px 20px;
   }
   .newsOpenArticle__info__bottom a img {
-    width: 10%;
+    width: 60px;
   }
   .newsOpenArticle__info__bottom a p {
     font-size: 1rem;
@@ -576,7 +570,7 @@ time, mark, audio, video {
 @media screen and (min-width: 1920px) {
   .newsOpenArticle {
     display: flex;
-    width: 73%;
+    width: 70%;
     margin-top: 0;
   }
   .newsOpenArticle__title__lineLeft, .newsOpenArticle__title__lineRight {
@@ -595,13 +589,13 @@ time, mark, audio, video {
     font-size: 1.25rem;
   }
   .newsOpenArticle__info__bottom {
-    padding: 5px 15px 15px 15px;
+    padding: 5px 20px 15px 20px;
   }
   .newsOpenArticle__info__bottom p {
     font-size: 1.25rem;
   }
   .newsOpenArticle__info__bottom a img {
-    width: 8%;
+    width: 70px;
     margin-right: 15px;
   }
   .newsOpenArticle__info__bottom a p {
@@ -840,16 +834,15 @@ time, mark, audio, video {
 .clubs {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
 }
 .clubs .leaflet-container {
   margin: auto;
   width: 80%;
   height: 480px;
   margin-bottom: 15px;
-  z-index: 0;
 }
 .clubs__title {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -925,10 +918,8 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .clubs {
-    margin-top: 100px;
-  }
   .clubs__title {
+    margin-top: 80px;
     margin-bottom: 30px;
   }
   .clubs__title__subhead {
@@ -1325,7 +1316,7 @@ time, mark, audio, video {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 35px;
+  margin-top: 50px;
 }
 .title-referee__left-line, .title-referee__right-line {
   position: absolute;
@@ -1352,7 +1343,7 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1024px) {
   .title-referee {
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 2rem;
   }
   .title-referee__left-line {
@@ -1495,18 +1486,26 @@ time, mark, audio, video {
 .regulation__title {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 50px 0 35px 0;
+  margin-top: 50px;
+  margin-bottom: 35px;
 }
 .regulation__title h2 {
   font-size: 1.5rem;
   color: #242627;
 }
 .regulation__title__left-line, .regulation__title__right-line {
+  position: absolute;
   width: 20%;
   border: 1px solid rgba(0, 0, 0, 0.35);
+}
+.regulation__title__left-line {
+  left: 10px;
+}
+.regulation__title__right-line {
+  right: 10px;
 }
 .regulation__list {
   display: flex;
@@ -1521,6 +1520,12 @@ time, mark, audio, video {
   .regulation__title h2 {
     font-size: 1.625rem;
   }
+  .regulation__title__left-line {
+    left: 80px;
+  }
+  .regulation__title__right-line {
+    right: 80px;
+  }
   .regulation__list {
     width: 100%;
     display: flex;
@@ -1534,11 +1539,17 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .regulation__title {
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 60px;
   }
   .regulation__title h2 {
     font-size: 2rem;
+  }
+  .regulation__title__left-line {
+    left: 100px;
+  }
+  .regulation__title__right-line {
+    right: 100px;
   }
   .regulation__list {
     flex-direction: column;
@@ -1548,6 +1559,12 @@ time, mark, audio, video {
 @media screen and (min-width: 1920px) {
   .regulation__title h2 {
     font-size: 3rem;
+  }
+  .regulation__title__left-line {
+    left: 260px;
+  }
+  .regulation__title__right-line {
+    right: 260px;
   }
   .regulation__list {
     flex-direction: row;
@@ -2922,6 +2939,7 @@ time, mark, audio, video {
   top: 70px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 .adminNav:hover {
   cursor: pointer;
@@ -3091,6 +3109,7 @@ time, mark, audio, video {
   border-radius: 5px;
   border: 1px solid #242627;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans", sans-serif;
   height: 40px;
   text-indent: 10px;
 }
@@ -3108,7 +3127,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 40px;
-  width: 50%;
+  width: 60%;
   max-width: 300px;
   height: 40px;
   border: none;
@@ -3124,6 +3143,9 @@ time, mark, audio, video {
   .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt, .addComity button {
     font-size: 1.125rem;
   }
+  .addComity__job input, .addComity__lastname input, .addComity__firstname input, .addComity__email input, .addComity__image input, .addComity__alt input, .addComity button input {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt {
@@ -3138,6 +3160,7 @@ time, mark, audio, video {
   .addComity input {
     width: 79%;
     max-width: 600px;
+    font-size: 1.125rem;
   }
   .addComity button {
     height: 40px;
@@ -3147,7 +3170,7 @@ time, mark, audio, video {
   .addComity {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
   }
   .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt {
     margin-bottom: 40px;
@@ -3162,6 +3185,7 @@ time, mark, audio, video {
   .addComity input {
     width: 85%;
     max-width: 600px;
+    font-size: 1.25rem;
   }
   .addComity button {
     margin-top: 20px;
@@ -3256,8 +3280,8 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 40px;
-  width: 80%;
-  height: 45px;
+  width: 60%;
+  height: 50px;
   border: none;
   font-size: 1rem;
   font-weight: bold;
@@ -3301,7 +3325,7 @@ time, mark, audio, video {
     font-size: 1.125rem;
   }
   .modalComity__content__button {
-    height: 50px;
+    height: 55px;
     font-size: 1.375rem;
   }
 }
@@ -3324,9 +3348,10 @@ time, mark, audio, video {
   }
   .modalComity__content__button {
     font-size: 1.5rem;
+    width: 50%;
   }
 }
-.comity {
+.adminComity {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3334,39 +3359,39 @@ time, mark, audio, video {
   margin-top: -70px;
   width: 100%;
 }
-.comity__title {
+.adminComity__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
-.comity__title h2 {
+.adminComity__title h2 {
   color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
   line-height: 24px;
 }
-.comity__title__lineLeft, .comity__title__lineRight {
+.adminComity__title__lineLeft, .adminComity__title__lineRight {
   position: absolute;
   width: 23%;
   height: 0px;
   z-index: -10;
 }
-.comity__title__lineLeft {
+.adminComity__title__lineLeft {
   left: 10px;
 }
-.comity__title__lineRight {
+.adminComity__title__lineRight {
   right: 10px;
 }
-.comity__list {
+.adminComity__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.comity__addTitle {
+.adminComity__addTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3374,7 +3399,7 @@ time, mark, audio, video {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.comity__addTitle__subhead {
+.adminComity__addTitle__subhead {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3384,170 +3409,171 @@ time, mark, audio, video {
   line-height: 12px;
   font-family: "Noto Sans", sans-serif;
 }
-.comity__addTitle__bigTitle {
+.adminComity__addTitle__bigTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.comity__addTitle__bigTitle h2 {
+.adminComity__addTitle__bigTitle h2 {
   color: #242627;
   font-size: 1.5rem;
   line-height: 24px;
   font-family: "Noto Sans", sans-serif;
 }
-.comity__addTitle__bigTitle__lineLeft, .comity__addTitle__bigTitle__lineRight {
+.adminComity__addTitle__bigTitle__lineLeft, .adminComity__addTitle__bigTitle__lineRight {
   width: 23%;
   height: 0px;
   position: absolute;
   z-index: -10;
 }
-.comity__addTitle__bigTitle__lineLeft {
+.adminComity__addTitle__bigTitle__lineLeft {
   left: 10px;
 }
-.comity__addTitle__bigTitle__lineRight {
+.adminComity__addTitle__bigTitle__lineRight {
   right: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .comity__title {
+  .adminComity__title {
     margin-bottom: 35px;
   }
-  .comity__title h2 {
+  .adminComity__title h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0 40px 0 40px;
   }
-  .comity__title__lineLeft, .comity__title__lineRight {
+  .adminComity__title__lineLeft, .adminComity__title__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .comity__title__lineLeft {
+  .adminComity__title__lineLeft {
     left: 80px;
   }
-  .comity__title__lineRight {
+  .adminComity__title__lineRight {
     right: 80px;
   }
-  .comity__list {
+  .adminComity__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .comity__addTitle {
+  .adminComity__addTitle {
     margin-top: 40px;
   }
-  .comity__addTitle__subhead {
+  .adminComity__addTitle__subhead {
     font-size: 0.875rem;
     line-height: 14px;
   }
-  .comity__addTitle__bigTitle h2 {
+  .adminComity__addTitle__bigTitle h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0;
   }
-  .comity__addTitle__bigTitle__lineLeft, .comity__addTitle__bigTitle__lineRight {
+  .adminComity__addTitle__bigTitle__lineLeft, .adminComity__addTitle__bigTitle__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .comity__addTitle__bigTitle__lineLeft {
+  .adminComity__addTitle__bigTitle__lineLeft {
     left: 80px;
   }
-  .comity__addTitle__bigTitle__lineRight {
+  .adminComity__addTitle__bigTitle__lineRight {
     right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .comity__title {
+  .adminComity__title {
     margin-bottom: 30px;
   }
-  .comity__title h2 {
+  .adminComity__title h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0 100px 0 100px;
   }
-  .comity__title__lineLeft, .comity__title__lineRight {
+  .adminComity__title__lineLeft, .adminComity__title__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .comity__title__lineLeft {
+  .adminComity__title__lineLeft {
     left: 100px;
   }
-  .comity__title__lineRight {
+  .adminComity__title__lineRight {
     right: 100px;
   }
-  .comity__list {
+  .adminComity__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .comity__addTitle__subhead {
+  .adminComity__addTitle__subhead {
     font-size: 1.25rem;
     line-height: 20px;
   }
-  .comity__addTitle__bigTitle h2 {
+  .adminComity__addTitle__bigTitle h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0;
   }
-  .comity__addTitle__bigTitle__lineLeft, .comity__addTitle__bigTitle__lineRight {
+  .adminComity__addTitle__bigTitle__lineLeft, .adminComity__addTitle__bigTitle__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .comity__addTitle__bigTitle__lineLeft {
+  .adminComity__addTitle__bigTitle__lineLeft {
     left: 100px;
   }
-  .comity__addTitle__bigTitle__lineRight {
+  .adminComity__addTitle__bigTitle__lineRight {
     right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .comity__title {
+  .adminComity__title {
     margin-bottom: 45px;
   }
-  .comity__title h2 {
+  .adminComity__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .comity__title__lineLeft, .comity__title__lineRight {
+  .adminComity__title__lineLeft, .adminComity__title__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .comity__title__lineLeft {
+  .adminComity__title__lineLeft {
     left: 260px;
   }
-  .comity__title__lineRight {
+  .adminComity__title__lineRight {
     right: 260px;
   }
-  .comity__list {
+  .adminComity__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 90%;
   }
-  .comity__addTitle__subhead {
+  .adminComity__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .comity__addTitle__bigTitle h2 {
+  .adminComity__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .comity__addTitle__bigTitle__lineLeft, .comity__addTitle__bigTitle__lineRight {
+  .adminComity__addTitle__bigTitle__lineLeft, .adminComity__addTitle__bigTitle__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .comity__addTitle__bigTitle__lineLeft {
+  .adminComity__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .comity__addTitle__bigTitle__lineRight {
+  .adminComity__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
@@ -3578,6 +3604,7 @@ time, mark, audio, video {
   border-radius: 5px;
   border: 1px solid #242627;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans", sans-serif;
   height: 40px;
   text-indent: 10px;
 }
@@ -3595,7 +3622,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 10px;
-  width: 50%;
+  width: 60%;
   max-width: 300px;
   height: 40px;
   border: none;
@@ -3611,6 +3638,9 @@ time, mark, audio, video {
   .addResult__title, .addResult__link, .addResult button {
     font-size: 1.125rem;
   }
+  .addResult__title input, .addResult__link input, .addResult button input {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .addResult__title, .addResult__link {
@@ -3625,12 +3655,16 @@ time, mark, audio, video {
   .addResult input {
     width: 79%;
     max-width: 600px;
+    font-size: 1.125rem;
   }
   .addResult button {
     height: 40px;
   }
 }
 @media screen and (min-width: 1920px) {
+  .addResult {
+    width: 90%;
+  }
   .addResult__title, .addResult__link {
     margin-bottom: 40px;
   }
@@ -3643,6 +3677,7 @@ time, mark, audio, video {
   .addResult input {
     width: 70%;
     max-width: 600px;
+    font-size: 1.25rem;
   }
   .addResult button {
     height: 50px;
@@ -3801,8 +3836,8 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 40px;
-  width: 80%;
-  height: 45px;
+  width: 60%;
+  height: 50px;
   border: none;
   font-size: 1rem;
   font-weight: bold;
@@ -3845,7 +3880,7 @@ time, mark, audio, video {
     font-size: 1.125rem;
   }
   .modalResult__content__button {
-    height: 50px;
+    height: 55px;
     font-size: 1.375rem;
   }
 }
@@ -3867,9 +3902,10 @@ time, mark, audio, video {
   }
   .modalResult__content__button {
     font-size: 1.5rem;
+    width: 50%;
   }
 }
-.result {
+.adminResult {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3877,39 +3913,39 @@ time, mark, audio, video {
   margin-top: -70px;
   width: 100%;
 }
-.result__title {
+.adminResult__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
-.result__title h2 {
+.adminResult__title h2 {
   color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
   line-height: 24px;
 }
-.result__title__lineLeft, .result__title__lineRight {
+.adminResult__title__lineLeft, .adminResult__title__lineRight {
   position: absolute;
   width: 23%;
   height: 0px;
   z-index: -10;
 }
-.result__title__lineLeft {
+.adminResult__title__lineLeft {
   left: 10px;
 }
-.result__title__lineRight {
+.adminResult__title__lineRight {
   right: 10px;
 }
-.result__list {
+.adminResult__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.result__addTitle {
+.adminResult__addTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3917,7 +3953,7 @@ time, mark, audio, video {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.result__addTitle__subhead {
+.adminResult__addTitle__subhead {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3927,170 +3963,171 @@ time, mark, audio, video {
   line-height: 12px;
   font-family: "Noto Sans", sans-serif;
 }
-.result__addTitle__bigTitle {
+.adminResult__addTitle__bigTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.result__addTitle__bigTitle h2 {
+.adminResult__addTitle__bigTitle h2 {
   color: #242627;
   font-size: 1.5rem;
   line-height: 24px;
   font-family: "Noto Sans", sans-serif;
 }
-.result__addTitle__bigTitle__lineLeft, .result__addTitle__bigTitle__lineRight {
+.adminResult__addTitle__bigTitle__lineLeft, .adminResult__addTitle__bigTitle__lineRight {
   width: 23%;
   height: 0px;
   position: absolute;
   z-index: -10;
 }
-.result__addTitle__bigTitle__lineLeft {
+.adminResult__addTitle__bigTitle__lineLeft {
   left: 10px;
 }
-.result__addTitle__bigTitle__lineRight {
+.adminResult__addTitle__bigTitle__lineRight {
   right: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .result__title {
+  .adminResult__title {
     margin-bottom: 35px;
   }
-  .result__title h2 {
+  .adminResult__title h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0 40px 0 40px;
   }
-  .result__title__lineLeft, .result__title__lineRight {
+  .adminResult__title__lineLeft, .adminResult__title__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .result__title__lineLeft {
+  .adminResult__title__lineLeft {
     left: 80px;
   }
-  .result__title__lineRight {
+  .adminResult__title__lineRight {
     right: 80px;
   }
-  .result__list {
+  .adminResult__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .result__addTitle {
+  .adminResult__addTitle {
     margin-top: 40px;
   }
-  .result__addTitle__subhead {
+  .adminResult__addTitle__subhead {
     font-size: 0.875rem;
     line-height: 14px;
   }
-  .result__addTitle__bigTitle h2 {
+  .adminResult__addTitle__bigTitle h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0;
   }
-  .result__addTitle__bigTitle__lineLeft, .result__addTitle__bigTitle__lineRight {
+  .adminResult__addTitle__bigTitle__lineLeft, .adminResult__addTitle__bigTitle__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .result__addTitle__bigTitle__lineLeft {
+  .adminResult__addTitle__bigTitle__lineLeft {
     left: 80px;
   }
-  .result__addTitle__bigTitle__lineRight {
+  .adminResult__addTitle__bigTitle__lineRight {
     right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .result__title {
+  .adminResult__title {
     margin-bottom: 30px;
   }
-  .result__title h2 {
+  .adminResult__title h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0 100px 0 100px;
   }
-  .result__title__lineLeft, .result__title__lineRight {
+  .adminResult__title__lineLeft, .adminResult__title__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .result__title__lineLeft {
+  .adminResult__title__lineLeft {
     left: 100px;
   }
-  .result__title__lineRight {
+  .adminResult__title__lineRight {
     right: 100px;
   }
-  .result__list {
+  .adminResult__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .result__addTitle__subhead {
+  .adminResult__addTitle__subhead {
     font-size: 1.25rem;
     line-height: 20px;
   }
-  .result__addTitle__bigTitle h2 {
+  .adminResult__addTitle__bigTitle h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0;
   }
-  .result__addTitle__bigTitle__lineLeft, .result__addTitle__bigTitle__lineRight {
+  .adminResult__addTitle__bigTitle__lineLeft, .adminResult__addTitle__bigTitle__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .result__addTitle__bigTitle__lineLeft {
+  .adminResult__addTitle__bigTitle__lineLeft {
     left: 100px;
   }
-  .result__addTitle__bigTitle__lineRight {
+  .adminResult__addTitle__bigTitle__lineRight {
     right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .result__title {
+  .adminResult__title {
     margin-bottom: 45px;
   }
-  .result__title h2 {
+  .adminResult__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .result__title__lineLeft, .result__title__lineRight {
+  .adminResult__title__lineLeft, .adminResult__title__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .result__title__lineLeft {
+  .adminResult__title__lineLeft {
     left: 260px;
   }
-  .result__title__lineRight {
+  .adminResult__title__lineRight {
     right: 260px;
   }
-  .result__list {
+  .adminResult__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 90%;
   }
-  .result__addTitle__subhead {
+  .adminResult__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .result__addTitle__bigTitle h2 {
+  .adminResult__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .result__addTitle__bigTitle__lineLeft, .result__addTitle__bigTitle__lineRight {
+  .adminResult__addTitle__bigTitle__lineLeft, .adminResult__addTitle__bigTitle__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .result__addTitle__bigTitle__lineLeft {
+  .adminResult__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .result__addTitle__bigTitle__lineRight {
+  .adminResult__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
@@ -4121,6 +4158,7 @@ time, mark, audio, video {
   border-radius: 5px;
   border: 1px solid #242627;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans", sans-serif;
   height: 40px;
   text-indent: 10px;
 }
@@ -4138,7 +4176,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 10px;
-  width: 50%;
+  width: 60%;
   max-width: 300px;
   height: 40px;
   border: none;
@@ -4154,6 +4192,9 @@ time, mark, audio, video {
   .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy, .addClub button {
     font-size: 1.125rem;
   }
+  .addClub__name input, .addClub__town input, .addClub__site input, .addClub__president input, .addClub__tel input, .addClub__members input, .addClub__coordx input, .addClub__coordy input, .addClub button input {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy {
@@ -4168,6 +4209,7 @@ time, mark, audio, video {
   .addClub input {
     width: 79%;
     max-width: 600px;
+    font-size: 1.125rem;
   }
   .addClub button {
     height: 40px;
@@ -4177,7 +4219,7 @@ time, mark, audio, video {
   .addClub {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
   }
   .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy {
     margin-bottom: 40px;
@@ -4192,6 +4234,7 @@ time, mark, audio, video {
   .addClub input {
     width: 88%;
     max-width: 600px;
+    font-size: 1.25rem;
   }
   .addClub button {
     margin-top: 20px;
@@ -4211,6 +4254,7 @@ time, mark, audio, video {
   width: 80%;
   margin-bottom: 15px;
   padding: 5px;
+  z-index: 0;
 }
 .articleClub__text {
   display: flex;
@@ -4349,8 +4393,8 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 40px;
-  width: 80%;
-  height: 45px;
+  width: 60%;
+  height: 50px;
   border: none;
   font-size: 1rem;
   font-weight: bold;
@@ -4394,7 +4438,7 @@ time, mark, audio, video {
     font-size: 1.125rem;
   }
   .modalClub__content__button {
-    height: 50px;
+    height: 55px;
     font-size: 1.375rem;
   }
 }
@@ -4417,9 +4461,10 @@ time, mark, audio, video {
   }
   .modalClub__content__button {
     font-size: 1.5rem;
+    width: 60%;
   }
 }
-.clubs {
+.adminClubs {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4427,39 +4472,38 @@ time, mark, audio, video {
   margin-top: -70px;
   width: 100%;
 }
-.clubs__title {
+.adminClubs__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
-.clubs__title h2 {
+.adminClubs__title h2 {
   color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
   line-height: 24px;
 }
-.clubs__title__lineLeft, .clubs__title__lineRight {
+.adminClubs__title__lineLeft, .adminClubs__title__lineRight {
   position: absolute;
   width: 23%;
   height: 0px;
   z-index: -10;
 }
-.clubs__title__lineLeft {
+.adminClubs__title__lineLeft {
   left: 10px;
 }
-.clubs__title__lineRight {
+.adminClubs__title__lineRight {
   right: 10px;
 }
-.clubs__list {
+.adminClubs__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
-.clubs__addTitle {
+.adminClubs__addTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4467,7 +4511,7 @@ time, mark, audio, video {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.clubs__addTitle__subhead {
+.adminClubs__addTitle__subhead {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -4477,170 +4521,171 @@ time, mark, audio, video {
   line-height: 12px;
   font-family: "Noto Sans", sans-serif;
 }
-.clubs__addTitle__bigTitle {
+.adminClubs__addTitle__bigTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.clubs__addTitle__bigTitle h2 {
+.adminClubs__addTitle__bigTitle h2 {
   color: #242627;
   font-size: 1.5rem;
   line-height: 24px;
   font-family: "Noto Sans", sans-serif;
 }
-.clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+.adminClubs__addTitle__bigTitle__lineLeft, .adminClubs__addTitle__bigTitle__lineRight {
   width: 23%;
   height: 0px;
   position: absolute;
   z-index: -10;
 }
-.clubs__addTitle__bigTitle__lineLeft {
+.adminClubs__addTitle__bigTitle__lineLeft {
   left: 10px;
 }
-.clubs__addTitle__bigTitle__lineRight {
+.adminClubs__addTitle__bigTitle__lineRight {
   right: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .clubs__title {
+  .adminClubs__title {
     margin-bottom: 35px;
   }
-  .clubs__title h2 {
+  .adminClubs__title h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0 40px 0 40px;
   }
-  .clubs__title__lineLeft, .clubs__title__lineRight {
+  .adminClubs__title__lineLeft, .adminClubs__title__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .clubs__title__lineLeft {
+  .adminClubs__title__lineLeft {
     left: 80px;
   }
-  .clubs__title__lineRight {
+  .adminClubs__title__lineRight {
     right: 80px;
   }
-  .clubs__list {
+  .adminClubs__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .clubs__addTitle {
+  .adminClubs__addTitle {
     margin-top: 40px;
   }
-  .clubs__addTitle__subhead {
+  .adminClubs__addTitle__subhead {
     font-size: 0.875rem;
     line-height: 14px;
   }
-  .clubs__addTitle__bigTitle h2 {
+  .adminClubs__addTitle__bigTitle h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0;
   }
-  .clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+  .adminClubs__addTitle__bigTitle__lineLeft, .adminClubs__addTitle__bigTitle__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .clubs__addTitle__bigTitle__lineLeft {
+  .adminClubs__addTitle__bigTitle__lineLeft {
     left: 80px;
   }
-  .clubs__addTitle__bigTitle__lineRight {
+  .adminClubs__addTitle__bigTitle__lineRight {
     right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .clubs__title {
+  .adminClubs__title {
     margin-bottom: 30px;
   }
-  .clubs__title h2 {
+  .adminClubs__title h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0 100px 0 100px;
   }
-  .clubs__title__lineLeft, .clubs__title__lineRight {
+  .adminClubs__title__lineLeft, .adminClubs__title__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .clubs__title__lineLeft {
+  .adminClubs__title__lineLeft {
     left: 100px;
   }
-  .clubs__title__lineRight {
+  .adminClubs__title__lineRight {
     right: 100px;
   }
-  .clubs__list {
+  .adminClubs__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .clubs__addTitle__subhead {
+  .adminClubs__addTitle__subhead {
     font-size: 1.25rem;
     line-height: 20px;
   }
-  .clubs__addTitle__bigTitle h2 {
+  .adminClubs__addTitle__bigTitle h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0;
   }
-  .clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+  .adminClubs__addTitle__bigTitle__lineLeft, .adminClubs__addTitle__bigTitle__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .clubs__addTitle__bigTitle__lineLeft {
+  .adminClubs__addTitle__bigTitle__lineLeft {
     left: 100px;
   }
-  .clubs__addTitle__bigTitle__lineRight {
+  .adminClubs__addTitle__bigTitle__lineRight {
     right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .clubs__title {
+  .adminClubs__title {
     margin-bottom: 45px;
   }
-  .clubs__title h2 {
+  .adminClubs__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .clubs__title__lineLeft, .clubs__title__lineRight {
+  .adminClubs__title__lineLeft, .adminClubs__title__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .clubs__title__lineLeft {
+  .adminClubs__title__lineLeft {
     left: 260px;
   }
-  .clubs__title__lineRight {
+  .adminClubs__title__lineRight {
     right: 260px;
   }
-  .clubs__list {
+  .adminClubs__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 90%;
   }
-  .clubs__addTitle__subhead {
+  .adminClubs__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .clubs__addTitle__bigTitle h2 {
+  .adminClubs__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .clubs__addTitle__bigTitle__lineLeft, .clubs__addTitle__bigTitle__lineRight {
+  .adminClubs__addTitle__bigTitle__lineLeft, .adminClubs__addTitle__bigTitle__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .clubs__addTitle__bigTitle__lineLeft {
+  .adminClubs__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .clubs__addTitle__bigTitle__lineRight {
+  .adminClubs__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
@@ -4671,6 +4716,7 @@ time, mark, audio, video {
   border-radius: 5px;
   border: 1px solid #242627;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans", sans-serif;
   height: 40px;
   text-indent: 10px;
 }
@@ -4688,7 +4734,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 10px;
-  width: 50%;
+  width: 60%;
   max-width: 300px;
   height: 40px;
   border: none;
@@ -4704,6 +4750,9 @@ time, mark, audio, video {
   .addReferee__name, .addReferee__validity, .addReferee__type, .addReferee__club, .addReferee button {
     font-size: 1.125rem;
   }
+  .addReferee__name input, .addReferee__validity input, .addReferee__type input, .addReferee__club input, .addReferee button input {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .addReferee__name, .addReferee__validity, .addReferee__type, .addReferee__club {
@@ -4718,13 +4767,14 @@ time, mark, audio, video {
   .addReferee input {
     width: 79%;
     max-width: 600px;
+    font-size: 1.125rem;
   }
 }
 @media screen and (min-width: 1920px) {
   .addReferee {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
   }
   .addReferee__name, .addReferee__validity, .addReferee__type, .addReferee__club {
     margin-bottom: 40px;
@@ -4739,6 +4789,7 @@ time, mark, audio, video {
   .addReferee input {
     width: 85%;
     max-width: 600px;
+    font-size: 1.25rem;
   }
   .addReferee button {
     height: 50px;
@@ -4895,8 +4946,8 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 40px;
-  width: 80%;
-  height: 45px;
+  width: 60%;
+  height: 50px;
   border: none;
   font-size: 1rem;
   font-weight: bold;
@@ -4939,7 +4990,7 @@ time, mark, audio, video {
     font-size: 1.125rem;
   }
   .modalReferees__content__button {
-    height: 50px;
+    height: 55px;
     font-size: 1.375rem;
   }
 }
@@ -4961,9 +5012,10 @@ time, mark, audio, video {
   }
   .modalReferees__content__button {
     font-size: 1.5rem;
+    width: 50%;
   }
 }
-.referee {
+.adminReferee {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4971,39 +5023,39 @@ time, mark, audio, video {
   margin-top: -70px;
   width: 100%;
 }
-.referee__title {
+.adminReferee__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
-.referee__title h2 {
+.adminReferee__title h2 {
   color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
   line-height: 24px;
 }
-.referee__title__lineLeft, .referee__title__lineRight {
+.adminReferee__title__lineLeft, .adminReferee__title__lineRight {
   position: absolute;
   width: 23%;
   height: 0px;
   z-index: -10;
 }
-.referee__title__lineLeft {
+.adminReferee__title__lineLeft {
   left: 10px;
 }
-.referee__title__lineRight {
+.adminReferee__title__lineRight {
   right: 10px;
 }
-.referee__list {
+.adminReferee__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.referee__addTitle {
+.adminReferee__addTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -5011,7 +5063,7 @@ time, mark, audio, video {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.referee__addTitle__subhead {
+.adminReferee__addTitle__subhead {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -5021,170 +5073,171 @@ time, mark, audio, video {
   line-height: 12px;
   font-family: "Noto Sans", sans-serif;
 }
-.referee__addTitle__bigTitle {
+.adminReferee__addTitle__bigTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.referee__addTitle__bigTitle h2 {
+.adminReferee__addTitle__bigTitle h2 {
   color: #242627;
   font-size: 1.5rem;
   line-height: 24px;
   font-family: "Noto Sans", sans-serif;
 }
-.referee__addTitle__bigTitle__lineLeft, .referee__addTitle__bigTitle__lineRight {
+.adminReferee__addTitle__bigTitle__lineLeft, .adminReferee__addTitle__bigTitle__lineRight {
   width: 23%;
   height: 0px;
   position: absolute;
   z-index: -10;
 }
-.referee__addTitle__bigTitle__lineLeft {
+.adminReferee__addTitle__bigTitle__lineLeft {
   left: 10px;
 }
-.referee__addTitle__bigTitle__lineRight {
+.adminReferee__addTitle__bigTitle__lineRight {
   right: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .referee__title {
+  .adminReferee__title {
     margin-bottom: 35px;
   }
-  .referee__title h2 {
+  .adminReferee__title h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0 40px 0 40px;
   }
-  .referee__title__lineLeft, .referee__title__lineRight {
+  .adminReferee__title__lineLeft, .adminReferee__title__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .referee__title__lineLeft {
+  .adminReferee__title__lineLeft {
     left: 80px;
   }
-  .referee__title__lineRight {
+  .adminReferee__title__lineRight {
     right: 80px;
   }
-  .referee__list {
+  .adminReferee__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .referee__addTitle {
+  .adminReferee__addTitle {
     margin-top: 40px;
   }
-  .referee__addTitle__subhead {
+  .adminReferee__addTitle__subhead {
     font-size: 0.875rem;
     line-height: 14px;
   }
-  .referee__addTitle__bigTitle h2 {
+  .adminReferee__addTitle__bigTitle h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0;
   }
-  .referee__addTitle__bigTitle__lineLeft, .referee__addTitle__bigTitle__lineRight {
+  .adminReferee__addTitle__bigTitle__lineLeft, .adminReferee__addTitle__bigTitle__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .referee__addTitle__bigTitle__lineLeft {
+  .adminReferee__addTitle__bigTitle__lineLeft {
     left: 80px;
   }
-  .referee__addTitle__bigTitle__lineRight {
+  .adminReferee__addTitle__bigTitle__lineRight {
     right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .referee__title {
+  .adminReferee__title {
     margin-bottom: 30px;
   }
-  .referee__title h2 {
+  .adminReferee__title h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0 100px 0 100px;
   }
-  .referee__title__lineLeft, .referee__title__lineRight {
+  .adminReferee__title__lineLeft, .adminReferee__title__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .referee__title__lineLeft {
+  .adminReferee__title__lineLeft {
     left: 100px;
   }
-  .referee__title__lineRight {
+  .adminReferee__title__lineRight {
     right: 100px;
   }
-  .referee__list {
+  .adminReferee__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .referee__addTitle__subhead {
+  .adminReferee__addTitle__subhead {
     font-size: 1.25rem;
     line-height: 20px;
   }
-  .referee__addTitle__bigTitle h2 {
+  .adminReferee__addTitle__bigTitle h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0;
   }
-  .referee__addTitle__bigTitle__lineLeft, .referee__addTitle__bigTitle__lineRight {
+  .adminReferee__addTitle__bigTitle__lineLeft, .adminReferee__addTitle__bigTitle__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .referee__addTitle__bigTitle__lineLeft {
+  .adminReferee__addTitle__bigTitle__lineLeft {
     left: 100px;
   }
-  .referee__addTitle__bigTitle__lineRight {
+  .adminReferee__addTitle__bigTitle__lineRight {
     right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .referee__title {
+  .adminReferee__title {
     margin-bottom: 45px;
   }
-  .referee__title h2 {
+  .adminReferee__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .referee__title__lineLeft, .referee__title__lineRight {
+  .adminReferee__title__lineLeft, .adminReferee__title__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .referee__title__lineLeft {
+  .adminReferee__title__lineLeft {
     left: 260px;
   }
-  .referee__title__lineRight {
+  .adminReferee__title__lineRight {
     right: 260px;
   }
-  .referee__list {
+  .adminReferee__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 90%;
   }
-  .referee__addTitle__subhead {
+  .adminReferee__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .referee__addTitle__bigTitle h2 {
+  .adminReferee__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .referee__addTitle__bigTitle__lineLeft, .referee__addTitle__bigTitle__lineRight {
+  .adminReferee__addTitle__bigTitle__lineLeft, .adminReferee__addTitle__bigTitle__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .referee__addTitle__bigTitle__lineLeft {
+  .adminReferee__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .referee__addTitle__bigTitle__lineRight {
+  .adminReferee__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
@@ -5215,6 +5268,7 @@ time, mark, audio, video {
   border-radius: 5px;
   border: 1px solid #242627;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans", sans-serif;
   height: 40px;
   text-indent: 10px;
 }
@@ -5232,7 +5286,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 10px;
-  width: 50%;
+  width: 60%;
   max-width: 300px;
   height: 40px;
   border: none;
@@ -5248,6 +5302,9 @@ time, mark, audio, video {
   .addRegulation__title, .addRegulation__link, .addRegulation button {
     font-size: 1.125rem;
   }
+  .addRegulation__title input, .addRegulation__link input, .addRegulation button input {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .addRegulation__title, .addRegulation__link {
@@ -5262,6 +5319,7 @@ time, mark, audio, video {
   .addRegulation input {
     width: 79%;
     max-width: 600px;
+    font-size: 1.125rem;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -5277,6 +5335,7 @@ time, mark, audio, video {
   .addRegulation input {
     width: 70%;
     max-width: 600px;
+    font-size: 1.25rem;
   }
   .addRegulation button {
     height: 50px;
@@ -5292,8 +5351,8 @@ time, mark, audio, video {
   border-radius: 5px;
   font-family: "Noto Sans", sans-serif;
   color: #fff;
-  width: 80%;
-  height: 90px;
+  width: 60%;
+  height: 70px;
   margin-bottom: 15px;
   padding: 5px;
 }
@@ -5321,7 +5380,7 @@ time, mark, audio, video {
 
 @media screen and (min-width: 768px) {
   .articleRegulation {
-    width: 40%;
+    width: 35%;
     margin: 0 10px 20px 10px;
   }
   .articleRegulation p {
@@ -5330,7 +5389,6 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1024px) {
   .articleRegulation {
-    width: 40%;
     margin: 0 10px 20px 10px;
   }
   .articleRegulation__text p {
@@ -5342,7 +5400,7 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .articleRegulation {
-    width: 24%;
+    width: 20%;
     margin: 0 15px 30px 15px;
   }
   .articleRegulation p {
@@ -5437,8 +5495,8 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 40px;
-  width: 80%;
-  height: 45px;
+  width: 60%;
+  height: 50px;
   border: none;
   font-size: 1rem;
   font-weight: bold;
@@ -5481,7 +5539,7 @@ time, mark, audio, video {
     font-size: 1.125rem;
   }
   .modalRegulation__content__button {
-    height: 50px;
+    height: 55px;
     font-size: 1.375rem;
   }
 }
@@ -5503,9 +5561,10 @@ time, mark, audio, video {
   }
   .modalRegulation__content__button {
     font-size: 1.5rem;
+    width: 50%;
   }
 }
-.regulation {
+.adminRegulation {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -5513,39 +5572,39 @@ time, mark, audio, video {
   margin-top: -70px;
   width: 100%;
 }
-.regulation__title {
+.adminRegulation__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
-.regulation__title h2 {
+.adminRegulation__title h2 {
   color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
   line-height: 24px;
 }
-.regulation__title__lineLeft, .regulation__title__lineRight {
+.adminRegulation__title__lineLeft, .adminRegulation__title__lineRight {
   position: absolute;
   width: 23%;
   height: 0px;
   z-index: -10;
 }
-.regulation__title__lineLeft {
+.adminRegulation__title__lineLeft {
   left: 10px;
 }
-.regulation__title__lineRight {
+.adminRegulation__title__lineRight {
   right: 10px;
 }
-.regulation__list {
+.adminRegulation__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.regulation__addTitle {
+.adminRegulation__addTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -5553,7 +5612,7 @@ time, mark, audio, video {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.regulation__addTitle__subhead {
+.adminRegulation__addTitle__subhead {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -5563,170 +5622,170 @@ time, mark, audio, video {
   line-height: 12px;
   font-family: "Noto Sans", sans-serif;
 }
-.regulation__addTitle__bigTitle {
+.adminRegulation__addTitle__bigTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.regulation__addTitle__bigTitle h2 {
+.adminRegulation__addTitle__bigTitle h2 {
   color: #242627;
   font-size: 1.5rem;
   line-height: 24px;
   font-family: "Noto Sans", sans-serif;
 }
-.regulation__addTitle__bigTitle__lineLeft, .regulation__addTitle__bigTitle__lineRight {
+.adminRegulation__addTitle__bigTitle__lineLeft, .adminRegulation__addTitle__bigTitle__lineRight {
   width: 23%;
   height: 0px;
   position: absolute;
   z-index: -10;
 }
-.regulation__addTitle__bigTitle__lineLeft {
+.adminRegulation__addTitle__bigTitle__lineLeft {
   left: 10px;
 }
-.regulation__addTitle__bigTitle__lineRight {
+.adminRegulation__addTitle__bigTitle__lineRight {
   right: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .regulation__title {
+  .adminRegulation__title {
     margin-bottom: 35px;
   }
-  .regulation__title h2 {
+  .adminRegulation__title h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0 40px 0 40px;
   }
-  .regulation__title__lineLeft, .regulation__title__lineRight {
+  .adminRegulation__title__lineLeft, .adminRegulation__title__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .regulation__title__lineLeft {
+  .adminRegulation__title__lineLeft {
     left: 80px;
   }
-  .regulation__title__lineRight {
+  .adminRegulation__title__lineRight {
     right: 80px;
   }
-  .regulation__list {
+  .adminRegulation__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .regulation__addTitle {
+  .adminRegulation__addTitle {
     margin-top: 40px;
   }
-  .regulation__addTitle__subhead {
+  .adminRegulation__addTitle__subhead {
     font-size: 0.875rem;
     line-height: 14px;
   }
-  .regulation__addTitle__bigTitle h2 {
+  .adminRegulation__addTitle__bigTitle h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0;
   }
-  .regulation__addTitle__bigTitle__lineLeft, .regulation__addTitle__bigTitle__lineRight {
+  .adminRegulation__addTitle__bigTitle__lineLeft, .adminRegulation__addTitle__bigTitle__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .regulation__addTitle__bigTitle__lineLeft {
+  .adminRegulation__addTitle__bigTitle__lineLeft {
     left: 80px;
   }
-  .regulation__addTitle__bigTitle__lineRight {
+  .adminRegulation__addTitle__bigTitle__lineRight {
     right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .regulation__title {
+  .adminRegulation__title {
     margin-bottom: 30px;
   }
-  .regulation__title h2 {
+  .adminRegulation__title h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0 100px 0 100px;
   }
-  .regulation__title__lineLeft, .regulation__title__lineRight {
+  .adminRegulation__title__lineLeft, .adminRegulation__title__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .regulation__title__lineLeft {
+  .adminRegulation__title__lineLeft {
     left: 100px;
   }
-  .regulation__title__lineRight {
+  .adminRegulation__title__lineRight {
     right: 100px;
   }
-  .regulation__list {
+  .adminRegulation__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .regulation__addTitle__subhead {
+  .adminRegulation__addTitle__subhead {
     font-size: 1.25rem;
     line-height: 20px;
   }
-  .regulation__addTitle__bigTitle h2 {
+  .adminRegulation__addTitle__bigTitle h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0;
   }
-  .regulation__addTitle__bigTitle__lineLeft, .regulation__addTitle__bigTitle__lineRight {
+  .adminRegulation__addTitle__bigTitle__lineLeft, .adminRegulation__addTitle__bigTitle__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .regulation__addTitle__bigTitle__lineLeft {
+  .adminRegulation__addTitle__bigTitle__lineLeft {
     left: 100px;
   }
-  .regulation__addTitle__bigTitle__lineRight {
+  .adminRegulation__addTitle__bigTitle__lineRight {
     right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .regulation__title {
+  .adminRegulation__title {
     margin-bottom: 45px;
   }
-  .regulation__title h2 {
+  .adminRegulation__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .regulation__title__lineLeft, .regulation__title__lineRight {
+  .adminRegulation__title__lineLeft, .adminRegulation__title__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .regulation__title__lineLeft {
+  .adminRegulation__title__lineLeft {
     left: 260px;
   }
-  .regulation__title__lineRight {
+  .adminRegulation__title__lineRight {
     right: 260px;
   }
-  .regulation__list {
+  .adminRegulation__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .regulation__addTitle__subhead {
+  .adminRegulation__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .regulation__addTitle__bigTitle h2 {
+  .adminRegulation__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .regulation__addTitle__bigTitle__lineLeft, .regulation__addTitle__bigTitle__lineRight {
+  .adminRegulation__addTitle__bigTitle__lineLeft, .adminRegulation__addTitle__bigTitle__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .regulation__addTitle__bigTitle__lineLeft {
+  .adminRegulation__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .regulation__addTitle__bigTitle__lineRight {
+  .adminRegulation__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
@@ -5757,6 +5816,7 @@ time, mark, audio, video {
   border-radius: 5px;
   border: 1px solid #242627;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans", sans-serif;
   height: 40px;
   text-indent: 10px;
 }
@@ -5778,7 +5838,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 10px;
-  width: 50%;
+  width: 60%;
   max-width: 300px;
   height: 40px;
   border: none;
@@ -5794,6 +5854,9 @@ time, mark, audio, video {
   .addArticle__title, .addArticle__author, .addArticle__description, .addArticle__image, .addArticle button {
     font-size: 1.125rem;
   }
+  .addArticle__title input, .addArticle__author input, .addArticle__description input, .addArticle__image input, .addArticle button input {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .addArticle__title, .addArticle__author, .addArticle__description, .addArticle__image {
@@ -5808,9 +5871,13 @@ time, mark, audio, video {
   .addArticle input, .addArticle textarea {
     width: 79%;
     max-width: 600px;
+    font-size: 1.125rem;
   }
 }
 @media screen and (min-width: 1920px) {
+  .addArticle {
+    width: 90%;
+  }
   .addArticle__title, .addArticle__author, .addArticle__description, .addArticle__image {
     margin-bottom: 40px;
   }
@@ -5823,6 +5890,7 @@ time, mark, audio, video {
   .addArticle input, .addArticle textarea {
     width: 70%;
     max-width: 600px;
+    font-size: 1.25rem;
   }
   .addArticle button {
     height: 50px;
@@ -5980,8 +6048,8 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 40px;
-  width: 80%;
-  height: 45px;
+  width: 60%;
+  height: 50px;
   border: none;
   font-size: 1rem;
   font-weight: bold;
@@ -5991,6 +6059,11 @@ time, mark, audio, video {
   transform: scale(0.98);
 }
 
+@media screen and (max-height: 600px) {
+  .modalArticle__content {
+    top: 55%;
+  }
+}
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .modalArticle__content {
@@ -6020,7 +6093,7 @@ time, mark, audio, video {
     font-size: 1.125rem;
   }
   .modalArticle__content__button {
-    height: 50px;
+    height: 55px;
     font-size: 1.375rem;
   }
 }
@@ -6038,9 +6111,10 @@ time, mark, audio, video {
   }
   .modalArticle__content__button {
     font-size: 1.5rem;
+    width: 50%;
   }
 }
-.article {
+.adminArticle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6048,39 +6122,39 @@ time, mark, audio, video {
   margin-top: -70px;
   width: 100%;
 }
-.article__title {
+.adminArticle__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
-.article__title h2 {
+.adminArticle__title h2 {
   color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
   line-height: 24px;
 }
-.article__title__lineLeft, .article__title__lineRight {
+.adminArticle__title__lineLeft, .adminArticle__title__lineRight {
   position: absolute;
   width: 23%;
   height: 0px;
   z-index: -10;
 }
-.article__title__lineLeft {
+.adminArticle__title__lineLeft {
   left: 10px;
 }
-.article__title__lineRight {
+.adminArticle__title__lineRight {
   right: 10px;
 }
-.article__list {
+.adminArticle__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.article__addTitle {
+.adminArticle__addTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6088,7 +6162,7 @@ time, mark, audio, video {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.article__addTitle__subhead {
+.adminArticle__addTitle__subhead {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -6098,170 +6172,171 @@ time, mark, audio, video {
   line-height: 12px;
   font-family: "Noto Sans", sans-serif;
 }
-.article__addTitle__bigTitle {
+.adminArticle__addTitle__bigTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.article__addTitle__bigTitle h2 {
+.adminArticle__addTitle__bigTitle h2 {
   color: #242627;
   font-size: 1.5rem;
   line-height: 24px;
   font-family: "Noto Sans", sans-serif;
 }
-.article__addTitle__bigTitle__lineLeft, .article__addTitle__bigTitle__lineRight {
+.adminArticle__addTitle__bigTitle__lineLeft, .adminArticle__addTitle__bigTitle__lineRight {
   width: 23%;
   height: 0px;
   position: absolute;
   z-index: -10;
 }
-.article__addTitle__bigTitle__lineLeft {
+.adminArticle__addTitle__bigTitle__lineLeft {
   left: 10px;
 }
-.article__addTitle__bigTitle__lineRight {
+.adminArticle__addTitle__bigTitle__lineRight {
   right: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .article__title {
+  .adminArticle__title {
     margin-bottom: 35px;
   }
-  .article__title h2 {
+  .adminArticle__title h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0 40px 0 40px;
   }
-  .article__title__lineLeft, .article__title__lineRight {
+  .adminArticle__title__lineLeft, .adminArticle__title__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .article__title__lineLeft {
+  .adminArticle__title__lineLeft {
     left: 80px;
   }
-  .article__title__lineRight {
+  .adminArticle__title__lineRight {
     right: 80px;
   }
-  .article__list {
+  .adminArticle__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .article__addTitle {
+  .adminArticle__addTitle {
     margin-top: 40px;
   }
-  .article__addTitle__subhead {
+  .adminArticle__addTitle__subhead {
     font-size: 0.875rem;
     line-height: 14px;
   }
-  .article__addTitle__bigTitle h2 {
+  .adminArticle__addTitle__bigTitle h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0;
   }
-  .article__addTitle__bigTitle__lineLeft, .article__addTitle__bigTitle__lineRight {
+  .adminArticle__addTitle__bigTitle__lineLeft, .adminArticle__addTitle__bigTitle__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .article__addTitle__bigTitle__lineLeft {
+  .adminArticle__addTitle__bigTitle__lineLeft {
     left: 80px;
   }
-  .article__addTitle__bigTitle__lineRight {
+  .adminArticle__addTitle__bigTitle__lineRight {
     right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .article__title {
+  .adminArticle__title {
     margin-bottom: 30px;
   }
-  .article__title h2 {
+  .adminArticle__title h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0 100px 0 100px;
   }
-  .article__title__lineLeft, .article__title__lineRight {
+  .adminArticle__title__lineLeft, .adminArticle__title__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .article__title__lineLeft {
+  .adminArticle__title__lineLeft {
     left: 100px;
   }
-  .article__title__lineRight {
+  .adminArticle__title__lineRight {
     right: 100px;
   }
-  .article__list {
+  .adminArticle__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .article__addTitle__subhead {
+  .adminArticle__addTitle__subhead {
     font-size: 1.25rem;
     line-height: 20px;
   }
-  .article__addTitle__bigTitle h2 {
+  .adminArticle__addTitle__bigTitle h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0;
   }
-  .article__addTitle__bigTitle__lineLeft, .article__addTitle__bigTitle__lineRight {
+  .adminArticle__addTitle__bigTitle__lineLeft, .adminArticle__addTitle__bigTitle__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .article__addTitle__bigTitle__lineLeft {
+  .adminArticle__addTitle__bigTitle__lineLeft {
     left: 100px;
   }
-  .article__addTitle__bigTitle__lineRight {
+  .adminArticle__addTitle__bigTitle__lineRight {
     right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .article__title {
+  .adminArticle__title {
     margin-bottom: 45px;
   }
-  .article__title h2 {
+  .adminArticle__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .article__title__lineLeft, .article__title__lineRight {
+  .adminArticle__title__lineLeft, .adminArticle__title__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .article__title__lineLeft {
+  .adminArticle__title__lineLeft {
     left: 260px;
   }
-  .article__title__lineRight {
+  .adminArticle__title__lineRight {
     right: 260px;
   }
-  .article__list {
+  .adminArticle__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 90%;
   }
-  .article__addTitle__subhead {
+  .adminArticle__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .article__addTitle__bigTitle h2 {
+  .adminArticle__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .article__addTitle__bigTitle__lineLeft, .article__addTitle__bigTitle__lineRight {
+  .adminArticle__addTitle__bigTitle__lineLeft, .adminArticle__addTitle__bigTitle__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .article__addTitle__bigTitle__lineLeft {
+  .adminArticle__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .article__addTitle__bigTitle__lineRight {
+  .adminArticle__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
@@ -6292,6 +6367,7 @@ time, mark, audio, video {
   border-radius: 5px;
   border: 1px solid #242627;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans", sans-serif;
   height: 40px;
   text-indent: 10px;
 }
@@ -6309,7 +6385,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 10px;
-  width: 50%;
+  width: 60%;
   max-width: 300px;
   height: 40px;
   border: none;
@@ -6325,6 +6401,9 @@ time, mark, audio, video {
   .addChampion__name, .addChampion__year, .addChampion button {
     font-size: 1.125rem;
   }
+  .addChampion__name input, .addChampion__year input, .addChampion button input {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .addChampion__name, .addChampion__year {
@@ -6339,12 +6418,16 @@ time, mark, audio, video {
   .addChampion input {
     width: 79%;
     max-width: 600px;
+    font-size: 1.125rem;
   }
   .addChampion button {
     height: 40px;
   }
 }
 @media screen and (min-width: 1920px) {
+  .addChampion {
+    width: 90%;
+  }
   .addChampion__name, .addChampion__year {
     margin-bottom: 40px;
   }
@@ -6357,6 +6440,7 @@ time, mark, audio, video {
   .addChampion input {
     width: 70%;
     max-width: 600px;
+    font-size: 1.25rem;
   }
   .addChampion button {
     height: 50px;
@@ -6513,8 +6597,8 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 40px;
-  width: 80%;
-  height: 45px;
+  width: 60%;
+  height: 50px;
   border: none;
   font-size: 1rem;
   font-weight: bold;
@@ -6557,7 +6641,7 @@ time, mark, audio, video {
     font-size: 1.125rem;
   }
   .modalChampion__content__button {
-    height: 50px;
+    height: 55px;
     font-size: 1.375rem;
   }
 }
@@ -6579,9 +6663,10 @@ time, mark, audio, video {
   }
   .modalChampion__content__button {
     font-size: 1.5rem;
+    width: 50%;
   }
 }
-.champion {
+.adminChampion {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6589,39 +6674,39 @@ time, mark, audio, video {
   margin-top: -70px;
   width: 100%;
 }
-.champion__title {
+.adminChampion__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
-.champion__title h2 {
+.adminChampion__title h2 {
   color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
   line-height: 24px;
 }
-.champion__title__lineLeft, .champion__title__lineRight {
+.adminChampion__title__lineLeft, .adminChampion__title__lineRight {
   position: absolute;
   width: 23%;
   height: 0px;
   z-index: -10;
 }
-.champion__title__lineLeft {
+.adminChampion__title__lineLeft {
   left: 10px;
 }
-.champion__title__lineRight {
+.adminChampion__title__lineRight {
   right: 10px;
 }
-.champion__list {
+.adminChampion__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.champion__addTitle {
+.adminChampion__addTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6629,7 +6714,7 @@ time, mark, audio, video {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.champion__addTitle__subhead {
+.adminChampion__addTitle__subhead {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -6639,164 +6724,165 @@ time, mark, audio, video {
   line-height: 12px;
   font-family: "Noto Sans", sans-serif;
 }
-.champion__addTitle__bigTitle {
+.adminChampion__addTitle__bigTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.champion__addTitle__bigTitle h2 {
+.adminChampion__addTitle__bigTitle h2 {
   color: #242627;
   font-size: 1.5rem;
   line-height: 24px;
   font-family: "Noto Sans", sans-serif;
 }
-.champion__addTitle__bigTitle__lineLeft, .champion__addTitle__bigTitle__lineRight {
+.adminChampion__addTitle__bigTitle__lineLeft, .adminChampion__addTitle__bigTitle__lineRight {
   width: 23%;
   height: 0px;
   position: absolute;
   z-index: -10;
 }
-.champion__addTitle__bigTitle__lineLeft {
+.adminChampion__addTitle__bigTitle__lineLeft {
   left: 10px;
 }
-.champion__addTitle__bigTitle__lineRight {
+.adminChampion__addTitle__bigTitle__lineRight {
   right: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .champion__title {
+  .adminChampion__title {
     margin-bottom: 35px;
   }
-  .champion__title h2 {
+  .adminChampion__title h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0 40px 0 40px;
   }
-  .champion__title__lineLeft, .champion__title__lineRight {
+  .adminChampion__title__lineLeft, .adminChampion__title__lineRight {
     width: 20%;
   }
-  .champion__title__lineLeft {
+  .adminChampion__title__lineLeft {
     left: 80px;
   }
-  .champion__title__lineRight {
+  .adminChampion__title__lineRight {
     right: 80px;
   }
-  .champion__list {
+  .adminChampion__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .champion__addTitle {
+  .adminChampion__addTitle {
     margin-top: 40px;
   }
-  .champion__addTitle__subhead {
+  .adminChampion__addTitle__subhead {
     font-size: 0.875rem;
     line-height: 14px;
   }
-  .champion__addTitle__bigTitle h2 {
+  .adminChampion__addTitle__bigTitle h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0;
   }
-  .champion__addTitle__bigTitle__lineLeft, .champion__addTitle__bigTitle__lineRight {
+  .adminChampion__addTitle__bigTitle__lineLeft, .adminChampion__addTitle__bigTitle__lineRight {
     width: 20%;
   }
-  .champion__addTitle__bigTitle__lineLeft {
+  .adminChampion__addTitle__bigTitle__lineLeft {
     left: 80px;
   }
-  .champion__addTitle__bigTitle__lineRight {
+  .adminChampion__addTitle__bigTitle__lineRight {
     right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .champion__title {
+  .adminChampion__title {
     margin-bottom: 30px;
   }
-  .champion__title h2 {
+  .adminChampion__title h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0 100px 0 100px;
   }
-  .champion__title__lineLeft, .champion__title__lineRight {
+  .adminChampion__title__lineLeft, .adminChampion__title__lineRight {
     width: 21%;
   }
-  .champion__title__lineLeft {
+  .adminChampion__title__lineLeft {
     left: 100px;
   }
-  .champion__title__lineRight {
+  .adminChampion__title__lineRight {
     right: 100px;
   }
-  .champion__list {
+  .adminChampion__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .champion__addTitle__subhead {
+  .adminChampion__addTitle__subhead {
     font-size: 1.25rem;
     line-height: 20px;
   }
-  .champion__addTitle__bigTitle h2 {
+  .adminChampion__addTitle__bigTitle h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0;
   }
-  .champion__addTitle__bigTitle__lineLeft, .champion__addTitle__bigTitle__lineRight {
+  .adminChampion__addTitle__bigTitle__lineLeft, .adminChampion__addTitle__bigTitle__lineRight {
     width: 21%;
   }
-  .champion__addTitle__bigTitle__lineLeft {
+  .adminChampion__addTitle__bigTitle__lineLeft {
     left: 100px;
   }
-  .champion__addTitle__bigTitle__lineRight {
+  .adminChampion__addTitle__bigTitle__lineRight {
     right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .champion__title {
+  .adminChampion__title {
     margin-bottom: 45px;
   }
-  .champion__title h2 {
+  .adminChampion__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .champion__title__lineLeft, .champion__title__lineRight {
+  .adminChampion__title__lineLeft, .adminChampion__title__lineRight {
     width: 22%;
   }
-  .champion__title__lineLeft {
+  .adminChampion__title__lineLeft {
     left: 260px;
   }
-  .champion__title__lineRight {
+  .adminChampion__title__lineRight {
     right: 260px;
   }
-  .champion__list {
+  .adminChampion__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 90%;
   }
-  .champion__addTitle__subhead {
+  .adminChampion__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .champion__addTitle__bigTitle h2 {
+  .adminChampion__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .champion__addTitle__bigTitle__lineLeft, .champion__addTitle__bigTitle__lineRight {
+  .adminChampion__addTitle__bigTitle__lineLeft, .adminChampion__addTitle__bigTitle__lineRight {
     width: 22%;
   }
-  .champion__addTitle__bigTitle__lineLeft {
+  .adminChampion__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .champion__addTitle__bigTitle__lineRight {
+  .adminChampion__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
@@ -6890,6 +6976,7 @@ time, mark, audio, video {
   border-radius: 5px;
   border: 1px solid #242627;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans", sans-serif;
   height: 40px;
   text-indent: 10px;
 }
@@ -6923,6 +7010,9 @@ time, mark, audio, video {
   .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword, .addAdmins button {
     font-size: 1.125rem;
   }
+  .addAdmins__email input, .addAdmins__password input, .addAdmins__confirmPassword input, .addAdmins button input {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword {
@@ -6937,12 +7027,16 @@ time, mark, audio, video {
   .addAdmins input {
     width: 79%;
     max-width: 600px;
+    font-size: 1.125rem;
   }
   .addAdmins button {
     height: 40px;
   }
 }
 @media screen and (min-width: 1920px) {
+  .addAdmins {
+    width: 90%;
+  }
   .addAdmins__email, .addAdmins__password, .addAdmins__confirmPassword {
     margin-bottom: 40px;
   }
@@ -6955,6 +7049,7 @@ time, mark, audio, video {
   .addAdmins input {
     width: 70%;
     max-width: 600px;
+    font-size: 1.25rem;
   }
   .addAdmins button {
     height: 50px;
@@ -7048,8 +7143,8 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-top: 40px;
-  width: 80%;
-  height: 45px;
+  width: 60%;
+  height: 50px;
   border: none;
   font-size: 1rem;
   font-weight: bold;
@@ -7092,7 +7187,7 @@ time, mark, audio, video {
     font-size: 1.125rem;
   }
   .modalAdmins__content__button {
-    height: 50px;
+    height: 55px;
     font-size: 1.375rem;
   }
 }
@@ -7114,9 +7209,10 @@ time, mark, audio, video {
   }
   .modalAdmins__content__button {
     font-size: 1.5rem;
+    width: 50%;
   }
 }
-.admins {
+.adminAdmins {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7124,39 +7220,39 @@ time, mark, audio, video {
   margin-top: -70px;
   width: 100%;
 }
-.admins__title {
+.adminAdmins__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
-.admins__title h2 {
+.adminAdmins__title h2 {
   color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
   line-height: 24px;
 }
-.admins__title__lineLeft, .admins__title__lineRight {
+.adminAdmins__title__lineLeft, .adminAdmins__title__lineRight {
   position: absolute;
   width: 23%;
   height: 0px;
   z-index: -10;
 }
-.admins__title__lineLeft {
+.adminAdmins__title__lineLeft {
   left: 10px;
 }
-.admins__title__lineRight {
+.adminAdmins__title__lineRight {
   right: 10px;
 }
-.admins__list {
+.adminAdmins__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.admins__addTitle {
+.adminAdmins__addTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7164,7 +7260,7 @@ time, mark, audio, video {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.admins__addTitle__subhead {
+.adminAdmins__addTitle__subhead {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -7174,170 +7270,170 @@ time, mark, audio, video {
   line-height: 12px;
   font-family: "Noto Sans", sans-serif;
 }
-.admins__addTitle__bigTitle {
+.adminAdmins__addTitle__bigTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.admins__addTitle__bigTitle h2 {
+.adminAdmins__addTitle__bigTitle h2 {
   color: #242627;
   font-size: 1.5rem;
   line-height: 24px;
   font-family: "Noto Sans", sans-serif;
 }
-.admins__addTitle__bigTitle__lineLeft, .admins__addTitle__bigTitle__lineRight {
+.adminAdmins__addTitle__bigTitle__lineLeft, .adminAdmins__addTitle__bigTitle__lineRight {
   width: 23%;
   height: 0px;
   position: absolute;
   z-index: -10;
 }
-.admins__addTitle__bigTitle__lineLeft {
+.adminAdmins__addTitle__bigTitle__lineLeft {
   left: 10px;
 }
-.admins__addTitle__bigTitle__lineRight {
+.adminAdmins__addTitle__bigTitle__lineRight {
   right: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  .admins__title {
+  .adminAdmins__title {
     margin-bottom: 35px;
   }
-  .admins__title h2 {
+  .adminAdmins__title h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0 40px 0 40px;
   }
-  .admins__title__lineLeft, .admins__title__lineRight {
+  .adminAdmins__title__lineLeft, .adminAdmins__title__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .admins__title__lineLeft {
+  .adminAdmins__title__lineLeft {
     left: 80px;
   }
-  .admins__title__lineRight {
+  .adminAdmins__title__lineRight {
     right: 80px;
   }
-  .admins__list {
+  .adminAdmins__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .admins__addTitle {
+  .adminAdmins__addTitle {
     margin-top: 40px;
   }
-  .admins__addTitle__subhead {
+  .adminAdmins__addTitle__subhead {
     font-size: 0.875rem;
     line-height: 14px;
   }
-  .admins__addTitle__bigTitle h2 {
+  .adminAdmins__addTitle__bigTitle h2 {
     font-size: 1.625rem;
     line-height: 26px;
     margin: 0;
   }
-  .admins__addTitle__bigTitle__lineLeft, .admins__addTitle__bigTitle__lineRight {
+  .adminAdmins__addTitle__bigTitle__lineLeft, .adminAdmins__addTitle__bigTitle__lineRight {
     width: 20%;
     z-index: -10;
   }
-  .admins__addTitle__bigTitle__lineLeft {
+  .adminAdmins__addTitle__bigTitle__lineLeft {
     left: 80px;
   }
-  .admins__addTitle__bigTitle__lineRight {
+  .adminAdmins__addTitle__bigTitle__lineRight {
     right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .admins__title {
+  .adminAdmins__title {
     margin-bottom: 30px;
   }
-  .admins__title h2 {
+  .adminAdmins__title h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0 100px 0 100px;
   }
-  .admins__title__lineLeft, .admins__title__lineRight {
+  .adminAdmins__title__lineLeft, .adminAdmins__title__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .admins__title__lineLeft {
+  .adminAdmins__title__lineLeft {
     left: 100px;
   }
-  .admins__title__lineRight {
+  .adminAdmins__title__lineRight {
     right: 100px;
   }
-  .admins__list {
+  .adminAdmins__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .admins__addTitle__subhead {
+  .adminAdmins__addTitle__subhead {
     font-size: 1.25rem;
     line-height: 20px;
   }
-  .admins__addTitle__bigTitle h2 {
+  .adminAdmins__addTitle__bigTitle h2 {
     font-size: 2rem;
     line-height: 32px;
     margin: 0;
   }
-  .admins__addTitle__bigTitle__lineLeft, .admins__addTitle__bigTitle__lineRight {
+  .adminAdmins__addTitle__bigTitle__lineLeft, .adminAdmins__addTitle__bigTitle__lineRight {
     width: 21%;
     z-index: -10;
   }
-  .admins__addTitle__bigTitle__lineLeft {
+  .adminAdmins__addTitle__bigTitle__lineLeft {
     left: 100px;
   }
-  .admins__addTitle__bigTitle__lineRight {
+  .adminAdmins__addTitle__bigTitle__lineRight {
     right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .admins__title {
+  .adminAdmins__title {
     margin-bottom: 45px;
   }
-  .admins__title h2 {
+  .adminAdmins__title h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0 350px 0 350px;
   }
-  .admins__title__lineLeft, .admins__title__lineRight {
+  .adminAdmins__title__lineLeft, .adminAdmins__title__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .admins__title__lineLeft {
+  .adminAdmins__title__lineLeft {
     left: 260px;
   }
-  .admins__title__lineRight {
+  .adminAdmins__title__lineRight {
     right: 260px;
   }
-  .admins__list {
+  .adminAdmins__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .admins__addTitle__subhead {
+  .adminAdmins__addTitle__subhead {
     font-size: 1.75rem;
     line-height: 28px;
   }
-  .admins__addTitle__bigTitle h2 {
+  .adminAdmins__addTitle__bigTitle h2 {
     font-size: 3rem;
     line-height: 40px;
     margin: 0;
   }
-  .admins__addTitle__bigTitle__lineLeft, .admins__addTitle__bigTitle__lineRight {
+  .adminAdmins__addTitle__bigTitle__lineLeft, .adminAdmins__addTitle__bigTitle__lineRight {
     width: 22%;
     z-index: -10;
   }
-  .admins__addTitle__bigTitle__lineLeft {
+  .adminAdmins__addTitle__bigTitle__lineLeft {
     left: 260px;
   }
-  .admins__addTitle__bigTitle__lineRight {
+  .adminAdmins__addTitle__bigTitle__lineRight {
     right: 260px;
   }
 }
@@ -7575,6 +7671,7 @@ time, mark, audio, video {
 /* VERSION MOBILE */
 .main {
   min-width: 360px;
+  min-height: 20vh;
   margin-top: 180px;
 }
 

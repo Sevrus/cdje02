@@ -23,6 +23,7 @@
             border-radius: 5px
             border: 1px solid $black
             box-shadow: $shadow
+            font-family: $font-primary
             height: 40px
             text-indent: 10px
 
@@ -33,7 +34,7 @@
         button
             @include articles()
             margin-top: 10px
-            width: 50%
+            width: 60%
             max-width: 300px
             height: 40px
             border: none
@@ -51,6 +52,9 @@
         &__title, &__link, button
             font-size: $fs-18
 
+            input
+                font-size: $fs-16
+
 // VERSION L
 @media screen and (min-width:1024px)
     .addRegulation
@@ -67,6 +71,7 @@
         input
             width: 79%
             max-width: 600px
+            font-size: $fs-18
 
 // VERSION XL
 @media screen and (min-width:1920px)
@@ -84,6 +89,7 @@
         input
             width: 70%
             max-width: 600px
+            font-size: $fs-20
 
         button
             height: 50px

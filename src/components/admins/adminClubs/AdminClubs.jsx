@@ -7,26 +7,26 @@ const AdminClubs = () => {
 
     if (pathname === "/admin/clubs") {
         return (
-            <section className="clubs">
+            <section className="adminClubs">
 
-                <div className="clubs__title">
-                    <hr className="clubs__title__lineLeft" />
+                <div className="adminClubs__title">
+                    <hr className="adminClubs__title__lineLeft" />
                     <h2>CLUBS</h2>
-                    <hr className="clubs__title__lineRight" />
+                    <hr className="adminClubs__title__lineRight" />
                 </div>
 
-                <div className="clubs__list">
+                <div className="adminClubs__list">
                     <ClubsDescription />
                 </div>
 
-                <div className="clubs__addTitle">
+                <div className="adminClubs__addTitle">
 
-                    <h3 className="clubs__addTitle__subhead">AJOUTER UN</h3>
+                    <h3 className="adminClubs__addTitle__subhead">AJOUTER UN</h3>
 
-                    <div className="clubs__addTitle__bigTitle">
-                        <hr className="clubs__addTitle__bigTitle__lineLeft" />
+                    <div className="adminClubs__addTitle__bigTitle">
+                        <hr className="adminClubs__addTitle__bigTitle__lineLeft" />
                         <h2>CLUB</h2>
-                        <hr className="clubs__addTitle__bigTitle__lineRight" />
+                        <hr className="adminClubs__addTitle__bigTitle__lineRight" />
                     </div>
 
                 </div>

@@ -7,26 +7,26 @@ const AdminRegulation = () => {
 
     if (pathname === "/admin/regulation") {
         return (
-            <section className="regulation">
+            <section className="adminRegulation">
 
-                <div className="regulation__title">
-                    <hr className="regulation__title__lineLeft" />
+                <div className="adminRegulation__title">
+                    <hr className="adminRegulation__title__lineLeft" />
                     <h2>RÈGLEMENTS</h2>
-                    <hr className="regulation__title__lineRight" />
+                    <hr className="adminRegulation__title__lineRight" />
                 </div>
 
-                <div className="regulation__list">
+                <div className="adminRegulation__list">
                     <RegulationDescription />
                 </div>
 
-                <div className="regulation__addTitle">
+                <div className="adminRegulation__addTitle">
 
-                    <h3 className="regulation__addTitle__subhead">AJOUTER UN</h3>
+                    <h3 className="adminRegulation__addTitle__subhead">AJOUTER UN</h3>
 
-                    <div className="regulation__addTitle__bigTitle">
-                        <hr className="regulation__addTitle__bigTitle__lineLeft" />
+                    <div className="adminRegulation__addTitle__bigTitle">
+                        <hr className="adminRegulation__addTitle__bigTitle__lineLeft" />
                         <h2>RÈGLEMENT</h2>
-                        <hr className="regulation__addTitle__bigTitle__lineRight" />
+                        <hr className="adminRegulation__addTitle__bigTitle__lineRight" />
                     </div>
 
                 </div>

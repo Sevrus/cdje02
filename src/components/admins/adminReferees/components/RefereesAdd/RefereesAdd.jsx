@@ -15,7 +15,7 @@ const RefereesAdd = () => {
 
                 <div className="addReferee__validity">
                     <label htmlFor="lastname">Validité</label>
-                    <input type="text" name="validity" maxLength={4} required={true} />
+                    <input type="text" name="validity" placeholder="Année de fin de validité sous ce format : YYYY" maxLength={4} required={true} />
                 </div>
 
                 <div className="addReferee__type">

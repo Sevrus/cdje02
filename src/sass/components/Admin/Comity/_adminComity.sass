@@ -5,7 +5,7 @@
 @import '../../Admin/Comity/_modalComity.sass'
 
 // VERSION MOBILE 
-.comity
+.adminComity
     @include flex(column , center , center)
     margin-top: -70px
     width: 100%
@@ -72,7 +72,7 @@
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
-    .comity
+    .adminComity
 
         &__title
             margin-bottom: 35px
@@ -122,7 +122,7 @@
 
 // VERSION L
 @media screen and (min-width:1024px)
-    .comity
+    .adminComity
 
         &__title
             margin-bottom: 30px
@@ -169,7 +169,7 @@
 
 // VERSION XL
 @media screen and (min-width:1920px)
-    .comity
+    .adminComity
 
         &__title
             margin-bottom: 45px
@@ -192,6 +192,7 @@
         &__list
             @include flex(row , center , center)
             flex-wrap: wrap
+            width: 90%
 
         &__addTitle__subhead
             font-size: $fs-28

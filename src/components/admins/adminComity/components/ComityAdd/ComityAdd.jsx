@@ -65,13 +65,13 @@ const ComityAdd = () => {
                 </div>
 
                 <div className="addComity__image">
-                    <label htmlFor="image">Image</label>
-                    <input type="text" name="image" required={true} value={image} onChange={(e) => setImage(e.target.value)} />
+                    <label htmlFor="image">Photo</label>
+                    <input type="text" name="image" required={true} value={image} placeholder="Lien/adresse de la photo" onChange={(e) => setImage(e.target.value)} />
                 </div>
 
                 <div className="addComity__alt">
-                    <label htmlFor="alt">Alt (Texte Alternatif)</label>
-                    <input type="text" name="alt" required={true} value={alt} onChange={(e) => setAlt(e.target.value)} />
+                    <label htmlFor="alt">Texte Alternatif</label>
+                    <input type="text" name="alt" required={true} value={alt} placeholder="Description de la photo" onChange={(e) => setAlt(e.target.value)} />
                 </div>
 
                 <div className="addComity__btn">

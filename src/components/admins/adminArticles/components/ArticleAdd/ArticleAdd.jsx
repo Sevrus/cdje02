@@ -1,5 +1,5 @@
-import { Form } from "react-router-dom";
 import { useState } from "react";
+import { Form } from "react-router-dom";
 
 const ArticleAdd = () => {
     const [title, setTitle] = useState("");
@@ -55,8 +55,8 @@ const ArticleAdd = () => {
                     </div>
 
                     <div className="addArticle__image">
-                        <label htmlFor="image">Image</label>
-                        <input type="text" name="image" maxLength={500} required={true} value={image} onChange={(e) => setImage(e.target.value)} />
+                        <label htmlFor="image">Photo de l'auteur</label>
+                        <input type="text" name="image" maxLength={500} required={true} value={image} placeholder="Lien/adresse de la photo" onChange={(e) => setImage(e.target.value)} />
                     </div>
 
                     <div className="addArticle__btn">

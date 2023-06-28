@@ -92,12 +92,12 @@ const ModalClubs = ({ closeModal, clubData }) => {
                         </div>
 
                         <div className="modalClub__content__coordx">
-                            <label htmlFor="coordx" className="modalClub__content__coordx__label">Coordonnée X</label>
+                            <label htmlFor="coordx" className="modalClub__content__coordx__label">Latitude</label>
                             <input type="text" name="coordx" id="coordx" className="modalClub__content__coordx__input" value={coordx} onChange={(e) => setCoordx(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__coordy">
-                            <label htmlFor="coordy" className="modalClub__content__coordy__label">Coordonnée Y</label>
+                            <label htmlFor="coordy" className="modalClub__content__coordy__label">Longitude</label>
                             <input type="text" name="coordy" id="coordy" className="modalClub__content__coordy__input" value={coordy} onChange={(e) => setCoordy(e.target.value)} />
                         </div>
 
