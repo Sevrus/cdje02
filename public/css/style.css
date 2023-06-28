@@ -1255,23 +1255,29 @@ time, mark, audio, video {
   .accordion-referee__item {
     width: 400px;
   }
-  .accordion-referee__title, .accordion-referee__content {
+  .accordion-referee__item__title, .accordion-referee__item__content {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 1024px) {
-  .accordion-referee__title {
-    font-size: 1.125rem;
+@media screen and (min-width: 911px) {
+  .accordion-referee {
+    gap: 20px;
+  }
+  .accordion-referee__item {
+    margin-bottom: 0;
   }
 }
-@media screen and (min-width: 1920px) {
-  .accordion-referee__title {
-    font-size: 1.25rem;
-  }
-  .accordion-referee__content {
-    font-size: 1.125rem;
-  }
+.accordion-referee__title {
+  font-size: 1.125rem;
 }
+
+.accordion-referee__title {
+  font-size: 1.25rem;
+}
+.accordion-referee__content {
+  font-size: 1.125rem;
+}
+
 .modalRefereeBack {
   opacity: 0;
 }
