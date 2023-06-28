@@ -66,13 +66,13 @@ const RefereeDescription = () => {
                                 <h3>{item.name}</h3>
                                 <hr className="accordion-referee__item__title--right" />
                                 <FontAwesomeIcon
-                                    icon={screenWidth < 911 ? selected === item.id ? faChevronUp : faChevronDown : faChevronDown}
+                                    icon={screenWidth < 955 ? selected === item.id ? faChevronUp : faChevronDown : faChevronDown}
                                     className="accordion-referee__item__title__arrow"
                                 />
                             </div>
 
                             <section
-                                className={screenWidth < 911 ?
+                                className={screenWidth < 955 ?
                                     selected === item.id ? 'accordion-referee__item__content show' : 'accordion-referee__item__content'
                                     : 'accordion-referee__item__content'}
                             >

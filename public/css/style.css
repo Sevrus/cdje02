@@ -1187,7 +1187,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   padding: 5px;
-  margin-bottom: 20px;
+  margin: 0 10px 20px 10px;
 }
 .accordion-referee__item__title {
   position: relative;
@@ -1248,7 +1248,7 @@ time, mark, audio, video {
     justify-content: center;
     align-items: normal;
     flex-wrap: wrap;
-    max-width: 90%;
+    max-width: 88%;
     margin: auto;
     margin-top: 30px;
   }
@@ -1257,14 +1257,6 @@ time, mark, audio, video {
   }
   .accordion-referee__item__title, .accordion-referee__item__content {
     font-size: 1rem;
-  }
-}
-@media screen and (min-width: 911px) {
-  .accordion-referee {
-    gap: 20px;
-  }
-  .accordion-referee__item {
-    margin-bottom: 0;
   }
 }
 .accordion-referee__title {
@@ -1286,7 +1278,7 @@ time, mark, audio, video {
   display: none;
 }
 
-@media screen and (min-width: 911px) {
+@media screen and (min-width: 955px) {
   .modalRefereeBack {
     opacity: 1;
     position: fixed;
