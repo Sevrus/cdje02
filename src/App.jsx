@@ -7,12 +7,33 @@ const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     
     useEffect(() => {
-        if (localStorage.getItem("isLoggedIn")) {
-            setIsLoggedIn(true)
-        } else {
-            setIsLoggedIn(false)
-        }
+        const token = localStorage.getItem("token");
+        setIsLoggedIn(!!token);
     }, [])
+
+    useEffect(() => {
+        const checkAuthenticationStatus = () => {
+          const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
+    
+          if (storedIsLoggedIn) {
+            setIsLoggedIn(JSON.parse(storedIsLoggedIn));
+          }
+        };
+    
+        checkAuthenticationStatus();
+      }, []);
+    
+      useEffect(() => {
+        const handleBeforeUnload = () => {
+          localStorage.setItem("isLoggedIn", JSON.stringify(isLoggedIn));
+        };
+    
+        window.addEventListener("beforeunload", handleBeforeUnload);
+    
+        return () => {
+          window.removeEventListener("beforeunload", handleBeforeUnload);
+        };
+      }, [isLoggedIn]);
 
     return (
         <>

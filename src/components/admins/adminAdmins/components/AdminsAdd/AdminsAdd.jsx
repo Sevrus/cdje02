@@ -52,6 +52,7 @@ const AdminsAdd = () => {
                 <div className="addAdmins__password">
                     <label htmlFor="password">Mot de passe</label>
                     <input type="password" name="password" minLength={8} maxLength={50} required={true} value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <p>8 Caractères, 1 Majuscule, 1 Nombre et 1 Caractère Spécial(@$!%*?&)</p>
                 </div>
 
                 <div className="addAdmins__confirmPassword">

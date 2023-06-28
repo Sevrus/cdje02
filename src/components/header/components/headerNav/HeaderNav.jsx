@@ -60,7 +60,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                     </NavLink>
                     <hr className="navbar__links__link__admin__hr" />
                     <NavLink to={"/"} onClick={setLogout}>
-                        Déconnexion
+                        LOGOUT
                     </NavLink>
                 </div>
             )

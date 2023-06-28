@@ -88,9 +88,18 @@
 
             a
                 color: $white
+                text-align: center
 
             .active
-                color: $red
+                color: $red              
+
+            &__admin
+                display: flex
+                flex-direction: column
+
+                &__hr
+                    width: 90px
+
 
 @media screen and (min-width: 500px)
     .navbar, .navbar--scroll
@@ -157,8 +166,6 @@
 
                 .active
                     border-top: 3.5px solid $red
-                    margin-bottom: 10px
-                    padding-top: 10px
 
                 &--scroll
                     font-size: $fs-14
@@ -225,7 +232,8 @@
             border: 1px solid rgba(255, 255, 255, .5)
             padding: 15px
             left: auto
-            top: -40px
+            top: 50%
+            transform: translateY(-50%)
             right: 100px
 
             &::before, &::after
@@ -235,7 +243,7 @@
                 margin-right: 100px
                 width: 800px
                 gap: 56px
-                padding: 25px 0
+                padding: 10px 0
 
             &--site-name
                 display: none

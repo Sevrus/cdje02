@@ -58,7 +58,7 @@ const RefereeDescription = () => {
                 <ul className="accordion-referee">
 
                     {datas.data.map((item) => (
-                        <motion.li className="accordion-referee__item" 
+                        <li className="accordion-referee__item" 
                             onClick={() => setSelectedId(item.id)} key={item.id} >
 
                             <div className="accordion-referee__item__title" onClick={() => toggle(item.id)} >
@@ -80,7 +80,7 @@ const RefereeDescription = () => {
                                 <p>Validité: {item.validity}</p>
                                 <p>Club: {item.club}</p>
                             </section>
-                        </motion.li>
+                        </li>
                     ))}
 
                     <AnimatePresence

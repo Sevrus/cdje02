@@ -14,9 +14,9 @@
     &__content
         position: absolute
         z-index: 1003
-        top: 40%
+        top: 50px
         left: 50%
-        transform: translate(-50%, -50%)
+        transform: translateX(-50%)
         background-color: $white
         border-radius: 5px
         font-family: $font-primary
@@ -88,11 +88,6 @@
             &:hover
                 cursor: pointer
                 transform: scale(0.98)
-                    
-@media screen and (max-height: 600px)
-    .modalResult
-        &__content
-            top: 45%
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
@@ -114,7 +109,6 @@
 @media screen and (min-width: 1024px)
     .modalResult
         &__content
-            top: 45%
             width: 600px
 
             &__title, &__link
@@ -127,11 +121,6 @@
             &__button
                 height: 55px
                 font-size: $fs-22
-
-@media screen and (min-width: 1024px) and (max-height: 600px)
-    .modalResult
-        &__content
-            top: 50%
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
