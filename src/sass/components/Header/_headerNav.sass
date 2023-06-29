@@ -151,10 +151,12 @@
             &--site-name
                 display: block
                 font-size: $fs-18
-                color: $white
                 font-weight: bold
                 font-family: $font-secondary
                 margin-right: 20px
+
+                a
+                    color: $white
 
                 &__span
                     color: $red
@@ -164,6 +166,7 @@
 
             &__link
                 font-size: $fs-12
+
 
                 &__icon
                     display: block
@@ -180,6 +183,15 @@
 
                 &--scroll
                     font-size: $fs-14
+
+            &__link__admin
+                border: none
+                padding: 0
+
+                .active
+                    border-top: none
+                    margin: 0
+                    padding: 0
 
 /* VERSION L */
 @media screen and (min-width: 1024px)

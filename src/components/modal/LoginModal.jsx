@@ -6,6 +6,36 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../utilities/AuthContext.jsx";
 import { clearErrorAfterDelay } from "../../utilities/clearErrorAfterDelay.js";
 
+const modalVariants = {
+    initial: {
+        opacity: 0,
+        scale: 0.7,
+        x: "-50%"
+    },
+    animate: {
+        opacity: 1,
+        scale: 1,
+        x: "-50%",
+        transition: {
+            duration: 0.3,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+            }
+        },
+        exit: {
+            opacity: 0,
+            scale: 0.7,
+            x: "100%",
+            transition: {
+                duration: 0.5
+            }
+        }
+    }
+}
+
 const LoginModal = ({ closeModal }) => {
     const { login } = useContext(AuthContext);
     const [email, setEmail] = useState('');
@@ -64,27 +94,12 @@ const LoginModal = ({ closeModal }) => {
     return (
         <>
 
-            <AnimatePresence mode="wait" onExitComplete={() => null}>
-                <div className="modal" onClick={closeModal}>
+            <div className="modal" onClick={closeModal}>
+
+                <AnimatePresence mode="wait" onExitComplete={() => null}>
                     <motion.div className="modal__content"
-                        initial={{ opacity: 0, scale: 0.7, x: "-50%" }}
-                        animate={{ opacity: 1, scale: 1, x: "-50%" }}
-                        transition={{
-                            duration: 0.3,
-                            ease: [0, 0.71, 0.2, 1.01],
-                            scale: {
-                                type: "spring",
-                                damping: 5,
-                                stiffness: 100,
-                            }
-                        }}
-                        exit={{
-                            opacity: 0,
-                            y: "100vh",
-                            transition: {
-                                duration: 0.5
-                            }
-                        }}>
+                        variants={modalVariants} initial="initial" animate="animate" exit="exit">
+
                         <form onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()}>
                             <div className="modal__content__close" onClick={closeModal}></div>
 
@@ -121,9 +136,11 @@ const LoginModal = ({ closeModal }) => {
 
                             <Link to={"/request-reset-password"} onClick={closeModal} className="modal__content__lost-password">Mot de passe oublié ?</Link>
                         </form>
+
                     </motion.div>
-                </div>
-            </AnimatePresence >
+                </AnimatePresence >
+
+            </div>
         </>
     )
 }

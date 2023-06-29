@@ -1916,10 +1916,12 @@ time, mark, audio, video {
   .navbar__links--site-name {
     display: block;
     font-size: 1.125rem;
-    color: #fff;
     font-weight: bold;
     font-family: "Noto Serif", serif;
     margin-right: 20px;
+  }
+  .navbar__links--site-name a {
+    color: #fff;
   }
   .navbar__links--site-name__span {
     color: #f73746;
@@ -1945,6 +1947,15 @@ time, mark, audio, video {
   }
   .navbar__links__link--scroll {
     font-size: 0.875rem;
+  }
+  .navbar__links__link__admin {
+    border: none;
+    padding: 0;
+  }
+  .navbar__links__link__admin .active {
+    border-top: none;
+    margin: 0;
+    padding: 0;
   }
 }
 /* VERSION L */

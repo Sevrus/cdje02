@@ -95,8 +95,10 @@ const HeaderNav = ({ chessboardDisappear }) => {
             {(isOpen || width > 767) && (
                 <ul className={chessboardDisappear ? 'navbar__links--scroll' : 'navbar__links'}>
                     <li className={chessboardDisappear ? 'navbar__links--disappear-site-name' : 'navbar__links--site-name'}>
-                        <p>CDJE</p>
-                        <p className="navbar__links--site-name__span">02</p>
+                        <NavLink to={`/`}>
+                            <p>CDJE</p>
+                            <p className="navbar__links--site-name__span">02</p>
+                        </NavLink>
                     </li>
 
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
