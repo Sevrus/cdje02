@@ -1,8 +1,15 @@
-function fetchForAll(setIsLoaded, setError, setItems, uri) {
+import {json} from "react-router-dom";
+
+function fetchForAll(setIsLoaded, setError, setItems, uri, token) {
 
     const url = "http://localhost:3000/"
 
-    fetch(url + uri)
+    fetch(url + uri, {
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        }
+    })
         .then(res => res.json())
         .then(
             (result) => {

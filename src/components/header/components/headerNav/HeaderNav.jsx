@@ -6,13 +6,12 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../../utilities/AuthContext.jsx";
 import LoginModal from "../../../modal/LoginModal.jsx";
 
-
 const HeaderNav = ({ chessboardDisappear }) => {
     const [burgerClass, setBurgerClass] = useState("navbar__burger__line unclicked");
     const [isOpen, setOpen] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
     const [openModal, setOpenModal] = useState(false);
-    const { logout, isLoggedIn } = useContext(AuthContext);
+    const { logout, login, isLoggedIn } = useContext(AuthContext);
 
     const handleClick = () => {
         if (!isOpen) {
@@ -40,10 +39,15 @@ const HeaderNav = ({ chessboardDisappear }) => {
     }, []);
 
 
-    const setLogout = () => {
+    const handleLogout = () => {
         localStorage.removeItem("token");
         logout();
     }
+
+    const handleLogin = () => {
+        login();
+        setOpenModal(false);
+    };
 
 
     const adminLogin = () => {
@@ -59,7 +63,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                         ADMIN
                     </NavLink>
                     <hr className="navbar__links__link__admin__hr" />
-                    <NavLink to={"/"} onClick={setLogout}>
+                    <NavLink to={"/"} onClick={handleLogout}>
                         LOGOUT
                     </NavLink>
                 </div>
@@ -68,14 +72,21 @@ const HeaderNav = ({ chessboardDisappear }) => {
         } else {
             return (
                 <>
-                    <FontAwesomeIcon icon={faRightToBracket}
-                        className={chessboardDisappear ? 'navbar__links__link__icon--scroll' : 'navbar__links__link__icon'} />
+                    <FontAwesomeIcon
+                        icon={faRightToBracket}
+                        className={chessboardDisappear
+                            ? 'navbar__links__link__icon--scroll'
+                            : 'navbar__links__link__icon'}
+                    />
                     <a onClick={() => setOpenModal(true)}>
                         LOGIN
                     </a>
                     {
                         openModal && createPortal(
-                            <LoginModal closeModal={() => setOpenModal(false)} />, document.body
+                            <LoginModal
+                                closeModal={() => setOpenModal(false)}
+                                handleLogin={handleLogin}
+                            />, document.body
                         )
                     }
                 </>

@@ -6,7 +6,7 @@ import { AuthContext } from "../../utilities/AuthContext.jsx";
 import { clearErrorAfterDelay } from "../../utilities/clearErrorAfterDelay.js";
 
 
-const LoginModal = ({ closeModal }) => {
+const LoginModal = ({ closeModal, handleLogin }) => {
     const { login } = useContext(AuthContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,12 +17,8 @@ const LoginModal = ({ closeModal }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let password = document.getElementById("password").value;
-        let email = document.getElementById("email").value;
-
         if (password === "" || email === "") {
             setMessage("Veuillez remplir tous les champs");
-
         } else {
             setMessage("");
             setIsLoading(true);
@@ -41,16 +37,19 @@ const LoginModal = ({ closeModal }) => {
                     if (data.token) {
                         // Save the token to localStorage for authentication
                         localStorage.setItem("token", data.token);
-                        login();
+                        // Call the handleLogin function from props
+                        handleLogin();
                         navigate("/admin");
                     } else {
-                        setError('Mot de passe incorrect.');
+                        setError("Mot de passe incorrect.");
                         clearErrorAfterDelay(setError, 3000);
                     }
                 })
                 .catch((error) => {
                     setIsLoading(false);
-                    setError("Échec de la connexion. Veuillez réessayer plus tard.");
+                    setError(
+                        "Échec de la connexion. Veuillez réessayer plus tard."
+                    );
                     clearErrorAfterDelay(setError, 3000);
                 });
         }

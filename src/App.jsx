@@ -1,49 +1,33 @@
-import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
-import Footer from "./components/footer/Footer.jsx";
-import Header from "./components/header/Header.jsx";
+import {useContext, useEffect} from 'react';
+import { Outlet } from 'react-router-dom';
+import Footer from './components/footer/Footer.jsx';
+import Header from './components/header/Header.jsx';
+import { AuthProvider, AuthContext } from './utilities/AuthContext.jsx';
 
 const App = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    
-    useEffect(() => {
-        const token = localStorage.getItem("token");
-        setIsLoggedIn(!!token);
-    }, [])
+    const { isLoggedIn, checkAuthenticationStatus, handleBeforeUnload } = useContext(AuthContext);
 
     useEffect(() => {
-        const checkAuthenticationStatus = () => {
-          const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
-    
-          if (storedIsLoggedIn) {
-            setIsLoggedIn(JSON.parse(storedIsLoggedIn));
-          }
-        };
-    
         checkAuthenticationStatus();
-      }, []);
-    
-      useEffect(() => {
-        const handleBeforeUnload = () => {
-          localStorage.setItem("isLoggedIn", JSON.stringify(isLoggedIn));
-        };
-    
-        window.addEventListener("beforeunload", handleBeforeUnload);
-    
+    }, [checkAuthenticationStatus]);
+
+    useEffect(() => {
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
         return () => {
-          window.removeEventListener("beforeunload", handleBeforeUnload);
+            window.removeEventListener('beforeunload', handleBeforeUnload);
         };
-      }, [isLoggedIn]);
+    }, [handleBeforeUnload]);
 
     return (
-        <>
+        <AuthProvider>
             <Header />
             <div className="main">
                 <Outlet />
             </div>
             <Footer />
-        </>
-    )
-}
+        </AuthProvider>
+    );
+};
 
 export default App;
