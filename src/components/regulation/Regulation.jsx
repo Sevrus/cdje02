@@ -26,9 +26,9 @@ const Regulation = () => {
                     <hr className="regulation__title__right-line" />
                 </div>
 
-                <div className="regulation__list">
+                <ul className="regulation__list">
                     <Description data={datas} />
-                </div>
+                </ul>
             </section>
         )
     }

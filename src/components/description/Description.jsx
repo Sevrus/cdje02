@@ -1,11 +1,30 @@
-const Description = ({data}) => {
+import { motion } from 'framer-motion';
+
+const Description = ({ data }) => {
 
     return (
         <>
             {data &&
                 data.data.map((item) => (
-                    <div className="activity__article" key={item.id}>
-                        <div className="activity__article__title" >
+                    <motion.li className="activity__article" key={item.id}
+                        initial={{
+                            opacity: 0,
+                            translateX: item.id % 2 === 0 ? -50 : 50,
+                            translateY: -50
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            translateX: 0,
+                            translateY: 0
+                        }}
+                        viewport={{once: true}}
+                        transition={{
+                            duration: 0.5,
+                            delay:  item.id * 0.3
+                        }}
+                    >
+
+                        <div className="activity__article__title">
                             <hr className="activity__article__title__left-line" />
                             <h4>{item.title}</h4>
                             <hr className="activity__article__title__right-line" />
@@ -13,7 +32,7 @@ const Description = ({data}) => {
                         <div className="activity__article__more">
                             <a href={item.link} target="_blank" >Lire la suite</a>
                         </div>
-                    </div>
+                    </motion.li>
                 ))}
         </>
     )

@@ -25,7 +25,7 @@
             margin-bottom: 15px
 
         input, textarea
-            width: 78%
+            width: 80%
             max-width: 450px
             border-radius: 5px
             border: 1px solid $black
@@ -36,6 +36,7 @@
             text-indent: 10px
 
         textarea
+            text-indent: 10px
             resize: vertical
 
         span
@@ -67,6 +68,9 @@
             font-size: $fs-18
             line-height: 18px
 
+            input, textarea
+                font-size: $fs-16
+
 // VERSION L
 @media screen and (min-width:1024px)
     .form
@@ -81,7 +85,8 @@
             margin-bottom: 20px
 
         input, textarea
-            width: 79%
+            font-size: $fs-18
+            max-width: 500px
 
         button
             height: 40px
@@ -94,8 +99,8 @@
             filter: invert(1)
             width: 20%
             position: absolute
-            top: 65vh
-            opacity: 65%
+            top: 70vh
+            opacity: 60%
 
         &__imageLeft
             transform: rotate(90deg)
@@ -116,7 +121,8 @@
                 margin-bottom: 20px
 
             input, textarea
-                width: 60%
+                font-size: $fs-20
+                max-width: 600px
 
         button
             height: 50px

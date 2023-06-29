@@ -27,9 +27,9 @@ const Tournament = () => {
                     <hr className="tournament__title__right-line" />
                 </div>
 
-                <div className="tournament__list">
+                <ul className="tournament__list">
                     <Description data={datas} />
-                </div>
+                </ul>
 
                 <div className="tournament__more-results">
                     <Link to="/tournaments">Plus de résultats</Link>

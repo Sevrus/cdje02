@@ -45,7 +45,7 @@ time, mark, audio, video {
   margin-bottom: 15px;
 }
 .form__lastname input, .form__lastname textarea, .form__firstname input, .form__firstname textarea, .form__email input, .form__email textarea, .form__message input, .form__message textarea {
-  width: 78%;
+  width: 80%;
   max-width: 450px;
   border-radius: 5px;
   border: 1px solid #242627;
@@ -56,6 +56,7 @@ time, mark, audio, video {
   text-indent: 10px;
 }
 .form__lastname textarea, .form__firstname textarea, .form__email textarea, .form__message textarea {
+  text-indent: 10px;
   resize: vertical;
 }
 .form__lastname span, .form__firstname span, .form__email span, .form__message span {
@@ -90,6 +91,9 @@ time, mark, audio, video {
     font-size: 1.125rem;
     line-height: 18px;
   }
+  .form__lastname input, .form__lastname textarea, .form__firstname input, .form__firstname textarea, .form__email input, .form__email textarea, .form__message input, .form__message textarea, .form button input, .form button textarea {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .form__lastname, .form__firstname, .form__email, .form__message {
@@ -103,7 +107,8 @@ time, mark, audio, video {
     margin-bottom: 20px;
   }
   .form input, .form textarea {
-    width: 79%;
+    font-size: 1.125rem;
+    max-width: 500px;
   }
   .form button {
     height: 40px;
@@ -115,8 +120,8 @@ time, mark, audio, video {
     filter: invert(1);
     width: 20%;
     position: absolute;
-    top: 65vh;
-    opacity: 65%;
+    top: 70vh;
+    opacity: 60%;
   }
   .form__imageLeft {
     transform: rotate(90deg);
@@ -137,7 +142,8 @@ time, mark, audio, video {
     margin-bottom: 20px;
   }
   .form__lastname input, .form__lastname textarea, .form__firstname input, .form__firstname textarea, .form__email input, .form__email textarea, .form__message input, .form__message textarea, .form button input, .form button textarea {
-    width: 60%;
+    font-size: 1.25rem;
+    max-width: 600px;
   }
   .form button {
     height: 50px;
@@ -838,7 +844,7 @@ time, mark, audio, video {
 .clubs .leaflet-container {
   margin: auto;
   width: 80%;
-  height: 480px;
+  height: 500px;
   margin-bottom: 15px;
   z-index: 0;
 }
@@ -891,9 +897,6 @@ time, mark, audio, video {
 }
 
 @media screen and (min-width: 768px) {
-  .clubs .leaflet-container {
-    width: 80%;
-  }
   .clubs__title {
     margin-bottom: 35px;
   }
@@ -941,8 +944,8 @@ time, mark, audio, video {
 }
 @media screen and (min-width: 1920px) {
   .clubs .leaflet-container {
-    width: 73%;
-    height: 800px;
+    width: 70%;
+    height: 600px;
   }
   .clubs__title {
     margin-bottom: 45px;
@@ -964,7 +967,7 @@ time, mark, audio, video {
   }
   .clubs__list {
     margin: auto;
-    width: 80%;
+    width: 75%;
   }
 }
 .accordion-comity {
