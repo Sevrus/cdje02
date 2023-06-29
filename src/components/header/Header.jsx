@@ -1,16 +1,17 @@
-import { useContext, useState } from "react";
-import { AuthContext } from "../../utilities/AuthContext.jsx";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import HeaderChessboard from "./components/headerChessboard/HeaderChessboard.jsx";
 import HeaderLogo from "./components/headerLogo/HeaderLogo.jsx";
 import HeaderNav from "./components/headerNav/HeaderNav.jsx";
 
 const Header = () => {
     const [resizeHeader, setResizeHeader] = useState(false);
-    const { isLoggedIn } = useContext(AuthContext);
-
+    const { pathname } = useLocation();
 
     const changeSize = () => {
-        if (isLoggedIn) {
+        if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
+            || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
+            || pathname === "/admin/results" || pathname === "/admin/regulation") {
             setResizeHeader(true);
 
         } else {
