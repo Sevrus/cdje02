@@ -15,7 +15,7 @@ const AdminsAdd = () => {
             setError("Les mots de passe ne sont pas identiques");
             clearErrorAfterDelay(setError, 3000);
             return;
-        };
+        }
 
         fetch("http://localhost:3000/api/users", {
             method: 'POST',

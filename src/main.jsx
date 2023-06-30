@@ -81,35 +81,35 @@ const router = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        path: "/admin/champions",
+                        path: "champions",
                         element: <AdminChampions/>
                     },
                     {
-                        path: "/admin/referees",
+                        path: "referees",
                         element: <AdminReferees/>
                     },
                     {
-                        path: "/admin/clubs",
+                        path: "clubs",
                         element: <AdminClubs/>
                     },
                     {
-                        path: "/admin/comity",
+                        path: "comity",
                         element: <AdminComity/>
                     },
                     {
-                        path: "/admin/articles",
+                        path: "articles",
                         element: <AdminArticles/>
                     },
                     {
-                        path: "/admin/results",
+                        path: "results",
                         element: <AdminResults/>
                     },
                     {
-                        path: "/admin/regulation",
+                        path: "regulation",
                         element: <AdminRegulation/>
                     },
                     {
-                        path: "/admin/admins",
+                        path: "admins",
                         element: <AdminAdmins/>
                     },
                 ]
