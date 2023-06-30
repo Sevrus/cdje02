@@ -1191,12 +1191,12 @@ time, mark, audio, video {
   color: #fff;
   padding: 5px;
   margin: 0 10px 20px 10px;
+  cursor: pointer;
 }
 .accordion-referee__item__title {
   position: relative;
   font-size: 0.875rem;
   height: 48px;
-  cursor: pointer;
 }
 .accordion-referee__item__title h3 {
   text-align: center;

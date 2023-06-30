@@ -1,5 +1,6 @@
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import fetch from "../../../utilities/fetchForAll.js";
 import useWindowSize from "../../../utilities/useWindowSize.jsx";
@@ -36,7 +37,21 @@ const ComityDescription = () => {
         return (
             <ul className="accordion-comity">
                 {datas.data.map((item) => (
-                    <li className="accordion-comity__item" key={item.id}>
+                    <motion.li className="accordion-comity__item" key={item.id}
+                        initial={{
+                            opacity: 1,
+                            translateX: item.id % 2 === 0 ? "-100%" : "100%",
+                        }}
+                        animate={{
+                            opacity: 1,
+                            translateX: 0,
+                        }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 50
+                        }}
+                    >
+
                         <div className="accordion-comity__item__title" onClick={() => toggle(item.id)}>
                             <hr className="accordion-comity__item__title--left" />
                             <h3>{item.title}</h3>
@@ -58,7 +73,7 @@ const ComityDescription = () => {
                                 <p onClick={() => handleMail(item.mail)}>E-mail: <span>{item.mail}</span></p>
                             </div>
                         </section>
-                    </li>
+                    </motion.li>
                 ))}
             </ul>
         )

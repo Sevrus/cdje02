@@ -60,6 +60,20 @@ const RefereeDescription = () => {
                     {datas.data.map((item) => (
                         <motion.li className="accordion-referee__item"
                             onClick={() => setSelectedId(item.id)} key={item.id}
+
+                            initial={{
+                                opacity: 1,
+                                translateX: item.id % 2 === 0 ? "-100%" : "100%",
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                translateX: 0,
+                            }}
+                            viewport={{once: true}}
+                            transition={{
+                                type: "spring",
+                                stiffness: 50
+                            }}
                         >
 
                             <div className="accordion-referee__item__title" onClick={() => toggle(item.id)} >
