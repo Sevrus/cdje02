@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const ChampionAdd = () => {
     const [name, setName] = useState("");
     const [years, setYears] = useState("");
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,14 +17,17 @@ const ChampionAdd = () => {
                 years
             }),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
               },
         })
             .then(resp => {
                 if (resp.ok) {
-                    console.log(`La création du champion est effectué`);
+                    setMessage(`La création du champion est effectué`);
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La création du champion a échoué.`);
+                    setMessage(`La création du champion a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la création du champion.");
                 }
             })
@@ -50,6 +56,8 @@ const ChampionAdd = () => {
                     <div className="addChampion__btn">
                         <button type="submit">Ajouter</button>
                     </div>
+
+                    <p className="addAdmins__validate">{message}</p>
 
                 </Form>
 

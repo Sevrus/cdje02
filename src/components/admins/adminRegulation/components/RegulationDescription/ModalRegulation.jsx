@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalRegulation = ({ closeModal, regulationData }) => {
     const [error, setError] = useState(null);
@@ -7,6 +8,8 @@ const ModalRegulation = ({ closeModal, regulationData }) => {
 
     const [title, setTitle] = useState(regulationData.title);
     const [link, setLink] = useState(regulationData.link);
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,15 +24,18 @@ const ModalRegulation = ({ closeModal, regulationData }) => {
             method: 'PUT',
             body: JSON.stringify(updatedData),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
             },
         })
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    console.log(`La mise à jour du réglement est effectué`)
+                    setMessage(`La mise à jour du réglement est effectué`)
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La mise à jour du réglement a échoué.`);
+                    setMessage(`La mise à jour du réglement a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la mise à jour du réglement.");
                 }
             })
@@ -59,6 +65,8 @@ const ModalRegulation = ({ closeModal, regulationData }) => {
 
                 <button disabled={isLoaded} type="submit" className="modalRegulation__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
+                <p className="addAdmins__validate">{message}</p>
+                
             </Form>
         </>
     )

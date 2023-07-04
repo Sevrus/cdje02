@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import fetch from "../../../../../utilities/fetchForAll.js"
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 import ModalClub from "./ModalClubs.jsx"
 
 const ClubsDescription = () => {
@@ -11,16 +12,23 @@ const ClubsDescription = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
 
+    const [message, setMessage] = useState('');
+
     const handleDelete = (id) => {
         fetch("http://localhost:3000/api/clubs/" + id, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
+            },
         })
             .then(resp => {
                 if (resp.ok) {
-                    console.log(`La suppression du club ${id} a réussi.`);
+                    setMessage(`La suppression du club ${id} a réussi.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
-                    console.log(`La suppression du club a échoué.`);
+                    setMessage(`La suppression du club a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la suppression du club.");
                 }
             })

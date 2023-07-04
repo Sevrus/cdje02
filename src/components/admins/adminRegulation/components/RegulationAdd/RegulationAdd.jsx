@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const RegulationAdd = () => {
     const [title, setTitle] = useState("");
     const [link, setLink] = useState("");
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,14 +17,17 @@ const RegulationAdd = () => {
                 link
             }),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
               },
         })
             .then(resp => {
                 if (resp.ok) {
-                    console.log(`La création du réglement est effectué`);
+                    setMessage(`La création du réglement est effectué`);
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La création du réglement a échoué.`);
+                    setMessage(`La création du réglement a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la création du réglement.");
                 }
             })
@@ -48,6 +54,8 @@ const RegulationAdd = () => {
                     <button type="submit">Ajouter</button>
                 </div>
 
+                <p className="addAdmins__validate">{message}</p>
+                
             </Form>
         </>
     )

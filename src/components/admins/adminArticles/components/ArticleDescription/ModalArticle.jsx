@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalArticle = ({ closeModal, articleData }) => {
     const [error, setError] = useState(null);
@@ -10,6 +11,8 @@ const ModalArticle = ({ closeModal, articleData }) => {
     const [description, setDescription] = useState(articleData.description);
     const [image, setImage] = useState(articleData.image);
     const [created, setCreated] = useState(articleData.created);
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,15 +30,18 @@ const ModalArticle = ({ closeModal, articleData }) => {
             method: 'PUT',
             body: JSON.stringify(updatedData),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
             },
         })
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    console.log(`La mise à jour de l'article est effectué`)
+                    setMessage(`La mise à jour de l'article est effectué`)
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La mise à jour de l'article a échoué.`);
+                    setMessage(`La mise à jour de l'article a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la mise à jour de l'article.");
                 }
             })
@@ -79,6 +85,8 @@ const ModalArticle = ({ closeModal, articleData }) => {
                 </div>
 
                 <button disabled={isLoaded} type="submit" className="modalArticle__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
+
+                <p className="addAdmins__validate">{message}</p>
 
             </Form>
         </>

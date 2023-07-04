@@ -14,8 +14,6 @@ const NewsOpenArticle = () => {
         fetch(setIsLoaded, setError, setDatas, `api/news/${id}`)
     }, []);
 
-    console.log(datas);
-
     if (error) {
         return <div>Erreur : {error.message}</div>;
     } else if (!isLoaded) {

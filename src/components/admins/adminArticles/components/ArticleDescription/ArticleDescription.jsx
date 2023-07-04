@@ -2,25 +2,34 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
-import fetch from "../../../../../utilities/fetchForAll"
+import customFetch from "../../../../../utilities/fetchForAll"
 import ModalArticle from "./ModalArticle.jsx"
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const ArticleDescription = () => {
     const [openModal, setOpenModal] = useState(null);
+
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
 
+    const [message, setMessage] = useState('');
+
     const handleDelete = (id) => {
         fetch("http://localhost:3000/api/news/" + id, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
+            },
         })
             .then(resp => {
                 if (resp.ok) {
-                    console.log(`La suppression de l'article ${id} a réussi.`);
+                    setMessage(`La suppression de l'article ${id} a réussi.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
-                    console.log(`La suppression de l'article a échoué.`);
+                    setMessage(`La suppression de l'article a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la suppression de l'article.");
                 }
             })
@@ -43,7 +52,7 @@ const ArticleDescription = () => {
     }
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/news")
+        customFetch(setIsLoaded, setError, setDatas, "api/news")
     }, [])
 
     if (error) {
@@ -74,12 +83,13 @@ const ArticleDescription = () => {
                                 <ModalArticle articleData={item} closeModal={handleCloseModal} />, document.body
                             )}
 
-                            <span onClick={() => { handleDelete(item.id) }}>
+                            <span onClick={() => handleDelete(item.id)}>
                                 <FontAwesomeIcon className="articleArticle__icon__trash" icon={faTrash} />
                             </span>
                         </div>
 
                     </section>
+
 
                 ))}
 

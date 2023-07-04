@@ -10,12 +10,14 @@ const ModalAdmins = ({ closeModal, adminData }) => {
     const [password, setPassword] = useState(adminData.password);
     const [verifyPassword, setVerifyPassword] = useState("");
 
+    const [message, setMessage] = useState('');
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (password !== verifyPassword) {
-            setError("Les mots de passe ne sont pas identiques");
-            clearErrorAfterDelay(setError, 3000);
+            setMessage("Les mots de passe ne sont pas identiques");
+            clearErrorAfterDelay(setMessage, 3000);
             return;
         };
 
@@ -29,15 +31,18 @@ const ModalAdmins = ({ closeModal, adminData }) => {
             method: 'PUT',
             body: JSON.stringify(updatedData),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
             },
         })
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    console.log(`La mise à jour de l'utilisateur est effectué`)
+                    setMessage(`La mise à jour de l'utilisateur est effectué`)
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La mise à jour de l'utilisateur a échoué.`);
+                    setMessage(`La mise à jour de l'utilisateur a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la mise à jour de l'utilisateur.");
                 }
             })
@@ -69,7 +74,9 @@ const ModalAdmins = ({ closeModal, adminData }) => {
                 </div>
 
                 <button disabled={isLoaded} type="submit" className="modalAdmins__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
-                {error && <div className="modalAdmins__content__error">{error}</div>}
+                
+                <p className="addAdmins__validate">{message}</p>
+
             </Form>
         </>
     )

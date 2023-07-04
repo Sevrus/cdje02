@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const ComityAdd = () => {
     const [title, setTitle] = useState("");
@@ -8,6 +9,8 @@ const ComityAdd = () => {
     const [firstName, setFirstname] = useState("");
     const [lastName, setLastname] = useState("");
     const [mail, setMail] = useState("");
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,14 +25,17 @@ const ComityAdd = () => {
                 mail
             }),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
               },
         })
             .then(resp => {
                 if (resp.ok) {
-                    console.log(`La création du membre est effectué`);
+                    setMessage(`La création du membre est effectué`);
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La création du membre a échoué.`);
+                    setMessage(`La création du membre a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la création du membre.");
                 }
             })
@@ -78,6 +84,7 @@ const ComityAdd = () => {
                     <button type="submit">Ajouter</button>
                 </div>
 
+                <p className="addAdmins__validate">{message}</p>
             </Form>
 
         </>

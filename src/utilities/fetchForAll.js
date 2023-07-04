@@ -1,15 +1,19 @@
 
-function fetchForAll(setIsLoaded, setError, setItems, uri, token) {
+function fetchForAll(setIsLoaded, setError, setItems, uri) {
 
     const url = "http://localhost:3000/"
 
     fetch(url + uri, {
         headers: {
-            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         }
     })
-        .then(res => res.json())
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Erreur lors de la requête.');
+            }
+            return res.json()
+        })
         .then(
             (result) => {
                 setIsLoaded(true);

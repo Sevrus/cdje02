@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const ClubsAdd = () => {
     const [name, setName] = useState("");
@@ -10,6 +11,8 @@ const ClubsAdd = () => {
     const [members, setMembers] = useState("");
     const [coordx, setCoordx] = useState("");
     const [coordy, setCoordy] = useState("");
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,14 +29,17 @@ const ClubsAdd = () => {
                 coordy
             }),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
               },
         })
             .then(resp => {
                 if (resp.ok) {
-                    console.log(`La création du club est effectué`)
+                    setMessage(`La création du club est effectué`);
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La création du club a échoué.`);
+                    setMessage(`La création du club a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la création du club.");
                 }
             })
@@ -92,6 +98,8 @@ const ClubsAdd = () => {
                         <button type="submit">Ajouter</button>
                     </div>
 
+                    <p className="addAdmins__validate">{message}</p>
+                    
                 </Form>
 
             </>

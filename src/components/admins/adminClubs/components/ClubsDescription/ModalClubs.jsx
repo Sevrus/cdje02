@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalClubs = ({ closeModal, clubData }) => {
     const [error, setError] = useState(null);
@@ -13,6 +14,8 @@ const ModalClubs = ({ closeModal, clubData }) => {
     const [members, setMembers] = useState(clubData.members);
     const [coordx, setCoordx] = useState(clubData.coordx);
     const [coordy, setCoordy] = useState(clubData.coordy);
+
+    const [message, setMessage] = useState('');
     
 
     const handleSubmit = (e) => {
@@ -34,16 +37,19 @@ const ModalClubs = ({ closeModal, clubData }) => {
             method: 'PUT',
             body: JSON.stringify(updatedData),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
             },
         })
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    console.log(`La mise à jour du club est effectué`)
+                    setMessage(`La mise à jour du club est effectué`)
+                    clearErrorAfterDelay(setMessage, 3000);
                     setDatas(datas);
                 } else {
-                    console.log(`La mise à jour du club a échoué.`);
+                    setMessage(`La mise à jour du club a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la mise à jour du club.");
                 }
             })
@@ -103,6 +109,8 @@ const ModalClubs = ({ closeModal, clubData }) => {
 
                         <button disabled={isLoaded} type="submit" className="modalClub__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
+                        <p className="addAdmins__validate">{message}</p>
+                        
                     </Form>
             </>
         )

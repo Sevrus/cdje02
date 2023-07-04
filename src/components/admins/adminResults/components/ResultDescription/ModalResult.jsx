@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalResult = ({ closeModal, resultData }) => {
     const [error, setError] = useState(null);
@@ -7,6 +8,8 @@ const ModalResult = ({ closeModal, resultData }) => {
 
     const [title, setTitle] = useState(resultData.title);
     const [link, setLink] = useState(resultData.link);
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,15 +24,18 @@ const ModalResult = ({ closeModal, resultData }) => {
             method: 'PUT',
             body: JSON.stringify(updatedData),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
             },
         })
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    console.log(`La mise à jour du tournoi est effectué`)
+                    setMessage(`La mise à jour du tournoi est effectué`);
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La mise à jour du tournoi a échoué.`);
+                    setMessage(`La mise à jour du tournoi a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la mise à jour du tournoi.");
                 }
             })
@@ -58,6 +64,8 @@ const ModalResult = ({ closeModal, resultData }) => {
 
                 <button disabled={isLoaded} type="submit" className="modalResult__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
+                <p className="addAdmins__validate">{message}</p>
+                
             </Form>
         </>
     )

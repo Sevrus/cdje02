@@ -1,20 +1,22 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import ImageRight from '../../assets/images/image-title-right.png';
 
 const Form = () => {
 
+    const [message, setMessage] = useState("");
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs.sendForm('contact_service', 'contact_form', form.current, 'LoB492yO3zEvCzY_C')
             .then(
-                (result) => {
-                    console.log(result.text);
+                (resp) => {
+                    setMessage(`L'email a bien été envoyé`)
                 },
                 (error) => {
-                    console.log(error.text);
+                    console.error(error)
+                    setMessage(`L'email n'a pas été envoyé. Veuillez réessayer.`)
                 }
             );
     };
@@ -39,6 +41,9 @@ const Form = () => {
                 <label htmlFor="message">Message</label>
                 <textarea cols="30" rows="10" name='message' maxLength={200} required={true} />
             </div>
+         
+            <p className='form__validate'>{message}</p>
+
             <div className="form__btn">
                 <button>Envoyer</button>
             </div>

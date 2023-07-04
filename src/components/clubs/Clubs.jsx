@@ -9,7 +9,6 @@ const Clubs = () => {
 
     const toogle = ((i, coordx, coordy) => {
         const coord = new Array(coordx, coordy)
-        console.log(coord);
         if (selected === i) {
             return (
                 setSelected(null)

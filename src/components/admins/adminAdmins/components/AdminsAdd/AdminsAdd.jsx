@@ -1,19 +1,22 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const AdminsAdd = () => {
     const [error, setError] = useState(null);
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [verifyPassword, setVerifyPassword] = useState("");
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (password !== verifyPassword) {
-            setError("Les mots de passe ne sont pas identiques");
-            clearErrorAfterDelay(setError, 3000);
+            setMessage("Les mots de passe ne sont pas identiques");
+            clearErrorAfterDelay(setMessage, 3000);
             return;
         }
 
@@ -24,14 +27,17 @@ const AdminsAdd = () => {
                 password
             }),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
-              },
+            },
         })
             .then(resp => {
                 if (resp.ok) {
-                    console.log(`La création de l'utilisateur est effectué`);
+                    setMessage(`La création de l'utilisateur est effectué`);
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La création de l'utilisateur a échoué.`);
+                    setMessage(`La création de l'utilisateur a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la création de l'utilisateur.");
                 }
             })
@@ -43,7 +49,7 @@ const AdminsAdd = () => {
     return (
         <>
             <Form className="addAdmins" onSubmit={handleSubmit}>
-            
+
                 <div className="addAdmins__email">
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" maxLength={50} required={true} value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -63,6 +69,8 @@ const AdminsAdd = () => {
                 <div className="addAdmins__btn">
                     <button type="submit">Ajouter</button>
                 </div>
+
+                <p className="addAdmins__validate">{message}</p>
                 {error && <div className="addAdmins__error">{error}</div>}
             </Form>
         </>

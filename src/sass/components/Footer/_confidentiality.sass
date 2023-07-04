@@ -40,12 +40,38 @@
                 margin-bottom: 10px
 
             &__content
-                
+
                 p
                     margin: 25px
-
 
     &__footer
         text-align: end
         margin-top: 40px
         font-style: italic
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .confidentiality
+
+        &__content
+
+            &__article
+
+                &__content
+                    margin-left: 20px
+
+                    &__contact
+                        margin-left: 20px
+
+// VERSION L
+@media screen and (min-width:1024px)
+
+    .confidentiality
+        padding: 0 30px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+
+    .confidentiality
+        padding: 0 70px
+        font-size: $fs-16

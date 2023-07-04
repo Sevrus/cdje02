@@ -27,10 +27,6 @@
             height: 40px
             text-indent: 10px
 
-    &__btn
-        @include flex(row , center , center)
-        width: 100%
-
     &__password
 
         p
@@ -39,6 +35,14 @@
             font-size: $fs-14
             text-align: center
             color: $grey
+
+            &:hover
+                cursor: pointer
+                transform: scale(0.98)
+
+    &__btn
+        @include flex(row , center , center)
+        width: 100%
 
         button
             @include articles()
@@ -50,9 +54,13 @@
             font-size: $fs-16
             font-weight: bold
 
-            &:hover
-                cursor: pointer
-                transform: scale(0.98)
+    &__validate
+        font-family: $font-primary
+        color: $red
+        font-weight: bold
+        font-size: $fs-14
+        text-align: center
+        margin: 15px 0 -10px
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)

@@ -62,6 +62,14 @@ time, mark, audio, video {
   color: #f73746;
   padding-top: 10px;
 }
+.form__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
 .form__btn {
   display: flex;
   justify-content: center;
@@ -110,6 +118,9 @@ time, mark, audio, video {
     font-size: 1.125rem;
     width: 500px;
   }
+  .form__validate {
+    font-size: 1rem;
+  }
   .form button {
     height: 40px;
   }
@@ -120,7 +131,7 @@ time, mark, audio, video {
     filter: invert(1);
     width: 20%;
     position: absolute;
-    top: 70vh;
+    top: 66vh;
     opacity: 60%;
   }
   .form__imageLeft {
@@ -2622,6 +2633,22 @@ time, mark, audio, video {
   font-style: italic;
 }
 
+@media screen and (min-width: 768px) {
+  .legal-notice__content__article__content {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .legal-notice {
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .legal-notice {
+    padding: 0 70px;
+    font-size: 1rem;
+  }
+}
 /* POLITIQUE DE CONFIDENTIALITE */
 .confidentiality {
   font-family: "Noto Sans", sans-serif;
@@ -2667,6 +2694,25 @@ time, mark, audio, video {
   font-style: italic;
 }
 
+@media screen and (min-width: 768px) {
+  .confidentiality__content__article__content {
+    margin-left: 20px;
+  }
+  .confidentiality__content__article__content__contact {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .confidentiality {
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .confidentiality {
+    padding: 0 70px;
+    font-size: 1rem;
+  }
+}
 /* FOOTER */
 /* VERSION MOBILE */
 .footer {
@@ -2734,7 +2780,6 @@ time, mark, audio, video {
 @media screen and (min-width: 1024px) {
   .footer {
     height: 200px;
-    margin-top: 20vh;
   }
   .footer__center {
     margin: 65px 70px 0 70px;
@@ -2756,7 +2801,6 @@ time, mark, audio, video {
 @media screen and (min-width: 1920px) {
   .footer {
     height: 250px;
-    margin-top: 30vh;
   }
   .footer__center {
     margin: 70px 180px 0 180px;
@@ -3180,6 +3224,14 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
+.addComity__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
 
 @media screen and (min-width: 768px) {
   .addComity__job, .addComity__lastname, .addComity__firstname, .addComity__email, .addComity__image, .addComity__alt, .addComity button {
@@ -3331,6 +3383,14 @@ time, mark, audio, video {
 .modalComity__content__button:hover {
   cursor: pointer;
   transform: scale(0.98);
+}
+.modalComity__content__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
 }
 
 /* VERSION TABLETTE */
@@ -3662,6 +3722,14 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
+.addResult__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
 
 @media screen and (min-width: 768px) {
   .addResult__title, .addResult__link, .addResult button {
@@ -3874,6 +3942,14 @@ time, mark, audio, video {
 .modalResult__content__button:hover {
   cursor: pointer;
   transform: scale(0.98);
+}
+.modalResult__content__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
 }
 
 /* VERSION TABLETTE */
@@ -4205,6 +4281,14 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
+.addClub__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
 
 @media screen and (min-width: 768px) {
   .addClub__name, .addClub__town, .addClub__site, .addClub__president, .addClub__tel, .addClub__members, .addClub__coordx, .addClub__coordy, .addClub button {
@@ -4350,6 +4434,12 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
 }
 .modalClub__content__close {
   position: absolute;
@@ -4421,7 +4511,6 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
-
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .modalClub__content {
@@ -4750,6 +4839,14 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
+.addReferee__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
 
 @media screen and (min-width: 768px) {
   .addReferee__name, .addReferee__validity, .addReferee__type, .addReferee__club, .addReferee button {
@@ -4960,6 +5057,14 @@ time, mark, audio, video {
 .modalReferees__content__button:hover {
   cursor: pointer;
   transform: scale(0.98);
+}
+.modalReferees__content__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
 }
 
 /* VERSION TABLETTE */
@@ -5291,6 +5396,14 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
+.addRegulation__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
 
 @media screen and (min-width: 768px) {
   .addRegulation__title, .addRegulation__link, .addRegulation button {
@@ -5498,6 +5611,14 @@ time, mark, audio, video {
 .modalRegulation__content__button:hover {
   cursor: pointer;
   transform: scale(0.98);
+}
+.modalRegulation__content__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
 }
 
 /* VERSION TABLETTE */
@@ -5832,6 +5953,14 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
+.addArticle__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
 
 @media screen and (min-width: 768px) {
   .addArticle__title, .addArticle__author, .addArticle__description, .addArticle__image, .addArticle button {
@@ -5970,6 +6099,12 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
 }
 .modalArticle__content__close {
   position: absolute;
@@ -6041,7 +6176,6 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
-
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .modalArticle__content {
@@ -6371,6 +6505,14 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
+.addChampion__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
 
 @media screen and (min-width: 768px) {
   .addChampion__name, .addChampion__year, .addChampion button {
@@ -6511,6 +6653,12 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
 }
 .modalChampion__content__close {
   position: absolute;
@@ -6582,7 +6730,6 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
-
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .modalChampion__content {
@@ -6886,6 +7033,15 @@ time, mark, audio, video {
   cursor: pointer;
 }
 
+.validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
+
 @media screen and (min-width: 768px) {
   .articleAdmins {
     width: 40%;
@@ -6944,13 +7100,6 @@ time, mark, audio, video {
   height: 40px;
   text-indent: 10px;
 }
-.addAdmins__btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
 .addAdmins__password p {
   width: 80%;
   margin-top: 5px;
@@ -6958,7 +7107,18 @@ time, mark, audio, video {
   text-align: center;
   color: #4e5862;
 }
-.addAdmins__password button {
+.addAdmins__password p:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+}
+.addAdmins__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.addAdmins__btn button {
   background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -6972,9 +7132,13 @@ time, mark, audio, video {
   font-size: 1rem;
   font-weight: bold;
 }
-.addAdmins__password button:hover {
-  cursor: pointer;
-  transform: scale(0.98);
+.addAdmins__validate {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -7053,6 +7217,12 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
 }
 .modalAdmins__content__close {
   position: absolute;
@@ -7124,7 +7294,6 @@ time, mark, audio, video {
   cursor: pointer;
   transform: scale(0.98);
 }
-
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .modalAdmins__content {

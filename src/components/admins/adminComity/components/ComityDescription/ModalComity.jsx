@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalComity = ({ closeModal, comityData }) => {
     const [error, setError] = useState(null);
@@ -11,6 +12,8 @@ const ModalComity = ({ closeModal, comityData }) => {
     const [firstName, setFirstname] = useState(comityData.firstName);
     const [lastName, setLastname] = useState(comityData.lastName);
     const [mail, setMail] = useState(comityData.mail);
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -29,15 +32,18 @@ const ModalComity = ({ closeModal, comityData }) => {
             method: 'PUT',
             body: JSON.stringify(updatedData),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
             },
         })
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    console.log(`La mise à jour du membre est effectué`)
+                    setMessage(`La mise à jour du membre est effectué`);
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La mise à jour du membre a échoué.`);
+                    setMessage(`La mise à jour du membre a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la mise à jour du membre.");
                 }
             })
@@ -87,6 +93,8 @@ const ModalComity = ({ closeModal, comityData }) => {
 
                 <button disabled={isLoaded} type="submit" className="modalComity__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
+                <p className="addAdmins__validate">{message}</p>
+                
             </Form>
         </>
     )

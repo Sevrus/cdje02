@@ -31,14 +31,40 @@
             p
                 margin-top: 10px
 
-        &__article__title
-            font-size: $fs-20
-            font-weight: bold
-            color: $grey
-            margin-top: 30px
-            margin-bottom: 10px
+        &__article
+
+            &__title
+                font-size: $fs-20
+                font-weight: bold
+                color: $grey
+                margin-top: 30px
+                margin-bottom: 10px
 
     &__footer
         text-align: end
         margin-top: 30px
         font-style: italic
+
+// VERSION TABLETTE
+@media screen and (min-width:768px)
+    .legal-notice
+
+        &__content
+
+            &__article
+
+                &__content
+                    margin-left: 20px
+
+// VERSION L
+@media screen and (min-width:1024px)
+
+    .legal-notice
+        padding: 0 30px
+
+// VERSION XL
+@media screen and (min-width:1920px)
+
+    .legal-notice
+        padding: 0 70px
+        font-size: $fs-16

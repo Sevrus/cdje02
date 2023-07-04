@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const ArticleAdd = () => {
     const [title, setTitle] = useState("");
     const [image, setImage] = useState("");
     const [author, setAuthor] = useState("");
     const [description, setDescription] = useState("");
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,14 +21,17 @@ const ArticleAdd = () => {
                 image
             }),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
               },
         })
             .then(resp => {
                 if (resp.ok) {
-                    console.log(`La création de l'article est effectué`);
+                    setMessage(`La création de l'article est effectué`);
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La création de l'article a échoué.`);
+                    setMessage(`La création de l'article a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la création de l'article.");
                 }
             })
@@ -62,6 +68,8 @@ const ArticleAdd = () => {
                     <div className="addArticle__btn">
                         <button type="submit">Ajouter</button>
                     </div>
+
+                    <p className="addAdmins__validate">{message}</p>
 
                 </Form>
             </>

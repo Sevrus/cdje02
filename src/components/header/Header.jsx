@@ -11,7 +11,7 @@ const Header = () => {
     const changeSize = () => {
         if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
             || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
-            || pathname === "/admin/results" || pathname === "/admin/regulation") {
+            || pathname === "/admin/results" || pathname === "/admin/regulation" || pathname === "/admin/admins") {
             setResizeHeader(true);
 
         } else {

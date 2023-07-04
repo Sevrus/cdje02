@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalReferees = ({ closeModal, refereeData }) => {
     const [error, setError] = useState(null);
@@ -9,6 +10,8 @@ const ModalReferees = ({ closeModal, refereeData }) => {
     const [title, setTitle] = useState(refereeData.title);
     const [validity, setValidity] = useState(refereeData.validity);
     const [club, setClub] = useState(refereeData.club);
+
+    const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,15 +28,18 @@ const ModalReferees = ({ closeModal, refereeData }) => {
             method: 'PUT',
             body: JSON.stringify(updatedData),
             headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
                 "Content-type": "application/json"
             },
         })
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    console.log(`La mise à jour de l'arbitre est effectué`)
+                    setMessage(`La mise à jour de l'arbitre est effectué`)
+                    clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    console.log(`La mise à jour de l'arbitre a échoué.`);
+                    setMessage(`La mise à jour de l'arbitre a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la mise à jour de l'arbitre.");
                 }
             })
@@ -48,7 +54,7 @@ const ModalReferees = ({ closeModal, refereeData }) => {
             <div className="modalReferees" onClick={closeModal}>
             </div>
 
-            <Form className="modalReferees__content">
+            <Form onSubmit={handleSubmit} className="modalReferees__content">
                 <div className="modalReferees__content__close" onClick={closeModal}></div>
 
                 <div className="modalReferees__content__name">
@@ -73,6 +79,8 @@ const ModalReferees = ({ closeModal, refereeData }) => {
 
                 <button disabled={isLoaded} type="submit" className="modalReferees__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
+                <p className="addAdmins__validate">{message}</p>
+                
             </Form>
         </>
     )

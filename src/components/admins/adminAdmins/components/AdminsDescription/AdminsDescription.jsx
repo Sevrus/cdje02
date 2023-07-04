@@ -2,30 +2,40 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
-import fetch from "../../../../../utilities/fetchForAll.js"
+import customFetch from "../../../../../utilities/fetchForAll"
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 import ModalAdmins from "./ModalAdmins.jsx"
 
 const AdminsDescription = () => {
     const [openModal, setOpenModal] = useState(null);
+
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
 
+    const [message, setMessage] = useState('');
+
     const handleDelete = (id) => {
+        console.log(id);
         fetch("http://localhost:3000/api/users/" + id, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
+            },
         })
             .then(resp => {
                 if (resp.ok) {
-                    console.log(`La suppression de l'utilisateur ${id} a réussi.`);
+                    setMessage(`La suppression de l'utilisateur a réussi.`);
+                    // clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
-                    console.log(`La suppression de l'utilisateur a échoué.`);
+                    setMessage(`La suppression de l'utilisateur a échoué.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la suppression de l'utilisateur.");
                 }
             })
             .then(datas => {
-                console.log(`La suppression de l'utilisateur ${id} a réussi.`,
+                console.log(`La suppression de l'utilisateur a réussi.`,
                     datas);
             })
             .catch(error => {
@@ -43,7 +53,7 @@ const AdminsDescription = () => {
     }
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/users")
+        customFetch(setIsLoaded, setError, setDatas, "api/users")
     }, [])
 
     if (error) {
@@ -73,9 +83,11 @@ const AdminsDescription = () => {
                                 <ModalAdmins adminData={item} closeModal={handleCloseModal} />, document.body
                             )}
 
-                            <span onClick={() => { handleDelete(item.id) }}>
+                            <span onClick={() => handleDelete(item.id)}>
                                 <FontAwesomeIcon className="articleAdmins__icon__trash" icon={faTrash} />
                             </span>
+
+
                         </div>
                     </section>
 
