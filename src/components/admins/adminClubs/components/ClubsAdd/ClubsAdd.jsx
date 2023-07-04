@@ -35,7 +35,7 @@ const ClubsAdd = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La création du club est effectué`);
+                    setMessage(`Le club a bien été créé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création du club a échoué.`);
@@ -98,7 +98,7 @@ const ClubsAdd = () => {
                         <button type="submit">Ajouter</button>
                     </div>
 
-                    <p className="addAdmins__validate">{message}</p>
+                    <p className="addClub__message">{message}</p>
                     
                 </Form>
 

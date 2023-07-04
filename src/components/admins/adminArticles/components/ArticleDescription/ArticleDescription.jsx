@@ -64,35 +64,38 @@ const ArticleDescription = () => {
         return (
 
             <>
+                <ul className="adminArticle__list">
 
-                {datas.data.map((item) => (
+                    {datas.data.map((item) => (
 
-                    <section className="articleArticle" key={item.id}>
+                        <li className="articleArticle" key={item.id}>
 
-                        <div className="articleArticle__text">
-                            <p>{item.title}</p>
-                            <p>{item.author}</p>
-                        </div>
-
-
-                        <div className="articleArticle__icon">
-                            <a onClick={() => handleOpenModal(item)}>
-                                <FontAwesomeIcon className="articleArticle__icon__pencil" icon={faPencil} />
-                            </a>
-                            {openModal === item && createPortal(
-                                <ModalArticle articleData={item} closeModal={handleCloseModal} />, document.body
-                            )}
-
-                            <span onClick={() => handleDelete(item.id)}>
-                                <FontAwesomeIcon className="articleArticle__icon__trash" icon={faTrash} />
-                            </span>
-                        </div>
-
-                    </section>
+                            <div className="articleArticle__text">
+                                <p>{item.title}</p>
+                                <p>{item.author}</p>
+                            </div>
 
 
-                ))}
+                            <div className="articleArticle__icon">
+                                <a onClick={() => handleOpenModal(item)}>
+                                    <FontAwesomeIcon className="articleArticle__icon__pencil" icon={faPencil} />
+                                </a>
+                                {openModal === item && createPortal(
+                                    <ModalArticle articleData={item} closeModal={handleCloseModal} />, document.body
+                                )}
 
+                                <span onClick={() => handleDelete(item.id)}>
+                                    <FontAwesomeIcon className="articleArticle__icon__trash" icon={faTrash} />
+                                </span>
+                            </div>
+
+                        </li>
+
+
+                    ))}
+                </ul>
+
+                <p className="articleArticle__message">{message}</p>
             </>
         )
     }

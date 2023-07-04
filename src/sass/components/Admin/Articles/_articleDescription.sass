@@ -27,14 +27,18 @@
             &:hover
                 cursor: pointer
 
+    &__message
+        font-family: $font-primary
+        color: $red
+        font-weight: bold
+        font-size: $fs-14
+        text-align: center
+
 // VERSION TABLETTE
 @media screen and (min-width:768px)
     .articleArticle
         width: 40%
         margin: 0 10px 20px 10px
-
-        p
-            font-size: $fs-14
 
 // VERSION L
 @media screen and (min-width:1024px)
@@ -42,8 +46,7 @@
         width: 25%
         margin: 0 10px 30px 10px
 
-        p
-            text-align: center
+        &__text, &__message
             font-size: $fs-16
 
 // VERSION XL
@@ -52,5 +55,5 @@
         width: 20%
         margin: 0 10px 30px 10px
 
-        p
+        &__text, &__message
             font-size: $fs-18

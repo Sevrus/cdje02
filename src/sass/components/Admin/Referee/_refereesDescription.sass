@@ -27,29 +27,33 @@
             &:hover
                 cursor: pointer
 
+    &__message
+        font-family: $font-primary
+        color: $red
+        font-weight: bold
+        font-size: $fs-14
+        text-align: center
+
 // VERSION TABLETTE
 @media screen and (min-width:768px)
     .articleReferee
         width: 40%
         margin: 0 10px 20px 10px
 
-        p
-            font-size: $fs-14
-
 // VERSION L
 @media screen and (min-width:1024px)
     .articleReferee
-        width: 40%
-        margin: 0 10px 20px 10px
-        
-        p
+        width: 25%
+        margin: 0 10px 30px 10px
+
+        &__text, &__message
             font-size: $fs-16
 
 // VERSION XL
 @media screen and (min-width:1920px)
     .articleReferee
-        width: 24%
-        margin: 0 15px 30px 15px
+        width: 20%
+        margin: 0 10px 30px 10px
 
-        p
+        &__text, &__message
             font-size: $fs-18

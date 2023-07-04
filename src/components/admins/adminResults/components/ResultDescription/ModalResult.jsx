@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalResult = ({ closeModal, resultData }) => {
     const [error, setError] = useState(null);
@@ -31,12 +31,12 @@ const ModalResult = ({ closeModal, resultData }) => {
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    setMessage(`La mise à jour du tournoi est effectué`);
+                    setMessage(`Le tournoi a bien été modifié.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    setMessage(`La mise à jour du tournoi a échoué.`);
+                    setMessage(`La modification du tournoi a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la mise à jour du tournoi.");
+                    throw new Error("Erreur lors de la modification du tournoi.");
                 }
             })
             .catch(error => {
@@ -64,7 +64,7 @@ const ModalResult = ({ closeModal, resultData }) => {
 
                 <button disabled={isLoaded} type="submit" className="modalResult__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
-                <p className="addAdmins__validate">{message}</p>
+                <p className="modalResult__content__message">{message}</p>
                 
             </Form>
         </>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalReferees = ({ closeModal, refereeData }) => {
     const [error, setError] = useState(null);
@@ -35,12 +35,12 @@ const ModalReferees = ({ closeModal, refereeData }) => {
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    setMessage(`La mise à jour de l'arbitre est effectué`)
+                    setMessage(`L'arbitre a bien été modifié.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    setMessage(`La mise à jour de l'arbitre a échoué.`);
+                    setMessage(`La modification de l'arbitre a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la mise à jour de l'arbitre.");
+                    throw new Error("Erreur lors de la modification de l'arbitre.");
                 }
             })
             .catch(error => {
@@ -79,7 +79,7 @@ const ModalReferees = ({ closeModal, refereeData }) => {
 
                 <button disabled={isLoaded} type="submit" className="modalReferees__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
-                <p className="addAdmins__validate">{message}</p>
+                <p className="modalReferees__content__message">{message}</p>
                 
             </Form>
         </>

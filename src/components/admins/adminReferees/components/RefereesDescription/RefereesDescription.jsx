@@ -2,8 +2,8 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import fetch from "../../../../../utilities/fetchForAll.js"
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
+import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalReferees from './ModalReferees.jsx'
 
 const RefereesDescription = () => {
@@ -23,7 +23,7 @@ const RefereesDescription = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La suppression de l'arbitre ${id} a réussi.`);
+                    setMessage(`L'arbitre a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
@@ -33,7 +33,7 @@ const RefereesDescription = () => {
                 }
             })
             .then(datas => {
-                console.log(`La suppression de l'arbitre ${id} a réussi.`,
+                console.log(`La suppression de l'arbitre a réussi.`,
                     datas);
             })
             .catch(error => {
@@ -51,7 +51,7 @@ const RefereesDescription = () => {
     }
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/referees")
+        customFetch(setIsLoaded, setError, setDatas, "api/referees")
     }, [])
 
     if (error) {
@@ -63,32 +63,37 @@ const RefereesDescription = () => {
         return (
 
             <>
-                {datas.data.map((item) => (
+                <ul className="adminReferee__list">
+                    
+                    {datas.data.map((item) => (
 
-                    <section className="articleReferee" key={item.id}>
+                        <li className="articleReferee" key={item.id}>
 
-                        <div className="articleReferee__text">
-                            <p>{item.name}</p>
-                            <p>{item.club}</p>
-                        </div>
+                            <div className="articleReferee__text">
+                                <p>{item.name}</p>
+                                <p>{item.club}</p>
+                            </div>
 
-                        <div className="articleReferee__icon">
+                            <div className="articleReferee__icon">
 
-                            <a onClick={() => handleOpenModal(item)}>
-                                <FontAwesomeIcon className="articleReferee__icon__pencil" icon={faPencil} />
-                            </a>
-                            {openModal === item && createPortal(
-                                <ModalReferees refereeData={item} closeModal={handleCloseModal} />, document.body
-                            )}
+                                <a onClick={() => handleOpenModal(item)}>
+                                    <FontAwesomeIcon className="articleReferee__icon__pencil" icon={faPencil} />
+                                </a>
+                                {openModal === item && createPortal(
+                                    <ModalReferees refereeData={item} closeModal={handleCloseModal} />, document.body
+                                )}
 
-                            <span onClick={() => { handleDelete(item.id) }}>
-                                <FontAwesomeIcon className="articleReferee__icon__trash" icon={faTrash} />
-                            </span>
-                        </div>
+                                <span onClick={() => { handleDelete(item.id) }}>
+                                    <FontAwesomeIcon className="articleReferee__icon__trash" icon={faTrash} />
+                                </span>
+                            </div>
 
-                    </section>
+                        </li>
 
-                ))}
+                    ))}
+                </ul>
+
+                <p className="articleReferee__message">{message}</p>
             </>
 
         )

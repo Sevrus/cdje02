@@ -2,8 +2,8 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
-import fetch from "../../../../../utilities/fetchForAll.js"
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
+import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalRegulation from "./ModalRegulation.jsx"
 
 const RegulationDescription = () => {
@@ -24,7 +24,7 @@ const RegulationDescription = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La suppression du réglement ${id} a réussi.`);
+                    setMessage(`Le réglement a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
@@ -34,7 +34,7 @@ const RegulationDescription = () => {
                 }
             })
             .then(datas => {
-                console.log(`La suppression du réglement ${id} a réussi.`,
+                console.log(`La suppression du réglement a réussi.`,
                     datas);
             })
             .catch(error => {
@@ -52,7 +52,7 @@ const RegulationDescription = () => {
     }
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/regulations")
+        customFetch(setIsLoaded, setError, setDatas, "api/regulations")
     }, [])
 
     if (error) {
@@ -63,30 +63,35 @@ const RegulationDescription = () => {
 
         return (
             <>
-                {datas.data.map((item) => (
+                <ul className="adminRegulation__list">
+                    
+                    {datas.data.map((item) => (
 
-                    <section className="articleRegulation" key={item.id}>
+                        <li className="articleRegulation" key={item.id}>
 
-                        <div className="articleRegulation__text">
-                            <p>{item.title}</p>
-                        </div>
+                            <div className="articleRegulation__text">
+                                <p>{item.title}</p>
+                            </div>
 
-                        <div className="articleRegulation__icon">
-                            <a onClick={() => handleOpenModal(item)}>
-                                <FontAwesomeIcon className="articleRegulation__icon__pencil" icon={faPencil} />
-                            </a>
+                            <div className="articleRegulation__icon">
+                                <a onClick={() => handleOpenModal(item)}>
+                                    <FontAwesomeIcon className="articleRegulation__icon__pencil" icon={faPencil} />
+                                </a>
 
-                            {openModal === item && createPortal(
-                                <ModalRegulation regulationData={item} closeModal={handleCloseModal} />, document.body
-                            )}
+                                {openModal === item && createPortal(
+                                    <ModalRegulation regulationData={item} closeModal={handleCloseModal} />, document.body
+                                )}
 
-                            <span onClick={() => { handleDelete(item.id) }}>
-                                <FontAwesomeIcon className="articleRegulation__icon__trash" icon={faTrash} />
-                            </span>
-                        </div>
+                                <span onClick={() => { handleDelete(item.id) }}>
+                                    <FontAwesomeIcon className="articleRegulation__icon__trash" icon={faTrash} />
+                                </span>
+                            </div>
 
-                    </section>
-                ))}
+                        </li>
+                    ))}
+                </ul>
+
+                <p className="articleRegulation__message">{message}</p>
             </>
         )
     }

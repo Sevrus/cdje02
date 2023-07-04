@@ -15,9 +15,7 @@ const AdminClubs = () => {
                     <hr className="adminClubs__title__lineRight" />
                 </div>
 
-                <div className="adminClubs__list">
                     <ClubsDescription />
-                </div>
 
                 <div className="adminClubs__addTitle">
 

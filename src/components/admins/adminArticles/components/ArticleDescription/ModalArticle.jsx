@@ -86,7 +86,7 @@ const ModalArticle = ({ closeModal, articleData }) => {
 
                 <button disabled={isLoaded} type="submit" className="modalArticle__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
-                <p className="addAdmins__validate">{message}</p>
+                <p className="modalArticle__content__message">{message}</p>
 
             </Form>
         </>

@@ -5,7 +5,7 @@
 /* VERSION MOBILE */
 .modalChampion
     position: fixed
-    background-color: rgba(0,0,0,.2)
+    background-color: rgba(0,0,0,.5)
     width: 100%
     height: 100vh
     top: 0
@@ -14,7 +14,7 @@
     &__content
         position: absolute
         z-index: 1003
-        top: 50px
+        top: 150px
         left: 50%
         transform: translateX(-50%)
         background-color: $white
@@ -89,13 +89,13 @@
                 cursor: pointer
                 transform: scale(0.98)
 
-        &__validate
-        font-family: $font-primary
-        color: $red
-        font-weight: bold
-        font-size: $fs-14
-        text-align: center
-        margin: 15px 0 -10px
+        &__message
+            font-family: $font-primary
+            color: $red
+            font-weight: bold
+            font-size: $fs-14
+            text-align: center
+            margin: 15px 0 -10px
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
@@ -125,6 +125,9 @@
 
                 &__input
                     font-size: $fs-18
+                
+            &__message
+                font-size: $fs-16
 
             &__button
                 height: 55px

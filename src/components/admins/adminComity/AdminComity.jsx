@@ -16,9 +16,7 @@ const AdminComity = () => {
                         <hr className="adminComity__title__lineRight" />
                     </div>
 
-                    <div className="adminComity__list">
                         <ComityDescription />
-                    </div>
 
                     <div className="adminComity__addTitle">
 

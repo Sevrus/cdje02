@@ -69,7 +69,7 @@ const ArticleAdd = () => {
                         <button type="submit">Ajouter</button>
                     </div>
 
-                    <p className="addAdmins__validate">{message}</p>
+                    <p className="addArticle__message">{message}</p>
 
                 </Form>
             </>

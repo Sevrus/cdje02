@@ -23,7 +23,7 @@ const ChampionAdd = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La création du champion est effectué`);
+                    setMessage(`Le champion a bien été créé`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création du champion a échoué.`);
@@ -57,7 +57,7 @@ const ChampionAdd = () => {
                         <button type="submit">Ajouter</button>
                     </div>
 
-                    <p className="addAdmins__validate">{message}</p>
+                    <p className="addChampion__message">{message}</p>
 
                 </Form>
 

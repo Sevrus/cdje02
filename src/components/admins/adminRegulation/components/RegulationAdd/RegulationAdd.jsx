@@ -23,7 +23,7 @@ const RegulationAdd = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La création du réglement est effectué`);
+                    setMessage(`Le réglement a bien été créé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création du réglement a échoué.`);
@@ -54,7 +54,7 @@ const RegulationAdd = () => {
                     <button type="submit">Ajouter</button>
                 </div>
 
-                <p className="addAdmins__validate">{message}</p>
+                <p className="addRegulation__message">{message}</p>
                 
             </Form>
         </>

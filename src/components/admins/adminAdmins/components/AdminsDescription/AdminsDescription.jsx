@@ -8,11 +8,9 @@ import ModalAdmins from "./ModalAdmins.jsx"
 
 const AdminsDescription = () => {
     const [openModal, setOpenModal] = useState(null);
-
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
-
     const [message, setMessage] = useState('');
 
     const handleDelete = (id) => {
@@ -28,15 +26,18 @@ const AdminsDescription = () => {
                     setMessage(`L'administrateur a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
+
                 } else {
                     setMessage(`La suppression de l'administrateur a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
                     throw new Error("Erreur lors de la suppression de l'administrateur.");
                 }
             })
+            .then(datas => {
+                console.log(`La suppression de l'utilisateur a réussi.`, datas);
+            })
             .catch(error => {
-                setIsLoaded(false);
-                setError(error.message);
+                console.error('Erreur lors de la requête de suppression', error);
             })
     }
 

@@ -15,9 +15,7 @@ const AdminArticles = () => {
                         <hr className="adminArticle__title__lineRight" />
                     </div>
 
-                    <div className="adminArticle__list">
                         <ArticleDescription />
-                    </div>
 
                     <div className="adminArticle__addTitle">
 

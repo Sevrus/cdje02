@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalRegulation = ({ closeModal, regulationData }) => {
     const [error, setError] = useState(null);
@@ -31,12 +31,12 @@ const ModalRegulation = ({ closeModal, regulationData }) => {
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    setMessage(`La mise à jour du réglement est effectué`)
+                    setMessage(`Le réglement a bien été modifié.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    setMessage(`La mise à jour du réglement a échoué.`);
+                    setMessage(`La modification du réglement a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la mise à jour du réglement.");
+                    throw new Error("Erreur lors de la modification du réglement.");
                 }
             })
             .catch(error => {
@@ -65,7 +65,7 @@ const ModalRegulation = ({ closeModal, regulationData }) => {
 
                 <button disabled={isLoaded} type="submit" className="modalRegulation__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
-                <p className="addAdmins__validate">{message}</p>
+                <p className="modalRegulation__content__message">{message}</p>
                 
             </Form>
         </>

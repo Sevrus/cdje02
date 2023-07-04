@@ -31,7 +31,7 @@ const ComityAdd = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La création du membre est effectué`);
+                    setMessage(`Le membre a bien été créé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création du membre a échoué.`);
@@ -84,7 +84,7 @@ const ComityAdd = () => {
                     <button type="submit">Ajouter</button>
                 </div>
 
-                <p className="addAdmins__validate">{message}</p>
+                <p className="addComity__message">{message}</p>
             </Form>
 
         </>

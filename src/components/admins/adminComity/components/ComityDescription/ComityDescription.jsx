@@ -2,8 +2,8 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
-import fetch from "../../../../../utilities/fetchForAll.js"
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
+import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalComity from "./ModalComity.jsx"
 
 const ComityDescription = () => {
@@ -23,7 +23,7 @@ const ComityDescription = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La suppression du membre ${id} a réussi.`);
+                    setMessage(`Le membre a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
@@ -33,7 +33,7 @@ const ComityDescription = () => {
                 }
             })
             .then(datas => {
-                console.log(`La suppression du membre ${id} a réussi.`,
+                console.log(`La suppression du membre a réussi.`,
                     datas);
             })
             .catch(error => {
@@ -51,7 +51,7 @@ const ComityDescription = () => {
     }
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/comities")
+        customFetch(setIsLoaded, setError, setDatas, "api/comities")
     }, [])
 
     if (error) {
@@ -63,35 +63,38 @@ const ComityDescription = () => {
         return (
 
             <>
+                <ul className="adminComity__list">
 
-                {datas.data.map((item) => (
+                    {datas.data.map((item) => (
 
-                    <section className="articleComity" key={item.id}>
+                        <li className="articleComity" key={item.id}>
 
-                        <div className="articleComity__text">
-                            <p>{item.title}</p>
-                            <p>{item.firstName} {item.lastName}</p>
-                        </div>
+                            <div className="articleComity__text">
+                                <p>{item.title}</p>
+                                <p>{item.firstName} {item.lastName}</p>
+                            </div>
 
 
-                        <div className="articleComity__icon">
-                            <a onClick={() => handleOpenModal(item)}>
+                            <div className="articleComity__icon">
+                                <a onClick={() => handleOpenModal(item)}>
                                     <FontAwesomeIcon className="articleComity__icon__pencil" icon={faPencil} />
-                            </a>
-                            {openModal === item && createPortal(
-                                <ModalComity comityData={item} closeModal={handleCloseModal} />, document.body
-                            )}
+                                </a>
+                                {openModal === item && createPortal(
+                                    <ModalComity comityData={item} closeModal={handleCloseModal} />, document.body
+                                )}
 
-                            <span onClick={() => { handleDelete(item.id) }}>
-                                <FontAwesomeIcon className="articleComity__icon__trash" icon={faTrash} />
-                            </span>
+                                <span onClick={() => { handleDelete(item.id) }}>
+                                    <FontAwesomeIcon className="articleComity__icon__trash" icon={faTrash} />
+                                </span>
 
-                        </div>
+                            </div>
 
-                    </section>
+                        </li>
 
-                ))}
+                    ))}
+                </ul>
 
+                <p className='articleComity__message'>{message}</p>
             </>
 
         )

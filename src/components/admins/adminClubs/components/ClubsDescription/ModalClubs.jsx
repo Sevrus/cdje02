@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalClubs = ({ closeModal, clubData }) => {
     const [error, setError] = useState(null);
@@ -44,13 +44,13 @@ const ModalClubs = ({ closeModal, clubData }) => {
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    setMessage(`La mise à jour du club est effectué`)
+                    setMessage(`Le club a bien été modifié.`);
                     clearErrorAfterDelay(setMessage, 3000);
                     setDatas(datas);
                 } else {
-                    setMessage(`La mise à jour du club a échoué.`);
+                    setMessage(`La modification du club a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la mise à jour du club.");
+                    throw new Error("Erreur lors de la modification du club.");
                 }
             })
             .catch(error => {
@@ -109,7 +109,7 @@ const ModalClubs = ({ closeModal, clubData }) => {
 
                         <button disabled={isLoaded} type="submit" className="modalClub__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
-                        <p className="addAdmins__validate">{message}</p>
+                        <p className="modalClub__content__message">{message}</p>
                         
                     </Form>
             </>

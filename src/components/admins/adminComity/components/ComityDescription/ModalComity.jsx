@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalComity = ({ closeModal, comityData }) => {
     const [error, setError] = useState(null);
@@ -39,12 +39,12 @@ const ModalComity = ({ closeModal, comityData }) => {
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    setMessage(`La mise à jour du membre est effectué`);
+                    setMessage(`Le membre a bien été modifié.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    setMessage(`La mise à jour du membre a échoué.`);
+                    setMessage(`La modification du membre a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la mise à jour du membre.");
+                    throw new Error("Erreur lors de la modification du membre.");
                 }
             })
             .catch(error => {
@@ -93,7 +93,7 @@ const ModalComity = ({ closeModal, comityData }) => {
 
                 <button disabled={isLoaded} type="submit" className="modalComity__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
-                <p className="addAdmins__validate">{message}</p>
+                <p className="modalComity__content__message">{message}</p>
                 
             </Form>
         </>

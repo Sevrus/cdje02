@@ -27,7 +27,7 @@ const RefereesAdd = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La création de l'article est effectué`);
+                    setMessage(`L'article a bien été créé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création de l'article a échoué.`);
@@ -69,7 +69,7 @@ const RefereesAdd = () => {
                     <button type="submit">Ajouter</button>
                 </div>
 
-                <p className="addAdmins__validate">{message}</p>
+                <p className="addReferee__message">{message}</p>
 
             </Form>
 

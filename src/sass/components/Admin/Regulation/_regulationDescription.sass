@@ -5,8 +5,7 @@
 .articleRegulation
     @include flex(column, space-between , center)
     @include articles()
-    width: 60%
-    height: 70px
+    width: 80%
     margin-bottom: 15px
     padding: 5px
 
@@ -28,33 +27,33 @@
             &:hover
                 cursor: pointer
 
+    &__message
+        font-family: $font-primary
+        color: $red
+        font-weight: bold
+        font-size: $fs-14
+        text-align: center
+
 // VERSION TABLETTE
 @media screen and (min-width:768px)
     .articleRegulation
-        width: 35%
+        width: 40%
         margin: 0 10px 20px 10px
-
-        p
-            font-size: $fs-14
 
 // VERSION L
 @media screen and (min-width:1024px)
     .articleRegulation
-        margin: 0 10px 20px 10px
+        width: 25%
+        margin: 0 10px 30px 10px
 
-        &__text
-            
-            p
-                text-align: center
-        
-        p
+        &__text, &__message
             font-size: $fs-16
 
 // VERSION XL
 @media screen and (min-width:1920px)
     .articleRegulation
         width: 20%
-        margin: 0 15px 30px 15px
+        margin: 0 10px 30px 10px
 
-        p
+        &__text, &__message
             font-size: $fs-18

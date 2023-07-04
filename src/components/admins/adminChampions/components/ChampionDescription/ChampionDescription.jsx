@@ -2,8 +2,8 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
-import fetch from "../../../../../utilities/fetchForAll.js"
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
+import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalChampion from "./ModalChampion.jsx"
 
 const ChampionDescription = () => {
@@ -11,7 +11,6 @@ const ChampionDescription = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
-
     const [message, setMessage] = useState('');
 
     const handleDelete = (id) => {
@@ -23,9 +22,10 @@ const ChampionDescription = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La suppression du champion ${id} a réussi.`);
+                    setMessage(`Le champion a bien été supprimé`);
                     clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
+
                 } else {
                     setMessage(`La suppression du champion a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
@@ -33,12 +33,10 @@ const ChampionDescription = () => {
                 }
             })
             .then(datas => {
-                console.log(`La suppression du champion ${id} a réussi.`,
-                    datas);
+                console.log(`La suppression du champion ${id} a réussi.`, datas);
             })
             .catch(error => {
-                console.error('Erreur lors de la requête de suppression',
-                    error);
+                console.error('Erreur lors de la requête de suppression', error);
             })
     }
 
@@ -51,7 +49,7 @@ const ChampionDescription = () => {
     }
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/aisnechampions")
+        customFetch(setIsLoaded, setError, setDatas, "api/aisnechampions")
     }, [])
 
     if (error) {
@@ -63,33 +61,38 @@ const ChampionDescription = () => {
         return (
 
             <>
-                {datas.data.map((item) => (
+                <ul className="adminChampion__list">
 
-                    <section className="articleChampion" key={item.id}>
+                    {datas.data.map((item) => (
 
-                        <div className="articleChampion__text">
-                            <p>{item.name}</p>
-                            <p>{item.years}</p>
-                        </div>
+                        <li className="articleChampion" key={item.id}>
+
+                            <div className="articleChampion__text">
+                                <p>{item.name}</p>
+                                <p>{item.years}</p>
+                            </div>
 
 
-                        <div className="articleChampion__icon">
+                            <div className="articleChampion__icon">
 
-                            <a onClick={() => handleOpenModal(item)}>
-                                <FontAwesomeIcon className="articleChampion__icon__pencil" icon={faPencil} />
-                            </a>
-                            {openModal === item && createPortal(
-                                <ModalChampion championData={item} closeModal={handleCloseModal} />, document.body
-                            )}
+                                <a onClick={() => handleOpenModal(item)}>
+                                    <FontAwesomeIcon className="articleChampion__icon__pencil" icon={faPencil} />
+                                </a>
+                                {openModal === item && createPortal(
+                                    <ModalChampion championData={item} closeModal={handleCloseModal} />, document.body
+                                )}
 
-                            <span onClick={() => { handleDelete(item.id) }}>
-                                <FontAwesomeIcon className="articleChampion__icon__trash" icon={faTrash} />
-                            </span>
-                        </div>
+                                <span onClick={() => { handleDelete(item.id) }}>
+                                    <FontAwesomeIcon className="articleChampion__icon__trash" icon={faTrash} />
+                                </span>
+                            </div>
 
-                    </section>
+                        </li>
 
-                ))}
+                    ))}
+                </ul>
+
+                <p className="articleChampion__message">{message}</p>
             </>
 
         )

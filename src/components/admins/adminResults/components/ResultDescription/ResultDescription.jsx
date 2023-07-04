@@ -2,8 +2,8 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
-import fetch from "../../../../../utilities/fetchForAll.js"
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
+import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalResult from "./ModalResult.jsx"
 
 
@@ -24,7 +24,7 @@ const ResultDescription = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La suppression du tournoi ${id} a réussi.`);
+                    setMessage(`Le tournoi a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
@@ -34,7 +34,7 @@ const ResultDescription = () => {
                 }
             })
             .then(datas => {
-                console.log(`La suppression du tournoi ${id} a réussi.`,
+                console.log(`La suppression du tournoi a réussi.`,
                     datas);
             })
             .catch(error => {
@@ -52,7 +52,7 @@ const ResultDescription = () => {
     }
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/tournaments")
+        customFetch(setIsLoaded, setError, setDatas, "api/tournaments")
     }, [])
 
     if (error) {
@@ -64,33 +64,36 @@ const ResultDescription = () => {
         return (
 
             <>
+                <ul className="adminResult__list">
 
-                {datas.data.map((item) => (
+                    {datas.data.map((item) => (
 
-                    <section className="articleResult" key={item.id}>
+                        <li className="articleResult" key={item.id}>
 
-                        <div className="articleResult__text">
-                            <p>{item.title}</p>
-                        </div>
+                            <div className="articleResult__text">
+                                <p>{item.title}</p>
+                            </div>
 
 
-                        <div className="articleResult__icon">
-                            <a onClick={() => handleOpenModal(item)}>
-                                <FontAwesomeIcon className="articleResult__icon__pencil" icon={faPencil} />
-                            </a>
-                            {openModal == item && createPortal(
-                                <ModalResult resultData={item} closeModal={handleCloseModal} />, document.body
-                            )}
+                            <div className="articleResult__icon">
+                                <a onClick={() => handleOpenModal(item)}>
+                                    <FontAwesomeIcon className="articleResult__icon__pencil" icon={faPencil} />
+                                </a>
+                                {openModal == item && createPortal(
+                                    <ModalResult resultData={item} closeModal={handleCloseModal} />, document.body
+                                )}
 
-                            <span onClick={() => { handleDelete(item.id) }}>
-                                <FontAwesomeIcon className="articleResult__icon__trash" icon={faTrash} />
-                            </span>
-                        </div>
+                                <span onClick={() => { handleDelete(item.id) }}>
+                                    <FontAwesomeIcon className="articleResult__icon__trash" icon={faTrash} />
+                                </span>
+                            </div>
 
-                    </section>
+                        </li>
 
-                ))}
+                    ))}
+                </ul>
 
+                <p className="articleResult__message">{message}</p>
             </>
 
         )

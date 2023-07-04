@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalChampion = ({ closeModal, championData }) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-
     const [name, setName] = useState(championData.name);
     const [years, setYears] = useState(championData.years);
-
     const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
@@ -31,13 +29,13 @@ const ModalChampion = ({ closeModal, championData }) => {
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    setMessage(`La mise à jour du champion est effectué`)
+                    setMessage(`Le champion a bien été modifié`);
                     clearErrorAfterDelay(setMessage, 3000);
                     setDatas(datas);
                 } else {
-                    setMessage(`La mise à jour du champion a échoué.`);
+                    setMessage(`La modification du champion a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la mise à jour du champion.");
+                    throw new Error("Erreur lors de la modification du champion.");
                 }
             })
             .catch(error => {
@@ -66,7 +64,7 @@ const ModalChampion = ({ closeModal, championData }) => {
 
                     <button disabled={isLoaded} type="submit" className="modalChampion__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
 
-                    <p className="addAdmins__validate">{message}</p>
+                    <p className="modalChampion__content__message">{message}</p>
                 </Form>
 
         </>

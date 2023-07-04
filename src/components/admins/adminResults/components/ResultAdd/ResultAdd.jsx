@@ -23,7 +23,7 @@ const ResultAdd = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La création du tournoi est effectué`);
+                    setMessage(`Le tournoi a bien été créé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création du tournoi a échoué.`);
@@ -56,7 +56,7 @@ const ResultAdd = () => {
                     <button type="submit">Ajouter</button>
                 </div>
 
-                <p className="addAdmins__validate">{message}</p>
+                <p className="addResult__message">{message}</p>
                 
             </Form>
 

@@ -15,9 +15,7 @@ const AdminRegulation = () => {
                     <hr className="adminRegulation__title__lineRight" />
                 </div>
 
-                <div className="adminRegulation__list">
                     <RegulationDescription />
-                </div>
 
                 <div className="adminRegulation__addTitle">
 

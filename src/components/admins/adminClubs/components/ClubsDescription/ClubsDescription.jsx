@@ -2,8 +2,8 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
-import fetch from "../../../../../utilities/fetchForAll.js"
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
+import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalClub from "./ModalClubs.jsx"
 
 const ClubsDescription = () => {
@@ -23,7 +23,7 @@ const ClubsDescription = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La suppression du club ${id} a réussi.`);
+                    setMessage(`Le club a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
@@ -33,7 +33,7 @@ const ClubsDescription = () => {
                 }
             })
             .then(datas => {
-                console.log(`La suppression du club ${id} a réussi.`,
+                console.log(`La suppression du club a réussi.`,
                     datas);
             })
             .catch(error => {
@@ -51,7 +51,7 @@ const ClubsDescription = () => {
     }
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/clubs")
+        customFetch(setIsLoaded, setError, setDatas, "api/clubs")
     }, [])
 
     if (error) {
@@ -63,35 +63,38 @@ const ClubsDescription = () => {
         return (
 
             <>
+                <ul className="adminClubs__list">
 
-                {datas.data.map((item) => (
+                    {datas.data.map((item) => (
 
-                    <section className="articleClub" key={item.id}>
+                        <li className="articleClub" key={item.id}>
 
-                        <div className="articleClub__text">
-                            <p>{item.name}</p>
-                            <p>{item.city}</p>
-                        </div>
+                            <div className="articleClub__text">
+                                <p>{item.name}</p>
+                                <p>{item.city}</p>
+                            </div>
 
 
-                        <div className="articleClub__icon">
-                            <a onClick={() => handleOpenModal(item)}>
-                                <FontAwesomeIcon className="articleClub__icon__pencil" icon={faPencil} />
-                            </a>
-                            {openModal === item && createPortal(
-                                <ModalClub clubData={item} closeModal={handleCloseModal} />, document.body
-                            )}
+                            <div className="articleClub__icon">
+                                <a onClick={() => handleOpenModal(item)}>
+                                    <FontAwesomeIcon className="articleClub__icon__pencil" icon={faPencil} />
+                                </a>
+                                {openModal === item && createPortal(
+                                    <ModalClub clubData={item} closeModal={handleCloseModal} />, document.body
+                                )}
 
-                            <span onClick={() => { handleDelete(item.id) }}>
-                                <FontAwesomeIcon className="articleClub__icon__trash" icon={faTrash} />
-                            </span>
+                                <span onClick={() => { handleDelete(item.id) }}>
+                                    <FontAwesomeIcon className="articleClub__icon__trash" icon={faTrash} />
+                                </span>
 
-                        </div>
+                            </div>
 
-                    </section>
+                        </li>
 
-                ))}
+                    ))}
+                </ul>
 
+                <p className="articleClub__message">{message}</p>
             </>
 
         )

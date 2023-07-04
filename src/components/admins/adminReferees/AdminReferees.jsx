@@ -16,9 +16,7 @@ const AdminReferees = () => {
                         <hr className="adminReferee__title__lineRight" />
                     </div>
 
-                    <div className="adminReferee__list">
                         <RefereesDescription />
-                    </div>
 
                     <div className="adminReferee__addTitle">
 
