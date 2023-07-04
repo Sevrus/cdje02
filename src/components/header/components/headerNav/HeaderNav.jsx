@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../../utilities/AuthContext.jsx";
 import LoginModal from "../../../modal/LoginModal.jsx";
 
+
 const HeaderNav = ({ chessboardDisappear }) => {
     const [burgerClass, setBurgerClass] = useState("navbar__burger__line unclicked");
     const [isOpen, setOpen] = useState(false);

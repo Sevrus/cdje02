@@ -92,11 +92,11 @@ const LoginModal = ({ closeModal, handleLogin }) => {
 
     return (
         <>
-
             <div className="modal" onClick={closeModal}>
 
                 <AnimatePresence mode="wait" onExitComplete={() => null}>
-                    <motion.div className="modal__content"
+                    
+                    <motion.div className="modal__content" key={"modal"}
                         variants={modalVariants} initial="initial" animate="animate" exit="exit">
 
                         <form onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()}>
