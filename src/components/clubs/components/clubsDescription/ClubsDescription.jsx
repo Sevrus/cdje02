@@ -25,13 +25,16 @@ const ClubsDescription = ({ toogle, selected }) => {
                         className={selected === item.id ? "article-clubs active" : "article-clubs"}
                         key={item.id}
                         onClick={() => toogle(item.id, item.coordx, item.coordy)}
+        
                         initial={{
                             rotate: 0,
                         }}
                         whileHover={{ 
                             rotate: [5, -5],
                          }}
-
+                         transition={{
+                             duration: 0.3
+                         }}
                     >
 
                         <div className="article-clubs__title">

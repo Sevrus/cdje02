@@ -771,7 +771,7 @@ time, mark, audio, video {
   align-items: center;
   position: absolute;
   top: -185px;
-  left: 50%;
+  left: 20%;
   z-index: 1;
   transform: translate(-50%);
   height: 165px;
@@ -798,6 +798,7 @@ time, mark, audio, video {
     height: 170px;
     max-height: 200px;
     width: 300px;
+    left: 30%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -819,6 +820,7 @@ time, mark, audio, video {
     height: 185px;
     max-height: 300px;
     width: 350px;
+    left: 35%;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -846,6 +848,7 @@ time, mark, audio, video {
     top: -250px;
     width: 400px;
     height: 220px;
+    left: 40%;
   }
 }
 .clubs {
