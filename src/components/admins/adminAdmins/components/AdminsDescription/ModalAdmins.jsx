@@ -1,30 +1,20 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalAdmins = ({ closeModal, adminData }) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
     const [email, setEmail] = useState(adminData.email);
-    const [password, setPassword] = useState(adminData.password);
-    const [verifyPassword, setVerifyPassword] = useState("");
-
     const [message, setMessage] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (password !== verifyPassword) {
-            setMessage("Les mots de passe ne sont pas identiques");
-            clearErrorAfterDelay(setMessage, 3000);
-            return;
-        };
-
         setIsLoaded(true);
         const updatedData = {
             email: email,
-            password: password
         };
 
         fetch("http://localhost:3000/api/users/" + adminData.id, {
@@ -38,12 +28,12 @@ const ModalAdmins = ({ closeModal, adminData }) => {
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    setMessage(`La mise à jour de l'utilisateur est effectué`)
+                    setMessage(`L'administrateur a bien été modifié.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    setMessage(`La mise à jour de l'utilisateur a échoué.`);
+                    setMessage(`La modification de l'admninistrateur a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la mise à jour de l'utilisateur.");
+                    throw new Error("Erreur lors de la modification de l'administrateur.");
                 }
             })
             .catch(error => {
@@ -63,20 +53,10 @@ const ModalAdmins = ({ closeModal, adminData }) => {
                     <input type="text" name="email" id="email" className="modalAdmins__content__email__input" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 </div>
 
-                <div className="modalAdmins__content__password">
-                    <label htmlFor="password" className="modalAdmins__content__password__label">Mot de Passe</label>
-                    <input type="password" name="password" id="password" className="modalAdmins__content__password__input" onChange={(e) => setPassword(e.target.value)}/>
-                </div>
-
-                <div className="modalAdmins__content__verifPassword">
-                    <label htmlFor="verifPassword" className="modalAdmins__content__verifPassword__label">Vérification du Mot de Passe</label>
-                    <input type="password" name="verifPassword" id="verifPassword" className="modalAdmins__content__verifPassword__input" value={verifyPassword} onChange={(e) => setVerifyPassword(e.target.value)}/>
-                </div>
-
                 <button disabled={isLoaded} type="submit" className="modalAdmins__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
                 
-                <p className="addAdmins__validate">{message}</p>
-
+                <p className="modalAdmins__content__message">{message}</p>
+ 
             </Form>
         </>
     )

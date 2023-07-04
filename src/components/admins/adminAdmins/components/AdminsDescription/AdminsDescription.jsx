@@ -2,8 +2,8 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll"
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 import ModalAdmins from "./ModalAdmins.jsx"
 
 const AdminsDescription = () => {
@@ -25,22 +25,18 @@ const AdminsDescription = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La suppression de l'utilisateur a réussi.`);
-                    // clearErrorAfterDelay(setMessage, 3000);
+                    setMessage(`L'administrateur a bien été supprimé.`);
+                    clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
-                    setMessage(`La suppression de l'utilisateur a échoué.`);
+                    setMessage(`La suppression de l'administrateur a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la suppression de l'utilisateur.");
+                    throw new Error("Erreur lors de la suppression de l'administrateur.");
                 }
             })
-            .then(datas => {
-                console.log(`La suppression de l'utilisateur a réussi.`,
-                    datas);
-            })
             .catch(error => {
-                console.error('Erreur lors de la requête de suppression',
-                    error);
+                setIsLoaded(false);
+                setError(error.message);
             })
     }
 
@@ -65,34 +61,36 @@ const AdminsDescription = () => {
         return (
 
             <>
+                <ul className="adminAdmins__list">
 
-                {datas.data.map((item) => (
+                    {datas.data.map((item) => (
 
-                    <section className="articleAdmins" key={item.id}>
+                        <li className="articleAdmins" key={item.id}>
 
-                        <div className="articleAdmins__text">
-                            <p>{item.email}</p>
-                        </div>
+                            <div className="articleAdmins__text">
+                                <p>{item.email}</p>
+                            </div>
 
-                        <div className="articleAdmins__icon">
+                            <div className="articleAdmins__icon">
 
-                            <a onClick={() => handleOpenModal(item)}>
-                                <FontAwesomeIcon className="articleAdmins__icon__pencil" icon={faPencil} />
-                            </a>
-                            {openModal === item && createPortal(
-                                <ModalAdmins adminData={item} closeModal={handleCloseModal} />, document.body
-                            )}
+                                <a onClick={() => handleOpenModal(item)}>
+                                    <FontAwesomeIcon className="articleAdmins__icon__pencil" icon={faPencil} />
+                                </a>
+                                {openModal === item && createPortal(
+                                    <ModalAdmins adminData={item} closeModal={handleCloseModal} />, document.body
+                                )}
 
-                            <span onClick={() => handleDelete(item.id)}>
-                                <FontAwesomeIcon className="articleAdmins__icon__trash" icon={faTrash} />
-                            </span>
+                                <span onClick={() => handleDelete(item.id)}>
+                                    <FontAwesomeIcon className="articleAdmins__icon__trash" icon={faTrash} />
+                                </span>
 
+                            </div>
+                        </li>
+                    ))}
 
-                        </div>
-                    </section>
+                </ul>
 
-                ))}
-
+                <p className="articleAdmins__message">{message}</p>
             </>
 
         )

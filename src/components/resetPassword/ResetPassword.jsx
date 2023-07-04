@@ -1,7 +1,7 @@
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { Form, useParams, useNavigate } from "react-router-dom";
+import { Form, useNavigate, useParams } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../utilities/clearErrorAfterDelay";
 
 const ResetPassword = () => {
@@ -59,7 +59,7 @@ const ResetPassword = () => {
             })
 
         } else {
-            setMessage("Les mots de passe ne correspondent pas");
+            setMessage("Les mots de passe ne sont pas identiques");
             clearErrorAfterDelay(setMessage, 3000);
         }
     }

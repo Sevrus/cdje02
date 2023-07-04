@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import {clearErrorAfterDelay} from "../../../../../utilities/clearErrorAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalArticle = ({ closeModal, articleData }) => {
     const [error, setError] = useState(null);
@@ -37,12 +37,12 @@ const ModalArticle = ({ closeModal, articleData }) => {
             .then(resp => {
                 setIsLoaded(false);
                 if (resp.ok) {
-                    setMessage(`La mise à jour de l'article est effectué`)
+                    setMessage(`L'article a bien été modifié.`);
                     clearErrorAfterDelay(setMessage, 3000);
                 } else {
-                    setMessage(`La mise à jour de l'article a échoué.`);
+                    setMessage(`La modification de l'article a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la mise à jour de l'article.");
+                    throw new Error("Erreur lors de la modification de l'article.");
                 }
             })
             .catch(error => {

@@ -38,7 +38,7 @@
 
     &__addTitle
         @include flex(column , center , center)
-        margin-top: 25px
+        margin-top: 50px
         margin-bottom: 25px
 
         &__subhead
@@ -97,7 +97,6 @@
             flex-wrap: wrap
 
         &__addTitle
-            margin-top: 40px
 
             &__subhead
                 font-size: $fs-14
@@ -146,15 +145,16 @@
             @include flex(row , center , center)
             flex-wrap: wrap
 
-        &__addTitle__subhead
-            font-size: $fs-20
-            line-height: 20px
+        &__addTitle
+            margin-top: 80px
+
+            &__subhead
+                font-size: $fs-20
 
         &__addTitle__bigTitle
 
             h2
                 font-size: $fs-32
-                line-height: 32px
                 margin: 0
 
             &__lineLeft , &__lineRight

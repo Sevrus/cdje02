@@ -2,9 +2,9 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll"
 import ModalArticle from "./ModalArticle.jsx"
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const ArticleDescription = () => {
     const [openModal, setOpenModal] = useState(null);
@@ -24,7 +24,7 @@ const ArticleDescription = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`La suppression de l'article ${id} a réussi.`);
+                    setMessage(`L'article a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
                     return resp.json();
                 } else {
@@ -34,7 +34,7 @@ const ArticleDescription = () => {
                 }
             })
             .then(datas => {
-                console.log(`La suppression de l'article ${id} a réussi.`,
+                console.log(`La suppression de l'article a réussi.`,
                     datas);
             })
             .catch(error => {
