@@ -29,7 +29,10 @@ const ModalAdmins = ({ closeModal, adminData }) => {
                 setIsLoaded(false);
                 if (resp.ok) {
                     setMessage(`L'administrateur a bien été modifié.`);
-                    clearErrorAfterDelay(setMessage, 3000);
+                    setTimeout(() => {
+                        setMessage(null);
+                        location.reload();
+                    }, 3000);
                 } else {
                     setMessage(`La modification de l'admninistrateur a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

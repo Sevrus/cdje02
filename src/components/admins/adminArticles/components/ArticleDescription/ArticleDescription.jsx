@@ -26,6 +26,10 @@ const ArticleDescription = () => {
                 if (resp.ok) {
                     setMessage(`L'article a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
+                    setDatas(datas => {
+                        const datasFilter = datas.data.filter(item => item.id !== id);
+                        return {...datas, data: datasFilter}
+                    })
                     return resp.json();
                 } else {
                     setMessage(`La suppression de l'article a échoué.`);
@@ -40,7 +44,7 @@ const ArticleDescription = () => {
             .catch(error => {
                 console.error('Erreur lors de la requête de suppression',
                     error);
-            })
+            })         
     }
 
     const handleOpenModal = (article) => {

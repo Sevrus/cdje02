@@ -36,7 +36,10 @@ const ClubsAdd = () => {
             .then(resp => {
                 if (resp.ok) {
                     setMessage(`Le club a bien été créé.`);
-                    clearErrorAfterDelay(setMessage, 3000);
+                    setTimeout(() => {
+                        setMessage(null);
+                        location.reload();
+                    }, 3000);
                 } else {
                     setMessage(`La création du club a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
@@ -80,7 +83,7 @@ const ClubsAdd = () => {
                     </div>
 
                     <div className="addClub__members">
-                        <label htmlFor="members">Membres</label>
+                        <label htmlFor="members">Nombre de Membres</label>
                         <input type="text" name="members" maxLength={3} required={true} value={members} placeholder="Nombre de membres dans le club" onChange={(e) => setMembers(e.target.value)}/>
                     </div>
 

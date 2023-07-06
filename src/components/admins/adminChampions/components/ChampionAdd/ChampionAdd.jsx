@@ -24,7 +24,10 @@ const ChampionAdd = () => {
             .then(resp => {
                 if (resp.ok) {
                     setMessage(`Le champion a bien été créé`);
-                    clearErrorAfterDelay(setMessage, 3000);
+                    setTimeout(() => {
+                        setMessage(null);
+                        location.reload();
+                    }, 3000);
                 } else {
                     setMessage(`La création du champion a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

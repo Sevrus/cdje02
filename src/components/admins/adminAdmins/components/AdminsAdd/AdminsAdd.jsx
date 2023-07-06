@@ -48,7 +48,10 @@ const AdminsAdd = () => {
                 .then(resp => {
                     if (resp.ok) {
                         setMessage(`L'administrateur a bien été créé.`);
-                        clearErrorAfterDelay(setMessage, 3000);
+                        setTimeout(() => {
+                            setMessage(null);
+                            location.reload();
+                        }, 3000);
                     } else {
                         setMessage(`La création de l'utilisateur a échoué.`);
                         clearErrorAfterDelay(setMessage, 3000);

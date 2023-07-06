@@ -45,8 +45,10 @@ const ModalClubs = ({ closeModal, clubData }) => {
                 setIsLoaded(false);
                 if (resp.ok) {
                     setMessage(`Le club a bien été modifié.`);
-                    clearErrorAfterDelay(setMessage, 3000);
-                    setDatas(datas);
+                    setTimeout(() => {
+                        setMessage(null);
+                        location.reload();
+                    }, 3000);
                 } else {
                     setMessage(`La modification du club a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

@@ -24,6 +24,10 @@ const ChampionDescription = () => {
                 if (resp.ok) {
                     setMessage(`Le champion a bien été supprimé`);
                     clearErrorAfterDelay(setMessage, 3000);
+                    setDatas(datas => {
+                        const datasFilter = datas.data.filter(item => item.id !== id);
+                        return {...datas, data: datasFilter}
+                    })
                     return resp.json();
 
                 } else {

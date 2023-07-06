@@ -38,7 +38,10 @@ const ModalArticle = ({ closeModal, articleData }) => {
                 setIsLoaded(false);
                 if (resp.ok) {
                     setMessage(`L'article a bien été modifié.`);
-                    clearErrorAfterDelay(setMessage, 3000);
+                    setTimeout(() => {
+                        setMessage(null);
+                        location.reload();
+                    }, 3000);
                 } else {
                     setMessage(`La modification de l'article a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

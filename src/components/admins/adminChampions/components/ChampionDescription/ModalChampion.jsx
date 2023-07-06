@@ -30,8 +30,10 @@ const ModalChampion = ({ closeModal, championData }) => {
                 setIsLoaded(false);
                 if (resp.ok) {
                     setMessage(`Le champion a bien été modifié`);
-                    clearErrorAfterDelay(setMessage, 3000);
-                    setDatas(datas);
+                    setTimeout(() => {
+                        setMessage(null);
+                        location.reload();
+                    }, 3000);
                 } else {
                     setMessage(`La modification du champion a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
