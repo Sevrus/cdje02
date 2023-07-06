@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay";
 
 const RegulationAdd = () => {
     const [title, setTitle] = useState("");
@@ -24,7 +25,7 @@ const RegulationAdd = () => {
             .then(resp => {
                 if (resp.ok) {
                     setMessage(`Le réglement a bien été créé.`);
-                    clearErrorAfterDelay(setMessage, 3000);
+                    ReloadAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création du réglement a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

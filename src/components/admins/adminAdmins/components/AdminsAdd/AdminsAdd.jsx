@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
 
 const AdminsAdd = () => {
     const [email, setEmail] = useState("");
@@ -48,10 +49,7 @@ const AdminsAdd = () => {
                 .then(resp => {
                     if (resp.ok) {
                         setMessage(`L'administrateur a bien été créé.`);
-                        setTimeout(() => {
-                            setMessage(null);
-                            location.reload();
-                        }, 3000);
+                        ReloadAfterDelay(setMessage, 3000);
                     } else {
                         setMessage(`La création de l'utilisateur a échoué.`);
                         clearErrorAfterDelay(setMessage, 3000);

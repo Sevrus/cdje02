@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay";
 
 const ChampionAdd = () => {
     const [name, setName] = useState("");
@@ -24,10 +25,7 @@ const ChampionAdd = () => {
             .then(resp => {
                 if (resp.ok) {
                     setMessage(`Le champion a bien été créé`);
-                    setTimeout(() => {
-                        setMessage(null);
-                        location.reload();
-                    }, 3000);
+                    ReloadAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création du champion a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

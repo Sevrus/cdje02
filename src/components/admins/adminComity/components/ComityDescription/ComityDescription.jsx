@@ -5,6 +5,7 @@ import { createPortal } from "react-dom"
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalComity from "./ModalComity.jsx"
+import { dataFilter } from '../../../../../utilities/dataFilter'
 
 const ComityDescription = () => {
     const [openModal, setOpenModal] = useState(null);
@@ -25,6 +26,7 @@ const ComityDescription = () => {
                 if (resp.ok) {
                     setMessage(`Le membre a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
+                    dataFilter(setDatas, datas, id);
                     return resp.json();
                 } else {
                     setMessage(`La suppression du membre a échoué.`);

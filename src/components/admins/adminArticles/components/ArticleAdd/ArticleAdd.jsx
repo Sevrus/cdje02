@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
 
 const ArticleAdd = () => {
     const [title, setTitle] = useState("");
@@ -28,10 +29,7 @@ const ArticleAdd = () => {
             .then(resp => {
                 if (resp.ok) {
                     setMessage(`L'article a bien été créé.`);
-                    setTimeout(() => {
-                        setMessage(null);
-                        location.reload();
-                    }, 3000);
+                    ReloadAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création de l'article a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

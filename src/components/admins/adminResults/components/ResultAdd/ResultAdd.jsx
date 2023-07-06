@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay";
 
 const ResultAdd = () => {
     const [title, setTitle] = useState("");
@@ -24,7 +25,7 @@ const ResultAdd = () => {
             .then(resp => {
                 if (resp.ok) {
                     setMessage(`Le tournoi a bien été créé.`);
-                    clearErrorAfterDelay(setMessage, 3000);
+                    ReloadAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La création du tournoi a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

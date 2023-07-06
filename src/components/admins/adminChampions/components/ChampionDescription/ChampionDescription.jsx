@@ -5,6 +5,7 @@ import { createPortal } from "react-dom"
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalChampion from "./ModalChampion.jsx"
+import { dataFilter } from '../../../../../utilities/dataFilter'
 
 const ChampionDescription = () => {
     const [openModal, setOpenModal] = useState(null);
@@ -24,10 +25,7 @@ const ChampionDescription = () => {
                 if (resp.ok) {
                     setMessage(`Le champion a bien été supprimé`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    setDatas(datas => {
-                        const datasFilter = datas.data.filter(item => item.id !== id);
-                        return {...datas, data: datasFilter}
-                    })
+                    dataFilter(setDatas, datas, id);
                     return resp.json();
 
                 } else {

@@ -5,6 +5,7 @@ import { createPortal } from "react-dom"
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalClub from "./ModalClubs.jsx"
+import { dataFilter } from '../../../../../utilities/dataFilter'
 
 const ClubsDescription = () => {
     const [openModal, setOpenModal] = useState(null);
@@ -25,10 +26,7 @@ const ClubsDescription = () => {
                 if (resp.ok) {
                     setMessage(`Le club a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    setDatas(datas => {
-                        const datasFilter = datas.data.filter(item => item.id !== id);
-                        return {...datas, data: datasFilter}
-                    })
+                    dataFilter(setDatas, datas, id);
                     return resp.json();
                 } else {
                     setMessage(`La suppression du club a échoué.`);

@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom'
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalReferees from './ModalReferees.jsx'
+import { dataFilter } from '../../../../../utilities/dataFilter'
 
 const RefereesDescription = () => {
     const [openModal, setOpenModal] = useState(null);
@@ -25,6 +26,7 @@ const RefereesDescription = () => {
                 if (resp.ok) {
                     setMessage(`L'arbitre a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
+                    dataFilter(setDatas, datas, id);
                     return resp.json();
                 } else {
                     setMessage(`La suppression de l'arbitre a échoué.`);

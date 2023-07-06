@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
 
 const ModalArticle = ({ closeModal, articleData }) => {
     const [error, setError] = useState(null);
@@ -38,10 +39,7 @@ const ModalArticle = ({ closeModal, articleData }) => {
                 setIsLoaded(false);
                 if (resp.ok) {
                     setMessage(`L'article a bien été modifié.`);
-                    setTimeout(() => {
-                        setMessage(null);
-                        location.reload();
-                    }, 3000);
+                    ReloadAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La modification de l'article a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

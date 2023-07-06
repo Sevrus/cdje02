@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
 
 const ModalClubs = ({ closeModal, clubData }) => {
     const [error, setError] = useState(null);
@@ -45,10 +46,7 @@ const ModalClubs = ({ closeModal, clubData }) => {
                 setIsLoaded(false);
                 if (resp.ok) {
                     setMessage(`Le club a bien été modifié.`);
-                    setTimeout(() => {
-                        setMessage(null);
-                        location.reload();
-                    }, 3000);
+                    ReloadAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La modification du club a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

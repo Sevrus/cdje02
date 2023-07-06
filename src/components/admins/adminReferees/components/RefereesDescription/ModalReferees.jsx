@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
 
 const ModalReferees = ({ closeModal, refereeData }) => {
     const [error, setError] = useState(null);
@@ -36,7 +37,7 @@ const ModalReferees = ({ closeModal, refereeData }) => {
                 setIsLoaded(false);
                 if (resp.ok) {
                     setMessage(`L'arbitre a bien été modifié.`);
-                    clearErrorAfterDelay(setMessage, 3000);
+                    ReloadAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La modification de l'arbitre a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

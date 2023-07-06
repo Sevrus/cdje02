@@ -5,6 +5,7 @@ import { createPortal } from "react-dom"
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll"
 import ModalArticle from "./ModalArticle.jsx"
+import { dataFilter } from '../../../../../utilities/dataFilter'
 
 const ArticleDescription = () => {
     const [openModal, setOpenModal] = useState(null);
@@ -26,10 +27,7 @@ const ArticleDescription = () => {
                 if (resp.ok) {
                     setMessage(`L'article a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    setDatas(datas => {
-                        const datasFilter = datas.data.filter(item => item.id !== id);
-                        return {...datas, data: datasFilter}
-                    })
+                    dataFilter(setDatas, datas, id);
                     return resp.json();
                 } else {
                     setMessage(`La suppression de l'article a échoué.`);

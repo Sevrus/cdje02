@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll"
+import { dataFilter } from '../../../../../utilities/dataFilter'
 import ModalAdmins from "./ModalAdmins.jsx"
 
 const AdminsDescription = () => {
@@ -25,10 +26,7 @@ const AdminsDescription = () => {
                 if (resp.ok) {
                     setMessage(`L'administrateur a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    setDatas(datas => {
-                        const datasFilter = datas.data.filter(item => item.id !== id);
-                        return {...datas, data: datasFilter}
-                    })
+                    dataFilter(setDatas, datas, id);
                     return resp.json();
 
                 } else {

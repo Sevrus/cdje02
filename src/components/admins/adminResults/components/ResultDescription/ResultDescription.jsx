@@ -5,6 +5,7 @@ import { createPortal } from "react-dom"
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalResult from "./ModalResult.jsx"
+import { dataFilter } from '../../../../../utilities/dataFilter'
 
 
 const ResultDescription = () => {
@@ -26,6 +27,7 @@ const ResultDescription = () => {
                 if (resp.ok) {
                     setMessage(`Le tournoi a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
+                    dataFilter(setDatas, datas, id);
                     return resp.json();
                 } else {
                     setMessage(`La suppression du tournoi a échoué.`);

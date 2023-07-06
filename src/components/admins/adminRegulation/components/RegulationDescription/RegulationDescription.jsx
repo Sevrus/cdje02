@@ -5,6 +5,7 @@ import { createPortal } from "react-dom"
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay"
 import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalRegulation from "./ModalRegulation.jsx"
+import { dataFilter } from '../../../../../utilities/dataFilter'
 
 const RegulationDescription = () => {
 
@@ -26,6 +27,7 @@ const RegulationDescription = () => {
                 if (resp.ok) {
                     setMessage(`Le réglement a bien été supprimé.`);
                     clearErrorAfterDelay(setMessage, 3000);
+                    dataFilter(setDatas, datas, id);
                     return resp.json();
                 } else {
                     setMessage(`La suppression du réglement a échoué.`);

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
 
 const ModalRegulation = ({ closeModal, regulationData }) => {
     const [error, setError] = useState(null);
@@ -32,7 +33,7 @@ const ModalRegulation = ({ closeModal, regulationData }) => {
                 setIsLoaded(false);
                 if (resp.ok) {
                     setMessage(`Le réglement a bien été modifié.`);
-                    clearErrorAfterDelay(setMessage, 3000);
+                    ReloadAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La modification du réglement a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);

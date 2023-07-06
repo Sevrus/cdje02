@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
+import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
 
 const ModalChampion = ({ closeModal, championData }) => {
     const [error, setError] = useState(null);
@@ -30,10 +31,7 @@ const ModalChampion = ({ closeModal, championData }) => {
                 setIsLoaded(false);
                 if (resp.ok) {
                     setMessage(`Le champion a bien été modifié`);
-                    setTimeout(() => {
-                        setMessage(null);
-                        location.reload();
-                    }, 3000);
+                    ReloadAfterDelay(setMessage, 3000);
                 } else {
                     setMessage(`La modification du champion a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
