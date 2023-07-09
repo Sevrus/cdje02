@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
+import { Editor } from '@tinymce/tinymce-react';
 
 const ArticleAdd = () => {
     const [title, setTitle] = useState("");
@@ -58,7 +59,25 @@ const ArticleAdd = () => {
 
                     <div className="addArticle__description">
                         <label htmlFor="description">Description</label>
-                        <textarea name="description" maxLength={500} required={true} value={description} onChange={(e) => setDescription(e.target.value)} />
+                        {/*<textarea name="description" maxLength={500} required={true} value={description} onChange={(e) => setDescription(e.target.value)} />*/}
+                        <Editor
+                            apiKey="m0o6mg35hp34hxkeqt7pqfh09ou1meghhv1hnvzpx7dl4w1x"
+                            init={{
+                                height: 500,
+                                menubar: false,
+                                plugins: [
+                                    'advlist autolink lists link image charmap print preview anchor',
+                                    'searchreplace visualblocks code fullscreen',
+                                    'insertdatetime media table paste code help wordcount',
+                                ],
+                                toolbar:
+                                    'undo redo | formatselect | bold italic backcolor | \
+                                    alignleft aligncenter alignright alignjustify | \
+                                    bullist numlist outdent indent | removeformat | help',
+                            }}
+                            // onChange={(e) => setDescription(e.target.value)}
+                            onChange={(content) => setDescription(content)}
+                        />
                     </div>
 
                     <div className="addArticle__image">
