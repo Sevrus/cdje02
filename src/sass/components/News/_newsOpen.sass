@@ -1,9 +1,9 @@
-@import '../utilities/_mixin.sass'
-@import '../utilities/_variables.sass'
-@import './_newsArticle.sass'
+@import '../../utilities/mixin'
+@import '../../utilities/variables'
+@import 'newsOpenArticle'
 
 // VERSION MOBILE 
-.news
+.newsOpen
     display: flex
     align-items: center
     flex-direction: column
@@ -40,7 +40,7 @@
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
-    .news
+    .newsOpen
 
         &__title__subhead
             display: flex
@@ -50,7 +50,7 @@
                 font-size: $fs-14
 
         &__title__bigTitle
-            margin-bottom: 20px
+            margin-bottom: 40px
             width: 100%
 
             h2
@@ -61,11 +61,11 @@
                 left: 80px
 
             &__lineRight
-                right: 80px
+                right: 80pxx
 
 // VERSION L
 @media screen and (min-width:1024px)
-    .news
+    .newsOpen
         margin-top: 50px
 
         &__title__subhead
@@ -74,7 +74,7 @@
             font-size: $fs-20
 
         &__title__bigTitle
-            margin-bottom: 25px
+            margin-bottom: 50px
 
             h2
                 font-size: $fs-32
@@ -87,7 +87,7 @@
 
 // VERSION XL
 @media screen and (min-width:1920px)
-    .news
+    .newsOpen
         margin-top: 90px
 
         &__title__subhead
@@ -96,7 +96,7 @@
             font-size: $fs-28
 
         &__title__bigTitle
-            margin-bottom: 30px
+            margin-bottom: 50px
 
             h2
                 font-size: $fs-40

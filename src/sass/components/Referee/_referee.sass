@@ -1,13 +1,14 @@
-@import '../utilities/variables'
-@import '../utilities/mixin'
-@import './comityDescription'
+@import '../../utilities/variables'
+@import '../../utilities/mixin'
+@import 'refereeDescription'
+@import 'refereeModal'
 
-.title-comity
+.title-referee
     font-family: $font-primary
     font-size: $fs-24
     @include flex(row, center, center)
     width: 100%
-    margin-top: 35px
+    margin-top: 50px
 
     &__left-line, &__right-line
         position: absolute
@@ -21,7 +22,7 @@
         right: 10px
 
 @media screen and (min-width: 768px)
-    .title-comity
+    .title-referee
         font-size: $fs-26
 
         &__left-line
@@ -31,7 +32,8 @@
             right: 80px
 
 @media screen and (min-width: 1024px)
-    .title-comity
+    .title-referee
+        margin-top: 80px
         font-size: $fs-32
 
         &__left-line
@@ -41,7 +43,7 @@
             right: 100px
 
 @media screen and (min-width: 1920px)
-    .title-comity
+    .title-referee
         font-size: $fs-40
 
         &__left-line

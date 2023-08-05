@@ -1,8 +1,8 @@
-@import '../utilities/_mixin.sass'
-@import '../utilities/_variables.sass'
+@import '../../utilities/mixin'
+@import '../../utilities/variables'
 
 // VERSION MOBILE
-.newsOpenArticle
+.newsArticle
     display: flex
     flex-direction: column
     @include articles
@@ -32,39 +32,28 @@
             padding: 10px
 
     &__description
+        display: flex
+
         p
             text-align: start
             font-size: $fs-14
             padding: 20px
             width: 100%
 
-    &__info
-        @include flex(column , center , center )
+    &__link
+        display: flex
+        justify-content: end
 
-        hr
-            width: 97%
-            margin-top: 10px
-
-        &__bottom
-            width: 100%
-            @include flex(row , space-between , center )
-            padding: 0 15px 10px 15px
-            font-weight: bold
+        a
             font-family: $font-primary
             font-size: $fs-14
-
-            a
-                @include flex(row , start , center )
-                width: 60%
-                color: $red
-
-                img
-                    width: 40px
-                    margin-right: 5px
+            color: $red
+            font-weight: bold
+            padding: 0 10px 10px 10px
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
-    .newsOpenArticle
+    .newsArticle
         width: 80%
         margin-top: 10px
 
@@ -86,16 +75,9 @@
             &__lineLeft
                 margin-left: 20px
 
-        &__info
-
-            &__bottom
-                a
-                    img
-                        width: 50px
-
 // VERSION L
 @media screen and (min-width:1024px)
-    .newsOpenArticle
+    .newsArticle
         display: flex
         width: 80%
         margin-top: 0
@@ -112,24 +94,19 @@
         &__description
 
             p
-                padding: 30px
+                
                 font-size: $fs-16
+                padding: 30px
 
-        &__info
+        &__link
 
-            &__bottom
-
-                a
-
-                    img
-                        width: 60px
-
-                    p
-                        font-size: $fs-16
+            a
+                font-size: $fs-18
+                padding: 0 20px 20px 20px
 
 // VERSION XL
 @media screen and (min-width:1920px)
-    .newsOpenArticle
+    .newsArticle
         display: flex
         width: 70%
         margin-top: 0
@@ -151,21 +128,10 @@
         &__description
 
             p
-
                 font-size: $fs-20
 
-        &__info
+        &__link
 
-            &__bottom
-                padding: 5px 20px 15px 20px
-
-                p
-                    font-size: $fs-20
-
-                a
-                    img
-                        width: 70px
-                        margin-right: 15px
-
-                    p
-                        font-size: $fs-20
+            a
+                font-size: $fs-20
+                
