@@ -4,11 +4,7 @@ const Referee = () => {
 
     return (
         <>
-            <div className="title-referee">
-                <hr className="title-referee__left-line" />
-                <h2>ARBITRES</h2>
-                <hr className="title-referee__right-line" />
-            </div>
+            <h2 className="title-referee">Arbitres</h2>
             <RefereeDescription />
         </>
     )

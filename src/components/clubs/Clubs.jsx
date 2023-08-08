@@ -17,20 +17,15 @@ const Clubs = () => {
         setSelected(i)
         setCoordinate(coord);
     })
-    
+
     return (
         <section className="clubs">
 
             <div className="clubs__title">
-
-                <h3 className="clubs__title__subhead">TROUVER</h3>
-
-                <div className="clubs__title__bigTitle">
-                    <hr className="clubs__title__bigTitle__lineLeft" />
-                    <h2>UN CLUB</h2>
-                    <hr className="clubs__title__bigTitle__lineRight" />
-                </div>
-
+                <h2 className="clubs__title__upperhead">
+                    Trouver
+                    <span className="clubs__title__subhead">un club</span>
+                </h2>
             </div>
 
             <ClubsMap coord={coordinate} />

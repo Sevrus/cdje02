@@ -31,13 +31,16 @@
 
     &__description
         @include flex( column , center , center )
-        cursor: pointer
+        cursor: default
         gap: 5px
         margin-bottom: 10px
 
         p, a
             font-size: $fs-12
             color: $white
+        
+        a
+            cursor: pointer
 
 .article-clubs.active
     @include flex(column , center , center)

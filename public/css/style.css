@@ -765,13 +765,16 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: default;
   gap: 5px;
   margin-bottom: 10px;
 }
 .article-clubs__description p, .article-clubs__description a {
   font-size: 0.75rem;
   color: #fff;
+}
+.article-clubs__description a {
+  cursor: pointer;
 }
 
 .article-clubs.active {
@@ -870,43 +873,33 @@ time, mark, audio, video {
 }
 .clubs__title {
   margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 20px;
   margin-bottom: 25px;
-}
-.clubs__title__subhead {
-  display: flex;
-  justify-content: center;
   color: #242627;
-  font-size: 0.75rem;
   font-family: "Noto Sans", sans-serif;
-  line-height: 12px;
-}
-.clubs__title__bigTitle {
+  text-transform: uppercase;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
-.clubs__title__bigTitle h2 {
-  color: #242627;
+.clubs__title__upperhead {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.clubs__title__subhead {
   font-size: 1.5rem;
-  font-family: "Noto Sans", sans-serif;
-  line-height: 24px;
 }
-.clubs__title__bigTitle__lineLeft, .clubs__title__bigTitle__lineRight {
-  position: absolute;
-  width: 20%;
-  border: 1px solid #fff;
-  opacity: 0.35;
-}
-.clubs__title__bigTitle__lineLeft {
-  left: 10px;
-}
-.clubs__title__bigTitle__lineRight {
-  right: 10px;
+.clubs__title::before, .clubs__title::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 .clubs__list {
   display: flex;
@@ -925,20 +918,11 @@ time, mark, audio, video {
   .clubs__title {
     margin-bottom: 35px;
   }
+  .clubs__title__upperhead {
+    font-size: 1rem;
+  }
   .clubs__title__subhead {
-    font-size: 0.875rem;
-    line-height: 14px;
-  }
-  .clubs__title__bigTitle h2 {
     font-size: 1.625rem;
-    line-height: 26px;
-    margin: 0 40px 0 40px;
-  }
-  .clubs__title__bigTitle__lineLeft {
-    left: 80px;
-  }
-  .clubs__title__bigTitle__lineRight {
-    right: 80px;
   }
   .clubs__list {
     flex-flow: row wrap;
@@ -951,20 +935,11 @@ time, mark, audio, video {
     margin-top: 80px;
     margin-bottom: 30px;
   }
-  .clubs__title__subhead {
+  .clubs__title__upperhead {
     font-size: 1.25rem;
-    line-height: 20px;
   }
-  .clubs__title__bigTitle h2 {
+  .clubs__title__subhead {
     font-size: 2rem;
-    line-height: 32px;
-    margin: 0 100px 0 100px;
-  }
-  .clubs__title__bigTitle__lineLeft {
-    left: 100px;
-  }
-  .clubs__title__bigTitle__lineRight {
-    right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -975,20 +950,11 @@ time, mark, audio, video {
   .clubs__title {
     margin-bottom: 45px;
   }
-  .clubs__title__subhead {
+  .clubs__title__upperhead {
     font-size: 1.75rem;
-    line-height: 28px;
   }
-  .clubs__title__bigTitle h2 {
+  .clubs__title__subhead {
     font-size: 3rem;
-    line-height: 40px;
-    margin: 0 350px 0 350px;
-  }
-  .clubs__title__bigTitle__lineLeft {
-    left: 260px;
-  }
-  .clubs__title__bigTitle__lineRight {
-    right: 260px;
   }
   .clubs__list {
     margin: auto;
@@ -1337,35 +1303,28 @@ time, mark, audio, video {
 }
 .title-referee {
   font-family: "Noto Sans", sans-serif;
+  text-transform: uppercase;
   font-size: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  gap: 20px;
   margin-top: 50px;
 }
-.title-referee__left-line, .title-referee__right-line {
-  position: absolute;
-  width: 20%;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-}
-.title-referee__left-line {
-  left: 10px;
-}
-.title-referee__right-line {
-  right: 10px;
+.title-referee::before, .title-referee::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 768px) {
   .title-referee {
     font-size: 1.625rem;
-  }
-  .title-referee__left-line {
-    left: 80px;
-  }
-  .title-referee__right-line {
-    right: 80px;
+    justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1373,22 +1332,10 @@ time, mark, audio, video {
     margin-top: 80px;
     font-size: 2rem;
   }
-  .title-referee__left-line {
-    left: 100px;
-  }
-  .title-referee__right-line {
-    right: 100px;
-  }
 }
 @media screen and (min-width: 1920px) {
   .title-referee {
     font-size: 3rem;
-  }
-  .title-referee__left-line {
-    left: 260px;
-  }
-  .title-referee__right-line {
-    right: 260px;
   }
 }
 /* VERSION MOBILE */
