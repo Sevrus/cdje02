@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const RefereesAdd = () => {
     const [title, setTitle] = useState("");
@@ -28,12 +28,12 @@ const RefereesAdd = () => {
         })
             .then(resp => {
                 if (resp.ok) {
-                    setMessage(`L'article a bien été créé.`);
+                    setMessage(`L'arbitre a bien été créé.`);
                     ReloadAfterDelay(setMessage, 3000);
                 } else {
-                    setMessage(`La création de l'article a échoué.`);
+                    setMessage(`La création de l'arbitre a échoué.`);
                     clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la création de l'article.");
+                    throw new Error("Erreur lors de la création de l'arbitre.");
                 }
             })
             .catch((error) => {

@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
 const FooterNav = () => {
-    const [openModal, setOpenModal] = useState(false);
 
     return (
         <nav className="footer__nav">
