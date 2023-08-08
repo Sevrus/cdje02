@@ -6,9 +6,9 @@
     @include flex(column, start , center)
     @include articles()
     margin-bottom: 20px
-    width: 80%
+    width: 100%
     overflow: hidden
-    height: 49px
+    height: 50px
 
     &__title
         @include flex(column, center, center)
@@ -22,46 +22,51 @@
             padding: 0 10px
 
         &__separation
-            width: 90%           
+            width: 90%
             background-color: $white
 
     &__description
         @include flex( column , center , center )
+        cursor: pointer
         gap: 5px
-        font-size: $fs-12
+        margin-bottom: 10px
+
+        p, a
+            font-size: $fs-12
+            color: $white
 
 .article-clubs.active
     @include flex(column , center , center)
     position: absolute
     top: -185px
-    left: 20%
     z-index: 1
+    left: 50%
     transform: translate(-50%)
-    height: 165px 
+    height: 160px
     width: 278px
     background: $bg-gradient
     opacity: .88
-    margin-bottom: 0
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
     .article-clubs
         width: 40%
         height: 53px
-        margin-bottom: 10px
+        margin: 10px
 
         h4
             font-size: $fs-16
 
-        p
-            font-size: $fs-14
+        &__description
+
+            p, a
+                font-size: $fs-14
 
     .article-clubs.active
-        top: -190px
+        top: -205px
         height: 170px
         max-height: 200px
         width: 300px
-        left: 30%
 
 // VERSION L 
 @media screen and (min-width:1024px)
@@ -76,15 +81,14 @@
             h4
                 font-size: $fs-18
 
-        p
+        p, a
             font-size: $fs-16
 
     .article-clubs.active
-        top: -210px
-        height: 185px
+        top: -230px
+        height: 195px
         max-height: 300px
         width: 350px
-        left: 35%
 
 // VERSION XL
 @media screen and (min-width:1920px)
@@ -100,15 +104,14 @@
                 padding: 10px 10px 0 10px
 
         &__description
-            margin-top: 15px
+            margin-top: 10px
 
-            p
+            p, a
                 padding: 0px
                 font-size: $fs-18
 
     .article-clubs.active
         @include flex(column , center , center)
-        top: -250px
+        top: -255px
         width: 400px
         height: 220px
-        left: 40%

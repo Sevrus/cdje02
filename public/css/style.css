@@ -733,9 +733,9 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   margin-bottom: 20px;
-  width: 80%;
+  width: 100%;
   overflow: hidden;
-  height: 49px;
+  height: 50px;
 }
 .article-clubs__title {
   display: flex;
@@ -760,8 +760,13 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   gap: 5px;
+  margin-bottom: 10px;
+}
+.article-clubs__description p, .article-clubs__description a {
   font-size: 0.75rem;
+  color: #fff;
 }
 
 .article-clubs.active {
@@ -771,34 +776,32 @@ time, mark, audio, video {
   align-items: center;
   position: absolute;
   top: -185px;
-  left: 20%;
   z-index: 1;
+  left: 50%;
   transform: translate(-50%);
-  height: 165px;
+  height: 160px;
   width: 278px;
   background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   opacity: 0.88;
-  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
   .article-clubs {
     width: 40%;
     height: 53px;
-    margin-bottom: 10px;
+    margin: 10px;
   }
   .article-clubs h4 {
     font-size: 1rem;
   }
-  .article-clubs p {
+  .article-clubs__description p, .article-clubs__description a {
     font-size: 0.875rem;
   }
   .article-clubs.active {
-    top: -190px;
+    top: -205px;
     height: 170px;
     max-height: 200px;
     width: 300px;
-    left: 30%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -812,15 +815,14 @@ time, mark, audio, video {
   .article-clubs__title h4 {
     font-size: 1.125rem;
   }
-  .article-clubs p {
+  .article-clubs p, .article-clubs a {
     font-size: 1rem;
   }
   .article-clubs.active {
-    top: -210px;
-    height: 185px;
+    top: -230px;
+    height: 195px;
     max-height: 300px;
     width: 350px;
-    left: 35%;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -834,9 +836,9 @@ time, mark, audio, video {
     padding: 10px 10px 0 10px;
   }
   .article-clubs__description {
-    margin-top: 15px;
+    margin-top: 10px;
   }
-  .article-clubs__description p {
+  .article-clubs__description p, .article-clubs__description a {
     padding: 0px;
     font-size: 1.125rem;
   }
@@ -845,10 +847,9 @@ time, mark, audio, video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: -250px;
+    top: -255px;
     width: 400px;
     height: 220px;
-    left: 40%;
   }
 }
 .clubs {
@@ -859,7 +860,7 @@ time, mark, audio, video {
   margin: auto;
   width: 80%;
   height: 500px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   z-index: 0;
 }
 .clubs__title {
@@ -893,7 +894,8 @@ time, mark, audio, video {
 .clubs__title__bigTitle__lineLeft, .clubs__title__bigTitle__lineRight {
   position: absolute;
   width: 20%;
-  border: 1px solid rgba(0, 0, 0, 0.35);
+  border: 1px solid #fff;
+  opacity: 0.35;
 }
 .clubs__title__bigTitle__lineLeft {
   left: 10px;
@@ -906,11 +908,15 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 70%;
+  margin: auto;
   position: relative;
 }
 
 @media screen and (min-width: 768px) {
+  .clubs .leaflet-container {
+    margin-bottom: 10px;
+  }
   .clubs__title {
     margin-bottom: 35px;
   }
@@ -932,7 +938,7 @@ time, mark, audio, video {
   .clubs__list {
     flex-flow: row wrap;
     align-items: flex-start;
-    gap: 10px;
+    width: 97%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2040,7 +2046,7 @@ time, mark, audio, video {
     font-size: 0.875rem;
     text-align: end;
     margin-top: 15px;
-    margin-left: -8px;
+    margin-left: -10px;
   }
   .navbar__links__link {
     font-size: 0.75rem;

@@ -11,7 +11,7 @@
         margin: auto
         width: 80%
         height: 500px
-        margin-bottom: 15px
+        margin-bottom: 20px
         z-index: 0
 
     &__title
@@ -42,7 +42,8 @@
             &__lineLeft, &__lineRight
                 position: absolute
                 width: 20%
-                border: 1px solid rgba(0, 0, 0, 0.35)
+                border: 1px solid $white
+                opacity: 0.35
 
             &__lineLeft
                 left: 10px
@@ -52,12 +53,16 @@
 
     &__list
         @include flex(column , center , center )
-        width: 100%
+        width: 70%
+        margin: auto
         position: relative
 
 // VERSION TABLETTE
 @media screen and (min-width:768px)
     .clubs
+
+        .leaflet-container
+            margin-bottom: 10px
 
         &__title
             margin-bottom: 35px
@@ -82,7 +87,7 @@
         &__list
             flex-flow: row wrap
             align-items: flex-start
-            gap: 10px
+            width: 97%
 
 // VERSION L
 @media screen and (min-width:1024px)

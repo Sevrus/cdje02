@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import fetch from "../../../../utilities/fetchForAll";
 
@@ -21,20 +20,8 @@ const ClubsDescription = ({ toogle, selected }) => {
             <>
                 {datas.data.map(item => (
 
-                    <motion.li
-                        className={selected === item.id ? "article-clubs active" : "article-clubs"}
-                        key={item.id}
-                        onClick={() => toogle(item.id, item.coordx, item.coordy)}
-        
-                        initial={{
-                            rotate: 0,
-                        }}
-                        whileHover={{ 
-                            rotate: [5, -5],
-                         }}
-                         transition={{
-                             duration: 0.3
-                         }}
+                    <li className={selected === item.id ? "article-clubs active" : "article-clubs"}
+                        key={item.id} onClick={() => toogle(item.id, item.coordx, item.coordy)}
                     >
 
                         <div className="article-clubs__title">
@@ -46,11 +33,11 @@ const ClubsDescription = ({ toogle, selected }) => {
                             <p>{item.city}</p>
                             <p>Président: {item.president}</p>
                             <p>Membres: {item.members}</p>
-                            <p>{item.site}</p>
+                            <a href={item.site}>{item.site}</a>
                             <p>{item.tel}</p>
                         </div>
 
-                    </motion.li>
+                    </li>
                 ))}
             </>
         )
