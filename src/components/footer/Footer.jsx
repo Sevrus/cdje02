@@ -23,9 +23,9 @@ const Footer = () => {
             </div>
 
             <div className='footer__bottom'>
-                <img src={footer_line_left} alt="barre gauche" className="footer__line__left" />
+                <img src={footer_line_left} alt="" className="footer__line__left" />
                 <FooterCopyright />
-                <img src={footer_line_right} alt="barre droite" className="footer__line__right" />
+                <img src={footer_line_right} alt="" className="footer__line__right" />
             </div>
         </footer>
     )

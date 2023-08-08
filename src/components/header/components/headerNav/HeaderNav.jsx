@@ -108,8 +108,9 @@ const HeaderNav = ({ chessboardDisappear }) => {
                 <ul className={chessboardDisappear ? 'navbar__links--scroll' : 'navbar__links'}>
                     <li className={chessboardDisappear ? 'navbar__links--disappear-site-name' : 'navbar__links--site-name'}>
                         <NavLink to={`/`}>
-                            <p>CDJE</p>
-                            <p className="navbar__links--site-name__span">02</p>
+                            <h1>CDJE
+                                <span className="navbar__links--site-name__span">02</span>
+                            </h1>
                         </NavLink>
                     </li>
 
