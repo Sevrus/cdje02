@@ -61,11 +61,11 @@ const HeaderNav = ({ chessboardDisappear }) => {
                             isPending ? "pending" : isActive ? "active" : ""
                         }
                     >
-                        ADMIN
+                        Admin
                     </NavLink>
                     <hr className="navbar__links__link__admin__hr" />
                     <NavLink to={"/"} onClick={handleLogout} className="navbar__links__link__admin__logout">
-                        LOGOUT
+                        Logout
                     </NavLink>
                 </div>
             )
@@ -80,7 +80,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                             : 'navbar__links__link__icon'}
                     />
                     <a onClick={() => setOpenModal(true)}>
-                        LOGIN
+                        Login
                     </a>
                     {
                         openModal && createPortal(
@@ -121,7 +121,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            ACCUEIL
+                            Accueil
                         </NavLink>
                     </li>
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
@@ -131,7 +131,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            A PROPOS
+                            A Propos
                         </NavLink>
                     </li>
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
@@ -141,7 +141,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            ACTIVITÉS
+                            Activités
                         </NavLink>
                     </li>
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>
@@ -151,7 +151,7 @@ const HeaderNav = ({ chessboardDisappear }) => {
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
                         >
-                            CONTACT
+                            Contact
                         </NavLink>
                     </li>
                     <li className={chessboardDisappear ? 'navbar__links__link--scroll' : 'navbar__links__link'}>

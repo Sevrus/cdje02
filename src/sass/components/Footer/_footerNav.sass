@@ -17,15 +17,16 @@
 
         &__links
             @include flex(column, center, center)
-
-            & a
-                font-family: $font-primary
-                text-decoration: none
+            font-family: $font-primary
+            text-decoration: none
+            text-transform: uppercase
+            font-size: $fs-14
+            font-weight: bold
+            cursor: pointer
+            
+            & a 
                 color: $white
                 padding: 3px 0
-                font-size: $fs-14
-                font-weight: bold
-                cursor: pointer
 
                 &.active, &:hover
                     color: $red
@@ -42,14 +43,15 @@
             margin: auto
             font-weight: bold
             font-size: $fs-16
+            text-transform: uppercase
             text-decoration: underline
 
         &__links
             height: 70px
+            font-size: $fs-14
             @include flex(row, space-around, center)
 
             & a
-                font-size: $fs-14
                 padding: 0 3px
 
 /* VERSION XL */

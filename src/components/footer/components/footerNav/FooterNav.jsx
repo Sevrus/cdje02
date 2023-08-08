@@ -5,7 +5,7 @@ const FooterNav = () => {
 
     return (
         <nav className="footer__nav">
-            <p className="footer__nav__title">PLAN DU SITE</p>
+            <p className="footer__nav__title">Plan du site</p>
             <ul className="footer__nav__links">
                 <NavLink
                     to="/"
@@ -13,7 +13,7 @@ const FooterNav = () => {
                         isPending ? "pending" : isActive ? "active" : ""
                     }
                 >
-                    ACCUEIL
+                    Accueil
                 </NavLink>
 
                 <NavLink
@@ -22,7 +22,7 @@ const FooterNav = () => {
                         isPending ? "pending" : isActive ? "active" : ""
                     }
                 >
-                    A PROPOS
+                    A Propos
                 </NavLink>
 
                 <NavLink
@@ -31,7 +31,7 @@ const FooterNav = () => {
                         isPending ? "pending" : isActive ? "active" : ""
                     }
                 >
-                    ACTIVITÉS
+                    Activités
                 </NavLink>
 
                 <NavLink
@@ -40,7 +40,7 @@ const FooterNav = () => {
                         isPending ? "pending" : isActive ? "active" : ""
                     }
                 >
-                    CONTACT
+                    Contact
                 </NavLink>
             </ul>
         </nav>

@@ -1,4 +1,4 @@
-import logo_comity from '../../../../assets/logos/logo_comity.png';
+import logo_ehdf from '../../../../assets/logos/logo_ehdf.png';
 import logo_ffe from '../../../../assets/logos/logo_ffe.png';
 import logo_fide from '../../../../assets/logos/logo_fide.png';
 
@@ -13,7 +13,7 @@ const FooterLinks = () => {
                 <img src={logo_fide} alt="logo fide" className='footer__links__fide' />
             </a>
             <a href="https://ehdf.fr/">
-                <img src={logo_comity} alt="logo comity" className='footer__links__comity' />
+                <img src={logo_ehdf} alt="logo ehdf" className='footer__links__ehdf' />
             </a>
         </div>
     )

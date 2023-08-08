@@ -1774,6 +1774,99 @@ time, mark, audio, video {
   }
 }
 /* VERSION MOBILE */
+.chessboard, .chessboard-disappear {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  bottom: -40px;
+}
+
+.chessboard {
+  display: block;
+  transition: opacity ease-in-out 0.5s 0.2s;
+}
+
+.chessboard-disappear {
+  display: none;
+  transition: opacity ease-in-out 0.5s;
+}
+
+@media screen and (min-width: 500px) {
+  .chessboard, .chessboard-disappear {
+    width: 280px;
+    bottom: -50px;
+  }
+}
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px) {
+  .chessboard, .chessboard-disappear {
+    bottom: -60px;
+    width: 350px;
+  }
+}
+/* VERSION L */
+@media screen and (min-width: 1024px) {
+  .chessboard, .chessboard-disappear {
+    bottom: -68px;
+    width: 400px;
+  }
+}
+/* VERSION XL */
+@media screen and (min-width: 1920px) {
+  .chessboard, .chessboard-disappear {
+    bottom: -80px;
+    width: 450px;
+    left: 37%;
+  }
+}
+/* VERSION MOBILE */
+.logo, .logo--scroll {
+  position: absolute;
+  width: 50px;
+  left: 10px;
+  top: 5px;
+}
+
+@media screen and (min-width: 500px) {
+  .logo, .logo--scroll {
+    width: 60px;
+    left: 20px;
+  }
+}
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .logo--scroll {
+    position: relative;
+    width: 75px;
+    left: 30px;
+  }
+}
+/* VERSION L */
+@media screen and (min-width: 1024px) {
+  .logo--scroll {
+    width: 85px;
+    left: 50px;
+  }
+}
+/* VERSION XL */
+@media screen and (min-width: 1920px) {
+  .logo {
+    display: block;
+    position: relative;
+  }
+  .logo, .logo--scroll {
+    width: 110px;
+    left: 100px;
+  }
+  .logo--scroll {
+    top: 16px;
+  }
+}
+/* VERSION MOBILE */
 .navbar__burger, .navbar--scroll__burger {
   position: absolute;
   width: 35px;
@@ -1829,6 +1922,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
+  text-transform: uppercase;
   background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
   width: 100%;
   height: 200px;
@@ -1941,10 +2035,12 @@ time, mark, audio, video {
     color: #fff;
   }
   .navbar__links--site-name__span {
+    position: absolute;
     color: #f73746;
     font-size: 0.875rem;
     text-align: end;
-    margin-top: -8px;
+    margin-top: 15px;
+    margin-left: -8px;
   }
   .navbar__links__link {
     font-size: 0.75rem;
@@ -1992,7 +2088,6 @@ time, mark, audio, video {
   }
   .navbar__links--site-name__span {
     font-size: 1rem;
-    margin-top: -9px;
   }
   .navbar__links__link {
     font-size: 0.875rem;
@@ -2086,99 +2181,6 @@ time, mark, audio, video {
 @media screen and (min-width: 2100px) {
   .navbar--scroll::before {
     width: 40%;
-  }
-}
-/* VERSION MOBILE */
-.chessboard, .chessboard-disappear {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 220px;
-  bottom: -40px;
-}
-
-.chessboard {
-  display: block;
-  transition: opacity ease-in-out 0.5s 0.2s;
-}
-
-.chessboard-disappear {
-  display: none;
-  transition: opacity ease-in-out 0.5s;
-}
-
-@media screen and (min-width: 500px) {
-  .chessboard, .chessboard-disappear {
-    width: 280px;
-    bottom: -50px;
-  }
-}
-/* VERSION TABLETTE */
-@media screen and (min-width: 768px) {
-  .chessboard, .chessboard-disappear {
-    bottom: -60px;
-    width: 350px;
-  }
-}
-/* VERSION L */
-@media screen and (min-width: 1024px) {
-  .chessboard, .chessboard-disappear {
-    bottom: -68px;
-    width: 400px;
-  }
-}
-/* VERSION XL */
-@media screen and (min-width: 1920px) {
-  .chessboard, .chessboard-disappear {
-    bottom: -80px;
-    width: 450px;
-    left: 37%;
-  }
-}
-/* VERSION MOBILE */
-.logo, .logo--scroll {
-  position: absolute;
-  width: 50px;
-  left: 10px;
-  top: 5px;
-}
-
-@media screen and (min-width: 500px) {
-  .logo, .logo--scroll {
-    width: 60px;
-    left: 20px;
-  }
-}
-/* VERSION TABLETTE */
-@media screen and (min-width: 768px) {
-  .logo {
-    display: none;
-  }
-  .logo--scroll {
-    position: relative;
-    width: 75px;
-    left: 30px;
-  }
-}
-/* VERSION L */
-@media screen and (min-width: 1024px) {
-  .logo--scroll {
-    width: 85px;
-    left: 50px;
-  }
-}
-/* VERSION XL */
-@media screen and (min-width: 1920px) {
-  .logo {
-    display: block;
-    position: relative;
-  }
-  .logo, .logo--scroll {
-    width: 110px;
-    left: 100px;
-  }
-  .logo--scroll {
-    top: 16px;
   }
 }
 /* HEADER */
@@ -2405,15 +2407,16 @@ time, mark, audio, video {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .footer__nav__links a {
     font-family: "Noto Sans", sans-serif;
     text-decoration: none;
-    color: #fff;
-    padding: 3px 0;
+    text-transform: uppercase;
     font-size: 0.875rem;
     font-weight: bold;
     cursor: pointer;
+  }
+  .footer__nav__links a {
+    color: #fff;
+    padding: 3px 0;
   }
   .footer__nav__links a.active, .footer__nav__links a:hover {
     color: #f73746;
@@ -2434,17 +2437,18 @@ time, mark, audio, video {
     margin: auto;
     font-weight: bold;
     font-size: 1rem;
+    text-transform: uppercase;
     text-decoration: underline;
   }
   .footer__nav__links {
     height: 70px;
+    font-size: 0.875rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
   .footer__nav__links a {
-    font-size: 0.875rem;
     padding: 0 3px;
   }
 }
@@ -2533,6 +2537,7 @@ time, mark, audio, video {
 .footer__socials__text {
   font-size: 0.75rem;
   text-align: center;
+  text-transform: uppercase;
 }
 .footer__socials hr {
   border: 1px solid #fff;
@@ -3013,6 +3018,237 @@ time, mark, audio, video {
   }
   .modal__content__lost-password {
     font-size: 1.25rem;
+  }
+}
+.resetPassword {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.resetPassword__password, .resetPassword__confirmPassword {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.resetPassword__password label, .resetPassword__confirmPassword label {
+  margin-bottom: 15px;
+}
+.resetPassword__password input, .resetPassword__confirmPassword input {
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid #242627;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  height: 40px;
+  text-indent: 10px;
+  font-size: 0.875rem;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.resetPassword__password__icon, .resetPassword__confirmPassword__icon {
+  color: #3d4450;
+  font-size: 0.875rem;
+  margin-left: -30px;
+}
+.resetPassword__password__icon:hover, .resetPassword__confirmPassword__icon:hover {
+  cursor: pointer;
+}
+.resetPassword__confirmPassword {
+  margin-top: 20px;
+}
+.resetPassword__message {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-bottom: -15px;
+}
+.resetPassword__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.resetPassword__btn button {
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: "Noto Sans", sans-serif;
+  color: #fff;
+  margin-top: 40px;
+  width: 50%;
+  max-width: 300px;
+  height: 40px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.resetPassword__btn button:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+}
+
+@media screen and (min-width: 768px) {
+  .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
+    font-size: 1.125rem;
+  }
+  .resetPassword__password__icon, .resetPassword__confirmPassword__icon, .resetPassword button__icon {
+    font-size: 1rem;
+  }
+  .resetPassword__password input, .resetPassword__confirmPassword input, .resetPassword button input {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .resetPassword {
+    margin-bottom: 50px;
+  }
+  .resetPassword__password, .resetPassword__confirmPassword {
+    margin-bottom: 30px;
+  }
+  .resetPassword__password__icon, .resetPassword__confirmPassword__icon {
+    margin-left: -35px;
+    font-size: 1.125rem;
+  }
+  .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
+    font-size: 1.25rem;
+  }
+  .resetPassword__password label, .resetPassword__confirmPassword label, .resetPassword button label {
+    margin-bottom: 20px;
+  }
+  .resetPassword__password input, .resetPassword__confirmPassword input, .resetPassword button input {
+    width: 500px;
+    font-size: 1.125rem;
+  }
+  .resetPassword__message {
+    font-size: 1rem;
+  }
+  .resetPassword button {
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .resetPassword {
+    margin-bottom: 90px;
+  }
+  .resetPassword__password, .resetPassword__confirmPassword {
+    margin-bottom: 40px;
+  }
+  .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
+    font-size: 1.5rem;
+  }
+  .resetPassword label {
+    margin-bottom: 20px;
+  }
+  .resetPassword button {
+    height: 50px;
+  }
+}
+/* VERSION MOBILE */
+.requestResetPassword {
+  margin-top: 30px;
+}
+.requestResetPassword__email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.requestResetPassword__email__label {
+  margin: 30px 0;
+}
+.requestResetPassword__email__input {
+  width: 350px;
+  border-radius: 5px;
+  border: 1px solid #242627;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  height: 40px;
+  text-indent: 10px;
+  font-size: 0.875rem;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.requestResetPassword__message {
+  font-family: "Noto Sans", sans-serif;
+  color: #f73746;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 15px 0 -10px;
+}
+.requestResetPassword__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.requestResetPassword__btn button {
+  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: "Noto Sans", sans-serif;
+  color: #fff;
+  margin-top: 30px;
+  width: 50%;
+  max-width: 300px;
+  height: 40px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.requestResetPassword__btn button:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+}
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px) {
+  .requestResetPassword__email__label, .requestResetPassword__btn__label {
+    font-size: 1.125rem;
+  }
+  .requestResetPassword__email__input, .requestResetPassword__btn__input {
+    font-size: 1rem;
+    width: 400px;
+  }
+}
+/* VERSION L */
+@media screen and (min-width: 1024px) {
+  .requestResetPassword__email__label {
+    font-size: 1.25rem;
+  }
+  .requestResetPassword__email__input {
+    height: 50px;
+    width: 500px;
+    font-size: 1.125rem;
+  }
+  .requestResetPassword__btn {
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  .requestResetPassword__message {
+    font-size: 1rem;
+  }
+}
+/* VERSION XL */
+@media screen and (min-width: 1920px) {
+  .requestResetPassword__email__label, .requestResetPassword__btn__label {
+    font-size: 1.375rem;
   }
 }
 /* VERSION MOBILE */
@@ -7720,237 +7956,6 @@ time, mark, audio, video {
   }
   .adminAdmins__addTitle__bigTitle__lineRight {
     right: 260px;
-  }
-}
-.resetPassword {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  width: 100%;
-}
-.resetPassword__password, .resetPassword__confirmPassword {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Noto Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 25px;
-  width: 100%;
-}
-.resetPassword__password label, .resetPassword__confirmPassword label {
-  margin-bottom: 15px;
-}
-.resetPassword__password input, .resetPassword__confirmPassword input {
-  width: 350px;
-  border-radius: 5px;
-  border: 1px solid #242627;
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
-  height: 40px;
-  text-indent: 10px;
-  font-size: 0.875rem;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-.resetPassword__password__icon, .resetPassword__confirmPassword__icon {
-  color: #3d4450;
-  font-size: 0.875rem;
-  margin-left: -30px;
-}
-.resetPassword__password__icon:hover, .resetPassword__confirmPassword__icon:hover {
-  cursor: pointer;
-}
-.resetPassword__confirmPassword {
-  margin-top: 20px;
-}
-.resetPassword__message {
-  font-family: "Noto Sans", sans-serif;
-  color: #f73746;
-  font-weight: bold;
-  font-size: 0.875rem;
-  text-align: center;
-  margin-bottom: -15px;
-}
-.resetPassword__btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.resetPassword__btn button {
-  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
-  font-family: "Noto Sans", sans-serif;
-  color: #fff;
-  margin-top: 40px;
-  width: 50%;
-  max-width: 300px;
-  height: 40px;
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-}
-.resetPassword__btn button:hover {
-  cursor: pointer;
-  transform: scale(0.98);
-}
-
-@media screen and (min-width: 768px) {
-  .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
-    font-size: 1.125rem;
-  }
-  .resetPassword__password__icon, .resetPassword__confirmPassword__icon, .resetPassword button__icon {
-    font-size: 1rem;
-  }
-  .resetPassword__password input, .resetPassword__confirmPassword input, .resetPassword button input {
-    width: 400px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .resetPassword {
-    margin-bottom: 50px;
-  }
-  .resetPassword__password, .resetPassword__confirmPassword {
-    margin-bottom: 30px;
-  }
-  .resetPassword__password__icon, .resetPassword__confirmPassword__icon {
-    margin-left: -35px;
-    font-size: 1.125rem;
-  }
-  .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
-    font-size: 1.25rem;
-  }
-  .resetPassword__password label, .resetPassword__confirmPassword label, .resetPassword button label {
-    margin-bottom: 20px;
-  }
-  .resetPassword__password input, .resetPassword__confirmPassword input, .resetPassword button input {
-    width: 500px;
-    font-size: 1.125rem;
-  }
-  .resetPassword__message {
-    font-size: 1rem;
-  }
-  .resetPassword button {
-    height: 40px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .resetPassword {
-    margin-bottom: 90px;
-  }
-  .resetPassword__password, .resetPassword__confirmPassword {
-    margin-bottom: 40px;
-  }
-  .resetPassword__password, .resetPassword__confirmPassword, .resetPassword button {
-    font-size: 1.5rem;
-  }
-  .resetPassword label {
-    margin-bottom: 20px;
-  }
-  .resetPassword button {
-    height: 50px;
-  }
-}
-/* VERSION MOBILE */
-.requestResetPassword {
-  margin-top: 30px;
-}
-.requestResetPassword__email {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Noto Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 25px;
-  width: 100%;
-}
-.requestResetPassword__email__label {
-  margin: 30px 0;
-}
-.requestResetPassword__email__input {
-  width: 350px;
-  border-radius: 5px;
-  border: 1px solid #242627;
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
-  height: 40px;
-  text-indent: 10px;
-  font-size: 0.875rem;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-.requestResetPassword__message {
-  font-family: "Noto Sans", sans-serif;
-  color: #f73746;
-  font-weight: bold;
-  font-size: 0.875rem;
-  text-align: center;
-  margin: 15px 0 -10px;
-}
-.requestResetPassword__btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.requestResetPassword__btn button {
-  background: linear-gradient(90deg, #242627 0%, #3D4450 50.67%, #384E65 99.99%, #4E5862 100%);
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
-  font-family: "Noto Sans", sans-serif;
-  color: #fff;
-  margin-top: 30px;
-  width: 50%;
-  max-width: 300px;
-  height: 40px;
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-}
-.requestResetPassword__btn button:hover {
-  cursor: pointer;
-  transform: scale(0.98);
-}
-
-/* VERSION TABLETTE */
-@media screen and (min-width: 768px) {
-  .requestResetPassword__email__label, .requestResetPassword__btn__label {
-    font-size: 1.125rem;
-  }
-  .requestResetPassword__email__input, .requestResetPassword__btn__input {
-    font-size: 1rem;
-    width: 400px;
-  }
-}
-/* VERSION L */
-@media screen and (min-width: 1024px) {
-  .requestResetPassword__email__label {
-    font-size: 1.25rem;
-  }
-  .requestResetPassword__email__input {
-    height: 50px;
-    width: 500px;
-    font-size: 1.125rem;
-  }
-  .requestResetPassword__btn {
-    height: 50px;
-    font-size: 1.25rem;
-  }
-  .requestResetPassword__message {
-    font-size: 1rem;
-  }
-}
-/* VERSION XL */
-@media screen and (min-width: 1920px) {
-  .requestResetPassword__email__label, .requestResetPassword__btn__label {
-    font-size: 1.375rem;
   }
 }
 /* VERSION MOBILE */

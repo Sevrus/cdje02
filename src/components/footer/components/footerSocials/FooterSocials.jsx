@@ -9,7 +9,7 @@ const FooterSocials = () => {
 
     return (
         <div className='footer__socials'>
-            <p className="footer__socials__text">SUIVEZ-NOUS</p>
+            <p className="footer__socials__text">Suivez-nous</p>
             <hr />
             <div className="footer__socials__icons">
                 <a href="https://www.facebook.com">
