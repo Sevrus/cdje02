@@ -20,6 +20,7 @@ const Header = () => {
 
         setResizeHeader(isAdminPath || isScrolled);
     }
+
     window.addEventListener('scroll', changeSize);
 
     return (
