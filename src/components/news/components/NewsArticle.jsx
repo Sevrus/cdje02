@@ -27,7 +27,7 @@ const NewsArticle = () => {
 
                         <div className="newsArticle__title">
                             <hr className="newsArticle__title__lineLeft" />
-                            <h4>{item.title}</h4>
+                            <h3>{item.title}</h3>
                             <hr className="newsArticle__title__lineRight" />
                         </div>
 

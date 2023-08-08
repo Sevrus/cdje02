@@ -4,10 +4,10 @@ import Referee from "../components/referee/Referee.jsx";
 const Info = () => {
 
     return (
-        <main className="infos">
+        <>
             <Comity />
             <Referee />
-        </main>
+        </>
     )
 }
 

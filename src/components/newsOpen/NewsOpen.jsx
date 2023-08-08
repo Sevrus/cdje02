@@ -5,14 +5,11 @@ const NewsOpen = () => {
     return (
         <section className="newsOpen">
 
-            <div className="newsOpen__title__subhead">
-                <h3>VOTRE</h3>
-            </div>
-
-            <div className="newsOpen__title__bigTitle">
-                <hr className="newsOpen__title__bigTitle__lineLeft" />
-                <h2>ARTICLE</h2>
-                <hr className="newsOpen__title__bigTitle__lineRight" />
+            <div className="newsOpen__title">
+                <h2 className="newsOpen__title__upperhead">
+                    Votre
+                    <span className="newsOpen__title__subhead">article</span>
+                </h2>
             </div>
 
             <NewsOpenArticle />

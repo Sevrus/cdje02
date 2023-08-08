@@ -4,7 +4,7 @@ const Referee = () => {
 
     return (
         <>
-            <h2 className="title-referee">Arbitres</h2>
+            <h2 className="title-referee">Les Arbitres</h2>
             <RefereeDescription />
         </>
     )

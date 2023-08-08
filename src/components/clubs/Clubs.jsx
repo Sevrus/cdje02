@@ -31,9 +31,7 @@ const Clubs = () => {
             <ClubsMap coord={coordinate} />
 
             <ul className="clubs__list">
-
                 <ClubsDescription toogle={toogle} selected={selected} />
-
             </ul>
 
         </section>

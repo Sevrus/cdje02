@@ -21,11 +21,8 @@ const AllTournament = () => {
         return (
 
             <section className="tournament">
-                <div className="tournament__title">
-                    <hr className="tournament__title__left-line" />
-                    <h2>RÉSULTATS</h2>
-                    <hr className="tournament__title__right-line" />
-                </div>
+                
+                <h2 className="tournament__title">Résultats</h2>
 
                 <ul className="tournament__list">
                     <Description data={datas} />

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import fetch from "../../../utilities/fetchForAll";
 import { formatDate } from "../../../utilities/dateUtils.js";
+import fetch from "../../../utilities/fetchForAll";
 
 const NewsOpenArticle = () => {
 
@@ -29,7 +29,7 @@ const NewsOpenArticle = () => {
 
                         <div className="newsOpenArticle__title">
                             <hr className="newsOpenArticle__title__lineLeft" />
-                            <h4>{datas.data.title}</h4>
+                            <h3>{datas.data.title}</h3>
                             <hr className="newsOpenArticle__title__lineRight" />
                         </div>
 

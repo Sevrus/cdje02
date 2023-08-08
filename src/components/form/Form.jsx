@@ -27,21 +27,24 @@ const Form = () => {
             <img className='form__imageRight' src={imageForm} alt="Image decoration droite" />
             <div className="form__lastname">
                 <label htmlFor="lastname">Nom</label>
-                <input type="text" name="lastname" maxLength={20} required={true} />
+                <input type="text" name="lastname" maxLength={20} required={true}
+                    pattern='[A-Za-zÀ-ÿ]' />
             </div>
             <div className="form__firstname">
                 <label htmlFor="firstname">Prénom</label>
-                <input type="text" name='firstname' maxLength={20} required={true} />
+                <input type="text" name='firstname' maxLength={20} required={true}
+                    pattern='[A-Za-zÀ-ÿ]' />
             </div>
             <div className="form__email">
                 <label htmlFor="email">Email</label>
-                <input type="email" name='email' maxLength={40} required={true} />
+                <input type="email" name='email' maxLength={40} required={true}
+                    pattern='^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$' />
             </div>
             <div className="form__message">
                 <label htmlFor="message">Message</label>
-                <textarea cols="30" rows="10" name='message' maxLength={200} required={true} />
+                <textarea cols="30" rows="10" name='message' minLength={20} maxLength={1000} required={true} />
             </div>
-         
+
             <p className='form__validate'>{message}</p>
 
             <div className="form__btn">

@@ -20,15 +20,15 @@ const Regulation = () => {
 
         return (
             <section className="regulation">
+
                 <div className="regulation__title">
-                    <hr className="regulation__title__left-line" />
-                    <h2>RÈGLEMENTS</h2>
-                    <hr className="regulation__title__right-line" />
+                    <h2>Règlements</h2>
                 </div>
 
                 <ul className="regulation__list">
                     <Description data={datas} />
                 </ul>
+
             </section>
         )
     }

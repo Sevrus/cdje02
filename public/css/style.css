@@ -57,6 +57,8 @@ time, mark, audio, video {
 .form__lastname textarea, .form__firstname textarea, .form__email textarea, .form__message textarea {
   text-indent: 10px;
   resize: vertical;
+  min-height: 40px;
+  max-height: 300px;
 }
 .form__lastname span, .form__firstname span, .form__email span, .form__message span {
   color: #f73746;
@@ -161,76 +163,41 @@ time, mark, audio, video {
     height: 50px;
   }
 }
-.contact {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
 .contact__title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 35px;
-}
-.contact__title h2 {
-  color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
-  line-height: 24px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 35px 0;
 }
-.contact__title__lineLeft, .contact__title__lineRight {
-  width: 20%;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-  position: absolute;
-}
-.contact__title__lineLeft {
-  left: 10px;
-}
-.contact__title__lineRight {
-  right: 10px;
+.contact__title::before, .contact__title::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 768px) {
-  .contact__title h2 {
+  .contact__title {
     font-size: 1.625rem;
-    line-height: 26px;
-    margin: 0;
-  }
-  .contact__title__lineLeft {
-    left: 80px;
-  }
-  .contact__title__lineRight {
-    right: 80px;
+    justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1024px) {
   .contact__title {
     margin-bottom: 60px;
-  }
-  .contact__title h2 {
     font-size: 2rem;
-    line-height: 32px;
-    margin: 0;
-  }
-  .contact__title__lineLeft {
-    left: 100px;
-  }
-  .contact__title__lineRight {
-    right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .contact__title h2 {
+  .contact__title {
     font-size: 3rem;
-    line-height: 40px;
-    margin: 0;
-  }
-  .contact__title__lineLeft {
-    left: 260px;
-  }
-  .contact__title__lineRight {
-    right: 260px;
   }
 }
 .newsArticle {
@@ -242,6 +209,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   width: 80%;
+  margin: auto;
   margin-bottom: 15px;
   margin-top: 25px;
 }
@@ -261,7 +229,7 @@ time, mark, audio, video {
 .newsArticle__title__lineRight {
   right: 15px;
 }
-.newsArticle__title h4 {
+.newsArticle__title h3 {
   margin: auto;
   font-size: 1rem;
   padding: 10px;
@@ -296,7 +264,7 @@ time, mark, audio, video {
     display: flex;
     align-items: center;
   }
-  .newsArticle__title h4 {
+  .newsArticle__title h3 {
     font-size: 1rem;
   }
   .newsArticle__title__lineLeft, .newsArticle__title__lineRight {
@@ -320,7 +288,7 @@ time, mark, audio, video {
   .newsArticle__title__lineLeft, .newsArticle__title__lineRight {
     width: 110px;
   }
-  .newsArticle__title h4 {
+  .newsArticle__title h3 {
     font-size: 1.125rem;
     padding: 20px;
   }
@@ -348,7 +316,7 @@ time, mark, audio, video {
   .newsArticle__title__lineLeft {
     margin-left: 200px;
   }
-  .newsArticle__title h4 {
+  .newsArticle__title h3 {
     font-size: 1.5rem;
   }
   .newsArticle__description p {
@@ -358,107 +326,73 @@ time, mark, audio, video {
     font-size: 1.25rem;
   }
 }
-.news {
+.news__title {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  gap: 20px;
   margin-top: 35px;
 }
-.news__title__subhead {
+.news__title__upperhead {
+  font-size: 0.875rem;
   display: flex;
-  align-items: center;
-  color: #242627;
-  font-size: 0.75rem;
-  font-family: "Noto Sans", sans-serif;
-}
-.news__title__bigTitle {
-  display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items: center;
 }
-.news__title__bigTitle h2 {
-  color: #242627;
+.news__title__subhead {
   font-size: 1.5rem;
-  font-family: "Noto Sans", sans-serif;
 }
-.news__title__bigTitle__lineLeft, .news__title__bigTitle__lineRight {
-  position: absolute;
-  width: 20%;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-}
-.news__title__bigTitle__lineLeft {
-  left: 10px;
-}
-.news__title__bigTitle__lineRight {
-  right: 10px;
+.news__title::before, .news__title::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 768px) {
+  .news__title {
+    margin-bottom: 35px;
+  }
+  .news__title__upperhead {
+    font-size: 1rem;
+  }
   .news__title__subhead {
-    display: flex;
-    align-items: center;
-  }
-  .news__title__subhead h3 {
-    font-size: 0.875rem;
-  }
-  .news__title__bigTitle {
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  .news__title__bigTitle h2 {
     font-size: 1.625rem;
-    margin: 0;
-  }
-  .news__title__bigTitle__lineLeft {
-    left: 80px;
-  }
-  .news__title__bigTitle__lineRight {
-    right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
   .news {
     margin-top: 50px;
   }
-  .news__title__subhead {
-    display: flex;
-    align-items: center;
+  .news__title {
+    margin-bottom: 30px;
+  }
+  .news__title__upperhead {
     font-size: 1.25rem;
   }
-  .news__title__bigTitle {
-    margin-bottom: 25px;
-  }
-  .news__title__bigTitle h2 {
+  .news__title__subhead {
     font-size: 2rem;
-  }
-  .news__title__bigTitle__lineLeft {
-    left: 100px;
-  }
-  .news__title__bigTitle__lineRight {
-    right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
   .news {
     margin-top: 90px;
   }
-  .news__title__subhead {
-    display: flex;
-    align-items: center;
+  .news__title {
+    margin-bottom: 45px;
+  }
+  .news__title__upperhead {
     font-size: 1.75rem;
   }
-  .news__title__bigTitle {
-    margin-bottom: 30px;
-  }
-  .news__title__bigTitle h2 {
+  .news__title__subhead {
     font-size: 3rem;
-  }
-  .news__title__bigTitle__lineLeft {
-    left: 260px;
-  }
-  .news__title__bigTitle__lineRight {
-    right: 260px;
   }
 }
 .newsOpenArticle {
@@ -470,6 +404,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   color: #fff;
   width: 80%;
+  margin: auto;
   margin-bottom: 15px;
   margin-top: 25px;
 }
@@ -489,7 +424,7 @@ time, mark, audio, video {
 .newsOpenArticle__title__lineRight {
   right: 15px;
 }
-.newsOpenArticle__title h4 {
+.newsOpenArticle__title h3 {
   margin: auto;
   font-size: 1rem;
   padding: 10px;
@@ -543,7 +478,7 @@ time, mark, audio, video {
     display: flex;
     align-items: center;
   }
-  .newsOpenArticle__title h4 {
+  .newsOpenArticle__title h3 {
     font-size: 1rem;
   }
   .newsOpenArticle__title__lineLeft, .newsOpenArticle__title__lineRight {
@@ -570,7 +505,7 @@ time, mark, audio, video {
   .newsOpenArticle__title__lineLeft, .newsOpenArticle__title__lineRight {
     width: 110px;
   }
-  .newsOpenArticle__title h4 {
+  .newsOpenArticle__title h3 {
     font-size: 1.125rem;
     padding: 20px;
   }
@@ -600,7 +535,7 @@ time, mark, audio, video {
   .newsOpenArticle__title__lineLeft {
     margin-left: 200px;
   }
-  .newsOpenArticle__title h4 {
+  .newsOpenArticle__title h3 {
     font-size: 1.5rem;
   }
   .newsOpenArticle__description p {
@@ -620,107 +555,73 @@ time, mark, audio, video {
     font-size: 1.25rem;
   }
 }
-.newsOpen {
+.newsOpen__title {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  gap: 20px;
   margin-top: 35px;
 }
-.newsOpen__title__subhead {
+.newsOpen__title__upperhead {
+  font-size: 0.875rem;
   display: flex;
-  align-items: center;
-  color: #242627;
-  font-size: 0.75rem;
-  font-family: "Noto Sans", sans-serif;
-}
-.newsOpen__title__bigTitle {
-  display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items: center;
 }
-.newsOpen__title__bigTitle h2 {
-  color: #242627;
+.newsOpen__title__subhead {
   font-size: 1.5rem;
-  font-family: "Noto Sans", sans-serif;
 }
-.newsOpen__title__bigTitle__lineLeft, .newsOpen__title__bigTitle__lineRight {
-  position: absolute;
-  width: 20%;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-}
-.newsOpen__title__bigTitle__lineLeft {
-  left: 10px;
-}
-.newsOpen__title__bigTitle__lineRight {
-  right: 10px;
+.newsOpen__title::before, .newsOpen__title::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 768px) {
+  .newsOpen__title {
+    margin-bottom: 35px;
+  }
+  .newsOpen__title__upperhead {
+    font-size: 1rem;
+  }
   .newsOpen__title__subhead {
-    display: flex;
-    align-items: center;
-  }
-  .newsOpen__title__subhead h3 {
-    font-size: 0.875rem;
-  }
-  .newsOpen__title__bigTitle {
-    margin-bottom: 40px;
-    width: 100%;
-  }
-  .newsOpen__title__bigTitle h2 {
     font-size: 1.625rem;
-    margin: 0;
-  }
-  .newsOpen__title__bigTitle__lineLeft {
-    left: 80px;
-  }
-  .newsOpen__title__bigTitle__lineRight {
-    right: 80pxx;
   }
 }
 @media screen and (min-width: 1024px) {
   .newsOpen {
     margin-top: 50px;
   }
-  .newsOpen__title__subhead {
-    display: flex;
-    align-items: center;
+  .newsOpen__title {
+    margin-bottom: 30px;
+  }
+  .newsOpen__title__upperhead {
     font-size: 1.25rem;
   }
-  .newsOpen__title__bigTitle {
-    margin-bottom: 50px;
-  }
-  .newsOpen__title__bigTitle h2 {
+  .newsOpen__title__subhead {
     font-size: 2rem;
-  }
-  .newsOpen__title__bigTitle__lineLeft {
-    left: 100px;
-  }
-  .newsOpen__title__bigTitle__lineRight {
-    right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
   .newsOpen {
     margin-top: 90px;
   }
-  .newsOpen__title__subhead {
-    display: flex;
-    align-items: center;
+  .newsOpen__title {
+    margin-bottom: 45px;
+  }
+  .newsOpen__title__upperhead {
     font-size: 1.75rem;
   }
-  .newsOpen__title__bigTitle {
-    margin-bottom: 50px;
-  }
-  .newsOpen__title__bigTitle h2 {
+  .newsOpen__title__subhead {
     font-size: 3rem;
-  }
-  .newsOpen__title__bigTitle__lineLeft {
-    left: 260px;
-  }
-  .newsOpen__title__bigTitle__lineRight {
-    right: 260px;
   }
 }
 .article-clubs {
@@ -861,8 +762,7 @@ time, mark, audio, video {
   }
 }
 .clubs {
-  display: flex;
-  flex-direction: column;
+  margin-top: 50px;
 }
 .clubs .leaflet-container {
   margin: auto;
@@ -872,7 +772,6 @@ time, mark, audio, video {
   z-index: 0;
 }
 .clubs__title {
-  margin-top: 50px;
   gap: 20px;
   margin-bottom: 25px;
   color: #242627;
@@ -931,8 +830,10 @@ time, mark, audio, video {
   }
 }
 @media screen and (min-width: 1024px) {
-  .clubs__title {
+  .clubs {
     margin-top: 80px;
+  }
+  .clubs__title {
     margin-bottom: 30px;
   }
   .clubs__title__upperhead {
@@ -1114,56 +1015,37 @@ time, mark, audio, video {
 .title-comity {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.5rem;
+  text-transform: uppercase;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  gap: 20px;
   margin-top: 35px;
 }
-.title-comity__left-line, .title-comity__right-line {
-  position: absolute;
-  width: 20%;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-}
-.title-comity__left-line {
-  left: 10px;
-}
-.title-comity__right-line {
-  right: 10px;
+.title-comity::before, .title-comity::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 768px) {
   .title-comity {
     font-size: 1.625rem;
-  }
-  .title-comity__left-line {
-    left: 80px;
-  }
-  .title-comity__right-line {
-    right: 80px;
+    justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1024px) {
   .title-comity {
     font-size: 2rem;
   }
-  .title-comity__left-line {
-    left: 100px;
-  }
-  .title-comity__right-line {
-    right: 100px;
-  }
 }
 @media screen and (min-width: 1920px) {
   .title-comity {
     font-size: 3rem;
-  }
-  .title-comity__left-line {
-    left: 260px;
-  }
-  .title-comity__right-line {
-    right: 260px;
   }
 }
 .accordion-referee {
@@ -1347,27 +1229,23 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
 }
 .tournament__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  gap: 20px;
   margin-bottom: 35px;
+  width: 100%;
 }
-.tournament__title h2 {
-  font-size: 1.5rem;
-  color: #242627;
-}
-.tournament__title__left-line, .tournament__title__right-line {
-  position: absolute;
-  width: 20%;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-}
-.tournament__title__left-line {
-  left: 10px;
-}
-.tournament__title__right-line {
-  right: 10px;
+.tournament__title::before, .tournament__title::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 .tournament__list {
   display: flex;
@@ -1390,14 +1268,9 @@ time, mark, audio, video {
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
-  .tournament__title h2 {
+  .tournament__title {
     font-size: 1.625rem;
-  }
-  .tournament__title__left-line {
-    left: 80px;
-  }
-  .tournament__title__right-line {
-    right: 80px;
+    justify-content: space-evenly;
   }
   .tournament__list {
     width: 100%;
@@ -1413,15 +1286,7 @@ time, mark, audio, video {
 @media screen and (min-width: 1024px) {
   .tournament__title {
     margin-bottom: 60px;
-  }
-  .tournament__title h2 {
     font-size: 2rem;
-  }
-  .tournament__title__left-line {
-    left: 100px;
-  }
-  .tournament__title__right-line {
-    right: 100px;
   }
   .tournament__list {
     flex-direction: column;
@@ -1432,14 +1297,8 @@ time, mark, audio, video {
 }
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
-  .tournament__title h2 {
+  .tournament__title {
     font-size: 3rem;
-  }
-  .tournament__title__left-line {
-    left: 260px;
-  }
-  .tournament__title__right-line {
-    right: 260px;
   }
   .tournament__more-results a {
     font-size: 1.5rem;
@@ -1458,28 +1317,24 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
 }
 .regulation__title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  gap: 20px;
   margin-top: 50px;
   margin-bottom: 35px;
+  width: 100%;
 }
-.regulation__title h2 {
-  font-size: 1.5rem;
-  color: #242627;
-}
-.regulation__title__left-line, .regulation__title__right-line {
-  position: absolute;
-  width: 20%;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-}
-.regulation__title__left-line {
-  left: 10px;
-}
-.regulation__title__right-line {
-  right: 10px;
+.regulation__title::before, .regulation__title::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 .regulation__list {
   display: flex;
@@ -1491,14 +1346,9 @@ time, mark, audio, video {
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
-  .regulation__title h2 {
+  .regulation__title {
     font-size: 1.625rem;
-  }
-  .regulation__title__left-line {
-    left: 80px;
-  }
-  .regulation__title__right-line {
-    right: 80px;
+    justify-content: space-evenly;
   }
   .regulation__list {
     width: 100%;
@@ -1515,15 +1365,7 @@ time, mark, audio, video {
   .regulation__title {
     margin-top: 80px;
     margin-bottom: 60px;
-  }
-  .regulation__title h2 {
     font-size: 2rem;
-  }
-  .regulation__title__left-line {
-    left: 100px;
-  }
-  .regulation__title__right-line {
-    right: 100px;
   }
   .regulation__list {
     flex-direction: column;
@@ -1531,14 +1373,8 @@ time, mark, audio, video {
 }
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
-  .regulation__title h2 {
+  .regulation__title {
     font-size: 3rem;
-  }
-  .regulation__title__left-line {
-    left: 260px;
-  }
-  .regulation__title__right-line {
-    right: 260px;
   }
   .regulation__list {
     flex-direction: row;
@@ -1563,7 +1399,7 @@ time, mark, audio, video {
   position: relative;
   width: 100%;
 }
-.activity__article__title h4 {
+.activity__article__title h3 {
   text-align: center;
   font-size: 0.875rem;
   padding-bottom: 10px;
@@ -1602,7 +1438,7 @@ time, mark, audio, video {
     display: flex;
     align-items: center;
   }
-  .activity__article__title h4 {
+  .activity__article__title h3 {
     font-size: 1.125rem;
   }
   .activity__article__title__left-line, .activity__article__title__right-line {
@@ -1632,7 +1468,7 @@ time, mark, audio, video {
     height: 110px;
     margin-bottom: 30px;
   }
-  .activity__article__title h4 {
+  .activity__article__title h3 {
     font-size: 1.5rem;
   }
   .activity__article__title__left-line, .activity__article__title__right-line {

@@ -26,7 +26,7 @@ const Description = ({ data }) => {
 
                         <div className="activity__article__title">
                             <hr className="activity__article__title__left-line" />
-                            <h4>{item.title}</h4>
+                            <h3>{item.title}</h3>
                             <hr className="activity__article__title__right-line" />
                         </div>
                         <div className="activity__article__more">
