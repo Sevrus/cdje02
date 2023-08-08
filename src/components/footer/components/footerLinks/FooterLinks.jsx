@@ -1,6 +1,6 @@
-import logo_ehdf from '../../../../assets/logos/logo_ehdf.png';
-import logo_ffe from '../../../../assets/logos/logo_ffe.png';
-import logo_fide from '../../../../assets/logos/logo_fide.png';
+import logo_ehdf from '../../../../assets/images/logo_ehdf.webp';
+import logo_ffe from '../../../../assets/images/logo_ffe.webp';
+import logo_fide from '../../../../assets/svg/logo_fide.svg';
 
 const FooterLinks = () => {
 

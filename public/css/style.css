@@ -2273,9 +2273,6 @@ time, mark, audio, video {
   align-items: center;
   margin-bottom: -20px;
 }
-.footer__copyright__icon {
-  height: 12px;
-}
 .footer__copyright__text {
   font-size: 0.68rem;
   margin-left: 2px;
@@ -2287,9 +2284,6 @@ time, mark, audio, video {
     width: 137px;
     margin-bottom: -70px;
   }
-  .footer__copyright__icon {
-    height: 15px;
-  }
   .footer__copyright__text {
     font-size: 0.875rem;
   }
@@ -2300,9 +2294,6 @@ time, mark, audio, video {
     width: 154px;
     margin-bottom: -90px;
   }
-  .footer__copyright__icon {
-    height: 18px;
-  }
   .footer__copyright__text {
     font-size: 1rem;
   }
@@ -2312,9 +2303,6 @@ time, mark, audio, video {
   .footer__copyright {
     width: 200px;
     margin-bottom: -150px;
-  }
-  .footer__copyright__icon {
-    height: 20px;
   }
   .footer__copyright__text {
     font-size: 1.25rem;
@@ -2336,50 +2324,34 @@ time, mark, audio, video {
   height: 30px;
   cursor: pointer;
   transition: transform ease-in-out 0.3s;
+  border-radius: 2px;
 }
 .footer__links img:hover {
   transform: scale(1.1);
 }
-.footer__links__ffe {
-  width: 18px;
-}
 .footer__links__fide {
-  width: 38px;
+  filter: invert(100%);
 }
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .footer__links {
     position: relative;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0;
-    width: 150px;
+    width: 300px;
   }
   .footer__links img {
     height: 35px;
-  }
-  .footer__links__ffe {
-    width: 20px;
-    margin-left: 0;
-  }
-  .footer__links__fide {
-    width: 42px;
   }
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .footer__links {
-    width: 300px;
+    width: 350px;
   }
   .footer__links img {
     height: 40px;
-  }
-  .footer__links__ffe {
-    width: 25px;
-    margin-left: 0;
-  }
-  .footer__links__fide {
-    width: 45px;
   }
 }
 /* VERSION XL */
@@ -2389,13 +2361,6 @@ time, mark, audio, video {
   }
   .footer__links img {
     height: 52px;
-  }
-  .footer__links__ffe {
-    width: 35px;
-    margin-left: 0;
-  }
-  .footer__links__fide {
-    width: 65px;
   }
 }
 /* FOOTER NAV */
@@ -2437,8 +2402,8 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .footer__nav {
-    width: 350px;
-    margin-bottom: -20px;
+    width: 400px;
+    margin: 0 -20px -20px 0;
   }
   .footer__nav__title {
     display: flex;
@@ -2453,7 +2418,7 @@ time, mark, audio, video {
   }
   .footer__nav__links {
     height: 70px;
-    font-size: 0.875rem;
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -2584,14 +2549,14 @@ time, mark, audio, video {
     width: 140px;
   }
   .footer__socials__text {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   .footer__socials hr {
     width: 90px;
   }
   .footer__socials__icons a {
-    font-size: 1.75rem;
-    margin-left: 12px;
+    font-size: 1.625rem;
+    margin-left: 15px;
   }
 }
 /* VERSION XL */
@@ -2607,6 +2572,7 @@ time, mark, audio, video {
   }
   .footer__socials__icons a {
     font-size: 2rem;
+    margin-left: 12px;
   }
 }
 /* MENTION LEGALES */
@@ -2788,7 +2754,7 @@ time, mark, audio, video {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 230px;
+    width: 250px;
     margin: 0;
   }
   .footer__bottom {
@@ -2807,7 +2773,7 @@ time, mark, audio, video {
     margin: 40px 70px 0 70px;
   }
   .footer__center__left {
-    width: 320px;
+    width: 360px;
   }
   .footer__line__left {
     margin-left: 30px;
@@ -2822,16 +2788,16 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .footer {
-    height: 250px;
+    height: 220px;
   }
   .footer__center {
-    margin: 70px 180px 0 180px;
+    margin: 40px 180px 0 180px;
   }
   .footer__center__left {
     width: 500px;
   }
   .footer__bottom {
-    margin-top: -110px;
+    margin-top: -120px;
   }
   .footer__line__left {
     margin-left: 40px;

@@ -1,13 +1,11 @@
 import React from 'react';
-
+import footer_line_left from '../../../src/assets/svg/footer_line_left.svg';
+import footer_line_right from '../../../src/assets/svg/footer_line_right.svg';
 import FooterCopyright from './components/footerCopyright/FooterCopyright.jsx';
 import FooterLinks from './components/footerLinks/FooterLinks.jsx';
 import FooterNav from './components/footerNav/FooterNav.jsx';
 import FooterRules from './components/footerRules/FooterRules.jsx';
 import FooterSocials from './components/footerSocials/FooterSocials.jsx';
-
-import footer_line_left from '../../../src/assets/lines/footer_line_left.svg';
-import footer_line_right from '../../../src/assets/lines/footer_line_right.svg';
 
 const Footer = () => {
 

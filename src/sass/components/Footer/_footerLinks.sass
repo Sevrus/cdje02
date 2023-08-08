@@ -13,48 +13,32 @@
         height: 30px
         cursor: pointer
         transition: transform ease-in-out .3s
+        border-radius: 2px
 
         &:hover
             transform: scale(1.1)
 
-    &__ffe
-        width: 18px
-
     &__fide
-        width: 38px
+        filter: invert(100%)
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
     .footer__links
         position: relative
-        justify-content: space-between
+        justify-content: space-around
         margin: 0
-        width: 150px
+        width: 300px
 
         img
             height: 35px
 
-        &__ffe
-            width: 20px
-            margin-left: 0
-
-        &__fide
-            width: 42px
-
 /* VERSION L */
 @media screen and (min-width: 1024px)
     .footer__links
-        width: 300px
+        width: 350px
 
         img
             height: 40px
-
-        &__ffe
-            width: 25px
-            margin-left: 0
-
-        &__fide
-            width: 45px
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
@@ -63,10 +47,3 @@
 
         img
             height: 52px
-
-        &__ffe
-            width: 35px
-            margin-left: 0
-
-        &__fide
-            width: 65px

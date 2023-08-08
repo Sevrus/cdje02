@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import ImageRight from '../../assets/images/image-title-right.png';
+import React, { useRef, useState } from 'react';
+import imageForm from '../../assets/images/image_form.webp';
 
 const Form = () => {
 
@@ -23,8 +23,8 @@ const Form = () => {
 
     return (
         <form ref={form} onSubmit={sendEmail} className="form">
-            <img className='form__imageLeft' src={ImageRight} alt="Image decoration gauche" />
-            <img className='form__imageRight' src={ImageRight} alt="Image decoration droite" />
+            <img className='form__imageLeft' src={imageForm} alt="Image decoration gauche" />
+            <img className='form__imageRight' src={imageForm} alt="Image decoration droite" />
             <div className="form__lastname">
                 <label htmlFor="lastname">Nom</label>
                 <input type="text" name="lastname" maxLength={20} required={true} />

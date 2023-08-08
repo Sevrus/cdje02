@@ -1,6 +1,6 @@
-import headerImg from "../../../../assets/images/Image_header.png";
-import {useLocation} from "react-router-dom";
-import {shouldChessboardDisappear} from "../../../../utilities/chessboardUtils.js";
+import { useLocation } from "react-router-dom";
+import headerImg from "../../../../assets/images/image_header.webp";
+import { shouldChessboardDisappear } from "../../../../utilities/chessboardUtils.js";
 
 const HeaderChessboard = ({ chessboardDisappear }) => {
     const { pathname } = useLocation();
