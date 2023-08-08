@@ -736,6 +736,10 @@ time, mark, audio, video {
   width: 100%;
   overflow: hidden;
   height: 50px;
+  transition: all ease-in-out 0.2s;
+}
+.article-clubs:hover {
+  transform: scale(0.98) translate(2%);
 }
 .article-clubs__title {
   display: flex;
