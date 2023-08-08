@@ -9,14 +9,24 @@ const Header = () => {
     const { pathname } = useLocation();
 
     const changeSize = () => {
-        if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
-            || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
-            || pathname === "/admin/results" || pathname === "/admin/regulation" || pathname === "/admin/admins") {
-            setResizeHeader(true);
+        const adminPaths = [
+            "/admin", "/admin/champions", "/admin/referees", "/admin/clubs",
+            "/admin/comity", "/admin/articles", "/admin/results",
+            "/admin/regulation", "/admin/admins"
+        ];
 
-        } else {
-            window.scrollY >= 100 ? setResizeHeader(true) : setResizeHeader(false);
-        }
+        const isAdminPath = adminPaths.includes(pathname);
+        const isScrolled = window.scrollY >= 100;
+
+        setResizeHeader(isAdminPath || isScrolled);
+        // if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
+        //     || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
+        //     || pathname === "/admin/results" || pathname === "/admin/regulation" || pathname === "/admin/admins") {
+        //     setResizeHeader(true);
+        //
+        // } else {
+        //     window.scrollY >= 100 ? setResizeHeader(true) : setResizeHeader(false);
+        // }
     }
     window.addEventListener('scroll', changeSize);
 
