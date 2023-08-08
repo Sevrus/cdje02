@@ -19,15 +19,8 @@ const Header = () => {
         const isScrolled = window.scrollY >= 100;
 
         setResizeHeader(isAdminPath || isScrolled);
-        // if (pathname === "/admin" || pathname === "/admin/champions" || pathname === "/admin/referees"
-        //     || pathname === "/admin/clubs" || pathname === "/admin/comity" || pathname === "/admin/articles"
-        //     || pathname === "/admin/results" || pathname === "/admin/regulation" || pathname === "/admin/admins") {
-        //     setResizeHeader(true);
-        //
-        // } else {
-        //     window.scrollY >= 100 ? setResizeHeader(true) : setResizeHeader(false);
-        // }
     }
+
     window.addEventListener('scroll', changeSize);
 
     return (

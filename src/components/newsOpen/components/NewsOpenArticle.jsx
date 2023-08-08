@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import fetch from "../../../utilities/fetchForAll";
+import { formatDate } from "../../../utilities/dateUtils.js";
 
 const NewsOpenArticle = () => {
 
@@ -46,7 +47,7 @@ const NewsOpenArticle = () => {
                                     <p>{datas.data.author}</p>
                                 </Link>
 
-                                <p>{datas.data.created}</p>
+                                <p>{formatDate(datas.data.created)}</p>
                             </div>
 
                         </div>
