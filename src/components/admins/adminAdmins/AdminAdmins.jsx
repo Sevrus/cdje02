@@ -6,28 +6,19 @@ const AdminAdmins = () => {
     const { pathname } = useLocation();
 
     if (pathname === "/admin/admins") {
-        
+
         return (
             <section className="adminAdmins">
 
-                <div className="adminAdmins__title">
-                    <hr className="adminAdmins__title__lineLeft" />
-                    <h2>ADMINS</h2>
-                    <hr className="adminAdmins__title__lineRight" />
-                </div>
+                <h2 className="adminAdmins__title">Admins</h2>
 
-                    <AdminsDescription />
+                <AdminsDescription />
 
                 <div className="adminAdmins__addTitle">
-
-                    <h3 className="adminAdmins__addTitle__subhead">AJOUTER UN</h3>
-
-                    <div className="adminAdmins__addTitle__bigTitle">
-                        <hr className="adminAdmins__addTitle__bigTitle__lineLeft" />
-                        <h2>ADMIN</h2>
-                        <hr className="adminAdmins__addTitle__bigTitle__lineRight" />
-                    </div>
-
+                    <h2 className="adminAdmins__addTitle__upperhead">
+                        Ajouter un
+                        <span className="adminAdmins__addTitle__subhead">admin</span>
+                    </h2>
                 </div>
 
                 <AdminsAdd />

@@ -169,7 +169,7 @@ time, mark, audio, video {
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
   margin: 35px 0;
@@ -186,7 +186,6 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .contact__title {
     font-size: 1.625rem;
-    justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -332,7 +331,7 @@ time, mark, audio, video {
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
   margin-top: 35px;
@@ -561,7 +560,7 @@ time, mark, audio, video {
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
   margin-top: 35px;
@@ -779,7 +778,7 @@ time, mark, audio, video {
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 .clubs__title__upperhead {
@@ -1018,7 +1017,7 @@ time, mark, audio, video {
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
   margin-top: 35px;
@@ -1035,7 +1034,6 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .title-comity {
     font-size: 1.625rem;
-    justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1189,7 +1187,7 @@ time, mark, audio, video {
   font-size: 1.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
   margin-top: 50px;
@@ -1206,7 +1204,6 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .title-referee {
     font-size: 1.625rem;
-    justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1270,7 +1267,6 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .tournament__title {
     font-size: 1.625rem;
-    justify-content: space-evenly;
   }
   .tournament__list {
     width: 100%;
@@ -1348,7 +1344,6 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .regulation__title {
     font-size: 1.625rem;
-    justify-content: space-evenly;
   }
   .regulation__list {
     width: 100%;
@@ -7517,107 +7512,69 @@ time, mark, audio, video {
   }
 }
 .adminAdmins {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: -70px;
-  width: 100%;
+  margin: 0 auto;
 }
 .adminAdmins__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 20px;
   margin-bottom: 25px;
-}
-.adminAdmins__title h2 {
-  color: #242627;
   font-size: 1.5rem;
   font-family: "Noto Sans", sans-serif;
-  line-height: 24px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.adminAdmins__title__lineLeft, .adminAdmins__title__lineRight {
-  position: absolute;
-  width: 23%;
-  height: 0px;
-  z-index: -10;
-}
-.adminAdmins__title__lineLeft {
-  left: 10px;
-}
-.adminAdmins__title__lineRight {
-  right: 10px;
+.adminAdmins__title::before, .adminAdmins__title::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 .adminAdmins__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 .adminAdmins__addTitle {
+  margin-top: 50px;
+  gap: 20px;
+  margin-bottom: 25px;
+  color: #242627;
+  font-family: "Noto Sans", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.adminAdmins__addTitle__upperhead {
+  font-size: 0.875rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 25px;
 }
 .adminAdmins__addTitle__subhead {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: #242627;
-  font-size: 0.75rem;
-  line-height: 12px;
-  font-family: "Noto Sans", sans-serif;
-}
-.adminAdmins__addTitle__bigTitle {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.adminAdmins__addTitle__bigTitle h2 {
-  color: #242627;
   font-size: 1.5rem;
-  line-height: 24px;
-  font-family: "Noto Sans", sans-serif;
 }
-.adminAdmins__addTitle__bigTitle__lineLeft, .adminAdmins__addTitle__bigTitle__lineRight {
-  width: 23%;
-  height: 0px;
-  position: absolute;
-  z-index: -10;
-}
-.adminAdmins__addTitle__bigTitle__lineLeft {
-  left: 10px;
-}
-.adminAdmins__addTitle__bigTitle__lineRight {
-  right: 10px;
+.adminAdmins__addTitle::before, .adminAdmins__addTitle::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 768px) {
   .adminAdmins__title {
     margin-bottom: 35px;
-  }
-  .adminAdmins__title h2 {
     font-size: 1.625rem;
-    line-height: 26px;
-    margin: 0 40px 0 40px;
-  }
-  .adminAdmins__title__lineLeft, .adminAdmins__title__lineRight {
-    width: 20%;
-    z-index: -10;
-  }
-  .adminAdmins__title__lineLeft {
-    left: 80px;
-  }
-  .adminAdmins__title__lineRight {
-    right: 80px;
   }
   .adminAdmins__list {
     display: flex;
@@ -7626,44 +7583,17 @@ time, mark, audio, video {
     align-items: center;
     flex-wrap: wrap;
   }
+  .adminAdmins__addTitle__upperhead {
+    font-size: 1rem;
+  }
   .adminAdmins__addTitle__subhead {
-    font-size: 0.875rem;
-    line-height: 14px;
-  }
-  .adminAdmins__addTitle__bigTitle h2 {
     font-size: 1.625rem;
-    line-height: 26px;
-    margin: 0;
-  }
-  .adminAdmins__addTitle__bigTitle__lineLeft, .adminAdmins__addTitle__bigTitle__lineRight {
-    width: 20%;
-    z-index: -10;
-  }
-  .adminAdmins__addTitle__bigTitle__lineLeft {
-    left: 80px;
-  }
-  .adminAdmins__addTitle__bigTitle__lineRight {
-    right: 80px;
   }
 }
 @media screen and (min-width: 1024px) {
   .adminAdmins__title {
     margin-bottom: 30px;
-  }
-  .adminAdmins__title h2 {
     font-size: 2rem;
-    line-height: 32px;
-    margin: 0 100px 0 100px;
-  }
-  .adminAdmins__title__lineLeft, .adminAdmins__title__lineRight {
-    width: 21%;
-    z-index: -10;
-  }
-  .adminAdmins__title__lineLeft {
-    left: 100px;
-  }
-  .adminAdmins__title__lineRight {
-    right: 100px;
   }
   .adminAdmins__list {
     display: flex;
@@ -7674,43 +7604,19 @@ time, mark, audio, video {
   }
   .adminAdmins__addTitle {
     margin-top: 80px;
+    margin-bottom: 30px;
   }
-  .adminAdmins__addTitle__subhead {
+  .adminAdmins__addTitle__upperhead {
     font-size: 1.25rem;
   }
-  .adminAdmins__addTitle__bigTitle h2 {
+  .adminAdmins__addTitle__subhead {
     font-size: 2rem;
-    margin: 0;
-  }
-  .adminAdmins__addTitle__bigTitle__lineLeft, .adminAdmins__addTitle__bigTitle__lineRight {
-    width: 21%;
-    z-index: -10;
-  }
-  .adminAdmins__addTitle__bigTitle__lineLeft {
-    left: 100px;
-  }
-  .adminAdmins__addTitle__bigTitle__lineRight {
-    right: 100px;
   }
 }
 @media screen and (min-width: 1920px) {
   .adminAdmins__title {
     margin-bottom: 45px;
-  }
-  .adminAdmins__title h2 {
     font-size: 3rem;
-    line-height: 40px;
-    margin: 0 350px 0 350px;
-  }
-  .adminAdmins__title__lineLeft, .adminAdmins__title__lineRight {
-    width: 22%;
-    z-index: -10;
-  }
-  .adminAdmins__title__lineLeft {
-    left: 260px;
-  }
-  .adminAdmins__title__lineRight {
-    right: 260px;
   }
   .adminAdmins__list {
     display: flex;
@@ -7719,24 +7625,14 @@ time, mark, audio, video {
     align-items: center;
     flex-wrap: wrap;
   }
-  .adminAdmins__addTitle__subhead {
+  .adminAdmins__addTitle {
+    margin-bottom: 45px;
+  }
+  .adminAdmins__addTitle__upperhead {
     font-size: 1.75rem;
-    line-height: 28px;
   }
-  .adminAdmins__addTitle__bigTitle h2 {
+  .adminAdmins__addTitle__subhead {
     font-size: 3rem;
-    line-height: 40px;
-    margin: 0;
-  }
-  .adminAdmins__addTitle__bigTitle__lineLeft, .adminAdmins__addTitle__bigTitle__lineRight {
-    width: 22%;
-    z-index: -10;
-  }
-  .adminAdmins__addTitle__bigTitle__lineLeft {
-    left: 260px;
-  }
-  .adminAdmins__addTitle__bigTitle__lineRight {
-    right: 260px;
   }
 }
 /* VERSION MOBILE */

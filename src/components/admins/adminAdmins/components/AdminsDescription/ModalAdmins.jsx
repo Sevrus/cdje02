@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay.js";
 
 const ModalAdmins = ({ closeModal, adminData }) => {
     const [error, setError] = useState(null);
@@ -51,13 +51,14 @@ const ModalAdmins = ({ closeModal, adminData }) => {
 
                 <div className="modalAdmins__content__email">
                     <label htmlFor="email" className="modalAdmins__content__email__label">Email</label>
-                    <input type="text" name="email" id="email" className="modalAdmins__content__email__input" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <input type="text" name="email" id="email" className="modalAdmins__content__email__input"
+                        pattern='^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$' value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
 
                 <button disabled={isLoaded} type="submit" className="modalAdmins__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>
-                
+
                 <p className="modalAdmins__content__message">{message}</p>
- 
+
             </Form>
         </>
     )

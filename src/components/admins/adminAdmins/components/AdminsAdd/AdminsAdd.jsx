@@ -2,8 +2,8 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const AdminsAdd = () => {
     const [email, setEmail] = useState("");
@@ -68,7 +68,8 @@ const AdminsAdd = () => {
 
                 <div className="addAdmins__email">
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" required={true} value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="email" name="email" required={true} value={email} pattern='^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$'
+                        onChange={(e) => setEmail(e.target.value)} />
                 </div>
 
                 <div className="addAdmins__password">
@@ -78,7 +79,7 @@ const AdminsAdd = () => {
                             onChange={(e) => setPassword(e.target.value)} placeholder="********" required={true} />
                         <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} onClick={toggleShowPassword} className="addAdmins__password__icon" />
                     </div>
-                    <p>8 Caractères, 1 Majuscule, 1 Nombre et 1 Caractère Spécial(@$!%*?&)</p>
+                    <p>8 Caractères, 1 Majuscule, 1 Nombre et 1 Caractère Spécial (@$!%*?&)</p>
                 </div>
 
                 <div className="addAdmins__confirmPassword">
