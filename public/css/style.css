@@ -7512,8 +7512,8 @@ time, mark, audio, video {
   }
 }
 .adminAdmins {
+  margin: auto;
   margin-top: -70px;
-  margin: 0 auto;
 }
 .adminAdmins__title {
   gap: 20px;
