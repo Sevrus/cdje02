@@ -736,7 +736,7 @@ time, mark, audio, video {
   width: 100%;
   overflow: hidden;
   height: 50px;
-  transition: all ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
 }
 .article-clubs:hover {
   transform: scale(0.98) translate(2%);
@@ -1960,7 +1960,7 @@ time, mark, audio, video {
 }
 .navbar__links__link:hover > a, .navbar__links__link:hover > .navbar__links__link__icon, .navbar__links__link--scroll:hover > a, .navbar__links__link:hover > .navbar__links__link--scroll__icon, .navbar__links--scroll__link:hover > a, .navbar__links__link:hover > .navbar__links--scroll__link__icon, .navbar__links--scroll__link--scroll:hover > a, .navbar__links__link:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links__link:hover > a, .navbar__links__link:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links__link--scroll:hover > a, .navbar__links__link:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > a, .navbar__links__link:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > a, .navbar__links__link:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar__links__link--scroll:hover > .navbar__links__link__icon, .navbar__links__link--scroll:hover > .navbar__links__link--scroll__icon, .navbar__links__link--scroll:hover > .navbar__links--scroll__link__icon, .navbar__links__link--scroll:hover > .navbar__links--scroll__link--scroll__icon, .navbar__links__link--scroll:hover > .navbar--scroll__links__link__icon, .navbar__links__link--scroll:hover > .navbar--scroll__links__link--scroll__icon, .navbar__links__link--scroll:hover > .navbar--scroll__links--scroll__link__icon, .navbar__links__link--scroll:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar__links--scroll__link:hover > .navbar__links__link__icon, .navbar__links--scroll__link:hover > .navbar__links__link--scroll__icon, .navbar__links--scroll__link:hover > .navbar__links--scroll__link__icon, .navbar__links--scroll__link:hover > .navbar__links--scroll__link--scroll__icon, .navbar__links--scroll__link:hover > .navbar--scroll__links__link__icon, .navbar__links--scroll__link:hover > .navbar--scroll__links__link--scroll__icon, .navbar__links--scroll__link:hover > .navbar--scroll__links--scroll__link__icon, .navbar__links--scroll__link:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar__links--scroll__link--scroll:hover > .navbar__links__link__icon, .navbar__links--scroll__link--scroll:hover > .navbar__links__link--scroll__icon, .navbar__links--scroll__link--scroll:hover > .navbar__links--scroll__link__icon, .navbar__links--scroll__link--scroll:hover > .navbar__links--scroll__link--scroll__icon, .navbar__links--scroll__link--scroll:hover > .navbar--scroll__links__link__icon, .navbar__links--scroll__link--scroll:hover > .navbar--scroll__links__link--scroll__icon, .navbar__links--scroll__link--scroll:hover > .navbar--scroll__links--scroll__link__icon, .navbar__links--scroll__link--scroll:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links__link:hover > .navbar__links__link__icon, .navbar--scroll__links__link:hover > .navbar__links__link--scroll__icon, .navbar--scroll__links__link:hover > .navbar__links--scroll__link__icon, .navbar--scroll__links__link:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links__link:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links__link:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links__link:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links__link:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links__link--scroll:hover > .navbar__links__link__icon, .navbar--scroll__links__link--scroll:hover > .navbar__links__link--scroll__icon, .navbar--scroll__links__link--scroll:hover > .navbar__links--scroll__link__icon, .navbar--scroll__links__link--scroll:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links__link--scroll:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links__link--scroll:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links__link--scroll:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links__link--scroll:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > .navbar__links__link__icon, .navbar--scroll__links--scroll__link:hover > .navbar__links__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > .navbar__links--scroll__link__icon, .navbar--scroll__links--scroll__link:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links--scroll__link:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links--scroll__link:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links--scroll__link:hover > .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar__links__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar__links__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar__links--scroll__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar--scroll__links__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links--scroll__link--scroll:hover > .navbar--scroll__links--scroll__link--scroll__icon {
   color: #f73746;
-  transition: color ease-out 0.2s;
+  transition: color ease-in-out 0.2s;
 }
 .navbar__links__link__icon, .navbar__links__link__icon--scroll, .navbar__links__link--scroll__icon, .navbar__links__link--scroll__icon--scroll, .navbar__links--scroll__link__icon, .navbar__links--scroll__link__icon--scroll, .navbar__links--scroll__link--scroll__icon, .navbar__links--scroll__link--scroll__icon--scroll, .navbar--scroll__links__link__icon, .navbar--scroll__links__link__icon--scroll, .navbar--scroll__links__link--scroll__icon, .navbar--scroll__links__link--scroll__icon--scroll, .navbar--scroll__links--scroll__link__icon, .navbar--scroll__links--scroll__link__icon--scroll, .navbar--scroll__links--scroll__link--scroll__icon, .navbar--scroll__links--scroll__link--scroll__icon--scroll {
   display: none;
@@ -1968,6 +1968,7 @@ time, mark, audio, video {
 .navbar__links__link a, .navbar__links__link--scroll a, .navbar__links--scroll__link a, .navbar__links--scroll__link--scroll a, .navbar--scroll__links__link a, .navbar--scroll__links__link--scroll a, .navbar--scroll__links--scroll__link a, .navbar--scroll__links--scroll__link--scroll a {
   color: #fff;
   text-align: center;
+  transition: color ease-in-out 0.2s;
 }
 .navbar__links__link .active, .navbar__links__link--scroll .active, .navbar__links--scroll__link .active, .navbar__links--scroll__link--scroll .active, .navbar--scroll__links__link .active, .navbar--scroll__links__link--scroll .active, .navbar--scroll__links--scroll__link .active, .navbar--scroll__links--scroll__link--scroll .active {
   color: #f73746;
@@ -1980,7 +1981,6 @@ time, mark, audio, video {
 }
 .navbar__links__link__admin a:hover, .navbar__links__link--scroll__admin a:hover, .navbar__links--scroll__link__admin a:hover, .navbar__links--scroll__link--scroll__admin a:hover, .navbar--scroll__links__link__admin a:hover, .navbar--scroll__links__link--scroll__admin a:hover, .navbar--scroll__links--scroll__link__admin a:hover, .navbar--scroll__links--scroll__link--scroll__admin a:hover {
   color: #f73746;
-  transition: color ease-out 0.2s;
 }
 .navbar__links__link__admin__hr, .navbar__links__link--scroll__admin__hr, .navbar__links--scroll__link__admin__hr, .navbar__links--scroll__link--scroll__admin__hr, .navbar--scroll__links__link__admin__hr, .navbar--scroll__links__link--scroll__admin__hr, .navbar--scroll__links--scroll__link__admin__hr, .navbar--scroll__links--scroll__link--scroll__admin__hr {
   width: 60px;
@@ -2335,10 +2335,10 @@ time, mark, audio, video {
 .footer__links img {
   height: 30px;
   cursor: pointer;
+  transition: transform ease-in-out 0.3s;
 }
 .footer__links img:hover {
   transform: scale(1.1);
-  transition: transform ease-out 0.2s;
 }
 .footer__links__ffe {
   width: 18px;
@@ -2351,8 +2351,9 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .footer__links {
     position: relative;
+    justify-content: space-between;
     margin: 0;
-    width: 210px;
+    width: 150px;
   }
   .footer__links img {
     height: 35px;
@@ -2427,10 +2428,10 @@ time, mark, audio, video {
   .footer__nav__links a {
     color: #fff;
     padding: 3px 0;
+    transition: color ease-in-out 0.2s;
   }
   .footer__nav__links a.active, .footer__nav__links a:hover {
     color: #f73746;
-    transition: color ease-out 0.2s;
   }
 }
 /* VERSION L */
@@ -2501,10 +2502,10 @@ time, mark, audio, video {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  transition: color ease-in-out 0.2s;
 }
 .footer__rules a:hover {
   color: #f73746;
-  transition: color ease-out 0.2s;
 }
 
 /* VERSION TABLETTE */
@@ -2558,10 +2559,10 @@ time, mark, audio, video {
   color: #fff;
   font-size: 1.125rem;
   margin-left: 7px;
+  transition: color ease-in-out 0.2s;
 }
 .footer__socials__icons a:hover {
   color: #f73746;
-  transition: color ease-out 0.2s;
 }
 
 /* VERSION TABLETTE */
@@ -2772,12 +2773,15 @@ time, mark, audio, video {
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
+  .footer {
+    height: 150px;
+  }
   .footer__center {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 45px 50px 0 50px;
+    margin: 25px 50px 0 50px;
   }
   .footer__center__left {
     display: flex;
@@ -2797,10 +2801,10 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .footer {
-    height: 200px;
+    height: 170px;
   }
   .footer__center {
-    margin: 65px 70px 0 70px;
+    margin: 40px 70px 0 70px;
   }
   .footer__center__left {
     width: 320px;

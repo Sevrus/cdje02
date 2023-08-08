@@ -23,14 +23,14 @@
             font-size: $fs-14
             font-weight: bold
             cursor: pointer
-            
-            & a 
+
+            & a
                 color: $white
                 padding: 3px 0
+                transition: color ease-in-out .2s
 
                 &.active, &:hover
                     color: $red
-                    transition: color ease-out .2s
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
@@ -64,6 +64,6 @@
 
         &__links
             height: 100px
- 
+
             & a
                 font-size: $fs-20

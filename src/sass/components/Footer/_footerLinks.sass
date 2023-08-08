@@ -12,10 +12,10 @@
     img
         height: 30px
         cursor: pointer
+        transition: transform ease-in-out .3s
 
         &:hover
             transform: scale(1.1)
-            transition: transform ease-out .2s
 
     &__ffe
         width: 18px
@@ -27,8 +27,9 @@
 @media screen and (min-width: 768px)
     .footer__links
         position: relative
+        justify-content: space-between
         margin: 0
-        width: 210px
+        width: 150px
 
         img
             height: 35px
