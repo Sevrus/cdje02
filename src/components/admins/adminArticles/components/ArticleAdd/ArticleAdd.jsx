@@ -1,19 +1,20 @@
-import { useState } from "react";
+import {useRef, useState} from "react";
 import { Form } from "react-router-dom";
 import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
-import { Editor } from '@tinymce/tinymce-react';
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css"
 
 const ArticleAdd = () => {
     const [title, setTitle] = useState("");
     const [image, setImage] = useState("");
     const [author, setAuthor] = useState("");
-    const [description, setDescription] = useState("");
-
     const [message, setMessage] = useState('');
+    const [description, setDescription] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         fetch("http://localhost:3000/api/news", {
             method: 'POST',
             body: JSON.stringify({
@@ -45,7 +46,7 @@ const ArticleAdd = () => {
         return (
 
             <>
-                <Form onSubmit={handleSubmit} className="addArticle">
+                <Form className="addArticle">
 
                     <div className="addArticle__title">
                         <label htmlFor="title">Titre</label>
@@ -59,24 +60,36 @@ const ArticleAdd = () => {
 
                     <div className="addArticle__description">
                         <label htmlFor="description">Description</label>
-                        {/*<textarea name="description" maxLength={500} required={true} value={description} onChange={(e) => setDescription(e.target.value)} />*/}
-                        <Editor
-                            apiKey="m0o6mg35hp34hxkeqt7pqfh09ou1meghhv1hnvzpx7dl4w1x"
-                            init={{
-                                height: 500,
-                                menubar: false,
-                                plugins: [
-                                    'advlist autolink lists link image charmap print preview anchor',
-                                    'searchreplace visualblocks code fullscreen',
-                                    'insertdatetime media table paste code help wordcount',
+                        <ReactQuill
+                            value={description}
+                            onChange={setDescription}
+                            modules={{
+                                toolbar: [
+                                    [{ header: [1, 2, false] }],
+                                    ["bold", "italic", "underline", "strike", "blockquote"],
+                                    [
+                                        { list: "ordered" },
+                                        { list: "bullet" },
+                                        { indent: "-1" },
+                                        { indent: "+1" },
+                                    ],
+                                    ["link", "image"],
+                                    ["clean"],
                                 ],
-                                toolbar:
-                                    'undo redo | formatselect | bold italic backcolor | \
-                                    alignleft aligncenter alignright alignjustify | \
-                                    bullist numlist outdent indent | removeformat | help',
                             }}
-                            // onChange={(e) => setDescription(e.target.value)}
-                            onChange={(content) => setDescription(content)}
+                            formats={[
+                                "header",
+                                "bold",
+                                "italic",
+                                "underline",
+                                "strike",
+                                "blockquote",
+                                "list",
+                                "bullet",
+                                "indent",
+                                "link",
+                                "image",
+                            ]}
                         />
                     </div>
 
@@ -86,7 +99,7 @@ const ArticleAdd = () => {
                     </div>
 
                     <div className="addArticle__btn">
-                        <button type="submit">Ajouter</button>
+                        <button type="button" onClick={(e) => handleSubmit(e)}>Ajouter</button>
                     </div>
 
                     <p className="addArticle__message">{message}</p>
