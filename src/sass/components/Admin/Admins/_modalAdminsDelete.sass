@@ -1,9 +1,10 @@
 @import '../../../utilities/_mixin'
 @import '../../../utilities/_variables'
 
-/* MODAL ADMIN */
+/* MODAL ADMIN DELETE */
 /* VERSION MOBILE */
-.modalAdmins
+
+.modalAdminsDelete
     position: fixed
     background-color: rgba(0,0,0,.5)
     width: 100%
@@ -12,6 +13,7 @@
     z-index: 1002
 
     &__content
+        @include flex(column, center, center)
         position: absolute
         z-index: 1003
         top: 150px
@@ -24,7 +26,6 @@
         width: 320px
         height: fit-content
         padding: 30px 0
-        @include flex(column, center, center)
 
         &__close
             position: absolute
@@ -52,43 +53,23 @@
             &:after
                 transform: rotate(-45deg)
 
-        &__email, &__password, &__verifPassword
-            @include flex(column, center, center)
-            width: 100%
+        &__question
+            text-align: center
+            margin-top: 20px
+            margin-bottom: 10px
+            font-size: $fs-16
+            color: $black
 
-            &__label
-                color: $black
-                font-size: $fs-16
-
-            &__input
-                width: 80%
-                height: 40px
-                border: 1px solid $grey-blue
-                box-shadow: $shadow
-                border-radius: 5px
-                margin-top: 12px
-                font-family: $font-primary
-                padding: 10px
-
-        &__password, &__verifPassword
-            margin-top: 30px
-
-        &__description__input
-            resize: vertical
-
-        &__button
+        &__yes, &__no
             @include articles()
-            margin-top: 40px
-            width: 60%
-            height: 50px
+            margin-top: 10px
+            width: 50%
+            max-width: 300px
+            height: 40px
             border: none
             font-size: $fs-16
             font-weight: bold
             transition: transform ease-in-out .2s
-
-            &:hover
-                cursor: pointer
-                transform: scale(0.98)
 
         &__message
             font-family: $font-primary
@@ -96,57 +77,44 @@
             font-weight: bold
             font-size: $fs-14
             text-align: center
-            margin: 15px 0 -10px
+            margin-top: 15px
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
-    .modalAdmins
+
+    .modalAdminsDelete
+
         &__content
             width: 500px
 
-            &__email, &__password, &__verifPassword
-                &__label
-                    font-size: $fs-20
-
-                &__input
-                    font-size: $fs-16
-
-            &__button
+            &__yes, &__no, &__question
                 font-size: $fs-20
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
-    .modalAdmins
+    .modalAdminsDelete
+
         &__content
             width: 600px
 
-            &__email, &__password, &__verifPassword
-                &__label
-                    font-size: $fs-22
+            &__yes, &__no, &__question
+                font-size: $fs-22
 
-                &__input
-                    font-size: $fs-18
-                
+            &__yes, &__no
+                height: 55px
+
             &__message
                 font-size: $fs-16
 
-            &__button
-                height: 55px
-                font-size: $fs-22
-
 /* VERSION XL */
 @media screen and (min-width: 1920px)
-    .modalAdmins
+    .modalAdminsDelete
+
         &__content
             width: 700px
 
-            &__email, &__password, &__verifPassword
-                &__label
-                    font-size: $fs-24
-
-                &__input
-                    font-size: $fs-20
-
-            &__button
+            &__yes, &__no, &__question
                 font-size: $fs-24
+
+            &__yes, &__no
                 width: 50%
