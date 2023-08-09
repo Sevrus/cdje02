@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ImageError from "./assets/svg/image-error.svg";
+import ImageError from "./assets/svg/image_error.svg";
 
 const ErrorPage = () => {
     return (
