@@ -9,24 +9,15 @@ const AdminClubs = () => {
         return (
             <section className="adminClubs">
 
-                <div className="adminClubs__title">
-                    <hr className="adminClubs__title__lineLeft" />
-                    <h2>CLUBS</h2>
-                    <hr className="adminClubs__title__lineRight" />
-                </div>
+                <h2 className="adminClubs__title">Clubs</h2>
 
                     <ClubsDescription />
 
                 <div className="adminClubs__addTitle">
-
-                    <h3 className="adminClubs__addTitle__subhead">AJOUTER UN</h3>
-
-                    <div className="adminClubs__addTitle__bigTitle">
-                        <hr className="adminClubs__addTitle__bigTitle__lineLeft" />
-                        <h2>CLUB</h2>
-                        <hr className="adminClubs__addTitle__bigTitle__lineRight" />
-                    </div>
-
+                    <h2 className="adminClubs__addTitle__upperhead">
+                        Ajouter un
+                        <span className="adminClubs__addTitle__subhead">club</span>
+                    </h2>
                 </div>
 
                 <ClubsAdd />

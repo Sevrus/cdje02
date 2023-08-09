@@ -9,24 +9,15 @@ const AdminRegulation = () => {
         return (
             <section className="adminRegulation">
 
-                <div className="adminRegulation__title">
-                    <hr className="adminRegulation__title__lineLeft" />
-                    <h2>RÈGLEMENTS</h2>
-                    <hr className="adminRegulation__title__lineRight" />
-                </div>
+                <h2 className="adminRegulation__title">Règlements</h2>
 
                     <RegulationDescription />
 
                 <div className="adminRegulation__addTitle">
-
-                    <h3 className="adminRegulation__addTitle__subhead">AJOUTER UN</h3>
-
-                    <div className="adminRegulation__addTitle__bigTitle">
-                        <hr className="adminRegulation__addTitle__bigTitle__lineLeft" />
-                        <h2>RÈGLEMENT</h2>
-                        <hr className="adminRegulation__addTitle__bigTitle__lineRight" />
-                    </div>
-
+                    <h2 className="adminRegulation__addTitle__upperhead">
+                        Ajouter un
+                        <span className="adminRegulation__addTitle__subhead">règlement</span>
+                        </h2>
                 </div>
 
                 <RegulationAdd />

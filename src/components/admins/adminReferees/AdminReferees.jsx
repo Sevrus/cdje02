@@ -10,24 +10,15 @@ const AdminReferees = () => {
             <>
                 <section className="adminReferee">
 
-                    <div className="adminReferee__title">
-                        <hr className="adminReferee__title__lineLeft" />
-                        <h2>ARBITRES</h2>
-                        <hr className="adminReferee__title__lineRight" />
-                    </div>
+                    <h2 className="adminAdmins__title">Arbitres</h2>
 
-                        <RefereesDescription />
+                    <RefereesDescription />
 
                     <div className="adminReferee__addTitle">
-
-                        <h3 className="adminReferee__addTitle__subhead">AJOUTER UN</h3>
-
-                        <div className="adminReferee__addTitle__bigTitle">
-                            <hr className="adminReferee__addTitle__bigTitle__lineLeft" />
-                            <h2>ARBITRE</h2>
-                            <hr className="adminReferee__addTitle__bigTitle__lineRight" />
-                        </div>
-
+                        <h2 className="adminReferee__addTitle__upperhead">
+                            Ajouter un
+                            <span className="adminReferee__addTitle__subhead">arbitre</span>
+                        </h2>
                     </div>
 
                     <RefereesAdd />

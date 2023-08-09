@@ -9,29 +9,20 @@ const AdminArticles = () => {
         return (
             <section className="adminArticle">
 
-                    <div className="adminArticle__title">
-                        <hr className="adminArticle__title__lineLeft" />
-                        <h2>ARTICLES</h2>
-                        <hr className="adminArticle__title__lineRight" />
-                    </div>
+                <h2 className="adminArticle__title">ARTICLES</h2>
 
-                        <ArticleDescription />
+                <ArticleDescription />
 
-                    <div className="adminArticle__addTitle">
+                <div className="adminArticle__addTitle">
+                    <h2 className="adminArticle__addTitle__upperhead">
+                        Ajouter un
+                        <span className="adminArticle__addTitle__subhead">article</span>
+                    </h2>
+                </div>
 
-                        <h3 className="adminArticle__addTitle__subhead">AJOUTER UN</h3>
+                <ArticleAdd />
 
-                        <div className="adminArticle__addTitle__bigTitle">
-                            <hr className="adminArticle__addTitle__bigTitle__lineLeft" />
-                            <h2>ARTICLE</h2>
-                            <hr className="adminArticle__addTitle__bigTitle__lineRight" />
-                        </div>
-
-                    </div>
-
-                    <ArticleAdd />
-
-                </section>
+            </section>
         )
     }
 }

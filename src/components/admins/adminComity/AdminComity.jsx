@@ -8,31 +8,22 @@ const AdminComity = () => {
     if (pathname === "/admin/comity") {
         return (
 
-                <section className="adminComity">
+            <section className="adminComity">
 
-                    <div className="adminComity__title">
-                        <hr className="adminComity__title__lineLeft" />
-                        <h2>COMITÉ</h2>
-                        <hr className="adminComity__title__lineRight" />
-                    </div>
+                <h2 className="adminComity__title">Comité</h2>
 
-                        <ComityDescription />
+                <ComityDescription />
 
-                    <div className="adminComity__addTitle">
+                <div className="adminComity__addTitle">
+                    <h2 className="adminComity__addTitle__upperhead">
+                        Ajouter un
+                        <span className="adminComity__addTitle__subhead">membre</span>
+                    </h2>
+                </div>
 
-                        <h3 className="adminComity__addTitle__subhead">AJOUTER UN</h3>
+                <ComityAdd />
 
-                        <div className="adminComity__addTitle__bigTitle">
-                            <hr className="adminComity__addTitle__bigTitle__lineLeft" />
-                            <h2>MEMBRE</h2>
-                            <hr className="adminComity__addTitle__bigTitle__lineRight" />
-                        </div>
-
-                    </div>
-
-                    <ComityAdd />
-
-                </section>
+            </section>
 
         )
     }

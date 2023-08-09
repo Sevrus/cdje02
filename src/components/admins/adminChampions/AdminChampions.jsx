@@ -10,24 +10,15 @@ const AdminChampions = () => {
             <>
                 <section className="adminChampion">
 
-                    <div className="adminChampion__title">
-                        <hr className="adminChampion__title__lineLeft" />
-                        <h2>CHAMPIONS</h2>
-                        <hr className="adminChampion__title__lineRight" />
-                    </div>
+                    <h2 className="adminChampion__title">Champions</h2>
 
-                        <ChampionDescription />
+                    <ChampionDescription />
 
                     <div className="adminChampion__addTitle">
-
-                        <h3 className="adminChampion__addTitle__subhead">AJOUTER UN</h3>
-
-                        <div className="adminChampion__addTitle__bigTitle">
-                            <hr className="adminChampion__addTitle__bigTitle__lineLeft" />
-                            <h2>CHAMPION</h2>
-                            <hr className="adminChampion__addTitle__bigTitle__lineRight" />
-                        </div>
-
+                        <h2 className="adminChampion__addTitle__upperhead">
+                            Ajouter un
+                            <span className="adminChampion__addTitle__subhead">champion</span>
+                            </h2>
                     </div>
 
                     <ChampionAdd />
