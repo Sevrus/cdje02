@@ -98,7 +98,7 @@
             &__admin
                 display: flex
                 flex-direction: column
-                border: 1px solid rgba(255, 255, 255, .5)
+                border: 1px solid $white
                 padding: 4px
 
                 a:hover
@@ -136,8 +136,8 @@
             &::before, &::after
                 content: ''
                 width: 10%
-                height: 1px
-                background-color: rgba(255, 255, 255, .5)
+                height: .5px
+                background-color: $white
 
             &--scroll
                 position: relative
@@ -147,7 +147,7 @@
                 background: none
                 padding: 15px
                 margin: -3px 30px 0 0
-                border: 1px solid rgba(255, 255, 255, .5)
+                border: 1px solid $white
 
             &--site-name
                 display: block
@@ -180,8 +180,8 @@
 
                 .active
                     border-top: 3.5px solid $red
-                    margin-bottom: 10px
-                    padding-top: 10px
+                    margin-bottom: 12px
+                    padding-top: 12px
 
                 &--scroll
                     font-size: $fs-14
@@ -203,6 +203,7 @@
 
             &::before, &::after
                 width: 12%
+                height: 1px
 
             &--scroll
                 margin-right: 50px
@@ -241,7 +242,7 @@
             content: ''
             width: 30%
             height: 1px
-            background-color: rgba(255, 255, 255, .5)
+            background-color: $white
             margin-left: 10%
 
 @media screen and (min-width: 1600px)
@@ -259,7 +260,7 @@
             position: absolute
             width: fit-content
             height: fit-content
-            border: 1px solid rgba(255, 255, 255, .5)
+            border: 1px solid $white
             padding: 15px
             left: auto
             top: 50%
@@ -297,6 +298,7 @@
     .navbar--scroll
         &::before
             width: 30%
+            opacity: .7
 
 @media screen and (min-width: 2100px)
     .navbar--scroll
