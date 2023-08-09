@@ -50,7 +50,7 @@ const ResultAdd = () => {
 
                 <div className="addResult__link">
                     <label htmlFor="link">Lien</label>
-                    <input type="text" name="link" maxLength={50} required={true} value={link} onChange={(e) => setLink(e.target.value)} />
+                    <input type="url" name="link" maxLength={50} required={true} value={link} onChange={(e) => setLink(e.target.value)} />
                 </div>
 
                 <div className="addResult__btn">

@@ -1,10 +1,10 @@
-@import '../../../utilities/_mixin'
-@import '../../../utilities/_variables'
+@import '../../utilities/_mixin'
+@import '../../utilities/_variables'
 
 /* MODAL ADMIN DELETE */
 /* VERSION MOBILE */
 
-.modalAdminsDelete
+.modalDelete
     position: fixed
     background-color: rgba(0,0,0,.5)
     width: 100%
@@ -22,7 +22,7 @@
         background-color: $white
         border-radius: 5px
         font-family: $font-primary
-        font-weight: bold
+        //font-weight: bold
         width: 320px
         height: fit-content
         padding: 30px 0
@@ -53,11 +53,17 @@
             &:after
                 transform: rotate(-45deg)
 
-        &__question
+        &__question, &__data
             text-align: center
-            margin-top: 20px
             margin-bottom: 10px
             font-size: $fs-16
+            font-weight: bold
+
+        &__data
+            color: $red
+
+        &__question    
+            margin-top: 20px
             color: $black
 
         &__yes, &__no
@@ -71,6 +77,10 @@
             font-weight: bold
             transition: transform ease-in-out .2s
 
+            &:hover
+                cursor: pointer
+                transform: scale(0.98)
+
         &__message
             font-family: $font-primary
             color: $red
@@ -82,22 +92,22 @@
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
 
-    .modalAdminsDelete
+    .modalDelete
 
         &__content
             width: 500px
 
-            &__yes, &__no, &__question
+            &__yes, &__no, &__question, &__data
                 font-size: $fs-20
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
-    .modalAdminsDelete
+    .modalDelete
 
         &__content
             width: 600px
 
-            &__yes, &__no, &__question
+            &__yes, &__no, &__question, &__data
                 font-size: $fs-22
 
             &__yes, &__no
@@ -108,12 +118,12 @@
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
-    .modalAdminsDelete
+    .modalDelete
 
         &__content
             width: 700px
 
-            &__yes, &__no, &__question
+            &__yes, &__no, &__question, &__data
                 font-size: $fs-24
 
             &__yes, &__no
