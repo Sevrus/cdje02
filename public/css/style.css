@@ -652,9 +652,10 @@ time, mark, audio, video {
   margin-top: 10px;
   cursor: pointer;
 }
-.article-clubs__title h4 {
+.article-clubs__title h3 {
   font-size: 0.875rem;
   padding: 0 10px;
+  text-transform: uppercase;
 }
 .article-clubs__title__separation {
   width: 90%;
@@ -668,6 +669,9 @@ time, mark, audio, video {
   cursor: default;
   gap: 5px;
   margin-bottom: 10px;
+}
+.article-clubs__description p:first-child {
+  text-transform: uppercase;
 }
 .article-clubs__description p, .article-clubs__description a {
   font-size: 0.75rem;
@@ -699,7 +703,7 @@ time, mark, audio, video {
     height: 53px;
     margin: 10px;
   }
-  .article-clubs h4 {
+  .article-clubs h3 {
     font-size: 1rem;
   }
   .article-clubs__description p, .article-clubs__description a {
@@ -720,7 +724,7 @@ time, mark, audio, video {
   .article-clubs__title__separation {
     height: 1px;
   }
-  .article-clubs__title h4 {
+  .article-clubs__title h3 {
     font-size: 1.125rem;
   }
   .article-clubs p, .article-clubs a {
@@ -738,7 +742,7 @@ time, mark, audio, video {
     width: 30%;
     height: 60px;
   }
-  .article-clubs__title h4 {
+  .article-clubs__title h3 {
     font-size: 1.25rem;
     line-height: 20px;
     padding: 10px 10px 0 10px;
@@ -888,6 +892,7 @@ time, mark, audio, video {
   text-align: center;
   padding: 10px 0;
   font-weight: 700;
+  text-transform: uppercase;
 }
 .accordion-comity__item__title--left, .accordion-comity__item__title--right {
   position: absolute;
@@ -930,6 +935,9 @@ time, mark, audio, video {
 }
 .accordion-comity__item__content img {
   width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
   filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
 }
 .accordion-comity__item__content.show {
@@ -1073,6 +1081,7 @@ time, mark, audio, video {
   text-align: center;
   padding: 10px 0;
   font-weight: 700;
+  text-transform: uppercase;
 }
 .accordion-referee__item__title--left, .accordion-referee__item__title--right {
   position: absolute;
