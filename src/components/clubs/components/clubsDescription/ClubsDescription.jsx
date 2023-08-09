@@ -25,7 +25,7 @@ const ClubsDescription = ({ toogle, selected }) => {
                     >
 
                         <div className="article-clubs__title">
-                            <h4>{item.name}</h4>
+                            <h3>{item.name}</h3>
                             <hr className="article-clubs__title__separation" />
                         </div>
 

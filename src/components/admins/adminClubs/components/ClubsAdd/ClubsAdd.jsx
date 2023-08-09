@@ -67,7 +67,7 @@ const ClubsAdd = () => {
 
                     <div className="addClub__site">
                         <label htmlFor="site">Site Internet</label>
-                        <input type="text" name="site" maxLength={50} required={true} value={site} onChange={(e) => setSite(e.target.value)} />
+                        <input type="url" name="site" maxLength={50} required={true} value={site} onChange={(e) => setSite(e.target.value)} />
                     </div>
 
                     <div className="addClub__president">
@@ -77,22 +77,22 @@ const ClubsAdd = () => {
 
                     <div className="addClub__tel">
                         <label htmlFor="tel">Téléphone</label>
-                        <input type="text" name="tel" maxLength={50} required={true} value={tel} onChange={(e) => setTel(e.target.value)}/>
+                        <input type="text" name="tel" maxLength={14} required={true} value={tel} onChange={(e) => setTel(e.target.value)}/>
                     </div>
 
                     <div className="addClub__members">
                         <label htmlFor="members">Nombre de Membres</label>
-                        <input type="text" name="members" maxLength={3} required={true} value={members} placeholder="Nombre de membres dans le club" onChange={(e) => setMembers(e.target.value)}/>
+                        <input type="number" name="members" maxLength={3} required={true} value={members} placeholder="Nombre de membres dans le club" onChange={(e) => setMembers(e.target.value)}/>
                     </div>
 
                     <div className="addClub__coordx">
                         <label htmlFor="coordx">Latitude</label>
-                        <input type="text" name="coordx" maxLength={25} required={true} value={coordx} placeholder="Coordonnée GPS X du club" onChange={(e) => setCoordx(e.target.value)} />
+                        <input type="number" name="coordx" maxLength={25} required={true} value={coordx} placeholder="Coordonnée GPS X du club" onChange={(e) => setCoordx(e.target.value)} />
                     </div>
 
                     <div className="addClub__coordy">
                         <label htmlFor="coordy">Longitude</label>
-                        <input type="text" name="coordy" maxLength={25} required={true} value={coordy} placeholder="Coordonnée GPS Y du club" onChange={(e) => setCoordy(e.target.value)} />
+                        <input type="number" name="coordy" maxLength={25} required={true} value={coordy} placeholder="Coordonnée GPS Y du club" onChange={(e) => setCoordy(e.target.value)} />
                     </div>
 
                     <div className="addClub__btn">

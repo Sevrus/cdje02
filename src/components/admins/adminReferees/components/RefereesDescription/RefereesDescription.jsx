@@ -6,43 +6,16 @@ import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDe
 import customFetch from "../../../../../utilities/fetchForAll.js"
 import ModalReferees from './ModalReferees.jsx'
 import { dataFilter } from '../../../../../utilities/dataFilter'
+import ModalRefereeDelete from './ModalRefereeDelete'
 
 const RefereesDescription = () => {
     const [openModal, setOpenModal] = useState(null);
+    const [openModalDelete, setOpenModalDelete] = useState(null);
+
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
-
     const [message, setMessage] = useState('');
-
-    const handleDelete = (id) => {
-        fetch("http://localhost:3000/api/referees/" + id, {
-            method: 'DELETE',
-            headers: {
-                "Authorization": `Bearer ${localStorage.getItem("token")}`,
-            },
-        })
-            .then(resp => {
-                if (resp.ok) {
-                    setMessage(`L'arbitre a bien été supprimé.`);
-                    clearErrorAfterDelay(setMessage, 3000);
-                    dataFilter(setDatas, datas, id);
-                    return resp.json();
-                } else {
-                    setMessage(`La suppression de l'arbitre a échoué.`);
-                    clearErrorAfterDelay(setMessage, 3000);
-                    throw new Error("Erreur lors de la suppression de l'arbitre.");
-                }
-            })
-            .then(datas => {
-                console.log(`La suppression de l'arbitre a réussi.`,
-                    datas);
-            })
-            .catch(error => {
-                console.error('Erreur lors de la requête de suppression',
-                    error);
-            })
-    }
 
     const handleOpenModal = (referee) => {
         setOpenModal(referee)
@@ -50,6 +23,14 @@ const RefereesDescription = () => {
 
     const handleCloseModal = () => {
         setOpenModal(null)
+    }
+
+    const handleOpenModalDelete = (item) => {
+        setOpenModalDelete(item);
+    }
+
+    const handleCloseModalDelete = () => {
+        setOpenModalDelete(null);
     }
 
     useEffect(() => {
@@ -85,9 +66,12 @@ const RefereesDescription = () => {
                                     <ModalReferees refereeData={item} closeModal={handleCloseModal} />, document.body
                                 )}
 
-                                <span onClick={() => { handleDelete(item.id) }}>
+                                <a onClick={() => handleOpenModalDelete(item)}>
                                     <FontAwesomeIcon className="articleReferee__icon__trash" icon={faTrash} />
-                                </span>
+                                </a>
+                                {openModalDelete === item && createPortal(
+                                    <ModalRefereeDelete adminData={item} closeModal={handleCloseModalDelete} />, document.body
+                                )}
                             </div>
 
                         </li>

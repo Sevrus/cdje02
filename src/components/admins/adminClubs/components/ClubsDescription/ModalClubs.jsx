@@ -69,42 +69,42 @@ const ModalClubs = ({ closeModal, clubData }) => {
 
                         <div className="modalClub__content__name">
                             <label htmlFor="name" className="modalClub__content__name__label">Nom</label>
-                            <input type="text" name="name" id="name" className="modalClub__content__name__input" value={name} onChange={(e) => setName(e.target.value)} />
+                            <input type="text" name="name" id="name" maxLength={20} className="modalClub__content__name__input" value={name} onChange={(e) => setName(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__town">
                             <label htmlFor="town" className="modalClub__content__town__label">Ville</label>
-                            <input type="text" name="town" id="town" className="modalClub__content__town__input" value={city} onChange={(e) => setCity(e.target.value)} />
+                            <input type="text" name="town" id="town" maxLength={50} className="modalClub__content__town__input" value={city} onChange={(e) => setCity(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__site">
                             <label htmlFor="site" className="modalClub__content__site__label">Site Internet</label>
-                            <input type="text" name="site" id="site" className="modalClub__content__site__input" value={site} onChange={(e) => setSite(e.target.value)} />
+                            <input type="text" name="site" id="site" maxLength={50} className="modalClub__content__site__input" value={site} onChange={(e) => setSite(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__president">
                             <label htmlFor="president" className="modalClub__content__president__label">Président</label>
-                            <input type="text" name="president" id="president" className="modalClub__content__president__input" value={president} onChange={(e) => setPresident(e.target.value)} />
+                            <input type="text" name="president" id="president" maxLength={50} className="modalClub__content__president__input" value={president} onChange={(e) => setPresident(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__tel">
                             <label htmlFor="tel" className="modalClub__content__tel__label">Téléphone</label>
-                            <input type="tel" name="tel" id="tel" className="modalClub__content__tel__input" value={tel} onChange={(e) => setTel(e.target.value)} />
+                            <input type="tel" name="tel" id="tel" maxLength={14} className="modalClub__content__tel__input" value={tel} onChange={(e) => setTel(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__members">
                             <label htmlFor="members" className="modalClub__content__members__label">Membres</label>
-                            <input type="text" name="members" id="members" className="modalClub__content__members__input" value={members} onChange={(e) => setMembers(e.target.value)} />
+                            <input type="number" name="members" id="members" maxLength={3} className="modalClub__content__members__input" value={members} onChange={(e) => setMembers(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__coordx">
                             <label htmlFor="coordx" className="modalClub__content__coordx__label">Latitude</label>
-                            <input type="text" name="coordx" id="coordx" className="modalClub__content__coordx__input" value={coordx} onChange={(e) => setCoordx(e.target.value)} />
+                            <input type="number" name="coordx" id="coordx" maxLength={25} className="modalClub__content__coordx__input" value={coordx} onChange={(e) => setCoordx(e.target.value)} />
                         </div>
 
                         <div className="modalClub__content__coordy">
                             <label htmlFor="coordy" className="modalClub__content__coordy__label">Longitude</label>
-                            <input type="text" name="coordy" id="coordy" className="modalClub__content__coordy__input" value={coordy} onChange={(e) => setCoordy(e.target.value)} />
+                            <input type="number" name="coordy" id="coordy" maxLength={25} className="modalClub__content__coordy__input" value={coordy} onChange={(e) => setCoordy(e.target.value)} />
                         </div>
 
                         <button disabled={isLoaded} type="submit" className="modalClub__content__button">{isLoaded ? "En Cours..." : "Confirmer"}</button>

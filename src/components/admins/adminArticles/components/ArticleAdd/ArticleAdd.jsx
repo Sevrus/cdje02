@@ -63,7 +63,7 @@ const ArticleAdd = () => {
 
                     <div className="addArticle__image">
                         <label htmlFor="image">Photo de l'auteur</label>
-                        <input type="text" name="image" maxLength={500} required={true} value={image} placeholder="Lien/adresse de la photo" onChange={(e) => setImage(e.target.value)} />
+                        <input type="url" name="image" maxLength={500} required={true} value={image} placeholder="Lien/adresse de la photo" onChange={(e) => setImage(e.target.value)} />
                     </div>
 
                     <div className="addArticle__btn">
