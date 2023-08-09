@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
-import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 import { ReloadAfterDelay } from "../../../../../utilities/ReloadAfterDelay.js";
+import { clearErrorAfterDelay } from "../../../../../utilities/clearErrorAfterDelay";
 
 const ArticleAdd = () => {
     const [title, setTitle] = useState("");
@@ -58,7 +58,7 @@ const ArticleAdd = () => {
 
                     <div className="addArticle__description">
                         <label htmlFor="description">Description</label>
-                        <textarea name="description" maxLength={500} required={true} value={description} onChange={(e) => setDescription(e.target.value)} />
+                        <textarea name="description" minLength={20} required={true} value={description} onChange={(e) => setDescription(e.target.value)} />
                     </div>
 
                     <div className="addArticle__image">

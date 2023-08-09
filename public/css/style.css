@@ -5537,8 +5537,10 @@ time, mark, audio, video {
   text-indent: 10px;
 }
 .addArticle__title textarea, .addArticle__author textarea, .addArticle__description textarea, .addArticle__image textarea {
-  height: 80px;
+  height: 150px;
   resize: vertical;
+  min-height: 40px;
+  max-height: 300px;
 }
 .addArticle__btn {
   display: flex;
@@ -5762,6 +5764,12 @@ time, mark, audio, video {
   margin-top: 12px;
   font-family: "Noto Sans", sans-serif;
   padding: 10px;
+}
+.modalArticle__content__title textarea, .modalArticle__content__author textarea, .modalArticle__content__description textarea, .modalArticle__content__date textarea, .modalArticle__content__image textarea {
+  height: 150px;
+  resize: vertical;
+  min-height: 40px;
+  max-height: 300px;
 }
 .modalArticle__content__author, .modalArticle__content__description, .modalArticle__content__date, .modalArticle__content__image {
   margin-top: 30px;
