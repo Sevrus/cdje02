@@ -1,6 +1,4 @@
 import React from 'react';
-import footer_line_left from '../../../src/assets/svg/footer_line_left.svg';
-import footer_line_right from '../../../src/assets/svg/footer_line_right.svg';
 import FooterCopyright from './components/footerCopyright/FooterCopyright.jsx';
 import FooterLinks from './components/footerLinks/FooterLinks.jsx';
 import FooterNav from './components/footerNav/FooterNav.jsx';
@@ -21,9 +19,7 @@ const Footer = () => {
             </div>
 
             <div className='footer__bottom'>
-                <img src={footer_line_left} alt="" className="footer__line__left" />
                 <FooterCopyright />
-                <img src={footer_line_right} alt="" className="footer__line__right" />
             </div>
         </footer>
     )
