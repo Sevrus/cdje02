@@ -5,6 +5,10 @@
 /* VERSION MOBILE */
 .footer__rules
     @include flex(column, center, center)
+    border-left: 1px solid $white
+    border-bottom: 1px solid $white
+    padding: 0 0 20px 15%
+    margin: 0 0 -20px -15%
 
     hr
         border: 1px solid $white
@@ -28,6 +32,8 @@
 @media screen and (min-width: 768px)
     .footer__rules
         margin: 0
+        padding: 0
+        border: none
 
         & a
             cursor: pointer
@@ -38,7 +44,6 @@
 /* VERSION L */
 @media screen and (min-width: 1024px)
     .footer__rules
-
         hr
             width: 90px
 
@@ -49,6 +54,7 @@
 /* VERSION XL */
 @media screen and (min-width: 1920px)
     .footer__rules
+        margin-left: -80px
 
         hr
             width: 110px

@@ -25,20 +25,11 @@
     &__center__left
         @include flex(row, space-around, center)
         width: 100%
-        margin-top: 60px
+        margin-top: 70px
 
     &__bottom
-        @include flex(row, space-between, center)
-
-    &__line__left
-        margin-left: 20px
-
-    &__line__right
-        margin-right: 20px
-
-    .footer__line__left, .footer__line__right
-        z-index: -1
-        width: 100px
+        @include flex(row, center, center)
+        margin-top: 10px
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
@@ -51,14 +42,14 @@
 
             &__left
                 @include flex(row, space-between, center)
-                width: 250px
-                margin: 0
+                width: 300px
+                border-bottom: 1.5px solid $white
+                border-left: 1.5px solid $white
+                padding: 0 0 25px 20px
+                margin: 0 0 -30px -30px
 
         &__bottom
-            margin-top: -60px
-
-        .footer__line__left, .footer__line__right
-            width: 286px
+            margin-top: -5px
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
@@ -69,16 +60,13 @@
             margin: 40px 70px 0 70px
 
             &__left
-                width: 360px
+                width: 450px
+                padding-left: 40px
+                margin-left: -50px
 
-        &__line__left
-            margin-left: 30px
 
-        &__line__right
-            margin-right: 30px
-
-        .footer__line__left, .footer__line__right
-            width: 390px
+        &__bottom
+            margin-top: 5px
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
@@ -89,16 +77,9 @@
             margin: 40px 180px 0 180px
 
             &__left
-                width: 500px
-
+                width: 600px
+                padding: 0 0 40px 150px
+                margin: 0 0 -30px -150px
+        
         &__bottom
-            margin-top: -120px
-
-        &__line__left
-            margin-left: 40px
-
-        &__line__right
-            margin-right: 40px
-
-        .footer__line__left, .footer__line__right
-            width: 650px
+            margin-top: -15px

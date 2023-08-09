@@ -10,7 +10,12 @@
 @media screen and (min-width: 768px)
     .footer__nav
         display: block
-        width: 230px
+        width: 300px
+        border-right: 1.5px solid $white
+        border-bottom: 1.5px solid $white
+        padding: 0 20px 10px 0
+        margin: 0 -30px -15px 0
+        text-transform: uppercase
 
         &__title
             display: none
@@ -19,7 +24,6 @@
             @include flex(column, center, center)
             font-family: $font-primary
             text-decoration: none
-            text-transform: uppercase
             font-size: $fs-14
             font-weight: bold
             cursor: pointer
@@ -35,15 +39,15 @@
 /* VERSION L */
 @media screen and (min-width: 1024px)
     .footer__nav
-        width: 400px
-        margin: 0 -20px -20px 0
+        width: 450px
+        padding-bottom: 20px
+        margin: 0 -50px -20px 0
 
         &__title
             @include flex(row, center, center)
             margin: auto
             font-weight: bold
             font-size: $fs-16
-            text-transform: uppercase
             text-decoration: underline
 
         &__links
@@ -57,7 +61,9 @@
 /* VERSION XL */
 @media screen and (min-width: 1920px)
     .footer__nav
-        width: 500px
+        width: 600px
+        padding: 0 30px 15px 0
+        margin: 15px -150px 0 0
 
         &__title
             font-size: $fs-22

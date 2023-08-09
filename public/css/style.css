@@ -2050,7 +2050,6 @@ time, mark, audio, video {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: -20px;
 }
 .footer__copyright__text {
   font-size: 0.68rem;
@@ -2061,7 +2060,6 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .footer__copyright {
     width: 137px;
-    margin-bottom: -70px;
   }
   .footer__copyright__text {
     font-size: 0.875rem;
@@ -2071,7 +2069,6 @@ time, mark, audio, video {
 @media screen and (min-width: 1024px) {
   .footer__copyright {
     width: 154px;
-    margin-bottom: -90px;
   }
   .footer__copyright__text {
     font-size: 1rem;
@@ -2081,7 +2078,6 @@ time, mark, audio, video {
 @media screen and (min-width: 1920px) {
   .footer__copyright {
     width: 200px;
-    margin-bottom: -150px;
   }
   .footer__copyright__text {
     font-size: 1.25rem;
@@ -2097,7 +2093,7 @@ time, mark, audio, video {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-top: -110px;
+  margin-top: -120px;
 }
 .footer__links img {
   height: 30px;
@@ -2121,7 +2117,7 @@ time, mark, audio, video {
     width: 300px;
   }
   .footer__links img {
-    height: 35px;
+    height: 30px;
   }
 }
 /* VERSION L */
@@ -2130,7 +2126,7 @@ time, mark, audio, video {
     width: 350px;
   }
   .footer__links img {
-    height: 40px;
+    height: 35px;
   }
 }
 /* VERSION XL */
@@ -2139,7 +2135,7 @@ time, mark, audio, video {
     width: 500px;
   }
   .footer__links img {
-    height: 52px;
+    height: 45px;
   }
 }
 /* FOOTER NAV */
@@ -2152,7 +2148,12 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .footer__nav {
     display: block;
-    width: 230px;
+    width: 300px;
+    border-right: 1.5px solid #fff;
+    border-bottom: 1.5px solid #fff;
+    padding: 0 20px 10px 0;
+    margin: 0 -30px -15px 0;
+    text-transform: uppercase;
   }
   .footer__nav__title {
     display: none;
@@ -2164,7 +2165,6 @@ time, mark, audio, video {
     align-items: center;
     font-family: "Noto Sans", sans-serif;
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 0.875rem;
     font-weight: bold;
     cursor: pointer;
@@ -2181,8 +2181,9 @@ time, mark, audio, video {
 /* VERSION L */
 @media screen and (min-width: 1024px) {
   .footer__nav {
-    width: 400px;
-    margin: 0 -20px -20px 0;
+    width: 450px;
+    padding-bottom: 20px;
+    margin: 0 -50px -20px 0;
   }
   .footer__nav__title {
     display: flex;
@@ -2192,7 +2193,6 @@ time, mark, audio, video {
     margin: auto;
     font-weight: bold;
     font-size: 1rem;
-    text-transform: uppercase;
     text-decoration: underline;
   }
   .footer__nav__links {
@@ -2210,7 +2210,9 @@ time, mark, audio, video {
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
   .footer__nav {
-    width: 500px;
+    width: 600px;
+    padding: 0 30px 15px 0;
+    margin: 15px -150px 0 0;
   }
   .footer__nav__title {
     font-size: 1.375rem;
@@ -2229,6 +2231,10 @@ time, mark, audio, video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 0 0 20px 15%;
+  margin: 0 0 -20px -15%;
 }
 .footer__rules hr {
   border: 1px solid #fff;
@@ -2256,6 +2262,8 @@ time, mark, audio, video {
 @media screen and (min-width: 768px) {
   .footer__rules {
     margin: 0;
+    padding: 0;
+    border: none;
   }
   .footer__rules a {
     cursor: pointer;
@@ -2276,6 +2284,9 @@ time, mark, audio, video {
 }
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
+  .footer__rules {
+    margin-left: -80px;
+  }
   .footer__rules hr {
     width: 110px;
   }
@@ -2287,7 +2298,10 @@ time, mark, audio, video {
 /* FOOTER SOCIALS */
 /* VERSION MOBILE */
 .footer__socials {
-  width: 80px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 0 15% 25px 20px;
+  margin: 0 -15% -25px -20px;
 }
 .footer__socials__text {
   font-size: 0.75rem;
@@ -2312,11 +2326,20 @@ time, mark, audio, video {
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
   .footer__socials {
+    border: none;
+    padding: 0;
     margin: 0;
-    width: 91px;
   }
   .footer__socials__text {
     font-size: 0.875rem;
+    width: 91x;
+  }
+  .footer__socials__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: -7px;
   }
   .footer__socials__icons a {
     font-size: 1.375rem;
@@ -2324,27 +2347,22 @@ time, mark, audio, video {
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
-  .footer__socials {
-    width: 140px;
-  }
   .footer__socials__text {
     font-size: 1rem;
+    width: 110px;
   }
   .footer__socials hr {
     width: 90px;
   }
   .footer__socials__icons a {
-    font-size: 1.625rem;
-    margin-left: 15px;
+    font-size: 1.5rem;
   }
 }
 /* VERSION XL */
 @media screen and (min-width: 1920px) {
-  .footer__socials {
-    width: 140px;
-  }
   .footer__socials__text {
     font-size: 1.25rem;
+    width: 140px;
   }
   .footer__socials hr {
     width: 110px;
@@ -2497,23 +2515,14 @@ time, mark, audio, video {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 .footer__bottom {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-.footer__line__left {
-  margin-left: 20px;
-}
-.footer__line__right {
-  margin-right: 20px;
-}
-.footer .footer__line__left, .footer .footer__line__right {
-  z-index: -1;
-  width: 100px;
+  margin-top: 10px;
 }
 
 /* VERSION TABLETTE */
@@ -2533,14 +2542,14 @@ time, mark, audio, video {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 250px;
-    margin: 0;
+    width: 300px;
+    border-bottom: 1.5px solid #fff;
+    border-left: 1.5px solid #fff;
+    padding: 0 0 25px 20px;
+    margin: 0 0 -30px -30px;
   }
   .footer__bottom {
-    margin-top: -60px;
-  }
-  .footer .footer__line__left, .footer .footer__line__right {
-    width: 286px;
+    margin-top: -5px;
   }
 }
 /* VERSION L */
@@ -2552,16 +2561,12 @@ time, mark, audio, video {
     margin: 40px 70px 0 70px;
   }
   .footer__center__left {
-    width: 360px;
+    width: 450px;
+    padding-left: 40px;
+    margin-left: -50px;
   }
-  .footer__line__left {
-    margin-left: 30px;
-  }
-  .footer__line__right {
-    margin-right: 30px;
-  }
-  .footer .footer__line__left, .footer .footer__line__right {
-    width: 390px;
+  .footer__bottom {
+    margin-top: 5px;
   }
 }
 /* VERSION XL */
@@ -2573,19 +2578,12 @@ time, mark, audio, video {
     margin: 40px 180px 0 180px;
   }
   .footer__center__left {
-    width: 500px;
+    width: 600px;
+    padding: 0 0 40px 150px;
+    margin: 0 0 -30px -150px;
   }
   .footer__bottom {
-    margin-top: -120px;
-  }
-  .footer__line__left {
-    margin-left: 40px;
-  }
-  .footer__line__right {
-    margin-right: 40px;
-  }
-  .footer .footer__line__left, .footer .footer__line__right {
-    width: 650px;
+    margin-top: -15px;
   }
 }
 /* MODAL LOGIN */
