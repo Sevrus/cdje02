@@ -20,7 +20,7 @@ const Description = ({ data }) => {
                         viewport={{once: true}}
                         transition={{
                             duration: 0.5,
-                            delay:  item.id * 0.3
+                            delay:  item.id * 0.2
                         }}
                     >
 
