@@ -77,7 +77,7 @@ const ClubsAdd = () => {
 
                     <div className="addClub__tel">
                         <label htmlFor="tel">Téléphone</label>
-                        <input type="text" name="tel" maxLength={50} required={true} value={tel} onChange={(e) => setTel(e.target.value)}/>
+                        <input type="text" name="tel" maxLength={14} required={true} value={tel} onChange={(e) => setTel(e.target.value)}/>
                     </div>
 
                     <div className="addClub__members">
