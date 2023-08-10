@@ -3187,6 +3187,9 @@ time, mark, audio, video {
   justify-content: space-around;
   align-items: center;
 }
+.adminNav__title__leftChevron, .adminNav__title__rightChevron {
+  transition: transform ease-in-out 0.3s;
+}
 .adminNav__links {
   display: flex;
   flex-direction: column;
@@ -3199,6 +3202,7 @@ time, mark, audio, video {
   font-family: "Noto Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
+  transition: color ease-in-out 0.2s;
 }
 .adminNav__links a:hover {
   color: #f73746;

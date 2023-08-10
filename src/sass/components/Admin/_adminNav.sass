@@ -22,6 +22,9 @@
     &__title
         @include flex(row, space-around, center)
 
+        &__leftChevron, &__rightChevron
+            transition: transform ease-in-out .3s
+
     &__links
         @include flex(column, center, center)
 
@@ -31,6 +34,7 @@
             font-family: $font-primary
             font-size: $fs-14
             font-weight: bold
+            transition: color ease-in-out .2s
 
             &:hover
                 color: $red
