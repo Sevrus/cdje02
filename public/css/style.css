@@ -684,16 +684,22 @@ time, mark, audio, video {
   align-items: center;
   gap: 15px;
 }
-.allNews__more-results {
+.allNews__go-back {
+  margin: auto;
   margin-top: 15px;
-  width: 80%;
+  width: 75%;
   text-align: end;
 }
-.allNews__more-results a {
+.allNews__go-back a {
   text-decoration: none;
   color: #f73746;
-  font-size: 0.875rem;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
   font-weight: bold;
+}
+.allNews__go-back__icon {
+  margin-right: 5px;
+  font-size: 1.25rem;
 }
 
 /* VERSION TABLETTE */
@@ -716,6 +722,9 @@ time, mark, audio, video {
     flex-wrap: wrap;
     gap: 15px;
   }
+  .allNews__go-back {
+    width: 85%;
+  }
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
@@ -731,8 +740,14 @@ time, mark, audio, video {
   .allNews__list {
     flex-direction: column;
   }
-  .allNews__more-results a {
-    font-size: 1.125rem;
+  .allNews__go-back {
+    width: 70%;
+  }
+  .allNews__go-back a {
+    font-size: 1.25rem;
+  }
+  .allNews__go-back__icon {
+    font-size: 1.5rem;
   }
 }
 /* VERSION XL */
@@ -746,8 +761,14 @@ time, mark, audio, video {
   .allNews__title__subhead {
     font-size: 3rem;
   }
-  .allNews__more-results a {
-    font-size: 1.5rem;
+  .allNews__go-back {
+    width: 80%;
+  }
+  .allNews__go-back a {
+    font-size: 1.75rem;
+  }
+  .allNews__go-back__icon {
+    font-size: 2rem;
   }
   .allNews__list {
     flex-direction: row;
@@ -1395,6 +1416,7 @@ time, mark, audio, video {
   gap: 15px;
 }
 .tournament__more-results {
+  margin: auto;
   margin-top: 15px;
   width: 80%;
   text-align: end;
@@ -1614,6 +1636,134 @@ time, mark, audio, video {
   }
   .activity__article__more a {
     font-size: 1.375rem;
+  }
+}
+/* VERSION MOBILE */
+.allTournaments__title {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+.allTournaments__title__upperhead {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.allTournaments__title__subhead {
+  font-size: 1.5rem;
+}
+.allTournaments__title::before, .allTournaments__title::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
+}
+.allTournaments__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.allTournaments__go-back {
+  margin: auto;
+  margin-top: 15px;
+  width: 75%;
+  text-align: end;
+}
+.allTournaments__go-back a {
+  text-decoration: none;
+  color: #f73746;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.allTournaments__go-back__icon {
+  margin-right: 5px;
+  font-size: 1.25rem;
+}
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px) {
+  .allTournaments__title {
+    margin-bottom: 35px;
+  }
+  .allTournaments__title__upperhead {
+    font-size: 1rem;
+  }
+  .allTournaments__title__subhead {
+    font-size: 1.625rem;
+  }
+  .allTournaments__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .allTournaments__go-back {
+    width: 85%;
+  }
+}
+/* VERSION L */
+@media screen and (min-width: 1024px) {
+  .allTournaments__title {
+    margin-bottom: 30px;
+  }
+  .allTournaments__title__upperhead {
+    font-size: 1.25rem;
+  }
+  .allTournaments__title__subhead {
+    font-size: 2rem;
+  }
+  .allTournaments__list {
+    flex-direction: column;
+  }
+  .allTournaments__go-back {
+    width: 70%;
+  }
+  .allTournaments__go-back a {
+    font-size: 1.25rem;
+  }
+  .allTournaments__go-back__icon {
+    font-size: 1.5rem;
+  }
+}
+/* VERSION XL */
+@media screen and (min-width: 1920px) {
+  .allTournaments__title {
+    margin-bottom: 45px;
+  }
+  .allTournaments__title__upperhead {
+    font-size: 1.75rem;
+  }
+  .allTournaments__title__subhead {
+    font-size: 3rem;
+  }
+  .allTournaments__go-back {
+    width: 80%;
+  }
+  .allTournaments__go-back a {
+    font-size: 1.75rem;
+  }
+  .allTournaments__go-back__icon {
+    font-size: 2rem;
+  }
+  .allTournaments__list {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .errorPage {

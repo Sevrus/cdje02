@@ -1,4 +1,7 @@
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import fetch from "../../../utilities/fetchForAll";
 import NewsArticle from "../components/NewsArticle";
 
@@ -31,6 +34,13 @@ const AllNews = () => {
                 <ul className="allNews__list">
                     <NewsArticle data={datas} />
                 </ul>
+
+                <div className="allNews__go-back">
+                    <Link to="/">
+                        <FontAwesomeIcon icon={faCircleArrowLeft} className='allNews__go-back__icon' />
+                        retour
+                    </Link>
+                </div>
 
             </section>
 
