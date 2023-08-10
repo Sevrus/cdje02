@@ -26,6 +26,18 @@
         background-color: $black
         opacity: .5
 
+.news__more-results
+    margin-top: 15px
+    width: 90%
+    text-align: end
+
+    a
+        text-decoration: none
+        font-family: $font-primary
+        color: $red
+        font-size: $fs-14
+        font-weight: bold
+
 // VERSION TABLETTE
 @media screen and (min-width:768px)
     .news__title
@@ -50,6 +62,10 @@
 
             &__subhead
                 font-size: $fs-32
+        
+        &__more-results
+            a
+                font-size: $fs-18
 
 // VERSION XL
 @media screen and (min-width:1920px)
@@ -64,3 +80,9 @@
 
             &__subhead
                 font-size: $fs-40
+        
+        &__more-results
+            width: 87%
+            margin-top: 20px
+            a
+                font-size: $fs-24

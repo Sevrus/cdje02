@@ -10,6 +10,7 @@ import AdminComity from './components/admins/adminComity/AdminComity';
 import AdminReferees from './components/admins/adminReferees/AdminReferees';
 import AdminRegulation from './components/admins/adminRegulation/AdminRegulation';
 import AdminResults from './components/admins/adminResults/adminResults';
+import AllNews from './components/news/allNews/AllNews';
 import NewsOpen from './components/newsOpen/NewsOpen';
 import Confidentiality from './components/policies/confidentiality/Confidentiality';
 import LegalNotice from './components/policies/legalNotice/LegalNotice';
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Index />,
+            },
+            {
+                path: "/articles",
+                element: <AllNews />,
             },
             {
                 path: "/articles/:id",

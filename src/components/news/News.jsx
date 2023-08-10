@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NewsArticle from "./components/NewsArticle";
 
 const News = () => {
@@ -13,6 +14,10 @@ const News = () => {
             </div>
 
             <NewsArticle />
+
+            <div className="news__more-results">
+                <Link to="/articles">Plus d'actualités</Link>
+            </div>
 
         </section>
     )

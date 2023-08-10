@@ -9,9 +9,8 @@ const NewsArticle = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
 
-
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/news")
+        fetch(setIsLoaded, setError, setDatas, "api/news?limit=3")
     }, [])
 
     if (error) {
