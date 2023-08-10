@@ -1,8 +1,8 @@
-import {useContext, useEffect} from 'react';
+import { useContext, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Footer from './components/footer/Footer.jsx';
 import Header from './components/header/Header.jsx';
-import { AuthProvider, AuthContext } from './utilities/AuthContext.jsx';
+import { AuthContext, AuthProvider } from './utilities/AuthContext.jsx';
 
 const App = () => {
     const { isLoggedIn, checkAuthenticationStatus, handleBeforeUnload } = useContext(AuthContext);

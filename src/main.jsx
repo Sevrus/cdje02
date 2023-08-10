@@ -18,6 +18,7 @@ import ResetPassword from './components/resetPassword/ResetPassword';
 import AllTournament from './components/tournament/allTournament/AllTournament';
 import ErrorPage from './ErrorPage';
 import { AuthProvider } from "./utilities/AuthContext.jsx";
+import ScrollToTop from './utilities/ScrollToTop';
 import Activity from './views/Activity';
 import Admin from './views/Admin';
 import Contact from './views/Contact';
@@ -30,14 +31,15 @@ const router = createBrowserRouter([
         path: "/",
         element: (
             <AuthProvider>
-                <App/>
+                <ScrollToTop />
+                <App />
             </AuthProvider>
         ),
-        errorElement: <ErrorPage/>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
-                element: <Index/>,
+                element: <Index />,
             },
             {
                 path: "/articles/:id",
@@ -45,11 +47,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/info",
-                element: <Info/>,
+                element: <Info />,
             },
             {
                 path: "/activity",
-                element: <Activity/>,
+                element: <Activity />,
             },
             {
                 path: "/tournaments",
@@ -61,56 +63,56 @@ const router = createBrowserRouter([
             },
             {
                 path: "/legal-notice",
-                element: <LegalNotice/>,
+                element: <LegalNotice />,
             },
             {
                 path: "/confidentiality",
-                element: <Confidentiality/>,
+                element: <Confidentiality />,
             },
             {
                 path: "/reset-password/:resetIdentifier",
-                element: <ResetPassword/>,
+                element: <ResetPassword />,
             },
             {
                 path: "/request-reset-password",
-                element: <RequestResetPassword/>,
+                element: <RequestResetPassword />,
             },
             {
                 path: "/admin",
-                element: <Admin/>,
+                element: <Admin />,
                 children: [
                     {
                         index: true,
                         path: "champions",
-                        element: <AdminChampions/>
+                        element: <AdminChampions />
                     },
                     {
                         path: "referees",
-                        element: <AdminReferees/>
+                        element: <AdminReferees />
                     },
                     {
                         path: "clubs",
-                        element: <AdminClubs/>
+                        element: <AdminClubs />
                     },
                     {
                         path: "comity",
-                        element: <AdminComity/>
+                        element: <AdminComity />
                     },
                     {
                         path: "articles",
-                        element: <AdminArticles/>
+                        element: <AdminArticles />
                     },
                     {
                         path: "results",
-                        element: <AdminResults/>
+                        element: <AdminResults />
                     },
                     {
                         path: "regulation",
-                        element: <AdminRegulation/>
+                        element: <AdminRegulation />
                     },
                     {
                         path: "admins",
-                        element: <AdminAdmins/>
+                        element: <AdminAdmins />
                     },
                 ]
             },
@@ -120,6 +122,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <RouterProvider router={router}/>
+        <RouterProvider router={router} />
     </React.StrictMode>,
 )
