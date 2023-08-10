@@ -3,9 +3,9 @@ const LegalNotice = () => {
     return (
         <div className="legal-notice">
             <div className="legal-notice__header">
-                <h1 className="legal-notice__header__title">
+                <h2 className="legal-notice__header__title">
                     Mentions légales
-                </h1>
+                </h2>
                 <div className="legal-notice__header__subtitle">
                     En vigueur au 28/07/2023
                 </div>
@@ -29,9 +29,9 @@ const LegalNotice = () => {
                 </div>
 
                 <div className="legal-notice__content__article">
-                    <h2 className="legal-notice__content__article__title">
-                        ARTICLE 1 - L'EDITEUR
-                    </h2>
+                    <h3 className="legal-notice__content__article__title">
+                        Article 1 - L'éditeur
+                    </h3>
                     <p className="legal-notice__content__article__content">
                         L’édition et la direction de la publication du Site est assurée par Bracq Christian, domiciliée 11 place
                         du Nain d'Alsace, appt 30, 02100 ST QUENTIN, dont le numéro de téléphone est 0664981341, et
@@ -41,9 +41,9 @@ const LegalNotice = () => {
                 </div>
 
                 <div className="legal-notice__content__article">
-                    <h2 className="legal-notice__content__article__title">
-                        ARTICLE 2 - L'HEBERGEUR
-                    </h2>
+                    <h3 className="legal-notice__content__article__title">
+                        Article 2 - L'hébergeur
+                    </h3>
                     <p className="legal-notice__content__article__content">
                         L'hébergeur du Site est la société Ionos, dont le siège social est situé au IONOS SARL, 7 PL DE LA
                         GARE 57200 SARREGUEMINES , avec le numéro de téléphone : 0970808911
@@ -51,9 +51,9 @@ const LegalNotice = () => {
                 </div>
 
                 <div className="legal-notice__content__article">
-                    <h2 className="legal-notice__content__article__title">
-                        ARTICLE 3 - ACCES AU SITE
-                    </h2>
+                    <h3 className="legal-notice__content__article__title">
+                        Article 3 - Accès au site
+                    </h3>
                     <p className="legal-notice__content__article__content">
                         Le Site est accessible en tout endroit, 7j/7, 24h/24 sauf cas de force majeure, interruption
                         programmée ou non et pouvant découlant d’une nécessité de maintenance.
@@ -63,9 +63,9 @@ const LegalNotice = () => {
                 </div>
 
                 <div className="legal-notice__content__article">
-                    <h2 className="legal-notice__content__article__title">
-                        ARTICLE 4 - COLLECTE DES DONNEES
-                    </h2>
+                    <h3 className="legal-notice__content__article__title">
+                        Article 4 - Collecte des données
+                    </h3>
                     <p className="legal-notice__content__article__content">
                         Le site est exempté de déclaration à la Commission Nationale Informatique et Libertés (CNIL) dans la
                         mesure où il ne collecte aucune donnée concernant les utilisateurs.

@@ -215,6 +215,7 @@ time, mark, audio, video {
 .newsArticle__title {
   display: flex;
   position: relative;
+  text-transform: uppercase;
 }
 .newsArticle__title__lineLeft, .newsArticle__title__lineRight {
   width: 70px;
@@ -1509,6 +1510,7 @@ time, mark, audio, video {
   top: -25px;
   font-size: 0.875rem;
   font-family: "Noto Sans", sans-serif;
+  text-transform: uppercase;
   color: #fff;
   background: #3d4450;
   border: 2px solid #fff;
@@ -2403,6 +2405,7 @@ time, mark, audio, video {
   font-size: 1.5rem;
   font-weight: bold;
   color: #3d4450;
+  text-transform: uppercase;
 }
 .legal-notice__header__subtitle {
   color: #242627;
@@ -2419,6 +2422,7 @@ time, mark, audio, video {
 .legal-notice__content__article__title {
   font-size: 1.25rem;
   font-weight: bold;
+  text-transform: uppercase;
   color: #4e5862;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -2462,6 +2466,7 @@ time, mark, audio, video {
   font-size: 1.5rem;
   font-weight: bold;
   color: #3d4450;
+  text-transform: uppercase;
 }
 .confidentiality__header__site {
   font-weight: bold;

@@ -22,9 +22,7 @@ const Tournament = () => {
         return (
             <section className="tournament">
 
-                {/* <div > */}
-                    <h2 className="tournament__title">Tournois</h2>
-                {/* </div> */}
+                <h2 className="tournament__title">Tournois</h2>
 
                 <ul className="tournament__list">
                     <Description data={datas} />

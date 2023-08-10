@@ -9,7 +9,7 @@ const ErrorPage = () => {
             <div className="errorPage__container">
                 <Link
                     className="errorPage__container__link"
-                    to={'/'}>ACCUEIL</Link>
+                    to={'/'}>Accueil</Link>
                 <img
                     className="errorPage__container__image"
                     src={ImageError} alt="Image erreur"

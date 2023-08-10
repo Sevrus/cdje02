@@ -3,9 +3,9 @@ const Confidentiality = () => {
     return (
         <div className="confidentiality">
             <div className="confidentiality__header">
-                <h1 className="confidentiality__header__title">
-                    POLITIQUE DE CONFIDENTIALITE
-                </h1>
+                <h2 className="confidentiality__header__title">
+                    Politique de Confidentialité
+                </h2>
                 <p className="confidentiality__header__site">
                     cdje02-asso.fr
                 </p>
@@ -19,9 +19,9 @@ const Confidentiality = () => {
 
             <div className="confidentiality__content">
                 <div className="confidentiality__content__article">
-                    <h2 className="confidentiality__content__article__title">
+                    <h3 className="confidentiality__content__article__title">
                         Le but de cette politique de confidentialité
-                    </h2>
+                    </h3>
                     <div className="confidentiality__content__article__content">
                         Le but de cette politique de confidentialité est d'informer les utilisateurs de notre site des données personnelles
                         que nous recueillerons ainsi que les informations suivantes, le cas échéant :
@@ -37,9 +37,9 @@ const Confidentiality = () => {
                 </div>
 
                 <div className="confidentiality__content__article">
-                    <h2 className="confidentiality__content__article__title">
+                    <h3 className="confidentiality__content__article__title">
                         Lois applicables
-                    </h2>
+                    </h3>
                     <div className="confidentiality__content__article__content">
                         Conformément au Règlement général sur la protection des données (RGPD), cette politique de confidentialité est conforme aux règlements suivants.
                         Les données à caractère personnel doivent être :
@@ -82,9 +82,9 @@ const Confidentiality = () => {
                 </div>
 
                 <div className="confidentiality__content__article">
-                    <h2 className="confidentiality__content__article__title">
+                    <h3 className="confidentiality__content__article__title">
                         Consentement
-                    </h2>
+                    </h3>
                     <div className="confidentiality__content__article__content">
                         Les utilisateur conviennent qu'en utilisant notre site, ils consentent à :
                         <div className="confidentiality___content__article__content__list">
@@ -95,9 +95,9 @@ const Confidentiality = () => {
                 </div>
 
                 <div className="confidentiality__content__article">
-                    <h2 className="confidentiality__content__article__title">
+                    <h3 className="confidentiality__content__article__title">
                         Données personnelles que nous collectons
-                    </h2>
+                    </h3>
                     <div className="confidentiality__content__article__content">
                         Nous ne collectons, ne stockons, ni n'utilisons aucune donnée utilisateur sur notre site.
                         Dans le cas où nous avons besoin de recueillir vos données, nous veillerons à vous fournir un préavis de ce recueil de données.
@@ -105,18 +105,18 @@ const Confidentiality = () => {
                 </div>
 
                 <div className="confidentiality__content__article">
-                    <h2 className="confidentiality__content__article__title">
+                    <h3 className="confidentiality__content__article__title">
                         Modifications
-                    </h2>
+                    </h3>
                     <div className="confidentiality__content__article__content">
                         Cette politique de confidentialité peut être modifiée à l’occasion afin de maintenir la conformité avec la loi et de tenir compte de tout changement à notre processus de collecte de données. Nous recommandons à nos utilisateurs de vérifier notre politique de temps à autre pour s’assurer qu’ils soient informés de toute mise à jour. Au besoin, nous pouvons informer les utilisateurs par courriel des changements apportés à cette politique.
                     </div>
                 </div>
 
                 <div className="confidentiality__content__article">
-                    <h2 className="confidentiality__content__article__title">
+                    <h3 className="confidentiality__content__article__title">
                         Contact
-                    </h2>
+                    </h3>
                     <div className="confidentiality__content__article__content__contact">
                         <p>Si vous avez des questions à nous poser, n'hésitez pas à communiquer avec nous en utilisant ce qui suit :</p>
                         <p>Télephone : 06 64 98 13 41</p>
@@ -131,7 +131,7 @@ const Confidentiality = () => {
                     Date d'entrée en vigueur : le 28 Juillet 2023
                 </div>
                 <div className="confidentiality__footer__copyright">
-                    © 2002-2023, DocumentsLégaux (Sequiter Inc.)
+                    &copy; 2002-2023, DocumentsLégaux (Sequiter Inc.)
                 </div>
             </div>
         </div>
