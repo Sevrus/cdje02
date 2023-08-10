@@ -68,8 +68,8 @@ const ComityDescription = () => {
                         >
                             <img src={item.image} alt={item.alt} />
                             <div>
-                                <p>Nom: {item.firstName}</p>
-                                <p>Prénom: {item.lastName}</p>
+                                <p>Nom: <span>{item.lastName}</span></p>
+                                <p>Prénom: {item.firstName}</p>
                                 <p onClick={() => handleMail(item.mail)}>E-mail: <span>{item.mail}</span></p>
                             </div>
                         </section>

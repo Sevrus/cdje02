@@ -1060,6 +1060,9 @@ time, mark, audio, video {
 .accordion-comity__item__content p {
   text-align: center;
 }
+.accordion-comity__item__content p:first-child span {
+  text-transform: uppercase;
+}
 .accordion-comity__item__content p:last-child span {
   cursor: pointer;
   text-decoration: underline;
@@ -3281,6 +3284,9 @@ time, mark, audio, video {
   font-size: 0.875rem;
   padding: 5px;
 }
+.articleComity p:first-child {
+  text-transform: uppercase;
+}
 .articleComity__icon {
   display: flex;
   justify-content: space-between;
@@ -4368,6 +4374,7 @@ time, mark, audio, video {
 .articleClub p {
   font-size: 0.875rem;
   padding: 5px;
+  text-transform: uppercase;
 }
 .articleClub__icon {
   display: flex;
@@ -4845,6 +4852,9 @@ time, mark, audio, video {
 .articleReferee p {
   font-size: 0.875rem;
   padding: 5px;
+}
+.articleReferee p:last-child {
+  text-transform: uppercase;
 }
 .articleReferee__icon {
   display: flex;
@@ -5789,6 +5799,9 @@ time, mark, audio, video {
 .articleArticle p {
   font-size: 0.875rem;
   padding: 5px;
+}
+.articleArticle p:first-child {
+  text-transform: uppercase;
 }
 .articleArticle__icon {
   display: flex;
