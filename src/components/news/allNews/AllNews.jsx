@@ -14,7 +14,8 @@ const AllNews = () => {
     //Articles affichés sur la page actuelle
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = datas.data.slice(indexOfFirstPost, indexOfLastPost);
+    //si datas.data vide render un tableau vide pour éviter que le slice ne fonctionne pas
+    const currentPosts = datas.data ? datas.data.slice(indexOfFirstPost, indexOfLastPost) : [];
     //Changer la page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
