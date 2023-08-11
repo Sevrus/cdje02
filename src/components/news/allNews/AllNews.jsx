@@ -10,13 +10,12 @@ const AllNews = () => {
 
     //Pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(5);
+    const [postsPerPage] = useState(5);
     //Articles affichés sur la page actuelle
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
     //si datas.data vide render un tableau vide pour éviter que le slice ne fonctionne pas
     const currentPosts = datas.data ? datas.data.slice(firstPostIndex, lastPostIndex) : [];
-    // const currentPosts = datas.data.slice(firstPostIndex, lastPostIndex);
 
     useEffect(() => {
         fetch(setIsLoaded, setError, setDatas, "api/news");
