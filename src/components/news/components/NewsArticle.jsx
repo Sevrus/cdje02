@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import fetch from "../../../utilities/fetchForAll";
 import NewsOpen from "../../newsOpen/NewsOpen";
+import HTMLReactParser from "html-react-parser";
 
 const NewsArticle = () => {
 
@@ -32,7 +33,7 @@ const NewsArticle = () => {
                         </div>
 
                         <div className="newsArticle__description">
-                            <p>{item.description}
+                            <p>{HTMLReactParser(item.description)}
                             </p>
                         </div>
 

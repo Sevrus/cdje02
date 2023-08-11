@@ -6036,7 +6036,7 @@ time, mark, audio, video {
 .addArticle__title label, .addArticle__author label, .addArticle__description label, .addArticle__image label {
   margin-bottom: 15px;
 }
-.addArticle__title input, .addArticle__title textarea, .addArticle__author input, .addArticle__author textarea, .addArticle__description input, .addArticle__description textarea, .addArticle__image input, .addArticle__image textarea {
+.addArticle__title input, .addArticle__author input, .addArticle__description input, .addArticle__image input {
   width: 78%;
   max-width: 450px;
   border-radius: 5px;
@@ -6046,9 +6046,25 @@ time, mark, audio, video {
   height: 40px;
   text-indent: 10px;
 }
-.addArticle__title textarea, .addArticle__author textarea, .addArticle__description textarea, .addArticle__image textarea {
-  height: 80px;
+.addArticle__title .quill, .addArticle__author .quill, .addArticle__description .quill, .addArticle__image .quill {
   resize: vertical;
+  width: 78%;
+  max-width: 450px;
+  border-radius: 5px;
+  border: 1px solid #242627;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+}
+.addArticle__title .ql-editor, .addArticle__author .ql-editor, .addArticle__description .ql-editor, .addArticle__image .ql-editor {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: normal;
+  height: 300px;
+}
+.addArticle__title .ql-toolbar, .addArticle__author .ql-toolbar, .addArticle__description .ql-toolbar, .addArticle__image .ql-toolbar {
+  text-align: center;
+}
+.addArticle__title .ql-toolbar.ql-snow, .addArticle__author .ql-toolbar.ql-snow, .addArticle__description .ql-toolbar.ql-snow, .addArticle__image .ql-toolbar.ql-snow {
+  border: none;
+  border-bottom: 1px solid #242627;
 }
 .addArticle__btn {
   display: flex;
@@ -6088,7 +6104,7 @@ time, mark, audio, video {
   .addArticle__title, .addArticle__author, .addArticle__description, .addArticle__image, .addArticle button {
     font-size: 1.125rem;
   }
-  .addArticle__title input, .addArticle__author input, .addArticle__description input, .addArticle__image input, .addArticle button input {
+  .addArticle__title input, .addArticle__title .ql-editor, .addArticle__author input, .addArticle__author .ql-editor, .addArticle__description input, .addArticle__description .ql-editor, .addArticle__image input, .addArticle__image .ql-editor, .addArticle button input, .addArticle button .ql-editor {
     font-size: 1rem;
   }
 }
@@ -6105,9 +6121,16 @@ time, mark, audio, video {
   .addArticle label {
     margin-bottom: 20px;
   }
-  .addArticle input, .addArticle textarea {
+  .addArticle input {
     width: 79%;
     max-width: 600px;
+    font-size: 1.125rem;
+  }
+  .addArticle .quill {
+    width: 79%;
+    max-width: 600px;
+  }
+  .addArticle .ql-editor {
     font-size: 1.125rem;
   }
 }
@@ -6124,7 +6147,7 @@ time, mark, audio, video {
   .addArticle label {
     margin-bottom: 20px;
   }
-  .addArticle input, .addArticle textarea {
+  .addArticle input {
     width: 70%;
     max-width: 600px;
     font-size: 1.25rem;

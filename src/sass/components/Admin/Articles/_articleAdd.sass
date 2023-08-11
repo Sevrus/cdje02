@@ -17,7 +17,7 @@
         label
             margin-bottom: 15px
 
-        input, textarea
+        input
             width: 78%
             max-width: 450px
             border-radius: 5px
@@ -27,9 +27,25 @@
             height: 40px
             text-indent: 10px
 
-        textarea
-            height: 80px
+        .quill
             resize: vertical
+            width: 78%
+            max-width: 450px
+            border-radius: 5px
+            border: 1px solid $black
+            box-shadow: $shadow
+
+        .ql-editor
+            font-family: $font-primary
+            font-weight: normal
+            height: 300px
+
+        .ql-toolbar
+            text-align: center
+
+        .ql-toolbar.ql-snow
+            border: none
+            border-bottom: 1px solid $black
 
     &__btn
         @include flex(row , center , center)
@@ -58,17 +74,17 @@
         margin: 15px 0 -10px
 
 // VERSION TABLETTE
-@media screen and (min-width:768px)
+@media screen and (min-width: 768px)
     .addArticle
 
         &__title, &__author, &__description, &__image, button
             font-size: $fs-18
 
-            input
+            input, .ql-editor
                 font-size: $fs-16
 
 // VERSION L
-@media screen and (min-width:1024px)
+@media screen and (min-width: 1024px)
     .addArticle
 
         &__title, &__author, &__description, &__image
@@ -79,17 +95,24 @@
 
         &__message
             font-size: $fs-16
-            
+
         label
             margin-bottom: 20px
 
-        input, textarea
+        input
             width: 79%
             max-width: 600px
             font-size: $fs-18
 
+        .quill
+            width: 79%
+            max-width: 600px
+
+        .ql-editor
+            font-size: $fs-18
+
 // VERSION XL
-@media screen and (min-width:1920px)
+@media screen and (min-width: 1920px)
     .addArticle
         width: 90%
 
@@ -102,7 +125,7 @@
         label
             margin-bottom: 20px
 
-        input, textarea
+        input
             width: 70%
             max-width: 600px
             font-size: $fs-20
