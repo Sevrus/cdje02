@@ -1,42 +1,24 @@
-import { useState } from "react";
+const Pagination = ({ postsPerPage, totalPosts, setCurrentPage, currentPage }) => {
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     let pageNumbers = [];
 
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
         pageNumbers.push(i);
     }
 
-    const [activePage, setActivePage] = useState(1);
-
-    const handlePageClick = (number) => {
-        setActivePage(number);
-    }
-
     return (
-        <>
-            <nav className="pagination">
-                <ul className="pagination__list">
+        <div className="pagination">
 
-                    {pageNumbers.map((number) => (
-                        <li key={number}
-                            className={`pagination__list__item ${activePage === number ? 'active' : ''}`}>
+            {pageNumbers.map((number, i) => {
+                return <button key={i}
+                    onClick={() => setCurrentPage(number)}
+                    className={number === currentPage ? 'active' : ''}
+                >
+                    {number}
+                </button>
+            })}
 
-                            <a href="!#" className="pagination__list__item__link"
-                                onClick={() => {
-                                    handlePageClick(number);
-                                    paginate(number);
-                                }}
-                            >
-                                {number}
-                            </a>
-
-                        </li>
-                    ))}
-
-                </ul>
-            </nav>
-        </>
+        </div>
     )
 }
 

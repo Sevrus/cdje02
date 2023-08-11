@@ -1,0 +1,25 @@
+@import '../utilities/_mixin.sass'
+@import '../utilities/_variables.sass'
+
+.pagination
+    @include flex(row, center, center)
+    width: 80%
+    margin: auto
+    margin-top: 30px
+
+    button
+        margin: 0 5px
+        background: $white
+        border: 1px solid $grey-blue
+        border-radius: 5px
+        font-family: $font-primary
+        color: $grey-blue
+        font-size: $fs-18
+        font-weight: bold
+        cursor: pointer
+        height: 40px
+        width: 40px
+
+        &.active
+            background: $grey-blue
+            color: $white

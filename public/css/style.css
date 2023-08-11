@@ -7191,6 +7191,33 @@ time, mark, audio, video {
     width: 50%;
   }
 }
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+.pagination button {
+  margin: 0 5px;
+  background: #fff;
+  border: 1px solid #3d4450;
+  border-radius: 5px;
+  font-family: "Noto Sans", sans-serif;
+  color: #3d4450;
+  font-size: 1.125rem;
+  font-weight: bold;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+.pagination button.active {
+  background: #3d4450;
+  color: #fff;
+}
+
 /* VERSION MOBILE */
 .main {
   min-width: 360px;
