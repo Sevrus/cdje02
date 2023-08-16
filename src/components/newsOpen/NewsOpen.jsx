@@ -18,7 +18,7 @@ const NewsOpen = () => {
             <NewsOpenArticle />
 
             <div className="newsOpen__go-back">
-                <Link to="/">
+                <Link to="/articles">
                     <FontAwesomeIcon icon={faCircleArrowLeft} className='newsOpen__go-back__icon' />
                     retour
                 </Link>
