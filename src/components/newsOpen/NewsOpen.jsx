@@ -1,3 +1,6 @@
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import NewsOpenArticle from "./components/NewsOpenArticle";
 
 const NewsOpen = () => {
@@ -13,6 +16,13 @@ const NewsOpen = () => {
             </div>
 
             <NewsOpenArticle />
+
+            <div className="newsOpen__go-back">
+                <Link to="/">
+                    <FontAwesomeIcon icon={faCircleArrowLeft} className='newsOpen__go-back__icon' />
+                    retour
+                </Link>
+            </div>
 
         </section>
     )

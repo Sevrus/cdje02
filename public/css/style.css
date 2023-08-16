@@ -608,6 +608,23 @@ time, mark, audio, video {
   opacity: 0.5;
 }
 
+.newsOpen__go-back {
+  margin: auto;
+  margin-top: 15px;
+  width: 80%;
+  text-align: end;
+}
+.newsOpen__go-back a {
+  text-decoration: none;
+  color: #f73746;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.newsOpen__go-back__icon {
+  margin-right: 5px;
+}
+
 @media screen and (min-width: 768px) {
   .newsOpen__title {
     margin-bottom: 35px;
@@ -632,6 +649,12 @@ time, mark, audio, video {
   .newsOpen__title__subhead {
     font-size: 2rem;
   }
+  .newsOpen__go-back {
+    margin-top: 20px;
+  }
+  .newsOpen__go-back a {
+    font-size: 1.25rem;
+  }
 }
 @media screen and (min-width: 1920px) {
   .newsOpen {
@@ -645,6 +668,12 @@ time, mark, audio, video {
   }
   .newsOpen__title__subhead {
     font-size: 3rem;
+  }
+  .newsOpen__go-back {
+    width: 70%;
+  }
+  .newsOpen__go-back a {
+    font-size: 1.5rem;
   }
 }
 /* VERSION MOBILE */
@@ -686,8 +715,7 @@ time, mark, audio, video {
 }
 .allNews__go-back {
   margin: auto;
-  margin-top: 15px;
-  width: 75%;
+  width: 80%;
   text-align: end;
 }
 .allNews__go-back a {
@@ -699,7 +727,6 @@ time, mark, audio, video {
 }
 .allNews__go-back__icon {
   margin-right: 5px;
-  font-size: 1.25rem;
 }
 
 /* VERSION TABLETTE */
@@ -722,9 +749,6 @@ time, mark, audio, video {
     flex-wrap: wrap;
     gap: 15px;
   }
-  .allNews__go-back {
-    width: 85%;
-  }
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
@@ -741,13 +765,10 @@ time, mark, audio, video {
     flex-direction: column;
   }
   .allNews__go-back {
-    width: 70%;
+    margin-top: 10px;
   }
   .allNews__go-back a {
     font-size: 1.25rem;
-  }
-  .allNews__go-back__icon {
-    font-size: 1.5rem;
   }
 }
 /* VERSION XL */
@@ -762,13 +783,10 @@ time, mark, audio, video {
     font-size: 3rem;
   }
   .allNews__go-back {
-    width: 80%;
+    width: 70%;
   }
   .allNews__go-back a {
-    font-size: 1.75rem;
-  }
-  .allNews__go-back__icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .allNews__list {
     flex-direction: row;
@@ -1677,8 +1695,8 @@ time, mark, audio, video {
 }
 .allTournaments__go-back {
   margin: auto;
+  width: 80%;
   margin-top: 15px;
-  width: 75%;
   text-align: end;
 }
 .allTournaments__go-back a {
@@ -1690,7 +1708,6 @@ time, mark, audio, video {
 }
 .allTournaments__go-back__icon {
   margin-right: 5px;
-  font-size: 1.25rem;
 }
 
 /* VERSION TABLETTE */
@@ -1713,9 +1730,6 @@ time, mark, audio, video {
     flex-wrap: wrap;
     gap: 15px;
   }
-  .allTournaments__go-back {
-    width: 85%;
-  }
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
@@ -1732,13 +1746,10 @@ time, mark, audio, video {
     flex-direction: column;
   }
   .allTournaments__go-back {
-    width: 70%;
+    margin-top: 20px;
   }
   .allTournaments__go-back a {
     font-size: 1.25rem;
-  }
-  .allTournaments__go-back__icon {
-    font-size: 1.5rem;
   }
 }
 /* VERSION XL */
@@ -1752,14 +1763,8 @@ time, mark, audio, video {
   .allTournaments__title__subhead {
     font-size: 3rem;
   }
-  .allTournaments__go-back {
-    width: 80%;
-  }
   .allTournaments__go-back a {
-    font-size: 1.75rem;
-  }
-  .allTournaments__go-back__icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .allTournaments__list {
     flex-direction: row;

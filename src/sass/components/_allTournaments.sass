@@ -31,9 +31,9 @@
         gap: 15px
 
     &__go-back
-        margin: auto 
+        margin: auto
+        width: 80%
         margin-top: 15px
-        width: 75%
         text-align: end
 
         a
@@ -45,7 +45,6 @@
 
         &__icon
             margin-right: 5px
-            font-size: $fs-20
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
@@ -66,9 +65,6 @@
             flex-wrap: wrap
             gap: 15px
 
-        &__go-back
-            width: 85%
-
 /* VERSION L */
 @media screen and (min-width: 1024px)
     .allTournaments
@@ -86,13 +82,9 @@
             flex-direction: column
 
         &__go-back
-            width: 70%
-
+            margin-top: 20px
             a
                 font-size: $fs-20
-
-            &__icon
-                font-size: $fs-24
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
@@ -108,13 +100,8 @@
                 font-size: $fs-40
 
         &__go-back
-            width: 80%
-
             a
-                font-size: $fs-28
-
-            &__icon
-                font-size: $fs-32
+                font-size: $fs-24
 
         &__list
             flex-direction: row
