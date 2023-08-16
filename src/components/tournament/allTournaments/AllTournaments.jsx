@@ -1,9 +1,12 @@
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Pagination from "../../../utilities/Pagination";
 import fetch from "../../../utilities/fetchForAll";
 import Description from "../../description/Description";
 
-const AllTournament = () => {
+const AllTournaments = () => {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -38,6 +41,13 @@ const AllTournament = () => {
                     <Description data={currentPosts} />
                 </ul>
 
+                <div className="allTournaments__go-back">
+                    <Link to="/activity">
+                        <FontAwesomeIcon icon={faCircleArrowLeft} className='allTournaments__go-back__icon' />
+                        retour
+                    </Link>
+                </div>
+
                 <Pagination
                     totalPosts={datas.data.length}
                     postsPerPage={postsPerPage}
@@ -51,4 +61,4 @@ const AllTournament = () => {
     }
 }
 
-export default AllTournament;
+export default AllTournaments;

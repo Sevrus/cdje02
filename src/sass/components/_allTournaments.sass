@@ -1,15 +1,15 @@
-@import '../../utilities/_mixin'
-@import '../../utilities/_variables'
+@import '../utilities/_mixin'
+@import '../utilities/_variables'
 
 /* VERSION MOBILE */
-.allNews
+.allTournaments
     &__title
         font-family: $font-primary
         font-size: $fs-24
         text-transform: uppercase
         @include flex(row, space-evenly, center)
         gap: 20px
-        margin-top: 35px
+        margin-bottom: 35px
 
         &__upperhead
             font-size: $fs-14
@@ -33,6 +33,7 @@
     &__go-back
         margin: auto
         width: 80%
+        margin-top: 15px
         text-align: end
 
         a
@@ -47,7 +48,7 @@
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
-    .allNews
+    .allTournaments
 
         &__title
             margin-bottom: 35px
@@ -66,7 +67,7 @@
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
-    .allNews
+    .allTournaments
 
         &__title
             margin-bottom: 30px
@@ -81,13 +82,13 @@
             flex-direction: column
 
         &__go-back
-            margin-top: 10px
+            margin-top: 20px
             a
                 font-size: $fs-20
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
-    .allNews
+    .allTournaments
 
         &__title
             margin-bottom: 45px
@@ -99,7 +100,6 @@
                 font-size: $fs-40
 
         &__go-back
-            width: 70%
             a
                 font-size: $fs-24
 
