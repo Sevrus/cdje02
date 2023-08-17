@@ -14,7 +14,7 @@ const AllTournaments = () => {
 
     //Pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(2);
+    const [postsPerPage] = useState(6);
     //Articles affichés sur la page actuelle
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;

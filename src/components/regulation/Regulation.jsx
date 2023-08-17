@@ -26,7 +26,7 @@ const Regulation = () => {
                 </div>
 
                 <ul className="regulation__list">
-                    <Description data={datas} />
+                    <Description data={datas.data} />
                 </ul>
 
             </section>

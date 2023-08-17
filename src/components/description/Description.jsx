@@ -5,7 +5,7 @@ const Description = ({ data }) => {
     return (
         <>
             {data &&
-                data.data.map((item) => (
+                data.map((item) => (
                     <motion.li className="activity__article" key={item.id}
                         initial={{
                             opacity: 0,
@@ -17,10 +17,10 @@ const Description = ({ data }) => {
                             translateX: 0,
                             translateY: 0
                         }}
-                        viewport={{once: true}}
+                        viewport={{ once: true }}
                         transition={{
                             duration: 0.5,
-                            delay:  item.id * 0.2
+                            delay: item.id * 0.2
                         }}
                     >
 
@@ -33,7 +33,8 @@ const Description = ({ data }) => {
                             <a href={item.link} target="_blank" >Lire la suite</a>
                         </div>
                     </motion.li>
-                ))}
+                ))
+            }
         </>
     )
 }

@@ -25,7 +25,7 @@ const Tournament = () => {
                 <h2 className="tournament__title">Tournois</h2>
 
                 <ul className="tournament__list">
-                    <Description data={datas} />
+                    <Description data={datas.data} />
                 </ul>
 
                 <div className="tournament__more-results">

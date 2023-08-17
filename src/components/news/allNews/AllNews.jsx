@@ -14,7 +14,7 @@ const AllNews = () => {
     //Pagination
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(5);
-    //Articles affichés sur la page actuelle
+    //Posts affichés sur la page actuelle
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
     //si datas.data vide render un tableau vide pour éviter que le slice ne fonctionne pas
