@@ -69,7 +69,7 @@ const RefereeDescription = () => {
                                 opacity: 1,
                                 translateX: 0,
                             }}
-                            viewport={{once: true}}
+                            viewport={{ once: true }}
                             transition={{
                                 type: "spring",
                                 stiffness: 50
@@ -122,8 +122,8 @@ const RefereeDescription = () => {
 
                                         <section className='accordion-referee__item__content show'>
                                             <p>{datas.data.find((item) => item.id === selectedId).title}</p>
-                                            <p>Validité: {datas.data.find((item) => item.id === selectedId).validity}</p>
-                                            <p>Club: {datas.data.find((item) => item.id === selectedId).Club.name}</p>
+                                            <p>Validité : {datas.data.find((item) => item.id === selectedId).validity}</p>
+                                            <p>Club : <span>{datas.data.find((item) => item.id === selectedId).Club.name}</span></p>
                                         </section>
                                     </li>
                                 </motion.div>

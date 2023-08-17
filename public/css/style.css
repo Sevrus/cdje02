@@ -1280,6 +1280,9 @@ time, mark, audio, video {
 .accordion-referee__item__content p {
   text-align: center;
 }
+.accordion-referee__item__content p span:last-child {
+  text-transform: uppercase;
+}
 .accordion-referee__item__content.show {
   height: auto;
   max-height: 9999px;
