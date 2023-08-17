@@ -123,7 +123,7 @@ const RefereeDescription = () => {
                                         <section className='accordion-referee__item__content show'>
                                             <p>{datas.data.find((item) => item.id === selectedId).title}</p>
                                             <p>Validité: {datas.data.find((item) => item.id === selectedId).validity}</p>
-                                            <p>Club: {datas.data.find((item) => item.id === selectedId).club}</p>
+                                            <p>Club: {datas.data.find((item) => item.id === selectedId).Club.name}</p>
                                         </section>
                                     </li>
                                 </motion.div>
