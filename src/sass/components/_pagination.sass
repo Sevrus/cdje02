@@ -1,6 +1,7 @@
 @import '../utilities/_mixin.sass'
 @import '../utilities/_variables.sass'
 
+/* VERSION MOBILE */
 .pagination
     @include flex(row, center, center)
     width: 80%
@@ -8,18 +9,45 @@
     margin-top: 50px
 
     button
+        @include flex(row, center, center)
         margin: 0 5px
         background: $white
         border: 1px solid $grey-blue
         border-radius: 5px
         font-family: $font-primary
         color: $grey-blue
-        font-size: $fs-18
+        font-size: $fs-16
         font-weight: bold
         cursor: pointer
-        height: 30px
-        width: 30px
+        height: 25px
+        width: 25px
 
         &.active
             background: $grey-blue
             color: $white
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px)
+    .pagination
+        button
+            font-size: $fs-18
+            height: 28px
+            width: 28px
+
+
+/* VERSION L */
+@media screen and (min-width: 1024px)
+    .pagination
+        button
+            font-size: $fs-20
+            height: 32px
+            width: 32px
+
+/* VERSION XL */
+@media screen and (min-width: 1920px)
+    .pagination
+        button
+            font-size: $fs-24
+            height: 40px
+            width: 40px
+

@@ -10,12 +10,17 @@ const Pagination = ({ postsPerPage, totalPosts, setCurrentPage, currentPage }) =
         <div className="pagination">
 
             {pageNumbers.map((number, i) => {
-                return <button key={i}
-                    onClick={() => setCurrentPage(number)}
-                    className={number === currentPage ? 'active' : ''}
-                >
-                    {number}
-                </button>
+                return (
+
+                    <button key={i}
+                        onClick={() => setCurrentPage(number)}
+                        className={number === currentPage ? 'active' : ''}
+                    >
+
+                        {number}
+                        
+                    </button>
+                )
             })}
 
         </div>
