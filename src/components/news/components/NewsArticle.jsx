@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Link, Route, Routes } from "react-router-dom";
 import NewsOpen from "../../newsOpen/NewsOpen";
 
@@ -7,7 +8,23 @@ const NewsArticle = ({ data }) => {
         <>
             {data &&
                 data.map((item) => (
-                    <section className="newsArticle" key={item.id}>
+                    <motion.li className="newsArticle" key={item.id}
+                        initial={{
+                            opacity: 0,
+                            translateX: item.id % 2 === 0 ? -50 : 50,
+                            translateY: -50
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            translateX: 0,
+                            translateY: 0
+                        }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.5,
+                            delay: item.id * 0.2
+                        }}
+                    >
 
                         <div className="newsArticle__title">
                             <hr className="newsArticle__title__lineLeft" />
@@ -26,7 +43,7 @@ const NewsArticle = ({ data }) => {
                             </Link>
                         </div>
 
-                    </section>
+                    </motion.li>
                 ))
             }
 
