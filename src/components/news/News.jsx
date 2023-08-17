@@ -28,7 +28,9 @@ const News = () => {
                     </h2>
                 </div>
 
+                <ul className="news__list">
                 <NewsArticle data={datas.data} />
+                </ul>
 
                 <div className="news__more-results">
                     <Link to="/articles">Plus d'actualités</Link>
