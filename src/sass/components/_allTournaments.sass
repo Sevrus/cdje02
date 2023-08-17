@@ -1,18 +1,22 @@
-@import '../utilities/_mixin.sass'
-@import '../utilities/_variables.sass'
+@import '../utilities/_mixin'
+@import '../utilities/_variables'
 
 /* VERSION MOBILE */
-.tournament
-    @include flex(column, center , center)
-    font-family: $font-primary
-
+.allTournaments
     &__title
+        font-family: $font-primary
         font-size: $fs-24
         text-transform: uppercase
         @include flex(row, space-evenly, center)
         gap: 20px
-        margin-bottom: 35px
-        width: 100%
+        margin-bottom: 30px
+
+        &__upperhead
+            font-size: $fs-14
+            @include flex(column, center, center)
+
+        &__subhead
+            font-size: $fs-24
 
         &::before, &::after
             content: ''
@@ -26,57 +30,74 @@
         @include flex(column, center, center)
         gap: 15px
 
-    &__more-results
+    &__go-back
         margin: auto
-        margin-top: 15px
         width: 80%
+        margin-top: 15px
         text-align: end
 
         a
             text-decoration: none
             color: $red
-            font-size: $fs-14
+            font-family: $font-primary
+            font-size: $fs-16
             font-weight: bold
+
+        &__icon
+            margin-right: 5px
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px)
-    .tournament
+    .allTournaments
 
         &__title
-            font-size: $fs-26
+            &__upperhead
+                font-size: $fs-16
+
+            &__subhead
+                font-size: $fs-26
 
         &__list
             width: 100%
             @include flex(row, center, center)
             flex-wrap: wrap
-            gap: 15px
 
 /* VERSION L */
 @media screen and (min-width: 1024px)
-    .tournament
+    .allTournaments
 
         &__title
-            margin-bottom: 60px
-            font-size: $fs-32
+            &__upperhead
+                font-size: $fs-20
+
+            &__subhead
+                font-size: $fs-32
 
         &__list
             flex-direction: column
 
-        &__more-results
+        &__go-back
+            margin-top: 20px
             a
-                font-size: $fs-18
+                font-size: $fs-20
 
 /* VERSION XL */
 @media screen and (min-width: 1920px)
-    .tournament
+    .allTournaments
 
         &__title
-            font-size: $fs-40
+            margin-bottom: 45px
 
-        &__more-results
-            a
-                font-size: $fs-24
+            &__upperhead
+                font-size: $fs-28
+
+            &__subhead
+                font-size: $fs-40
 
         &__list
             flex-direction: row
             flex-wrap: wrap
+
+        &__go-back
+            a
+                font-size: $fs-24

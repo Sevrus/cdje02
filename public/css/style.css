@@ -209,8 +209,6 @@ time, mark, audio, video {
   color: #fff;
   width: 80%;
   margin: auto;
-  margin-bottom: 15px;
-  margin-top: 25px;
 }
 .newsArticle__title {
   display: flex;
@@ -336,6 +334,7 @@ time, mark, audio, video {
   align-items: center;
   gap: 20px;
   margin-top: 35px;
+  margin-bottom: 30px;
 }
 .news__title__upperhead {
   font-size: 0.875rem;
@@ -355,10 +354,17 @@ time, mark, audio, video {
   background-color: #242627;
   opacity: 0.5;
 }
-
+.news__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 .news__more-results {
+  margin: auto;
+  width: 80%;
   margin-top: 15px;
-  width: 90%;
   text-align: end;
 }
 .news__more-results a {
@@ -370,9 +376,6 @@ time, mark, audio, video {
 }
 
 @media screen and (min-width: 768px) {
-  .news__title {
-    margin-bottom: 35px;
-  }
   .news__title__upperhead {
     font-size: 1rem;
   }
@@ -393,8 +396,14 @@ time, mark, audio, video {
   .news__title__subhead {
     font-size: 2rem;
   }
+  .news__list {
+    gap: 25px;
+  }
+  .news__more-results {
+    margin-top: 20px;
+  }
   .news__more-results a {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -411,8 +420,7 @@ time, mark, audio, video {
     font-size: 3rem;
   }
   .news__more-results {
-    width: 87%;
-    margin-top: 20px;
+    width: 70%;
   }
   .news__more-results a {
     font-size: 1.5rem;
@@ -608,6 +616,23 @@ time, mark, audio, video {
   opacity: 0.5;
 }
 
+.newsOpen__go-back {
+  margin: auto;
+  margin-top: 15px;
+  width: 80%;
+  text-align: end;
+}
+.newsOpen__go-back a {
+  text-decoration: none;
+  color: #f73746;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.newsOpen__go-back__icon {
+  margin-right: 5px;
+}
+
 @media screen and (min-width: 768px) {
   .newsOpen__title {
     margin-bottom: 35px;
@@ -632,6 +657,12 @@ time, mark, audio, video {
   .newsOpen__title__subhead {
     font-size: 2rem;
   }
+  .newsOpen__go-back {
+    margin-top: 20px;
+  }
+  .newsOpen__go-back a {
+    font-size: 1.25rem;
+  }
 }
 @media screen and (min-width: 1920px) {
   .newsOpen {
@@ -646,6 +677,12 @@ time, mark, audio, video {
   .newsOpen__title__subhead {
     font-size: 3rem;
   }
+  .newsOpen__go-back {
+    width: 70%;
+  }
+  .newsOpen__go-back a {
+    font-size: 1.5rem;
+  }
 }
 /* VERSION MOBILE */
 .allNews__title {
@@ -658,6 +695,7 @@ time, mark, audio, video {
   align-items: center;
   gap: 20px;
   margin-top: 35px;
+  margin-bottom: 30px;
 }
 .allNews__title__upperhead {
   font-size: 0.875rem;
@@ -684,44 +722,34 @@ time, mark, audio, video {
   align-items: center;
   gap: 15px;
 }
-.allNews__more-results {
-  margin-top: 15px;
+.allNews__go-back {
+  margin: auto;
   width: 80%;
+  margin-top: 15px;
   text-align: end;
 }
-.allNews__more-results a {
+.allNews__go-back a {
   text-decoration: none;
   color: #f73746;
-  font-size: 0.875rem;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
   font-weight: bold;
+}
+.allNews__go-back__icon {
+  margin-right: 5px;
 }
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 768px) {
-  .allNews__title {
-    margin-bottom: 35px;
-  }
   .allNews__title__upperhead {
     font-size: 1rem;
   }
   .allNews__title__subhead {
     font-size: 1.625rem;
   }
-  .allNews__list {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
 }
 /* VERSION L */
 @media screen and (min-width: 1024px) {
-  .allNews__title {
-    margin-bottom: 30px;
-  }
   .allNews__title__upperhead {
     font-size: 1.25rem;
   }
@@ -729,10 +757,13 @@ time, mark, audio, video {
     font-size: 2rem;
   }
   .allNews__list {
-    flex-direction: column;
+    gap: 25px;
   }
-  .allNews__more-results a {
-    font-size: 1.125rem;
+  .allNews__go-back {
+    margin-top: 20px;
+  }
+  .allNews__go-back a {
+    font-size: 1.25rem;
   }
 }
 /* VERSION XL */
@@ -746,12 +777,11 @@ time, mark, audio, video {
   .allNews__title__subhead {
     font-size: 3rem;
   }
-  .allNews__more-results a {
-    font-size: 1.5rem;
+  .allNews__go-back {
+    width: 70%;
   }
-  .allNews__list {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .allNews__go-back a {
+    font-size: 1.5rem;
   }
 }
 .article-clubs {
@@ -1395,6 +1425,7 @@ time, mark, audio, video {
   gap: 15px;
 }
 .tournament__more-results {
+  margin: auto;
   margin-top: 15px;
   width: 80%;
   text-align: end;
@@ -1614,6 +1645,114 @@ time, mark, audio, video {
   }
   .activity__article__more a {
     font-size: 1.375rem;
+  }
+}
+/* VERSION MOBILE */
+.allTournaments__title {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.allTournaments__title__upperhead {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.allTournaments__title__subhead {
+  font-size: 1.5rem;
+}
+.allTournaments__title::before, .allTournaments__title::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background-color: #242627;
+  opacity: 0.5;
+}
+.allTournaments__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.allTournaments__go-back {
+  margin: auto;
+  width: 80%;
+  margin-top: 15px;
+  text-align: end;
+}
+.allTournaments__go-back a {
+  text-decoration: none;
+  color: #f73746;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.allTournaments__go-back__icon {
+  margin-right: 5px;
+}
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px) {
+  .allTournaments__title__upperhead {
+    font-size: 1rem;
+  }
+  .allTournaments__title__subhead {
+    font-size: 1.625rem;
+  }
+  .allTournaments__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+/* VERSION L */
+@media screen and (min-width: 1024px) {
+  .allTournaments__title__upperhead {
+    font-size: 1.25rem;
+  }
+  .allTournaments__title__subhead {
+    font-size: 2rem;
+  }
+  .allTournaments__list {
+    flex-direction: column;
+  }
+  .allTournaments__go-back {
+    margin-top: 20px;
+  }
+  .allTournaments__go-back a {
+    font-size: 1.25rem;
+  }
+}
+/* VERSION XL */
+@media screen and (min-width: 1920px) {
+  .allTournaments__title {
+    margin-bottom: 45px;
+  }
+  .allTournaments__title__upperhead {
+    font-size: 1.75rem;
+  }
+  .allTournaments__title__subhead {
+    font-size: 3rem;
+  }
+  .allTournaments__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .allTournaments__go-back a {
+    font-size: 1.5rem;
   }
 }
 .errorPage {
@@ -7206,6 +7345,63 @@ time, mark, audio, video {
   }
   .modalDelete__content__yes, .modalDelete__content__no {
     width: 50%;
+  }
+}
+/* VERSION MOBILE */
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+.pagination button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  background: #fff;
+  border: 1px solid #3d4450;
+  border-radius: 5px;
+  font-family: "Noto Sans", sans-serif;
+  color: #3d4450;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  transition: all 0.2s ease-in-out;
+}
+.pagination button.active, .pagination button:hover {
+  background: #3d4450;
+  color: #fff;
+}
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 768px) {
+  .pagination button {
+    font-size: 1.125rem;
+    height: 28px;
+    width: 28px;
+  }
+}
+/* VERSION L */
+@media screen and (min-width: 1024px) {
+  .pagination button {
+    font-size: 1.25rem;
+    height: 32px;
+    width: 32px;
+  }
+}
+/* VERSION XL */
+@media screen and (min-width: 1920px) {
+  .pagination button {
+    font-size: 1.5rem;
+    height: 40px;
+    width: 40px;
   }
 }
 /* VERSION MOBILE */

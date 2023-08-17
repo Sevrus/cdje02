@@ -16,7 +16,7 @@ import Confidentiality from './components/policies/confidentiality/Confidentiali
 import LegalNotice from './components/policies/legalNotice/LegalNotice';
 import RequestResetPassword from './components/resetPassword/RequestResetPassword';
 import ResetPassword from './components/resetPassword/ResetPassword';
-import AllTournament from './components/tournament/allTournament/AllTournament';
+import AllTournaments from './components/tournament/allTournaments/AllTournaments';
 import ErrorPage from './ErrorPage';
 import { AuthProvider } from "./utilities/AuthContext.jsx";
 import ScrollToTop from './utilities/ScrollToTop';
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/tournaments",
-                element: <AllTournament />
+                element: <AllTournaments />
             },
             {
                 path: "/contact",

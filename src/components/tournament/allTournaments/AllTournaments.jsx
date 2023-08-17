@@ -4,24 +4,25 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Pagination from "../../../utilities/Pagination";
 import fetch from "../../../utilities/fetchForAll";
-import NewsArticle from "../components/NewsArticle";
+import Description from "../../description/Description";
 
-const AllNews = () => {
+const AllTournaments = () => {
+
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [datas, setDatas] = useState([]);
 
     //Pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(5);
-    //Posts affichés sur la page actuelle
+    const [postsPerPage] = useState(6);
+    //Articles affichés sur la page actuelle
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
     //si datas.data vide render un tableau vide pour éviter que le slice ne fonctionne pas
     const currentPosts = datas.data ? datas.data.slice(firstPostIndex, lastPostIndex) : [];
 
     useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/news");
+        fetch(setIsLoaded, setError, setDatas, "api/tournaments")
     }, [])
 
     if (error) {
@@ -32,22 +33,17 @@ const AllNews = () => {
 
         return (
 
-            <section className="allNews">
+            <section className="tournament">
 
-                <div className="allNews__title">
-                    <h2 className="allNews__title__upperhead">
-                        Tous les
-                        <span className="allNews__title__subhead">articles</span>
-                    </h2>
-                </div>
+                <h2 className="tournament__title">Résultats</h2>
 
-                <ul className="allNews__list">
-                    <NewsArticle data={currentPosts} />
+                <ul className="tournament__list">
+                    <Description data={currentPosts} />
                 </ul>
 
-                <div className="allNews__go-back">
-                    <Link to="/">
-                        <FontAwesomeIcon icon={faCircleArrowLeft} className='allNews__go-back__icon' />
+                <div className="allTournaments__go-back">
+                    <Link to="/activity">
+                        <FontAwesomeIcon icon={faCircleArrowLeft} className='allTournaments__go-back__icon' />
                         retour
                     </Link>
                 </div>
@@ -65,4 +61,4 @@ const AllNews = () => {
     }
 }
 
-export default AllNews;
+export default AllTournaments;

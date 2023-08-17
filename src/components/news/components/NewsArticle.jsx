@@ -1,28 +1,30 @@
-import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
 import { Link, Route, Routes } from "react-router-dom";
-import fetch from "../../../utilities/fetchForAll";
 import NewsOpen from "../../newsOpen/NewsOpen";
 
-const NewsArticle = () => {
+const NewsArticle = ({ data }) => {
 
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [datas, setDatas] = useState([]);
-
-    useEffect(() => {
-        fetch(setIsLoaded, setError, setDatas, "api/news?limit=3")
-    }, [])
-
-    if (error) {
-        return <div>Erreur : {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div>Chargement...</div>;
-    } else {
-
-        return (
-            <>
-                {datas.data.map((item) => (
-                    <section className="newsArticle" key={item.id}>
+    return (
+        <>
+            {data &&
+                data.map((item) => (
+                    <motion.li className="newsArticle" key={item.id}
+                        initial={{
+                            opacity: 0,
+                            translateX: item.id % 2 === 0 ? -50 : 50,
+                            translateY: -50
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            translateX: 0,
+                            translateY: 0
+                        }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.5,
+                            delay: item.id * 0.2
+                        }}
+                    >
 
                         <div className="newsArticle__title">
                             <hr className="newsArticle__title__lineLeft" />
@@ -41,15 +43,15 @@ const NewsArticle = () => {
                             </Link>
                         </div>
 
-                    </section>
-                ))}
+                    </motion.li>
+                ))
+            }
 
-                <Routes>
-                    <Route path="/articles/:id" element={<NewsOpen/>}/>
-                </Routes>
-            </>
-        )
-    }
+            <Routes>
+                <Route path="/articles/:id" element={<NewsOpen />} />
+            </Routes>
+        </>
+    )
 }
 
 export default NewsArticle;
